@@ -1,0 +1,3 @@
+{
+  meta = import ./meta.nix;
+}
