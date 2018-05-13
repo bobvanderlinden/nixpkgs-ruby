@@ -1,4 +1,4 @@
-{
+rec {
   p174 = import ./p174;
   p248 = import ./p248;
   p249 = import ./p249;
@@ -12,4 +12,5 @@
   p370 = import ./p370;
   p371 = import ./p371;
   p374 = import ./p374;
+  "*" = import ./p374;
 }

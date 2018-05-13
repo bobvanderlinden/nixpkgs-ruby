@@ -1,4 +1,4 @@
-{
+rec {
   p0 = import ./p0;
   p105 = import ./p105;
   p125 = import ./p125;
@@ -19,4 +19,5 @@
   p551 = import ./p551;
   preview1 = import ./preview1;
   rc1 = import ./rc1;
+  "*" = import ./rc1;
 }

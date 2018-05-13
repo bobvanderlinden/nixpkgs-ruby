@@ -1,4 +1,4 @@
-{
+rec {
   "0" = import ./0;
   "1" = import ./1;
   "2" = import ./2;
@@ -10,4 +10,5 @@
   "8" = import ./8;
   "9" = import ./9;
   "10" = import ./10;
+  "*" = import ./10;
 }
