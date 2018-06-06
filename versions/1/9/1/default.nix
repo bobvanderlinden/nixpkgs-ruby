@@ -9,7 +9,7 @@ rec {
   p431 = import ./p431;
   preview1 = import ./preview1;
   preview2 = import ./preview2;
-  rc1 = import ./rc1;
-  rc2 = import ./rc2;
+  "*" = import ./preview2;
+}= import ./rc2;
   "*" = import ./rc2;
 }
