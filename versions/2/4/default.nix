@@ -5,5 +5,6 @@ rec {
   "3" = import ./3;
   "4" = import ./4;
   "5" = import ./5;
-  "*" = import ./5;
+  "6" = import ./6;
+  "*" = import ./6;
 }
