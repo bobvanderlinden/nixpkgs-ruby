@@ -7,5 +7,5 @@
     ""
   ];
   url = https://cache.ruby-lang.org/pub/ruby/ruby-2.5.6.tar.gz;
-  sha256 = "8829a09526a5b315714fd1eb1fa561f787979faa4953df3cc23d670870cfbdc8";
+  sha256 = "1d7ed06c673020cd12a737ed686470552e8e99d72b82cd3c26daa3115c36bea7";
 }
