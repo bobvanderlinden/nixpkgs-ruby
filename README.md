@@ -18,7 +18,7 @@ let
 in
 rec {
   nixpkgsRuby = import nixpkgsRubySource { inherit pkgs; };
-  rubyVersion = nixpkgsRuby.getVersion;
+  rubyVersion = nixpkgsRuby.mkDerivationForRubyVersion;
 
   # Make your own easy-to-access attributes for the versions you use:
   ruby_2_5_1 = rubyVersion ["2" "5" "1"];
