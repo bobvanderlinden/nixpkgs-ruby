@@ -5,4 +5,6 @@ rec {
   rc1 = import ./rc1;
   rc2 = import ./rc2;
   "*" = import ./rc2;
+  derivation = import ./derivation.nix meta;
+  meta = import ./meta.nix;
 }
