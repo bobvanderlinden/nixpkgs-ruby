@@ -9,5 +9,6 @@ rec {
   "7" = import ./7;
   "8" = import ./8;
   "9" = import ./9;
-  "*" = import ./9;
+  "10" = import ./10;
+  "*" = import ./10;
 }
