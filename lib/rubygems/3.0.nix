@@ -10,7 +10,7 @@ stdenv.mkDerivation {
     (fetchurl {
       url =
         "https://github.com/bobvanderlinden/rubygems/commit/0b5bcc8075deaedf692ac0d720ee03e0ca4dabc9.patch";
-      hash = "sha256-8DZz1ycbkIC0Daz+dMJ8Olax8ZzQS0hWf7oIsiTfyvo=";
+      hash = "sha256-MsZ4NkAIPb6H0/JmYloGYtAdiZg5VHdewelZTX4KM1M=";
     })
   ];
   installPhase = ''
