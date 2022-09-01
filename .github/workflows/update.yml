@@ -16,6 +16,7 @@ jobs:
       with:
         node-version: 16.x
         cache: 'npm'
+        cache-dependency-path: updater/package-lock.json
     - run: npm ci
       working-directory: ./updater
     - run: node updater/index.js
