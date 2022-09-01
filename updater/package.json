@@ -6,7 +6,7 @@
   "dependencies": {
     "mz": "^2.7.0",
     "nijs": "0.0.25",
-    "node-fetch": "^2.1.2",
+    "node-fetch": "^3.2.10",
     "request-promise-native": "^1.0.5"
   },
   "devDependencies": {},
