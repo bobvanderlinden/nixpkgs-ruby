@@ -5,10 +5,10 @@
 }:
 stdenv.mkDerivation {
   pname = "rubygems";
-  version = "3.2.13";
+  version = "3.2.33";
   src = fetchurl {
-    url = "http://production.cf.rubygems.org/rubygems/rubygems-3.2.13.tgz";
-    hash = "sha256-a4smZvBo26yjdtp5S3Z6myw32PMLCbYSkx/5OMhHFAM";
+    url = "http://production.cf.rubygems.org/rubygems/rubygems-3.2.33.tgz";
+    hash = "sha256-bIQIzS4F3IdwwxdmH0jVnNKcrLzRji8K7V1LqoibkC0=";
   };
   patches = [
     (fetchurl {
