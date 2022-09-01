@@ -1,4 +1,8 @@
-{ stdenv, fetchurl, fetchpatch }:
+{
+  stdenv,
+  fetchurl,
+  fetchpatch,
+}:
 stdenv.mkDerivation {
   pname = "rubygems";
   version = "3.2.13";
@@ -8,9 +12,8 @@ stdenv.mkDerivation {
   };
   patches = [
     (fetchurl {
-      url =
-        "https://github.com/bobvanderlinden/rubygems/commit/0b5bcc8075deaedf692ac0d720ee03e0ca4dabc9.patch";
-      hash = "sha256-MsZ4NkAIPb6H0/JmYloGYtAdiZg5VHdewelZTX4KM1M=";
+      url = "https://github.com/bobvanderlinden/rubygems/commit/0b5bcc8075deaedf692ac0d720ee03e0ca4dabc9.patch";
+      hash = "sha256-hCHOGztZB67vB3hJ6lKdsgiUBw4SdhLQpFZbxKEOSjI=";
     })
   ];
   installPhase = ''
