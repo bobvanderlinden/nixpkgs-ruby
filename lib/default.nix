@@ -112,9 +112,6 @@
 
         enableParallelBuilding = true;
 
-        # patches =
-        #   [ "${rvm-patchsets}/patches/ruby/${version}/railsexpress/*.patch" ];
-
         postPatch = ''
           cp -rL --no-preserve=mode,ownership ${rubygemsSrc} ./rubygems
 

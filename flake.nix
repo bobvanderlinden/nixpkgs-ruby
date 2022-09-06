@@ -1,15 +1,12 @@
 {
   description = "mkRuby to build a version of Ruby";
 
-  inputs.rvm-patchsets.url = "github:skaes/rvm-patchsets";
-  inputs.rvm-patchsets.flake = false;
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.05";
   outputs =
     { self
     , nixpkgs
     , flake-utils
-    , rvm-patchsets
     }: {
       lib = {
         versions = import ./versions;
@@ -21,7 +18,7 @@
           , rubyVersion
           }:
           (self.lib.getRubyVersionEntry rubyVersion).derivation {
-            inherit pkgs rvm-patchsets;
+            inherit pkgs;
           };
       };
     }

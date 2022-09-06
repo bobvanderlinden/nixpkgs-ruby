@@ -34,24 +34,7 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
-        "rvm-patchsets": "rvm-patchsets"
-      }
-    },
-    "rvm-patchsets": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1650976969,
-        "narHash": "sha256-NpSa+uGQA1rfHNcLzPNTK65J+Wk9ZlzhHFePDA4uuo0=",
-        "owner": "skaes",
-        "repo": "rvm-patchsets",
-        "rev": "a6429bb1a7fb9b5798c22f43338739a6c192b42d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "skaes",
-        "repo": "rvm-patchsets",
-        "type": "github"
+        "nixpkgs": "nixpkgs"
       }
     }
   },

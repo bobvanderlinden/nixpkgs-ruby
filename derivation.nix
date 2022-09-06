@@ -5,7 +5,6 @@
   ...
 }: {
   pkgs,
-  rvm-patchsets,
 }: let
   mkRubyVersion = pkgs.callPackage ./lib/ruby-version.nix {};
   rubyVersion =
