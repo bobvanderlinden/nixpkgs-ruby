@@ -22,7 +22,17 @@
           };
       };
 
-      templates.default = ./template;
+      templates.default = {
+        path = ./template;
+        description = "A standard Nix-based Ruby project";
+        welcomeText = ''
+          Usage:
+
+          $ nix develop
+
+          See https://github.com/bobvanderlinden/nixpkgs-ruby for more information.
+        '';
+      };
     }
     // flake-utils.lib.eachDefaultSystem (system:
     let
