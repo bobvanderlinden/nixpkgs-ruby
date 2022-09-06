@@ -21,6 +21,8 @@
             inherit pkgs;
           };
       };
+
+      templates.default = ./template;
     }
     // flake-utils.lib.eachDefaultSystem (system:
     let
