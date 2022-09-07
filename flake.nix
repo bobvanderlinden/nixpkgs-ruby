@@ -40,7 +40,8 @@
       mkRuby = self.lib.mkRuby;
     in
     {
-      packages = {
+      packages = rec {
+        default = ruby-3_1;
         ruby-3_2 = mkRuby {
           rubyVersion = "3.2.*";
           inherit pkgs;
@@ -94,16 +95,23 @@
           inherit pkgs;
         };
       };
-      defaultPackage = mkRuby {
-        rubyVersion = "*";
-        inherit pkgs;
+
+      checks = {
+        inherit (self.packages.${system})
+          ruby-3_1
+          ruby-3_0
+          ruby-2_7
+          ruby-2_4
+          ruby-2_3;
       };
+
       devShells = {
         # The shell for editing this project.
         default = pkgs.mkShell {
-          nativeBuildInputs = with pkgs; [
-            nixpkgs-fmt
-          ];
+          nativeBuildInputs = with pkgs;
+            [
+              nixpkgs-fmt
+            ];
         };
       };
     });
