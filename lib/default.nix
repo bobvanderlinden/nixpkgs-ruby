@@ -14,7 +14,6 @@
   groff,
   libyaml,
   libffi,
-  autoreconfHook,
   bison,
   autoconf,
   darwin ? null,
@@ -68,7 +67,6 @@
       yamlSupport ? true,
       libffi,
       fiddleSupport ? true,
-      autoreconfHook,
       bison,
       autoconf,
       darwin ? null,
@@ -90,7 +88,7 @@
           else null;
 
         nativeBuildInputs =
-          [autoreconfHook bison]
+          [bison]
           ++ ops (stdenv.buildPlatform != stdenv.hostPlatform)
           [buildPackages.ruby];
         buildInputs =
