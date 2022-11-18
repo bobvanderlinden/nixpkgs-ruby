@@ -42,10 +42,10 @@
     {
       packages = rec {
         default = ruby-3_1;
-        ruby-3_2 = mkRuby {
-          rubyVersion = "3.2.*";
-          inherit pkgs;
-        };
+        # ruby-3_2 = mkRuby {
+        #   rubyVersion = "3.2.*";
+        #   inherit pkgs;
+        # };
         ruby-3_1 = mkRuby {
           rubyVersion = "3.1.*";
           inherit pkgs;
@@ -82,18 +82,18 @@
           rubyVersion = "2.1.*";
           inherit pkgs;
         };
-        ruby-2_0 = mkRuby {
-          rubyVersion = "2.0.*";
-          inherit pkgs;
-        };
-        ruby-1_9 = mkRuby {
-          rubyVersion = "1.9";
-          inherit pkgs;
-        };
-        ruby-1_8 = mkRuby {
-          rubyVersion = "1.8.*.*";
-          inherit pkgs;
-        };
+        # ruby-2_0 = mkRuby {
+        #   rubyVersion = "2.0.*";
+        #   inherit pkgs;
+        # };
+        # ruby-1_9 = mkRuby {
+        #   rubyVersion = "1.9";
+        #   inherit pkgs;
+        # };
+        # ruby-1_8 = mkRuby {
+        #   rubyVersion = "1.8.*.*";
+        #   inherit pkgs;
+        # };
       };
 
       checks = {
