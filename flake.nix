@@ -8,7 +8,7 @@
     , nixpkgs
     , flake-utils
     }: {
-      lib = {
+      lib = rec {
         versions = import ./versions;
         getRubyVersionEntry = rubyVersion:
           builtins.foldl' (parent: segment: parent.${segment}) self.lib.versions
@@ -20,6 +20,60 @@
           (self.lib.getRubyVersionEntry rubyVersion).derivation {
             inherit pkgs;
           };
+        mkPackages = pkgs: rec {
+          # ruby-3_2 = mkRuby {
+          #   rubyVersion = "3.2.*";
+          #   inherit pkgs;
+          # };
+          ruby-3_1 = mkRuby {
+            rubyVersion = "3.1.*";
+            inherit pkgs;
+          };
+          ruby-3_0 = mkRuby {
+            rubyVersion = "3.0.*";
+            inherit pkgs;
+          };
+          ruby-2_7 = mkRuby {
+            rubyVersion = "2.7.*";
+            inherit pkgs;
+          };
+          ruby-2_6 = mkRuby {
+            rubyVersion = "2.6.*";
+            inherit pkgs;
+          };
+          ruby-2_5 = mkRuby {
+            rubyVersion = "2.5.*";
+            inherit pkgs;
+          };
+          ruby-2_4 = mkRuby {
+            rubyVersion = "2.4.*";
+            inherit pkgs;
+          };
+          ruby-2_3 = mkRuby {
+            rubyVersion = "2.3.*";
+            inherit pkgs;
+          };
+          ruby-2_2 = mkRuby {
+            rubyVersion = "2.2.*";
+            inherit pkgs;
+          };
+          ruby-2_1 = mkRuby {
+            rubyVersion = "2.1.*";
+            inherit pkgs;
+          };
+          # ruby-2_0 = mkRuby {
+          #   rubyVersion = "2.0.*";
+          #   inherit pkgs;
+          # };
+          # ruby-1_9 = mkRuby {
+          #   rubyVersion = "1.9";
+          #   inherit pkgs;
+          # };
+          # ruby-1_8 = mkRuby {
+          #   rubyVersion = "1.8.*.*";
+          #   inherit pkgs;
+          # };
+        };
       };
 
       templates.default = {
@@ -33,68 +87,19 @@
           See https://github.com/bobvanderlinden/nixpkgs-ruby for more information.
         '';
       };
+
+      overlays.default = final: prev: self.lib.mkPackages final;
     }
     // flake-utils.lib.eachDefaultSystem (system:
     let
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      mkRuby = self.lib.mkRuby;
+      pkgs = import nixpkgs {
+        inherit system;
+      };
     in
     {
-      packages = rec {
-        default = ruby-3_1;
-        # ruby-3_2 = mkRuby {
-        #   rubyVersion = "3.2.*";
-        #   inherit pkgs;
-        # };
-        ruby-3_1 = mkRuby {
-          rubyVersion = "3.1.*";
-          inherit pkgs;
-        };
-        ruby-3_0 = mkRuby {
-          rubyVersion = "3.0.*";
-          inherit pkgs;
-        };
-        ruby-2_7 = mkRuby {
-          rubyVersion = "2.7.*";
-          inherit pkgs;
-        };
-        ruby-2_6 = mkRuby {
-          rubyVersion = "2.6.*";
-          inherit pkgs;
-        };
-        ruby-2_5 = mkRuby {
-          rubyVersion = "2.5.*";
-          inherit pkgs;
-        };
-        ruby-2_4 = mkRuby {
-          rubyVersion = "2.4.*";
-          inherit pkgs;
-        };
-        ruby-2_3 = mkRuby {
-          rubyVersion = "2.3.*";
-          inherit pkgs;
-        };
-        ruby-2_2 = mkRuby {
-          rubyVersion = "2.2.*";
-          inherit pkgs;
-        };
-        ruby-2_1 = mkRuby {
-          rubyVersion = "2.1.*";
-          inherit pkgs;
-        };
-        # ruby-2_0 = mkRuby {
-        #   rubyVersion = "2.0.*";
-        #   inherit pkgs;
-        # };
-        # ruby-1_9 = mkRuby {
-        #   rubyVersion = "1.9";
-        #   inherit pkgs;
-        # };
-        # ruby-1_8 = mkRuby {
-        #   rubyVersion = "1.8.*.*";
-        #   inherit pkgs;
-        # };
-      };
+      packages = {
+        default = self.packages.${system}.ruby-3_1;
+      } // self.lib.mkPackages pkgs;
 
       checks = {
         inherit (self.packages.${system})
