@@ -106,6 +106,8 @@
           ruby-3_1
           ruby-3_0
           ruby-2_7
+          ruby-2_6
+          ruby-2_5
           ruby-2_4
           ruby-2_3;
       };
