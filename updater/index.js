@@ -34,7 +34,8 @@ async function run() {
     const filename = match[2]
     const versionName = match[3]
     const versionSegments = Array.prototype.slice.call(match, 4).filter(segment => segment !== undefined)
-    const tarballUrl = `https://cache.ruby-lang.org/pub/ruby/${filename}`
+    const majorMinor = versionSegments.slice(0, 2).join('.');
+    const tarballUrl = `https://cache.ruby-lang.org/pub/ruby/${majorMinor}/${filename}`
 
     const versionPath = path.join(rootPath, path.join.apply(null, versionSegments))
     const versionJsonPath = path.join(versionPath, 'meta.nix')
