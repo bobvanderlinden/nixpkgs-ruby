@@ -2,9 +2,27 @@
 
 A Nix repository with all Ruby versions being kept up-to-date automatically.
 
-Consider this an experiment to make all versions of a tool available in a seperate Nixpkgs repo.
+Consider this an experiment to make all versions of a tool available in a separate Nixpkgs repo.
 
 ## Usage
+
+### Ad-hoc
+
+Open a shell with Ruby 2.7.x available:
+
+```sh
+$ nix shell github:bobvanderlinden/nixpkgs-ruby#ruby-2_7
+$ ruby --version
+ruby 2.7.7p221 (2022-11-24 revision 168ec2b1e5) [x86_64-linux]
+```
+
+Run Ruby 2.7.x interpreter directly:
+
+```sh
+$ nix shell github:bobvanderlinden/nixpkgs-ruby#ruby-2_7 --command irb
+irb(main):001:0> RUBY_VERSION
+=> "2.7.7"
+```
 
 ### Development shell
 
