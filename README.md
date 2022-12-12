@@ -72,13 +72,14 @@ When you want to use a specific Ruby version inside a Nix expression, you can us
 ```nix
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
     nixpkgs-ruby.url = "github:bobvanderlinden/nixpkgs-ruby";
   };
   outputs = { self, nixpkgs, nixpkgs-ruby }: let
-    pkgs = nixpkgs.legacyPackages.x86_64;
-    ruby-2_7 = nixpkgs-ruby.lib.mkRuby { inherit pkgs; rubyVersion = "2.7.1"; };
-    ruby-2_6 = nixpkgs-ruby.lib.mkRuby { inherit pkgs; rubyVersion = "2.6.0"; };
+    pkgs = import nixpkgs {
+      system = "x86_64-linux";
+    };
+    ruby-2_7_1 = nixpkgs-ruby.lib.mkRuby { inherit pkgs; rubyVersion = "2.7.1"; };
   in {
     ...
   };
