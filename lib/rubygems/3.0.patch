@@ -1,0 +1,36 @@
+From 0b5bcc8075deaedf692ac0d720ee03e0ca4dabc9 Mon Sep 17 00:00:00 2001
+From: Bob van der Linden <bobvanderlinden@gmail.com>
+Date: Thu, 4 Mar 2021 23:27:40 +0100
+Subject: [PATCH] nix patches
+
+---
+ lib/rubygems/dependency_installer.rb | 2 +-
+ lib/rubygems/path_support.rb         | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/lib/rubygems/dependency_installer.rb b/lib/rubygems/dependency_installer.rb
+index 400a5de5cff..364c0cb9461 100644
+--- a/lib/rubygems/dependency_installer.rb
++++ b/lib/rubygems/dependency_installer.rb
+@@ -16,7 +16,7 @@ class Gem::DependencyInstaller
+   extend Gem::Deprecate
+ 
+   DEFAULT_OPTIONS = { # :nodoc:
+-    :env_shebang         => false,
++    :env_shebang         => true,
+     :document            => %w[ri],
+     :domain              => :both, # HACK dup
+     :force               => false,
+diff --git a/lib/rubygems/path_support.rb b/lib/rubygems/path_support.rb
+index 8103caf3244..d076b1b0a27 100644
+--- a/lib/rubygems/path_support.rb
++++ b/lib/rubygems/path_support.rb
+@@ -23,7 +23,7 @@ class Gem::PathSupport
+   # hashtable, or defaults to ENV, the system environment.
+   #
+   def initialize(env)
+-    @home = env["GEM_HOME"] || Gem.default_dir
++    @home = env["GEM_HOME"] || Gem.user_dir
+ 
+     if File::ALT_SEPARATOR
+       @home = @home.gsub(File::ALT_SEPARATOR, File::SEPARATOR)
