@@ -1,0 +1,34 @@
+name: Check Nix builds
+
+on:
+  push:
+    branches:
+      - master
+  pull_request: {}
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cache Nix store
+        uses: actions/cache@v3
+        id: nix-cache
+        with:
+          path: /tmp/nix-cache
+          key: nix-cache
+      - name: Install Nix
+        uses: cachix/install-nix-action@v18
+      - name: Import Nix store cache
+        if: steps.nix-cache.outputs.cache-hit == 'true'
+        run: nix-store --import < /tmp/nix-cache
+
+      - uses: actions/checkout@v3
+      - run: nix flake check --print-build-logs
+
+      - name: Export Nix store cache
+        if: steps.nix-cache.outputs.cache-hit != 'true'
+        run: nix-store --export $(find /nix/store -maxdepth 1 -name '*-*') > /tmp/nix-cache
+
