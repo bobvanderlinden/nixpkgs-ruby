@@ -9,5 +9,8 @@
   "nix": {
     "enabled": true
   },
-  "automerge": true
+  "automerge": true,
+  "schedule": [
+    "every weekend"
+  ]
 }
