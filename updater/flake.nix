@@ -7,6 +7,7 @@
       systems = [ "x86_64-linux" ];
       config.projectRoot = ./.;
       source = ./.;
+      projects = ./projects.toml;
       settings = [
         {
           subsystemInfo.noDev = true;
