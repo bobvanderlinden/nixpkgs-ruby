@@ -6,5 +6,8 @@
   "npm": {
     "enabled": false
   },
+  "nix": {
+    "enabled": true
+  },
   "automerge": true
 }
