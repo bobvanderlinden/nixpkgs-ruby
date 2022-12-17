@@ -26,7 +26,7 @@ jobs:
         run: nix-store --import < /tmp/nix-cache
 
       - uses: actions/checkout@v3
-      - run: nix flake check
+      - run: nix flake check --print-build-logs
 
       - name: Export Nix store cache
         if: steps.nix-cache.outputs.cache-hit != 'true'
