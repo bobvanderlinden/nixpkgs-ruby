@@ -2,7 +2,7 @@
   description = "mkRuby to build a version of Ruby";
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.05";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
   outputs =
     { self
     , nixpkgs
