@@ -13,15 +13,17 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Cache Nix store
         uses: actions/cache@v3
         id: nix-cache
         with:
           path: /tmp/nix-cache
-          key: nix-cache
+          key: nix-cache-${{ matrix.os }}
       - name: Install Nix
         uses: cachix/install-nix-action@v18
       - name: Import Nix store cache
