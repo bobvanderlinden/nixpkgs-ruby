@@ -1,4 +1,4 @@
-name: Update Ruby versions
+name: Check Nix builds
 
 on:
   push:
