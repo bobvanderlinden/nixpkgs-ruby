@@ -46,9 +46,7 @@
           { pkgs
           , rubyVersion
           }:
-          (self.lib.getRubyVersionEntry rubyVersion).derivation {
-            inherit pkgs;
-          };
+          (mkRubyPackages pkgs)."ruby-${rubyVersion}";
       };
 
       templates.default = {
