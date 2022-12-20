@@ -81,16 +81,23 @@
     {
       packages = mkRubyPackages pkgs;
 
-      checks = {
-        inherit (self.packages.${system})
-          ruby-3_1
-          ruby-3_0
-          ruby-2_7
-          ruby-2_6
-          ruby-2_5
-          ruby-2_4
-          ruby-2_3;
-      };
+      checks =
+        let
+          versions = [
+            "ruby-3.1"
+            "ruby-3.0"
+            "ruby-2.7"
+            "ruby-2.6"
+            "ruby-2.5"
+            "ruby-2.4"
+            "ruby-2.3"
+          ];
+        in
+        nixpkgs.lib.genAttrs versions (packageName:
+          pkgs.runCommand packageName { } ''
+            ${self.packages.${system}.${packageName}}/bin/ruby -e 'puts "ok"' > $out
+          ''
+        );
 
       devShells = {
         # The shell for editing this project.
