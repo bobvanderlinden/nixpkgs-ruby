@@ -15,8 +15,8 @@ rec {
   notEqual = comparison: compareVersions version comparison != 0;
   greaterOrEqualTo = comparison: compareVersions version comparison >= 0;
   lessOrEqualTo = comparison: compareVersions version comparison <= 0;
-  inRange = from: to: greaterOrEqualTo version from && lessOrEqualTo version to;
-  hasMajor = major: greaterOrEqualTo "${major}" version && lessThan "${major + 1}" version;
-  hasMajorMinor = major: minor: greaterOrEqualTo "${major}.${minor}" version && lessThan "${major}.${minor + 1}" version;
-  hasMajorMinorPatch = major: minor: patch: greaterOrEqualTo "${major}.${minor}.${patch}" version && lessThan "${major}.${minor}.${patch + 1}" version;
+  inRange = from: to: greaterOrEqualTo from && lessOrEqualTo to;
+  hasMajor = major: greaterOrEqualTo "${major}" && lessThan "${major + 1}";
+  hasMajorMinor = major: minor: greaterOrEqualTo "${major}.${minor}" && lessThan "${major}.${minor + 1}";
+  hasMajorMinorPatch = major: minor: patch: greaterOrEqualTo "${major}.${minor}.${patch}" && lessThan "${major}.${minor}.${patch + 1}";
 }
