@@ -1,5 +1,5 @@
 { version
-, rubySrc
+, versionSource
 , rubygemsSrc
 , patches ? [ ]
 , stdenv
@@ -62,7 +62,7 @@ let
       pname = "ruby";
       inherit version patches;
 
-      src = rubySrc;
+      src = fetchurl versionSource;
 
       # Have `configure' avoid `/usr/bin/nroff' in non-chroot builds.
       NROFF =

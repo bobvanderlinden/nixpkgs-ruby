@@ -20,11 +20,10 @@
             "2.7" = pkgs.callPackage ./lib/rubygems/2.7.nix { };
             "3.0" = pkgs.callPackage ./lib/rubygems/3.0.nix { };
           };
-          packageFn = { version, source }:
+          packageFn = { version, versionSource }:
             let pkg =
               pkgs.callPackage ./lib/default.nix {
-                inherit version;
-                rubySrc = pkgs.fetchurl source;
+                inherit version versionSource;
                 rubygemsSrc =
                   let
                     rubygemsVersion = with (import ./lib/version-comparison.nix) version;
@@ -41,7 +40,7 @@
               inherit (pkgs) lib;
               inherit overrides version pkg;
             };
-          packageVersions = builtins.mapAttrs (version: source: packageFn { inherit version source; }) versions.sources;
+          packageVersions = builtins.mapAttrs (version: versionSource: packageFn { inherit version versionSource; }) versions.sources;
           packageAliases = builtins.mapAttrs (alias: version: packageVersions.${version}) versions.aliases;
           packages = nixpkgs.lib.mapAttrs' (version: package: { name = "ruby-${version}"; value = package; }) (packageAliases // packageVersions);
         in
