@@ -11,12 +11,12 @@
     let
       applyOverrides = import ./lib/apply-overrides.nix;
       versionComparison = import ./lib/version-comparison.nix;
-      mkPackageVersions = { pkgs, versions }:
+      mkPackageVersions = { pkgs, versions, overridesFile, packageFnFile }:
         let
-          overrides = pkgs.callPackage ./overrides.nix { inherit versionComparison; };
+          overrides = pkgs.callPackage overridesFile { inherit versionComparison; };
           packageFn = { version, versionSource }:
             let pkg =
-              pkgs.callPackage ./lib/default.nix {
+              pkgs.callPackage packageFnFile {
                 inherit version versionSource;
               };
             in
@@ -29,15 +29,17 @@
           packages = nixpkgs.lib.mapAttrs' (version: package: { name = version; value = package; }) (packageAliases // packageVersions);
         in
         packages;
-      mkPackages = { pname, pkgs, versions }:
+      mkPackages = { pname, pkgs, versions, overridesFile, packageFnFile }:
         let
-          packageVersions = mkPackageVersions { inherit versions pkgs; };
+          packageVersions = mkPackageVersions { inherit versions pkgs overridesFile packageFnFile; };
         in
         nixpkgs.lib.mapAttrs' (version: package: { name = "${pname}-${version}"; value = package; }) packageVersions;
       mkRubyPackages = pkgs: mkPackages {
         inherit pkgs;
         pname = "ruby";
-        versions = builtins.fromJSON (builtins.readFile ./versions.json);
+        versions = builtins.fromJSON (builtins.readFile ./ruby/versions.json);
+        overridesFile = ./ruby/overrides.nix;
+        packageFnFile = ./ruby/package-fn.nix;
       };
     in
     {
