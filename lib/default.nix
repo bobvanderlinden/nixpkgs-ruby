@@ -60,7 +60,7 @@ let
   self =
     stdenv.mkDerivation rec {
       pname = "ruby";
-      inherit version;
+      inherit version patches;
 
       src = rubySrc;
 
