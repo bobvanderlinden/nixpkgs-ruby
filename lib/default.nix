@@ -1,6 +1,6 @@
 { version
 , versionSource
-, rubygemsSrc
+, rubygems
 , patches ? [ ]
 , stdenv
 , buildPackages
@@ -94,7 +94,7 @@ let
       enableParallelBuilding = true;
 
       postPatch = ''
-        cp -rL --no-preserve=mode,ownership ${rubygemsSrc} ./rubygems
+        cp -rL --no-preserve=mode,ownership ${rubygems} ./rubygems
 
         if [ -f configure.ac ]
         then

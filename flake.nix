@@ -15,25 +15,10 @@
       mkPackages = pkgs:
         let
           overrides = pkgs.callPackage ./overrides.nix { inherit versionComparison; };
-          rubygemsSrcs = {
-            "2.6" = pkgs.callPackage ./lib/rubygems/2.6.nix { };
-            "2.7" = pkgs.callPackage ./lib/rubygems/2.7.nix { };
-            "3.0" = pkgs.callPackage ./lib/rubygems/3.0.nix { };
-          };
           packageFn = { version, versionSource }:
             let pkg =
               pkgs.callPackage ./lib/default.nix {
                 inherit version versionSource;
-                rubygemsSrc =
-                  let
-                    rubygemsVersion = with (import ./lib/version-comparison.nix) version;
-                      if lessThan "2.4"
-                      then "2.6"
-                      else if lessThan "2.5"
-                      then "2.7"
-                      else "3.0";
-                  in
-                  rubygemsSrcs.${rubygemsVersion};
               };
             in
             applyOverrides {
@@ -70,11 +55,20 @@
       };
 
       overlays.default = final: prev: mkPackages final;
+      overlays.rubygems = final: prev: {
+        "rubygems-2_6" = final.callPackage ./lib/rubygems/2.6.nix { };
+        "rubygems-2_7" = final.callPackage ./lib/rubygems/2.7.nix { };
+        "rubygems-3_0" = final.callPackage ./lib/rubygems/3.0.nix { };
+        rubygems = final."rubygems-3_0";
+      };
     }
     // flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs {
         inherit system;
+        overlays = [
+          self.overlays.rubygems
+        ];
       };
     in
     {
