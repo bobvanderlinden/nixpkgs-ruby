@@ -11,12 +11,12 @@
     let
       applyOverrides = import ./lib/apply-overrides.nix;
       versionComparison = import ./lib/version-comparison.nix;
-      mkPackageVersions = { pkgs, versions, overridesFile, packageFnFile }:
+      mkPackageVersions = { pkgs, versions, overridesFn, packageFn }:
         let
-          overrides = pkgs.callPackage overridesFile { inherit versionComparison; };
-          packageFn = { version, versionSource }:
+          overrides = pkgs.callPackage overridesFn { inherit versionComparison; };
+          versionedPackageFnWithOverrides = { version, versionSource }:
             let pkg =
-              pkgs.callPackage packageFnFile {
+              pkgs.callPackage packageFn {
                 inherit version versionSource;
               };
             in
@@ -24,22 +24,25 @@
               inherit (pkgs) lib;
               inherit overrides version pkg;
             };
-          packageVersions = builtins.mapAttrs (version: versionSource: packageFn { inherit version versionSource; }) versions.sources;
+          packageVersions = builtins.mapAttrs (version: versionSource: versionedPackageFnWithOverrides { inherit version versionSource; }) versions.sources;
           packageAliases = builtins.mapAttrs (alias: version: packageVersions.${version}) versions.aliases;
           packages = nixpkgs.lib.mapAttrs' (version: package: { name = version; value = package; }) (packageAliases // packageVersions);
         in
         packages;
-      mkPackages = { pname, pkgs, versions, overridesFile, packageFnFile }:
+      mkPackages = { pname, pkgs, versions, overridesFn, packageFn }:
         let
-          packageVersions = mkPackageVersions { inherit versions pkgs overridesFile packageFnFile; };
+          packageVersions = mkPackageVersions { inherit versions pkgs overridesFn packageFn; };
         in
         nixpkgs.lib.mapAttrs' (version: package: { name = "${pname}-${version}"; value = package; }) packageVersions;
+
+      pkgsets = {
+        ruby = import ./ruby;
+      };
+
       mkRubyPackages = pkgs: mkPackages {
         inherit pkgs;
         pname = "ruby";
-        versions = builtins.fromJSON (builtins.readFile ./ruby/versions.json);
-        overridesFile = ./ruby/overrides.nix;
-        packageFnFile = ./ruby/package-fn.nix;
+        inherit (pkgsets.ruby) versions overridesFn packageFn;
       };
     in
     {
