@@ -1,5 +1,5 @@
 # Usage:
-# with (import version.nix) version;
+# with (import version-comparison.nix) version;
 # hasMajor 3 && lessThan "3.2"
 # Examples:
 # Apply patches only to 3.x, but the patch is already available from > 3.2
