@@ -43,13 +43,11 @@
       };
     in
     {
-      lib = rec {
-        mkRuby =
-          { pkgs
-          , rubyVersion
-          }:
-          (mkRubyPackages pkgs)."ruby-${rubyVersion}";
-      };
+      lib.mkRuby =
+        { pkgs
+        , rubyVersion
+        }:
+        (mkRubyPackages pkgs)."ruby-${rubyVersion}";
 
       templates.default = {
         path = ./template;
