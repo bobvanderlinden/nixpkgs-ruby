@@ -7,12 +7,13 @@
       systems = [ "x86_64-linux" ];
       config.projectRoot = ./.;
       source = ./.;
-      projects = ./projects.toml;
-      settings = [
-        {
-          subsystemInfo.noDev = true;
-          subsystemInfo.nodejs = 14;
-        }
-      ];
+      projects.nixpkgs-ruby-updater = {
+        name = "nixpkgs-ruby-updater";
+        relPath = "";
+        subsystem = "nodejs";
+        translator = "package-lock";
+        translators = [ "package-lock" ];
+        subsystemInfo.nodejs = 18;
+      };
     };
 }

@@ -7,12 +7,12 @@
     { self
     , nixpkgs
     , flake-utils
-    }: {
+    }:
+    let
+      versions = builtins.fromJSON (builtins.readFile ./versions.json);
+    in
+    {
       lib = rec {
-        versions = import ./versions;
-        getRubyVersionEntry = rubyVersion:
-          builtins.foldl' (parent: segment: parent.${segment}) self.lib.versions
-            (builtins.splitVersion rubyVersion);
         mkRuby =
           { pkgs
           , rubyVersion
@@ -20,60 +20,6 @@
           (self.lib.getRubyVersionEntry rubyVersion).derivation {
             inherit pkgs;
           };
-        mkPackages = pkgs: rec {
-          # ruby-3_2 = mkRuby {
-          #   rubyVersion = "3.2.*";
-          #   inherit pkgs;
-          # };
-          ruby-3_1 = mkRuby {
-            rubyVersion = "3.1.*";
-            inherit pkgs;
-          };
-          ruby-3_0 = mkRuby {
-            rubyVersion = "3.0.*";
-            inherit pkgs;
-          };
-          ruby-2_7 = mkRuby {
-            rubyVersion = "2.7.*";
-            inherit pkgs;
-          };
-          ruby-2_6 = mkRuby {
-            rubyVersion = "2.6.*";
-            inherit pkgs;
-          };
-          ruby-2_5 = mkRuby {
-            rubyVersion = "2.5.*";
-            inherit pkgs;
-          };
-          ruby-2_4 = mkRuby {
-            rubyVersion = "2.4.*";
-            inherit pkgs;
-          };
-          ruby-2_3 = mkRuby {
-            rubyVersion = "2.3.*";
-            inherit pkgs;
-          };
-          ruby-2_2 = mkRuby {
-            rubyVersion = "2.2.*";
-            inherit pkgs;
-          };
-          ruby-2_1 = mkRuby {
-            rubyVersion = "2.1.*";
-            inherit pkgs;
-          };
-          # ruby-2_0 = mkRuby {
-          #   rubyVersion = "2.0.*";
-          #   inherit pkgs;
-          # };
-          # ruby-1_9 = mkRuby {
-          #   rubyVersion = "1.9";
-          #   inherit pkgs;
-          # };
-          # ruby-1_8 = mkRuby {
-          #   rubyVersion = "1.8.*.*";
-          #   inherit pkgs;
-          # };
-        };
       };
 
       templates.default = {
@@ -93,13 +39,37 @@
     // flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs {
+
         inherit system;
       };
+      rubygemsSrcs = {
+        "2.6" = pkgs.callPackage ./lib/rubygems/2.6.nix { };
+        "2.7" = pkgs.callPackage ./lib/rubygems/2.7.nix { };
+        "3.0" = pkgs.callPackage ./lib/rubygems/3.0.nix { };
+      };
+      packageFn = { version, source }:
+        pkgs.callPackage ./lib/default.nix {
+          inherit version;
+          rubySrc = pkgs.fetchurl source;
+          rubygemsSrc =
+            let
+              rubygemsVersion = with (import ./lib/version-comparison.nix) version;
+                if lessThan "2.4"
+                then "2.6"
+                else if lessThan "2.5"
+                then "2.7"
+                else "3.0";
+            in
+            rubygemsSrcs.${rubygemsVersion};
+        };
+      packageVersions = builtins.mapAttrs (version: source: packageFn { inherit version source; }) versions.sources;
+      packageAliases = builtins.mapAttrs (alias: version: packageVersions.${version}) versions.aliases;
+      packages = nixpkgs.lib.mapAttrs' (version: package: { name = "ruby-${version}"; value = package; }) (packageAliases // packageVersions);
     in
     {
       packages = {
         default = self.packages.${system}.ruby-3_1;
-      } // self.lib.mkPackages pkgs;
+      } // packages;
 
       checks = {
         inherit (self.packages.${system})
