@@ -19,4 +19,14 @@
       lessOrEqualTo "2.4";
     override = pkg: pkg.override { rubygems = rubygems-2_6; };
   }
+  {
+    condition = version: with versionComparison version;
+      inRange "2.0.0" "2.1.999";
+    override = pkg: pkg.override { libDir = "2.0.0"; };
+  }
+  {
+    condition = version: with versionComparison version;
+      lessThan "2.0.0";
+    override = pkg: pkg.override { libDir = pkg.version; };
+  }
 ]

@@ -1,5 +1,6 @@
 { version
 , versionSource
+, libDir ? "${(import ./parse-version.nix version).majMin}.0"
 , rubygems
 , patches ? [ ]
 , stdenv
@@ -38,25 +39,12 @@ let
   opString = lib.optionalString;
   config = import ./config.nix { inherit fetchFromSavannah; };
 
-  # Contains the ruby version heuristics
-  rubyVersion =
-    let
-      versionSegments = builtins.splitVersion version;
-      rubyVersion = import ./ruby-version.nix { inherit lib; }
-        (builtins.elemAt versionSegments 0)
-        (builtins.elemAt versionSegments 1)
-        (builtins.elemAt versionSegments 2)
-        (builtins.elemAt versionSegments 3);
-    in
-    rubyVersion;
-
   # Needed during postInstall
   buildRuby =
     if stdenv.hostPlatform == stdenv.buildPlatform
     then "$out/bin/ruby"
     else "${buildPackages.ruby}/bin/ruby";
 
-  tag = rubyVersion.gitTag;
   self =
     stdenv.mkDerivation rec {
       pname = "ruby";
@@ -156,10 +144,9 @@ let
       };
 
       passthru = rec {
-        version = rubyVersion;
         rubyEngine = "ruby";
-        libPath = "lib/${rubyEngine}/${rubyVersion.libDir}";
-        gemPath = "lib/${rubyEngine}/gems/${rubyVersion.libDir}";
+        libPath = "lib/${rubyEngine}/${libDir}";
+        gemPath = "lib/${rubyEngine}/gems/${libDir}";
         devEnv = import ./dev.nix {
           inherit buildEnv bundler bundix;
           ruby = self;
