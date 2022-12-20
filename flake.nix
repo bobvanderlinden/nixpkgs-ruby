@@ -9,10 +9,9 @@
     , flake-utils
     }:
     let
-      versions = builtins.fromJSON (builtins.readFile ./versions.json);
       applyOverrides = import ./lib/apply-overrides.nix;
       versionComparison = import ./lib/version-comparison.nix;
-      mkPackages = pkgs:
+      mkPackageVersions = { pkgs, versions }:
         let
           overrides = pkgs.callPackage ./overrides.nix { inherit versionComparison; };
           packageFn = { version, versionSource }:
@@ -27,9 +26,19 @@
             };
           packageVersions = builtins.mapAttrs (version: versionSource: packageFn { inherit version versionSource; }) versions.sources;
           packageAliases = builtins.mapAttrs (alias: version: packageVersions.${version}) versions.aliases;
-          packages = nixpkgs.lib.mapAttrs' (version: package: { name = "ruby-${version}"; value = package; }) (packageAliases // packageVersions);
+          packages = nixpkgs.lib.mapAttrs' (version: package: { name = version; value = package; }) (packageAliases // packageVersions);
         in
         packages;
+      mkPackages = { pname, pkgs, versions }:
+        let
+          packageVersions = mkPackageVersions { inherit versions pkgs; };
+        in
+        nixpkgs.lib.mapAttrs' (version: package: { name = "${pname}-${version}"; value = package; }) packageVersions;
+      mkRubyPackages = pkgs: mkPackages {
+        inherit pkgs;
+        pname = "ruby";
+        versions = builtins.fromJSON (builtins.readFile ./versions.json);
+      };
     in
     {
       lib = rec {
@@ -54,7 +63,7 @@
         '';
       };
 
-      overlays.default = final: prev: mkPackages final;
+      overlays.default = final: prev: mkRubyPackages final;
       overlays.rubygems = final: prev: {
         "rubygems-2_6" = final.callPackage ./lib/rubygems/2.6.nix { };
         "rubygems-2_7" = final.callPackage ./lib/rubygems/2.7.nix { };
@@ -72,7 +81,7 @@
       };
     in
     {
-      packages = mkPackages pkgs;
+      packages = mkRubyPackages pkgs;
 
       checks = {
         inherit (self.packages.${system})
