@@ -29,28 +29,30 @@
           packages = nixpkgs.lib.mapAttrs' (version: package: { name = version; value = package; }) (packageAliases // packageVersions);
         in
         packages;
-      mkPackages = { pname, pkgs, versions, overridesFn, packageFn }:
+      mkPkgSet = { pname, pkgs, versions, overridesFn, packageFn }:
         let
           packageVersions = mkPackageVersions { inherit versions pkgs overridesFn packageFn; };
         in
         nixpkgs.lib.mapAttrs' (version: package: { name = "${pname}-${version}"; value = package; }) packageVersions;
 
-      pkgsets = {
+      _pkgsets = {
         ruby = import ./ruby;
       };
 
-      mkRubyPackages = pkgs: mkPackages {
-        inherit pkgs;
-        pname = "ruby";
-        inherit (pkgsets.ruby) versions overridesFn packageFn;
-      };
+      pkgsets = builtins.mapAttrs
+        (name: pkgset: pkgs: mkPkgSet {
+          inherit pkgs;
+          pname = name;
+          inherit (pkgset) versions overridesFn packageFn;
+        })
+        _pkgsets;
     in
     {
       lib.mkRuby =
         { pkgs
         , rubyVersion
         }:
-        (mkRubyPackages pkgs)."ruby-${rubyVersion}";
+        (pkgsets.ruby pkgs)."ruby-${rubyVersion}";
 
       templates.default = {
         path = ./template;
@@ -64,25 +66,32 @@
         '';
       };
 
-      overlays.default = final: prev: mkRubyPackages final;
-      overlays.rubygems = final: prev: {
-        "rubygems-2_6" = final.callPackage ./lib/rubygems/2.6.nix { };
-        "rubygems-2_7" = final.callPackage ./lib/rubygems/2.7.nix { };
-        "rubygems-3_0" = final.callPackage ./lib/rubygems/3.0.nix { };
-        rubygems = final."rubygems-3_0";
-      };
+      overlays = {
+        default = nixpkgs.lib.composeManyExtensions [
+          self.overlays.rubygems
+          self.overlays.ruby
+        ];
+        rubygems = final: prev: {
+          "rubygems-2_6" = final.callPackage ./lib/rubygems/2.6.nix { };
+          "rubygems-2_7" = final.callPackage ./lib/rubygems/2.7.nix { };
+          "rubygems-3_0" = final.callPackage ./lib/rubygems/3.0.nix { };
+          rubygems = final."rubygems-3_0";
+        };
+      }
+       // (builtins.mapAttrs (name: pkgset: final: prev: pkgset final) pkgsets);
+
     }
     // flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs {
         inherit system;
         overlays = [
-          self.overlays.rubygems
+          self.overlays.default
         ];
       };
     in
     {
-      packages = mkRubyPackages pkgs;
+      packages = nixpkgs.lib.concatMapAttrs (name: pkgset: pkgset pkgs) pkgsets;
 
       checks =
         let
