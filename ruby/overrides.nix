@@ -21,7 +21,7 @@
   }
   {
     condition = version: with versionComparison version;
-      inRange "2.0.0" "2.1.999";
+      hasPrefix "2.1";
     override = pkg: pkg.override { libDir = "2.0.0"; };
   }
   {
