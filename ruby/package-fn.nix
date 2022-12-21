@@ -2,7 +2,6 @@
 , versionSource
 , libDir ? "${(import ./parse-version.nix version).majMin}.0"
 , rubygems
-, patches ? [ ]
 , stdenv
 , buildPackages
 , lib
@@ -48,7 +47,9 @@ let
   self =
     stdenv.mkDerivation rec {
       pname = "ruby";
-      inherit version patches;
+      inherit version;
+
+      patches = [ ];
 
       src = fetchurl versionSource;
 
