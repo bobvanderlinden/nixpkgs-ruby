@@ -16,7 +16,7 @@ rec {
   greaterOrEqualTo = comparison: compareVersions version comparison >= 0;
   lessOrEqualTo = comparison: compareVersions version comparison <= 0;
   inRange = from: to: greaterOrEqualTo from && lessOrEqualTo to;
-  hasMajor = major: greaterOrEqualTo "${major}" && lessThan "${major + 1}";
-  hasMajorMinor = major: minor: greaterOrEqualTo "${major}.${minor}" && lessThan "${major}.${minor + 1}";
-  hasMajorMinorPatch = major: minor: patch: greaterOrEqualTo "${major}.${minor}.${patch}" && lessThan "${major}.${minor}.${patch + 1}";
+  hasMajor = major: (greaterOrEqualTo "${toString major}") && (lessThan "${toString (major + 1)}");
+  hasMajorMinor = major: minor: (greaterOrEqualTo "${toString major}.${toString minor}") && (lessThan "${toString major}.${toString (minor + 1)}");
+  hasMajorMinorPatch = major: minor: patch: (greaterOrEqualTo "${toString major}.${toString minor}.${toString patch}") && (lessThan "${toString major}.${toString minor}.${toString (patch + 1)}");
 }
