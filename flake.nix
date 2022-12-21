@@ -33,7 +33,7 @@
         let
           packageVersions = mkPackageVersions { inherit versions pkgs overridesFn packageFn; };
         in
-        nixpkgs.lib.mapAttrs' (version: package: { name = "${pname}-${version}"; value = package; }) packageVersions;
+        nixpkgs.lib.mapAttrs' (version: package: { name = if version == "" then pname else "${pname}-${version}"; value = package; }) packageVersions;
 
       _pkgsets = {
         ruby = import ./ruby;
