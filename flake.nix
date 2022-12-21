@@ -37,6 +37,7 @@
 
       _pkgsets = {
         ruby = import ./ruby;
+        rubygems = import ./rubygems;
       };
 
       pkgsets = builtins.mapAttrs
@@ -71,12 +72,6 @@
           self.overlays.rubygems
           self.overlays.ruby
         ];
-        rubygems = final: prev: {
-          "rubygems-2_6" = final.callPackage ./lib/rubygems/2.6.nix { };
-          "rubygems-2_7" = final.callPackage ./lib/rubygems/2.7.nix { };
-          "rubygems-3_0" = final.callPackage ./lib/rubygems/3.0.nix { };
-          rubygems = final."rubygems-3_0";
-        };
       }
        // (builtins.mapAttrs (name: pkgset: final: prev: pkgset final) pkgsets);
 
