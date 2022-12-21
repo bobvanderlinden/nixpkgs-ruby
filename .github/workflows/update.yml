@@ -15,8 +15,7 @@ jobs:
     - name: Install Nix
       uses: cachix/install-nix-action@v18
     - run: nix run ./updater#nixpkgs-ruby-updater
-      env:
-        ROOT_PATH: versions
+      working-directory: ruby
     - uses: stefanzweifel/git-auto-commit-action@v4.16.0
       with:
         commit_message: Update Ruby versions
