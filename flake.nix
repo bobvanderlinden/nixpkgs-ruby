@@ -3,6 +3,12 @@
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+
+  nixConfig = {
+    substituters = "https://nixpkgs-ruby.cachix.org";
+    trusted-public-keys = "nixpkgs-ruby.cachix.org-1:vrcdi50fTolOxWCZZkw0jakOnUI1T19oYJ+PRYdK4SM=";
+  };
+
   outputs =
     { self
     , nixpkgs
