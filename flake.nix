@@ -67,13 +67,14 @@
         '';
       };
 
-      overlays = {
-        default = nixpkgs.lib.composeManyExtensions [
-          self.overlays.rubygems
-          self.overlays.ruby
-        ];
-      }
-       // (builtins.mapAttrs (name: pkgset: final: prev: pkgset final) pkgsets);
+      overlays =
+        let
+          pkgsetOverlays = builtins.mapAttrs (name: pkgset: final: prev: pkgset final) pkgsets;
+        in
+        {
+          default = nixpkgs.lib.composeManyExtensions (builtins.attrValues pkgsetOverlays);
+        }
+        // pkgsetOverlays;
 
     }
     // flake-utils.lib.eachDefaultSystem (system:
