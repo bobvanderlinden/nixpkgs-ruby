@@ -91,21 +91,12 @@
 
       checks =
         let
-          versions = [
-            "ruby-3.1"
-            "ruby-3.0"
-            "ruby-2.7"
-            "ruby-2.6"
-            "ruby-2.5"
-            "ruby-2.4"
-            "ruby-2.3"
-          ];
+          mkRubyTest = packageName: package:
+            pkgs.runCommand packageName { } ''
+              ${package}/bin/ruby -e 'puts "ok"' > $out
+            '';
         in
-        nixpkgs.lib.genAttrs versions (packageName:
-          pkgs.runCommand packageName { } ''
-            ${self.packages.${system}.${packageName}}/bin/ruby -e 'puts "ok"' > $out
-          ''
-        );
+        builtins.mapAttrs mkRubyTest self.packages.${system};
 
       devShells = {
         # The shell for editing this project.
