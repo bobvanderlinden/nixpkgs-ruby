@@ -115,5 +115,26 @@
             ];
         };
       };
+
+      apps.update = {
+        type = "app";
+        program =
+          let
+            inherit (builtins) map attrNames getFlake concatStringsSep filter;
+            inherit (nixpkgs.lib) mapAttrsToList filterAttrs;
+            pkgsetsToUpdate = filterAttrs (name: pkgset: pkgset ? updater) _pkgsets;
+            updateCommand = name: pkgset:
+              ''
+                echo "Updating ${name}..."
+                (cd ${name} && ${pkgs.callPackage pkgset.updater { }}/bin/update)
+              '';
+            updateCommands = mapAttrsToList updateCommand pkgsetsToUpdate;
+            script = pkgs.writeScript "update" ''
+              set -o errexit
+              ${concatStringsSep "\n" updateCommands}
+            '';
+          in
+          "${script}";
+      };
     });
 }
