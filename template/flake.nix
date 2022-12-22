@@ -11,7 +11,7 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         rubyVersion = nixpkgs.lib.fileContents ./.ruby-version;
-        ruby = nixpkgs-ruby.lib.mkRuby { inherit pkgs rubyVersion; };
+        ruby = nixpkgs-ruby.packages.${system}.ruby-${rubyVersion};
 
         gems = pkgs.bundlerEnv {
           name = "gemset";
