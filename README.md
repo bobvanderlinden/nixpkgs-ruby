@@ -11,7 +11,7 @@ Consider this an experiment to make all versions of a tool available in a separa
 Open a shell with Ruby 2.7.x available:
 
 ```sh
-$ nix shell github:bobvanderlinden/nixpkgs-ruby#ruby-2_7
+$ nix shell github:bobvanderlinden/nixpkgs-ruby#'"ruby-2.7"'
 $ ruby --version
 ruby 2.7.7p221 (2022-11-24 revision 168ec2b1e5) [x86_64-linux]
 ```
@@ -19,7 +19,7 @@ ruby 2.7.7p221 (2022-11-24 revision 168ec2b1e5) [x86_64-linux]
 Run Ruby 2.7.x interpreter directly:
 
 ```sh
-$ nix shell github:bobvanderlinden/nixpkgs-ruby#ruby-2_7 --command irb
+$ nix shell github:bobvanderlinden/nixpkgs-ruby#'"ruby-2.7"' --command irb
 irb(main):001:0> RUBY_VERSION
 => "2.7.7"
 ```
@@ -67,7 +67,24 @@ After that every time you enter your project directory, the correct Ruby version
 
 ### Package
 
-When you want to use a specific Ruby version inside a Nix expression, you can use `mkRuby` to generate a Ruby package:
+When you want to use a specific Ruby version inside a Nix expression, you can use `ruby-${version}`.
+
+```nix
+{
+  inputs = {
+    nixpkgs-ruby.url = "github:bobvanderlinden/nixpkgs-ruby";
+  };
+  outputs = { self, nixpkgs-ruby }: {
+    ...
+    # You can now refer to packages like:
+    #   nixpkgs-ruby.packages.x86_64-linux.ruby-3
+    #   nixpkgs-ruby.packages.x86_64-linux.ruby-2.7
+    #   nixpkgs-ruby.packages.x86_64-linux.ruby-3.0.1
+  };
+}
+```
+
+It is also possible to use overlays so that the packages are available in `pkgs` alongside other packages from nixpkgs:
 
 ```nix
 {
@@ -78,10 +95,17 @@ When you want to use a specific Ruby version inside a Nix expression, you can us
   outputs = { self, nixpkgs, nixpkgs-ruby }: let
     pkgs = import nixpkgs {
       system = "x86_64-linux";
+      overlays = [
+        nixpkgs-ruby.overlays.default
+      ];
     };
-    ruby-2_7_1 = nixpkgs-ruby.lib.mkRuby { inherit pkgs; rubyVersion = "2.7.1"; };
   in {
-    ...
+    # You can now refer to packages like:
+    #   pkgs.ruby-3
+    #   pkgs.ruby-2.7
+    #   pkgs.ruby-3.0.1
   };
 }
 ```
+
+Note that when using overlays, the Ruby packages are built against the nixpkgs that you have specified. This _can_ result in different outputs.
