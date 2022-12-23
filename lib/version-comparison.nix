@@ -30,4 +30,6 @@ rec {
       versionSegments = builtins.splitVersion version;
     in
       hasPrefixList prefixSegments versionSegments;
+  composeAny = fn: patterns: builtins.any (pattern: fn pattern) patterns;
+  isStable = builtins.match builtins.match "[[:digit:]]+(\\.[[:digit:]]+)*" version;
 }

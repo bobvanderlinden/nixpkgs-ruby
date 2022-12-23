@@ -6,6 +6,25 @@
 [
   {
     condition = version: with versionComparison version;
+      composeAny hasPrefix [
+        "1"
+        "2.0"
+        "2.1.0-preview1"
+        "2.1.0-preview2"
+        "2.1.0-rc1"
+        "2.2.0"
+        "2.2.10"
+        "2.3.0"
+        "2.3.2"
+        "2.3.3"
+        "2.4.0-preview1"
+        "2.4.8"
+        "2.5.2"
+      ];
+    override = pkg: pkg.overrideAttrs (finalAttrs: previousAttrs: { meta = previousAttrs.meta // { broken = true; }; });
+  }
+  {
+    condition = version: with versionComparison version;
       lessThan "3";
     override = pkg: pkg.override { openssl = openssl_1_1; };
   }

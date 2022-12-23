@@ -42,8 +42,8 @@
         nixpkgs.lib.mapAttrs' (version: package: { name = if version == "" then pname else "${pname}-${version}"; value = package; }) packageVersions;
 
       _pkgsets = {
-        ruby = import ./ruby;
         rubygems = import ./rubygems;
+        ruby = import ./ruby;
       };
 
       pkgsets = builtins.mapAttrs
@@ -101,8 +101,12 @@
             pkgs.runCommand packageName { } ''
               ${package}/bin/ruby -e 'puts "ok"' > $out
             '';
+          unbrokenPackages = nixpkgs.lib.filterAttrs (name: package: !package.meta.broken) self.packages.${system};
+          rubyPackages = nixpkgs.lib.filterAttrs
+            (name: package: (builtins.match "ruby-[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+" name) != null)
+            unbrokenPackages;
         in
-        builtins.mapAttrs mkRubyTest self.packages.${system};
+        builtins.mapAttrs mkRubyTest rubyPackages;
 
       devShells = {
         # The shell for editing this project.
