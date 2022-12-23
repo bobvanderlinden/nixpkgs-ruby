@@ -22,7 +22,7 @@
       patches = prev.patches ++ [
         (fetchpatch {
           url = "https://github.com/bobvanderlinden/rubygems/commit/0b5bcc8075deaedf692ac0d720ee03e0ca4dabc9.patch";
-          hash = "sha256-hCHOGztZB67vB3hJ6lKdsgiUBw4SdhLQpFZbxKEOSjI=";
+          hash = "sha256-8DZz1ycbkIC0Daz+dMJ8Olax8ZzQS0hWf7oIsiTfyvo=";
         })
       ];
     });
