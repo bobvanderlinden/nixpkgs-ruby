@@ -20,6 +20,7 @@
         "2.4.0-preview1"
         "2.4.8"
         "2.5.2"
+        "2.5.8"
       ];
     override = pkg: pkg.overrideAttrs (finalAttrs: previousAttrs: { meta = previousAttrs.meta // { broken = true; }; });
   }
