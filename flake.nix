@@ -98,7 +98,7 @@
       checks =
         let
           mkRubyTest = packageName: package:
-            pkgs.runCommand packageName { } ''
+            pkgs.runCommand "check-${packageName}" { } ''
               ${package}/bin/ruby -e 'puts "ok"' > $out
             '';
           unbrokenPackages = nixpkgs.lib.filterAttrs (name: package: !package.meta.broken) self.packages.${system};
