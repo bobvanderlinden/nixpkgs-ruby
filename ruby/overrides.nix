@@ -36,7 +36,7 @@
   }
   {
     condition = version: with versionComparison version;
-      lessOrEqualTo "2.4";
+      lessThan "2.4";
     override = pkg: pkg.override { rubygems = rubygems-2_6; };
   }
   {
