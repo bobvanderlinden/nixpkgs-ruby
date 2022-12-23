@@ -31,7 +31,7 @@
 , docSupport ? false
 , yamlSupport ? true
 , fiddleSupport ? true
-} @ args:
+}:
 let
   op = lib.optional;
   ops = lib.optionals;
