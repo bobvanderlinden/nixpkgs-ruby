@@ -1,7 +1,6 @@
 { version
 , versionSource
 , libDir ? "${(import ./parse-version.nix version).majMin}.0"
-, rubygems
 , stdenv
 , buildPackages
 , lib
@@ -83,8 +82,6 @@ let
       enableParallelBuilding = true;
 
       postPatch = ''
-        cp -rL --no-preserve=mode,ownership ${rubygems} ./rubygems
-
         if [ -f configure.ac ]
         then
           sed -i configure.ac -e '/config.guess/d'
@@ -117,11 +114,6 @@ let
       installFlags = lib.optionalString docSupport "install-doc";
       # Bundler tries to create this directory
       postInstall = ''
-        # Update rubygems
-        pushd rubygems
-        ${buildRuby} setup.rb
-        popd
-
         # Remove unnecessary groff reference from runtime closure, since it's big
         sed -i '/NROFF/d' $out/lib/ruby/*/*/rbconfig.rb
 
