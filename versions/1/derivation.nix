@@ -1,1 +1,0 @@
-meta: _pkgs: ((import ../derivation.nix meta) _pkgs).override { openssl = _pkgs.pkgs.openssl_1_1; }

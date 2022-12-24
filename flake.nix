@@ -3,78 +3,63 @@
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+
+  nixConfig = {
+    extra-substituters = "https://nixpkgs-ruby.cachix.org";
+    extra-trusted-public-keys = "nixpkgs-ruby.cachix.org-1:vrcdi50fTolOxWCZZkw0jakOnUI1T19oYJ+PRYdK4SM=";
+  };
+
   outputs =
     { self
     , nixpkgs
     , flake-utils
-    }: {
-      lib = rec {
-        versions = import ./versions;
-        getRubyVersionEntry = rubyVersion:
-          builtins.foldl' (parent: segment: parent.${segment}) self.lib.versions
-            (builtins.splitVersion rubyVersion);
-        mkRuby =
-          { pkgs
-          , rubyVersion
-          }:
-          (self.lib.getRubyVersionEntry rubyVersion).derivation {
-            inherit pkgs;
-          };
-        mkPackages = pkgs: rec {
-          # ruby-3_2 = mkRuby {
-          #   rubyVersion = "3.2.*";
-          #   inherit pkgs;
-          # };
-          ruby-3_1 = mkRuby {
-            rubyVersion = "3.1.*";
-            inherit pkgs;
-          };
-          ruby-3_0 = mkRuby {
-            rubyVersion = "3.0.*";
-            inherit pkgs;
-          };
-          ruby-2_7 = mkRuby {
-            rubyVersion = "2.7.*";
-            inherit pkgs;
-          };
-          ruby-2_6 = mkRuby {
-            rubyVersion = "2.6.*";
-            inherit pkgs;
-          };
-          ruby-2_5 = mkRuby {
-            rubyVersion = "2.5.*";
-            inherit pkgs;
-          };
-          ruby-2_4 = mkRuby {
-            rubyVersion = "2.4.*";
-            inherit pkgs;
-          };
-          ruby-2_3 = mkRuby {
-            rubyVersion = "2.3.*";
-            inherit pkgs;
-          };
-          ruby-2_2 = mkRuby {
-            rubyVersion = "2.2.*";
-            inherit pkgs;
-          };
-          ruby-2_1 = mkRuby {
-            rubyVersion = "2.1.*";
-            inherit pkgs;
-          };
-          # ruby-2_0 = mkRuby {
-          #   rubyVersion = "2.0.*";
-          #   inherit pkgs;
-          # };
-          # ruby-1_9 = mkRuby {
-          #   rubyVersion = "1.9";
-          #   inherit pkgs;
-          # };
-          # ruby-1_8 = mkRuby {
-          #   rubyVersion = "1.8.*.*";
-          #   inherit pkgs;
-          # };
-        };
+    }:
+    let
+      applyOverrides = import ./lib/apply-overrides.nix;
+      versionComparison = import ./lib/version-comparison.nix;
+      mkPackageVersions = { pkgs, versions, overridesFn, packageFn }:
+        let
+          overrides = pkgs.callPackage overridesFn { inherit versionComparison; };
+          versionedPackageFnWithOverrides = { version, versionSource }:
+            let pkg =
+              pkgs.callPackage packageFn {
+                inherit version versionSource;
+              };
+            in
+            applyOverrides {
+              inherit (pkgs) lib;
+              inherit overrides version pkg;
+            };
+          packageVersions = builtins.mapAttrs (version: versionSource: versionedPackageFnWithOverrides { inherit version versionSource; }) versions.sources;
+          packageAliases = builtins.mapAttrs (alias: version: packageVersions.${version}) versions.aliases;
+          packages = nixpkgs.lib.mapAttrs' (version: package: { name = version; value = package; }) (packageAliases // packageVersions);
+        in
+        packages;
+      mkPkgSet = { pname, pkgs, versions, overridesFn, packageFn }:
+        let
+          packageVersions = mkPackageVersions { inherit versions pkgs overridesFn packageFn; };
+        in
+        nixpkgs.lib.mapAttrs' (version: package: { name = if version == "" then pname else "${pname}-${version}"; value = package; }) packageVersions;
+
+      _pkgsets = {
+        rubygems = import ./rubygems;
+        ruby = import ./ruby;
       };
+
+      pkgsets = builtins.mapAttrs
+        (name: pkgset: pkgs: mkPkgSet {
+          inherit pkgs;
+          pname = name;
+          inherit (pkgset) versions overridesFn packageFn;
+        })
+        _pkgsets;
+    in
+    {
+      lib.mkRuby =
+        { pkgs
+        , rubyVersion
+        }:
+        (pkgsets.ruby pkgs)."ruby-${rubyVersion}";
 
       templates.default = {
         path = ./template;
@@ -88,29 +73,40 @@
         '';
       };
 
-      overlays.default = final: prev: self.lib.mkPackages final;
+      overlays =
+        let
+          pkgsetOverlays = builtins.mapAttrs (name: pkgset: final: prev: pkgset final) pkgsets;
+        in
+        {
+          default = nixpkgs.lib.composeManyExtensions (builtins.attrValues pkgsetOverlays);
+        }
+        // pkgsetOverlays;
+
     }
     // flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs {
         inherit system;
+        overlays = [
+          self.overlays.default
+        ];
       };
     in
     {
-      packages = {
-        default = self.packages.${system}.ruby-3_1;
-      } // self.lib.mkPackages pkgs;
+      packages = nixpkgs.lib.concatMapAttrs (name: pkgset: pkgset pkgs) pkgsets;
 
-      checks = {
-        inherit (self.packages.${system})
-          ruby-3_1
-          ruby-3_0
-          ruby-2_7
-          ruby-2_6
-          ruby-2_5
-          ruby-2_4
-          ruby-2_3;
-      };
+      checks =
+        let
+          mkRubyTest = packageName: package:
+            pkgs.runCommand "check-${packageName}" { } ''
+              ${package}/bin/ruby -e 'puts "ok"' > $out
+            '';
+          unbrokenPackages = nixpkgs.lib.filterAttrs (name: package: !package.meta.broken) self.packages.${system};
+          rubyPackages = nixpkgs.lib.filterAttrs
+            (name: package: (builtins.match "ruby-[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+" name) != null)
+            unbrokenPackages;
+        in
+        builtins.mapAttrs mkRubyTest rubyPackages;
 
       devShells = {
         # The shell for editing this project.
@@ -120,6 +116,27 @@
               nixpkgs-fmt
             ];
         };
+      };
+
+      apps.update = {
+        type = "app";
+        program =
+          let
+            inherit (builtins) map attrNames getFlake concatStringsSep filter;
+            inherit (nixpkgs.lib) mapAttrsToList filterAttrs;
+            pkgsetsToUpdate = filterAttrs (name: pkgset: pkgset ? updater) _pkgsets;
+            updateCommand = name: pkgset:
+              ''
+                echo "Updating ${name}..."
+                (cd ${name} && ${pkgs.callPackage pkgset.updater { }}/bin/update)
+              '';
+            updateCommands = mapAttrsToList updateCommand pkgsetsToUpdate;
+            script = pkgs.writeScript "update" ''
+              set -o errexit
+              ${concatStringsSep "\n" updateCommands}
+            '';
+          in
+          "${script}";
       };
     });
 }

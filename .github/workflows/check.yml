@@ -14,26 +14,18 @@ concurrency:
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Cache Nix store
-        uses: actions/cache@v3
-        id: nix-cache
-        with:
-          path: /tmp/nix-cache
-          key: nix-cache-${{ matrix.os }}
       - name: Install Nix
         uses: cachix/install-nix-action@v18
-      - name: Import Nix store cache
-        if: steps.nix-cache.outputs.cache-hit == 'true'
-        run: nix-store --import < /tmp/nix-cache
-
+      - uses: cachix/cachix-action@v11
+        with:
+          name: nixpkgs-ruby
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - uses: actions/checkout@v3
-      - run: nix flake check --print-build-logs
-
-      - name: Export Nix store cache
-        if: steps.nix-cache.outputs.cache-hit != 'true'
-        run: nix-store --export $(find /nix/store -maxdepth 1 -name '*-*') > /tmp/nix-cache
+      - name: nix flake check
+        run: NIXPKGS_ALLOW_BROKEN=1 nix flake check --print-build-logs --keep-going --impure
 
