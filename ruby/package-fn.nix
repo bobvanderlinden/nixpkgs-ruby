@@ -86,7 +86,6 @@ let
         ${opString (rubygems != null) ''
           cp -rL --no-preserve=mode,ownership ${rubygems} ./rubygems
         ''}
-
         if [ -f configure.ac ]
         then
           sed -i configure.ac -e '/config.guess/d'
@@ -125,7 +124,6 @@ let
           ${buildRuby} setup.rb
           popd
         ''}
-
         # Remove unnecessary groff reference from runtime closure, since it's big
         sed -i '/NROFF/d' $out/lib/ruby/*/*/rbconfig.rb
 
