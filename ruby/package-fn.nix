@@ -132,7 +132,7 @@ let
         description = "The Ruby language";
         homepage = "http://www.ruby-lang.org/en/";
         license = licenses.ruby;
-        maintainers = with maintainers; [ vrthra manveru ];
+        maintainers = with maintainers; [ bobvanderlinden ];
         platforms = platforms.all;
       };
 
