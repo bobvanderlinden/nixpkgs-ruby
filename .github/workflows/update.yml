@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "30 5 * * *"
   workflow_dispatch: {}
+permissions:
+  pull-requests: write
+  contents: write
 jobs:
   build:
 
@@ -17,8 +20,17 @@ jobs:
     - run: nix run .#update
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-    - uses: stefanzweifel/git-auto-commit-action@v4.16.0
+    - name: Create Pull Request
+      id: create-pull-request
+      uses: peter-evans/create-pull-request@v3
       with:
-        commit_message: Update Ruby versions
-        branch: master
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: Update Ruby versions
+        title: Update Ruby versions
+        delete-branch: true
+        branch: update-ruby-versions
+    - uses: peter-evans/enable-pull-request-automerge@v2
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        pull-request-number: ${{ steps.create-pull-request.outputs.pull-request-number }}
 
