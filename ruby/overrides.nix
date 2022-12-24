@@ -49,4 +49,9 @@
       lessThan "2.0.0";
     override = pkg: pkg.override { libDir = pkg.version; };
   }
+  {
+    condition = version: with versionComparison version;
+      greaterOrEqualTo "3.1.3";
+    override = pkg: pkg.override { rubygems = null; };
+  }
 ]
