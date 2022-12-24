@@ -83,7 +83,9 @@ let
       enableParallelBuilding = true;
 
       postPatch = ''
-        cp -rL --no-preserve=mode,ownership ${rubygems} ./rubygems
+        ${opString (rubygems != null) ''
+          cp -rL --no-preserve=mode,ownership ${rubygems} ./rubygems
+        ''}
 
         if [ -f configure.ac ]
         then
@@ -117,10 +119,12 @@ let
       installFlags = lib.optionalString docSupport "install-doc";
 
       postInstall = ''
-        # Update rubygems
-        pushd rubygems
-        ${buildRuby} setup.rb
-        popd
+        ${opString (rubygems != null) ''
+          # Update rubygems
+          pushd rubygems
+          ${buildRuby} setup.rb
+          popd
+        ''}
 
         # Remove unnecessary groff reference from runtime closure, since it's big
         sed -i '/NROFF/d' $out/lib/ruby/*/*/rbconfig.rb
