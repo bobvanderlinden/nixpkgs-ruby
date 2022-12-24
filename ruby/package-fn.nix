@@ -129,8 +129,8 @@ let
       '';
 
       meta = with lib; {
-        description = "The Ruby language";
-        homepage = "http://www.ruby-lang.org/en/";
+        description = "An object-oriented language for quick and easy programming";
+        homepage = "http://www.ruby-lang.org/";
         license = licenses.ruby;
         maintainers = with maintainers; [ bobvanderlinden ];
         platforms = platforms.all;
