@@ -112,7 +112,7 @@ let
       '';
 
       installFlags = lib.optionalString docSupport "install-doc";
-      # Bundler tries to create this directory
+
       postInstall = ''
         # Remove unnecessary groff reference from runtime closure, since it's big
         sed -i '/NROFF/d' $out/lib/ruby/*/*/rbconfig.rb
