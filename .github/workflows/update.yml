@@ -27,6 +27,16 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: Update Ruby versions
         title: Update Ruby versions
+        body: |
+          Automatically created pull-request to update Ruby and Rubygems versions.
+          
+          This is the result of running:
+
+          ```
+          nix run .#update
+          ```
+
+          See the workflow here: https://github.com/bobvanderlinden/nixpkgs-ruby/blob/master/.github/workflows/update.yml
         delete-branch: true
         branch: update-ruby-versions
     - uses: peter-evans/enable-pull-request-automerge@v2
