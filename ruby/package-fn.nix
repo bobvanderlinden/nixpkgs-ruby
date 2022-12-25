@@ -31,6 +31,8 @@
 , docSupport ? false
 , yamlSupport ? true
 , fiddleSupport ? true
+, yjitSupport ? true
+, rustc
 }:
 let
   op = lib.optional;
@@ -71,6 +73,7 @@ let
         ++ (op opensslSupport openssl)
         ++ (op gdbmSupport gdbm)
         ++ (op yamlSupport libyaml)
+        ++ (op yjitSupport rustc)
         # Looks like ruby fails to build on darwin without readline even if curses
         # support is not enabled, so add readline to the build inputs if curses
         # support is disabled (if it's enabled, we already have it) and we're

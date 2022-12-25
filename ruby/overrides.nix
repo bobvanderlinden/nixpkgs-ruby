@@ -55,4 +55,9 @@
       lessThan "2.0.0";
     override = pkg: pkg.override { libDir = pkg.version; };
   }
+  {
+    condition = version: with versionComparison version;
+      lessThan "3.2";
+    override = pkg: pkg.override { yjitSupport = false; };
+  }
 ]
