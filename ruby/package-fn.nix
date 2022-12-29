@@ -1,6 +1,6 @@
 { version
 , versionSource
-, libDir ? "${(import ./parse-version.nix version).majMin}.0"
+, libDir ? (import ./parse-version.nix version).libDir
 , rubygems
 , stdenv
 , buildPackages
@@ -39,6 +39,7 @@ let
   ops = lib.optionals;
   opString = lib.optionalString;
   config = import ./config.nix { inherit fetchFromSavannah; };
+  versionString = version;
 
   # Needed during postInstall
   buildRuby =
@@ -49,7 +50,7 @@ let
   self =
     stdenv.mkDerivation rec {
       pname = "ruby";
-      inherit version;
+      version = import ./parse-version.nix versionString;
 
       patches = [ ];
 
