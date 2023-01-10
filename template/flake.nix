@@ -10,8 +10,9 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        rubyVersion = nixpkgs.lib.fileContents ./.ruby-version;
-        ruby = nixpkgs-ruby.packages.${system}.ruby-${rubyVersion};
+        rubyVersion = nixpkgs.lib.strings.removePrefix "ruby-"
+          (nixpkgs.lib.fileContents ./.ruby-version);
+        ruby = nixpkgs-ruby.packages.${system}."ruby-${rubyVersion}";       
 
         gems = pkgs.bundlerEnv {
           name = "gemset";
