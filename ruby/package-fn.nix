@@ -89,6 +89,10 @@ let
         ${opString (rubygems != null) ''
           cp -rL --no-preserve=mode,ownership ${rubygems} ./rubygems
         ''}
+
+        sed -i 's/\(:env_shebang *=> *\)false/\1true/' lib/rubygems/dependency_installer.rb
+        sed -i 's/\(@home *=.* || \)Gem.default_dir/\1Gem.user_dir/' lib/rubygems/path_support.rb
+
         if [ -f configure.ac ]
         then
           sed -i configure.ac -e '/config.guess/d'
