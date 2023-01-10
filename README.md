@@ -29,7 +29,7 @@ irb(main):001:0> RUBY_VERSION
 When you are in a Ruby project that uses `.ruby-version` and Bundle, you can use the following:
 
 ```sh
-nix flake init -t github:bobvanderlinden/nixpkgs-ruby#
+nix flake init --template github:bobvanderlinden/nixpkgs-ruby#
 ```
 
 This creates `flake.nix` that includes a development shell with a Ruby version that it reads from `.ruby-version`.
@@ -59,7 +59,7 @@ To use this for nixpkgs-ruby, you'll need [nix-direnv](https://github.com/nix-co
 Once installed, you can do:
 
 ```sh
-nix flake init -t github:bobvanderlinden/nixpkgs-ruby#
+nix flake init --template github:bobvanderlinden/nixpkgs-ruby#
 direnv allow
 ```
 
