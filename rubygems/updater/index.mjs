@@ -194,7 +194,6 @@ async function run() {
     .mapValues(versions => versions[0]);
 
   const aliases = {
-    "": stableVersions[0],
     ...majorVersions,
     ...minorVersions,
     ...minorVersions.mapKeys(key => key.replace(/\./g, '_'))

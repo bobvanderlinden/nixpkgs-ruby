@@ -1,7 +1,7 @@
 { version
 , versionSource
 , libDir ? "${(import ./parse-version.nix version).majMin}.0"
-, rubygems
+, rubygems ? null
 , stdenv
 , buildPackages
 , lib
