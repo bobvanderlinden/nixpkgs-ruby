@@ -150,6 +150,7 @@ let
       };
 
       passthru = {
+        version = import ./parse-version.nix version;
         rubyEngine = "ruby";
         libPath = "lib/${self.passthru.rubyEngine}/${libDir}";
         gemPath = "lib/${self.passthru.rubyEngine}/gems/${libDir}";
