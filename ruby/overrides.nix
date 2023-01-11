@@ -52,13 +52,6 @@
   }
   {
     condition = version: with versionComparison version;
-      lessThan "1.9.1";
-    override = pkg: pkg.override {
-      libDir = throw "version ${pkg.version} is not supported";
-    };
-  }
-  {
-    condition = version: with versionComparison version;
       lessThan "3.2";
     override = pkg: pkg.override { yjitSupport = false; };
   }
