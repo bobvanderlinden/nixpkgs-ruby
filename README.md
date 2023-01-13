@@ -77,12 +77,14 @@ When you want to use a specific Ruby version inside a Nix expression, you can us
   outputs = { self, nixpkgs-ruby }: {
     ...
     # You can now refer to packages like:
-    #   nixpkgs-ruby.packages.x86_64-linux.ruby-3
-    #   nixpkgs-ruby.packages.x86_64-linux.ruby-2.7
-    #   nixpkgs-ruby.packages.x86_64-linux.ruby-3.0.1
+    #   nixpkgs-ruby.packages.x86_64-linux."ruby-3"
+    #   nixpkgs-ruby.packages.x86_64-linux."ruby-2.7"
+    #   nixpkgs-ruby.packages.x86_64-linux."ruby-3.0.1"
   };
 }
 ```
+
+### Overlays
 
 It is also possible to use overlays so that the packages are available in `pkgs` alongside other packages from nixpkgs:
 
@@ -101,11 +103,33 @@ It is also possible to use overlays so that the packages are available in `pkgs`
     };
   in {
     # You can now refer to packages like:
-    #   pkgs.ruby-3
-    #   pkgs.ruby-2.7
-    #   pkgs.ruby-3.0.1
+    #   pkgs."ruby-3"
+    #   pkgs."ruby-2.7"
+    #   pkgs."ruby-3.0.1"
   };
 }
 ```
 
-Note that when using overlays, the Ruby packages are built against the nixpkgs that you have specified. This _can_ result in different outputs.
+Note that when using overlays, the Ruby packages are built against the nixpkgs that you have specified. `nixpkgs-ruby` only tests against a single version of nixpkgs, so when building against a different `nixpkgs` it'll result in a different package hash compared to what `nixpkgs-ruby` builds and tests against.
+
+### Devenv.sh
+
+You can also use `nixpkgs-ruby` in [devenv.sh](https://devenv.sh). First add `nixpkgs-ruby` to `devenv.yaml`:
+
+```yaml
+inputs:
+  nixpkgs:
+    url: github:NixOS/nixpkgs/nixpkgs-unstable
+  nixpkgs-ruby:
+    url: github:bobvanderlinden/nixpkgs-ruby
+```
+
+Next, use a specific Ruby package in `devenv.nix`:
+
+```nix
+{ pkgs, nixpkgs-ruby, ... }:
+{
+  languages.ruby.enable = true;
+  languages.ruby.package = nixpkgs-ruby.packages.${pkgs.system}."ruby-2.7";
+}
+```
