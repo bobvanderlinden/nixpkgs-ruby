@@ -1,8 +1,5 @@
 { versionComparison
 , openssl_1_1
-, rubygems-2_7
-, rubygems-2_6
-, rubygems-3_3
 }:
 [
   {
