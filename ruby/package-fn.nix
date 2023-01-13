@@ -47,7 +47,7 @@ let
     else "${buildPackages.ruby}/bin/ruby";
 
   self =
-    stdenv.mkDerivation rec {
+    stdenv.mkDerivation {
       pname = "ruby";
       inherit version;
 
@@ -118,8 +118,8 @@ let
 
       preInstall = ''
         # Ruby installs gems here itself now.
-        mkdir -pv "$out/${passthru.gemPath}"
-        export GEM_HOME="$out/${passthru.gemPath}"
+        mkdir -pv "$out/${self.passthru.gemPath}"
+        export GEM_HOME="$out/${self.passthru.gemPath}"
       '';
 
       installFlags = lib.optionalString docSupport "install-doc";
@@ -138,7 +138,7 @@ let
         mkdir -p $out/nix-support
         cat > $out/nix-support/setup-hook <<EOF
         addGemPath() {
-          addToSearchPath GEM_PATH \$1/${passthru.gemPath}
+          addToSearchPath GEM_PATH \$1/${self.passthru.gemPath}
         }
 
         addEnvHooks "$hostOffset" addGemPath
@@ -153,10 +153,11 @@ let
         platforms = platforms.all;
       };
 
-      passthru = rec {
+      passthru = {
+        version = import ./parse-version.nix version;
         rubyEngine = "ruby";
-        libPath = "lib/${rubyEngine}/${libDir}";
-        gemPath = "lib/${rubyEngine}/gems/${libDir}";
+        libPath = "lib/${self.passthru.rubyEngine}/${libDir}";
+        gemPath = "lib/${self.passthru.rubyEngine}/gems/${libDir}";
         devEnv = import ./dev.nix {
           inherit buildEnv bundler bundix;
           ruby = self;

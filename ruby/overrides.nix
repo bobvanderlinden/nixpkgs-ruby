@@ -29,13 +29,13 @@
   }
   {
     condition = version: with versionComparison version;
-      hasPrefix "2.1";
+      hasPrefix "2.0";
     override = pkg: pkg.override { libDir = "2.0.0"; };
   }
   {
     condition = version: with versionComparison version;
-      lessThan "2.0.0";
-    override = pkg: pkg.override { libDir = pkg.version; };
+      hasPrefix "1.9" && greaterOrEqualTo "1.9.1";
+    override = pkg: pkg.override { libDir = "1.9.1"; };
   }
   {
     condition = version: with versionComparison version;
