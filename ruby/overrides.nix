@@ -27,23 +27,13 @@
   }
   {
     condition = version: with versionComparison version;
-      (lessThan "3.0") || (hasPrefix "3.0" && lessThan "3.0.3");
+      lessThan "3.0.3";
     override = pkg: pkg.override { openssl = openssl_1_1; };
   }
   {
     condition = version: with versionComparison version;
-      lessThan "3.1.3";
-    override = pkg: pkg.override { rubygems = rubygems-3_3; };
-  }
-  {
-    condition = version: with versionComparison version;
-      lessThan "2.5";
-    override = pkg: pkg.override { rubygems = rubygems-2_7; };
-  }
-  {
-    condition = version: with versionComparison version;
-      lessThan "2.4";
-    override = pkg: pkg.override { rubygems = rubygems-2_6; };
+      hasPrefix "2.0";
+    override = pkg: pkg.override { libDir = "2.0.0"; };
   }
   {
     condition = version: with versionComparison version;
