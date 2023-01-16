@@ -61,6 +61,23 @@
         }:
         (pkgsets.ruby pkgs)."ruby-${rubyVersion}";
 
+      lib.readRubyVersionFile = file:
+        let
+          contents = nixpkgs.lib.strings.fileContents file;
+          segments = nixpkgs.lib.strings.splitString "-" contents;
+        in
+          if builtins.length segments == 1
+          then { rubyEngine = "ruby"; version = builtins.head segments; }
+          else {
+            rubyEngine = builtins.head segments;
+            version = builtins.concatStringsSep "-" (builtins.tail segments);
+          };
+      lib.packageFromRubyVersionFile = { file, system }:
+        let
+          inherit (self.lib.readRubyVersionFile file) rubyEngine version;
+        in
+          self.packages.${system}."${rubyEngine}-${version}";
+
       templates.default = {
         path = ./template;
         description = "A standard Nix-based Ruby project";
