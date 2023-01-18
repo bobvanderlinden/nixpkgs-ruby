@@ -97,16 +97,31 @@
 
       checks =
         let
-          mkRubyTest = packageName: package:
-            pkgs.runCommand "check-${packageName}" { } ''
-              ${package}/bin/ruby -e 'puts "ok"' > $out
-            '';
-          unbrokenPackages = nixpkgs.lib.filterAttrs (name: package: !package.meta.broken) self.packages.${system};
-          rubyPackages = nixpkgs.lib.filterAttrs
+          lib = nixpkgs.lib;
+          mkTest = { name, command, env ? {}, nativeBuildInputs ? [] }:
+            pkgs.runCommand name ({ inherit nativeBuildInputs; } // env) command;
+          unbrokenPackages = lib.filterAttrs (name: package: !package.meta.broken) self.packages.${system};
+          rubyPackages = lib.filterAttrs
             (name: package: (builtins.match "ruby-[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+" name) != null)
             unbrokenPackages;
+          testAttrs = lib.concatMapAttrs (rubyName: ruby:
+            {
+              "${rubyName}-puts-ok" = {
+                nativeBuildInputs = [
+                  ruby
+                ];
+                command = ''
+                  ruby -e 'puts "ok"' > $out
+                '';
+              };
+            }
+          ) rubyPackages;
         in
-        builtins.mapAttrs mkRubyTest rubyPackages;
+          lib.mapAttrs (name: testAttrs:
+            mkTest ({
+              inherit name;
+            } // testAttrs)
+          ) testAttrs;
 
       devShells = {
         # The shell for editing this project.
