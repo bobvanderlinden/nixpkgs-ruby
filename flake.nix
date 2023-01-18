@@ -114,6 +114,17 @@
                   ruby -e 'puts "ok"' > $out
                 '';
               };
+              "${rubyName}-mkRuby" = {
+                nativeBuildInputs = [
+                  (self.lib.mkRuby {
+                    inherit pkgs;
+                    rubyVersion = nixpkgs.lib.removePrefix "ruby-" rubyName;
+                  })
+                ];
+                command = ''
+                  ruby -e 'puts "ok"' > $out
+                '';
+              };
             }
           ) rubyPackages;
         in
