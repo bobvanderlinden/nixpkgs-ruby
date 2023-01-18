@@ -42,4 +42,9 @@
       lessThan "3.2";
     override = pkg: pkg.override { yjitSupport = false; };
   }
+  {
+    condition = version: with versionComparison version;
+      lessThan "2.7.6";
+    override = pkg: pkg.override { useRailsExpress = false; };
+  }
 ]

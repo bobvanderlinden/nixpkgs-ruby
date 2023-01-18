@@ -39,6 +39,11 @@ let
   ops = lib.optionals;
   opString = lib.optionalString;
   config = import ./config.nix { inherit fetchFromSavannah; };
+  railsExpressPatches = if useRailsExpress
+                        then (import ./railsexpress.nix {
+                          inherit fetchFromGitHub lib version;
+                        })
+                        else [ ];
 
   # Needed during postInstall
   buildRuby =
@@ -51,7 +56,7 @@ let
       pname = "ruby";
       inherit version;
 
-      patches = [ ];
+      patches = railsExpressPatches;
 
       src = fetchurl versionSource;
 
