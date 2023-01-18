@@ -47,9 +47,13 @@ let
 
   # Needed during postInstall
   buildRuby =
-    if stdenv.hostPlatform == stdenv.buildPlatform
-    then "$out/bin/ruby"
-    else "${buildPackages.ruby}/bin/ruby";
+    if ((stdenv.hostPlatform != stdenv.buildPlatform) || useRailsExpress)
+    then buildPackages."ruby-${version}".override {
+          useRailsExpress = false;
+          docSupport = false;
+          rubygems = null;
+        }
+    else self;
 
   self =
     stdenv.mkDerivation {
@@ -68,8 +72,8 @@ let
 
       nativeBuildInputs =
         [ bison ]
-        ++ ops (stdenv.buildPlatform != stdenv.hostPlatform)
-          [ buildPackages.ruby ];
+        ++ ops ((stdenv.buildPlatform != stdenv.hostPlatform) || useRailsExpress)
+          [ buildRuby ];
       buildInputs =
         (op fiddleSupport libffi)
         ++ (ops cursesSupport [ ncurses readline ])
@@ -133,7 +137,7 @@ let
         ${opString (rubygems != null) ''
           # Update rubygems
           pushd rubygems
-          ${buildRuby} setup.rb
+          ${buildRuby}/bin/ruby setup.rb
           popd
         ''}
         # Remove unnecessary groff reference from runtime closure, since it's big
