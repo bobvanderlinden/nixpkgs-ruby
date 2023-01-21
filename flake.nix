@@ -125,6 +125,24 @@
                   ruby -e 'puts "ok"' > $out
                 '';
               };
+              "${rubyName}-bundlerEnv" = let
+                gems = pkgs.bundlerEnv {
+                  name = "gemset";
+                  inherit ruby;
+                  gemfile = ./tests/bundlerEnv/Gemfile;
+                  lockfile = ./tests/bundlerEnv/Gemfile.lock;
+                  gemset = ./tests/bundlerEnv/gemset.nix;
+                  groups = [ "default" "production" "development" "test" ];
+                };
+              in {
+                nativeBuildInputs = [
+                  self.packages.${pkgs.system}.${rubyName}
+                  gems
+                ];
+                command = ''
+                  ruby -e 'require "active_support"' > $out
+                '';
+              };
             }
           ) rubyPackages;
         in
