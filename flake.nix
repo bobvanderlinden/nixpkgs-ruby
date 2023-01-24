@@ -140,7 +140,7 @@
                   gems
                 ];
                 command = ''
-                  ruby -e 'require "active_support"' > $out
+                  ruby -e 'require "foobar"; say' > $out
                 '';
               };
             }
