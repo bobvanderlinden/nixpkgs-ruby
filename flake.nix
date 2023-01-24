@@ -105,6 +105,9 @@
             (name: package: (builtins.match "ruby-[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+" name) != null)
             unbrokenPackages;
           testAttrs = lib.concatMapAttrs (rubyName: ruby:
+            let
+              rubyVersion = nixpkgs.lib.removePrefix "ruby-" rubyName;
+            in
             {
               "${rubyName}-puts-ok" = {
                 nativeBuildInputs = [
@@ -117,14 +120,14 @@
               "${rubyName}-mkRuby" = {
                 nativeBuildInputs = [
                   (self.lib.mkRuby {
-                    inherit pkgs;
-                    rubyVersion = nixpkgs.lib.removePrefix "ruby-" rubyName;
+                    inherit pkgs rubyVersion;
                   })
                 ];
                 command = ''
                   ruby -e 'puts "ok"' > $out
                 '';
               };
+            } // (lib.optionalAttrs (with import ./lib/version-comparison.nix rubyVersion; greaterOrEqualTo "2.2") {
               "${rubyName}-bundlerEnv" = let
                 gems = pkgs.bundlerEnv {
                   name = "gemset";
@@ -143,7 +146,7 @@
                   ruby -e 'require "foobar"; say' > $out
                 '';
               };
-            }
+            })
           ) rubyPackages;
         in
           lib.mapAttrs (name: testAttrs:
