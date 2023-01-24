@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    foobar (0.0.1)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  foobar
+
+BUNDLED WITH
+   2.3.7

@@ -97,16 +97,63 @@
 
       checks =
         let
-          mkRubyTest = packageName: package:
-            pkgs.runCommand "check-${packageName}" { } ''
-              ${package}/bin/ruby -e 'puts "ok"' > $out
-            '';
-          unbrokenPackages = nixpkgs.lib.filterAttrs (name: package: !package.meta.broken) self.packages.${system};
-          rubyPackages = nixpkgs.lib.filterAttrs
+          lib = nixpkgs.lib;
+          mkTest = { name, command, env ? {}, nativeBuildInputs ? [] }:
+            pkgs.runCommand name ({ inherit nativeBuildInputs; } // env) command;
+          unbrokenPackages = lib.filterAttrs (name: package: !package.meta.broken) self.packages.${system};
+          rubyPackages = lib.filterAttrs
             (name: package: (builtins.match "ruby-[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+" name) != null)
             unbrokenPackages;
+          testAttrs = lib.concatMapAttrs (rubyName: ruby:
+            let
+              rubyVersion = nixpkgs.lib.removePrefix "ruby-" rubyName;
+            in
+            {
+              "${rubyName}-puts-ok" = {
+                nativeBuildInputs = [
+                  ruby
+                ];
+                command = ''
+                  ruby -e 'puts "ok"' > $out
+                '';
+              };
+              "${rubyName}-mkRuby" = {
+                nativeBuildInputs = [
+                  (self.lib.mkRuby {
+                    inherit pkgs rubyVersion;
+                  })
+                ];
+                command = ''
+                  ruby -e 'puts "ok"' > $out
+                '';
+              };
+            } // (lib.optionalAttrs (with import ./lib/version-comparison.nix rubyVersion; greaterOrEqualTo "2.2") {
+              "${rubyName}-bundlerEnv" = let
+                gems = pkgs.bundlerEnv {
+                  name = "gemset";
+                  inherit ruby;
+                  gemfile = ./tests/bundlerEnv/Gemfile;
+                  lockfile = ./tests/bundlerEnv/Gemfile.lock;
+                  gemset = ./tests/bundlerEnv/gemset.nix;
+                  groups = [ "default" "production" "development" "test" ];
+                };
+              in {
+                nativeBuildInputs = [
+                  self.packages.${pkgs.system}.${rubyName}
+                  gems
+                ];
+                command = ''
+                  ruby -e 'require "foobar"; say' > $out
+                '';
+              };
+            })
+          ) rubyPackages;
         in
-        builtins.mapAttrs mkRubyTest rubyPackages;
+          lib.mapAttrs (name: testAttrs:
+            mkTest ({
+              inherit name;
+            } // testAttrs)
+          ) testAttrs;
 
       devShells = {
         # The shell for editing this project.
