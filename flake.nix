@@ -121,7 +121,7 @@
           rubyPackages = lib.filterAttrs
             (name: package: (builtins.match "ruby-[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+" name) != null)
             unbrokenPackages;
-          testAttrs = lib.concatMapAttrs (rubyName: ruby:
+          rubyTestAttrs = lib.concatMapAttrs (rubyName: ruby:
             let
               rubyVersion = nixpkgs.lib.removePrefix "ruby-" rubyName;
             in
@@ -165,6 +165,43 @@
               };
             })
           ) rubyPackages;
+
+          testAttrs = rubyTestAttrs // {
+            packageFromRubyVersionFileWithoutEngine =
+              let
+                ruby = self.lib.packageFromRubyVersionFile {
+                  file = pkgs.writeText ".ruby-version" ''
+                    3.0.0
+                  '';
+                  inherit system;
+                };
+              in
+                {
+                  nativeBuildInputs = [
+                    ruby
+                  ];
+                  command = ''
+                    ruby -e 'puts RUBY_VERSION' > $out
+                  '';
+                };
+            packageFromRubyVersionFileWithEngine = 
+              let
+                ruby = self.lib.packageFromRubyVersionFile {
+                  file = pkgs.writeText ".ruby-version" ''
+                    ruby-3.0.0
+                  '';
+                  inherit system;
+                };
+              in
+                {
+                  nativeBuildInputs = [
+                    ruby
+                  ];
+                  command = ''
+                    ruby -e 'puts RUBY_VERSION' > $out
+                  '';
+                };
+          };
         in
           lib.mapAttrs (name: testAttrs:
             mkTest ({
