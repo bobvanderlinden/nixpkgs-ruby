@@ -170,9 +170,7 @@
             packageFromRubyVersionFileWithoutEngine =
               let
                 ruby = self.lib.packageFromRubyVersionFile {
-                  file = pkgs.writeText ".ruby-version" ''
-                    3.0.0
-                  '';
+                  file = ./tests/ruby-version-without-engine;
                   inherit system;
                 };
               in
@@ -187,9 +185,7 @@
             packageFromRubyVersionFileWithEngine = 
               let
                 ruby = self.lib.packageFromRubyVersionFile {
-                  file = pkgs.writeText ".ruby-version" ''
-                    ruby-3.0.0
-                  '';
+                  file = ./tests/ruby-version-with-engine;
                   inherit system;
                 };
               in
