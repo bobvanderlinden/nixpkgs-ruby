@@ -39,7 +39,8 @@ jobs:
           See the workflow here: https://github.com/bobvanderlinden/nixpkgs-ruby/blob/master/.github/workflows/update.yml
         delete-branch: true
         branch: update-ruby-versions
-    - uses: peter-evans/enable-pull-request-automerge@v2
+    - if: steps.create-pull-request.outputs.pull-request-operation == "created"
+      uses: peter-evans/enable-pull-request-automerge@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         pull-request-number: ${{ steps.create-pull-request.outputs.pull-request-number }}

@@ -61,6 +61,24 @@
         }:
         (pkgsets.ruby pkgs)."ruby-${rubyVersion}";
 
+      lib.readRubyVersionFile = file:
+        let
+          contents = nixpkgs.lib.strings.fileContents file;
+          strippedContents = builtins.head (builtins.match "[[:space:]]*(.*)[[:space:]]*" contents);
+          segments = nixpkgs.lib.strings.splitString "-" strippedContents;
+        in
+          if builtins.length segments == 1
+          then { rubyEngine = "ruby"; version = builtins.head segments; }
+          else {
+            rubyEngine = builtins.head segments;
+            version = builtins.concatStringsSep "-" (builtins.tail segments);
+          };
+      lib.packageFromRubyVersionFile = { file, system }:
+        let
+          inherit (self.lib.readRubyVersionFile file) rubyEngine version;
+        in
+          self.packages.${system}."${rubyEngine}-${version}";
+
       templates.default = {
         path = ./template;
         description = "A standard Nix-based Ruby project";
@@ -104,7 +122,7 @@
           rubyPackages = lib.filterAttrs
             (name: package: (builtins.match "ruby-[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+" name) != null)
             unbrokenPackages;
-          testAttrs = lib.concatMapAttrs (rubyName: ruby:
+          rubyTestAttrs = lib.concatMapAttrs (rubyName: ruby:
             let
               rubyVersion = nixpkgs.lib.removePrefix "ruby-" rubyName;
             in
@@ -148,6 +166,39 @@
               };
             })
           ) rubyPackages;
+
+          testAttrs = rubyTestAttrs // {
+            packageFromRubyVersionFileWithoutEngine =
+              let
+                ruby = self.lib.packageFromRubyVersionFile {
+                  file = ./tests/ruby-version-without-engine;
+                  inherit system;
+                };
+              in
+                {
+                  nativeBuildInputs = [
+                    ruby
+                  ];
+                  command = ''
+                    ruby -e 'puts RUBY_VERSION' > $out
+                  '';
+                };
+            packageFromRubyVersionFileWithEngine = 
+              let
+                ruby = self.lib.packageFromRubyVersionFile {
+                  file = ./tests/ruby-version-with-engine;
+                  inherit system;
+                };
+              in
+                {
+                  nativeBuildInputs = [
+                    ruby
+                  ];
+                  command = ''
+                    ruby -e 'puts RUBY_VERSION' > $out
+                  '';
+                };
+          };
         in
           lib.mapAttrs (name: testAttrs:
             mkTest ({
