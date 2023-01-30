@@ -41,6 +41,6 @@ jobs:
         branch: update-ruby-versions
     - uses: peter-evans/enable-pull-request-automerge@v2
       with:
-        token: ${{ secrets.UPDATE_GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         pull-request-number: ${{ steps.create-pull-request.outputs.pull-request-number }}
 
