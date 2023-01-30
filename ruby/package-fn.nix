@@ -39,16 +39,22 @@ let
   ops = lib.optionals;
   opString = lib.optionalString;
   config = import ./config.nix { inherit fetchFromSavannah; };
-  railsExpressPatches = if useRailsExpress
-                        then (import ./railsexpress.nix {
-                          inherit fetchFromGitHub lib version;
-                        })
-                        else [ ];
+  railsExpressPatches =
+    if useRailsExpress
+    then
+      (import ./railsexpress.nix {
+        inherit fetchFromGitHub lib version;
+      })
+    else [ ];
+
+  useBaseRuby = (stdenv.buildPlatform != stdenv.hostPlatform) || useRailsExpress;
 
   # Needed during postInstall
   buildRuby =
-    if ((stdenv.hostPlatform != stdenv.buildPlatform) || useRailsExpress)
-    then buildPackages."ruby-${version}".override {
+    if useBaseRuby
+    then
+      buildPackages."ruby-${version}".override
+        {
           useRailsExpress = false;
           docSupport = false;
           rubygems = null;
@@ -72,8 +78,7 @@ let
 
       nativeBuildInputs =
         [ bison ]
-        ++ ops ((stdenv.buildPlatform != stdenv.hostPlatform) || useRailsExpress)
-          [ buildRuby ];
+        ++ ops useBaseRuby [ buildRuby ];
       buildInputs =
         (op fiddleSupport libffi)
         ++ (ops cursesSupport [ ncurses readline ])
@@ -123,7 +128,8 @@ let
           "--with-out-ext=tk"
           # on yosemite, "generating encdb.h" will hang for a very long time without this flag
           "--with-setjmp-type=setjmp"
-        ];
+        ]
+        ++ op useBaseRuby "--with-baseruby=${buildRuby}/bin/ruby";
 
       preInstall = ''
         # Ruby installs gems here itself now.
@@ -140,6 +146,7 @@ let
           ${buildRuby}/bin/ruby setup.rb
           popd
         ''}
+
         # Remove unnecessary groff reference from runtime closure, since it's big
         sed -i '/NROFF/d' $out/lib/ruby/*/*/rbconfig.rb
 
@@ -152,6 +159,19 @@ let
 
         addEnvHooks "$hostOffset" addGemPath
         EOF
+      '';
+
+      preFixup = ''
+        ${opString ((with import ../lib/version-comparison.nix version; greaterOrEqualTo "3.1.3") && useBaseRuby) ''
+          echo "Removing references to build ruby:"
+          # Build fails otherwise with "forbidden reference" error during postFixup phase.
+
+          for so in $out/lib/ruby/*/*/enc/*.so $out/lib/ruby/*/*/enc/trans/*.so; do
+            echo "patching $so"
+            echo "  set RPATH to $out:${buildPackages.glibc}/lib"
+            patchelf --set-rpath "$out:${buildPackages.glibc}/lib" $so
+          done
+        ''}
       '';
 
       meta = with lib; {
