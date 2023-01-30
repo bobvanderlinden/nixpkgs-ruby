@@ -64,7 +64,8 @@
       lib.readRubyVersionFile = file:
         let
           contents = nixpkgs.lib.strings.fileContents file;
-          segments = nixpkgs.lib.strings.splitString "-" contents;
+          strippedContents = builtins.head (builtins.match "[[:space:]]*(.*)[[:space:]]*" contents);
+          segments = nixpkgs.lib.strings.splitString "-" strippedContents;
         in
           if builtins.length segments == 1
           then { rubyEngine = "ruby"; version = builtins.head segments; }
