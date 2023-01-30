@@ -166,7 +166,6 @@ async function run() {
     }
     const releaseName = releaseNameMatch[1];
 
-    console.log(releaseName);
     // When a release is already in sources, we may presume we have handled this release
     // in an earlier run. We may stop here.
     if (releaseName in sources) {
