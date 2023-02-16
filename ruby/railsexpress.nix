@@ -6,8 +6,8 @@ let
   rvmPatchsets = fetchFromGitHub {
     owner = "skaes";
     repo = "rvm-patchsets";
-    rev = "e6574c54a34fe6e4d45aa1433872a22ddfe14cf3";
-    sha256 = "x2KvhgRVJ4Nc5v1j4DggKO1u3otG8HVMxhq4yuUKnds=";
+    rev = "d1e981c193da981e3300cdcc2d50b4a97df5d759";
+    sha256 = "1zhk7y66gsijyjm9gkcbcdfk44mj8yrvwqv0h3b72b6yxfkhx8z2";
   };
 
   dirFilter = n: v: ((v == "directory") &&
