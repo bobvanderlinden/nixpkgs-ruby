@@ -33,6 +33,7 @@
 , fiddleSupport ? true
 , yjitSupport ? true
 , rustc
+, removeReferencesTo
 }:
 let
   op = lib.optional;
@@ -78,7 +79,7 @@ let
 
       nativeBuildInputs =
         [ bison ]
-        ++ ops useBaseRuby [ buildRuby ];
+        ++ ops useBaseRuby [ buildRuby removeReferencesTo ];
       buildInputs =
         (op fiddleSupport libffi)
         ++ (ops cursesSupport [ ncurses readline ])
@@ -140,15 +141,18 @@ let
       installFlags = lib.optionalString docSupport "install-doc";
 
       postInstall = ''
+        rbConfig=$out/lib/ruby/*/*/rbconfig.rb
+        # Remove references to the build environment from the closure
+        sed -i '/^  CONFIG\["\(BASERUBY\|SHELL\|GREP\|EGREP\|MKDIR_P\|MAKEDIRS\|INSTALL\)"\]/d' $rbConfig
+        # Remove unnecessary groff reference from runtime closure, since it's big
+        sed -i '/NROFF/d' $rbConfig
+
         ${opString (rubygems != null) ''
           # Update rubygems
           pushd rubygems
           ${buildRuby}/bin/ruby setup.rb
           popd
         ''}
-
-        # Remove unnecessary groff reference from runtime closure, since it's big
-        sed -i '/NROFF/d' $out/lib/ruby/*/*/rbconfig.rb
 
         # Bundler tries to create this directory
         mkdir -p $out/nix-support
@@ -162,8 +166,8 @@ let
       '';
 
       preFixup = ''
-        ${opString ((with import ../lib/version-comparison.nix version; greaterOrEqualTo "3.1.3") && useBaseRuby) ''
-          echo "Removing references to build ruby:"
+          ${opString ((with import ../lib/version-comparison.nix version; greaterOrEqualTo "3.1.3") && useBaseRuby) ''
+          echo "Removing references to base ruby:"
           # Build fails otherwise with "forbidden reference" error during postFixup phase.
 
           for so in $out/lib/ruby/*/*/enc/*.so $out/lib/ruby/*/*/enc/trans/*.so; do
