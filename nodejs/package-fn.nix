@@ -124,11 +124,8 @@ let
       patchShebangs .
 
       # fix tests
-      for a in test/parallel/test-child-process-env.js \
-               test/parallel/test-child-process-exec-env.js \
-               test/parallel/test-child-process-default-options.js \
-               test/fixtures/syntax/good_syntax_shebang.js \
-               test/fixtures/syntax/bad_syntax_shebang.js ; do
+      for a in test/parallel/*.js \
+               test/fixtures/syntax/*.js; do
         substituteInPlace $a \
           --replace "/usr/bin/env" "${coreutils}/bin/env"
       done
