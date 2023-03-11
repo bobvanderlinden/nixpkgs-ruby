@@ -44,6 +44,7 @@
       _pkgsets = {
         rubygems = import ./rubygems;
         ruby = import ./ruby;
+        nodejs = import ./nodejs;
       };
 
       pkgsets = builtins.mapAttrs

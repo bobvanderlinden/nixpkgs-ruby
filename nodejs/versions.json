@@ -1,0 +1,3034 @@
+{
+  "sources": {
+    "19.7.0": {
+      "url": "https://nodejs.org/dist/v19.7.0/node-v19.7.0-aix-ppc64.tar.gz",
+      "sha256": "af6a7a636db2a10bfd563181095ed9bcce4a2e49b519649ed0620d48509c1afc"
+    },
+    "19.6.1": {
+      "url": "https://nodejs.org/dist/v19.6.1/node-v19.6.1-aix-ppc64.tar.gz",
+      "sha256": "0b84f9d4189adf1b3d955384db1aba971b4e5ac2dedadeaffa3c76b0efa8fade"
+    },
+    "19.6.0": {
+      "url": "https://nodejs.org/dist/v19.6.0/node-v19.6.0-aix-ppc64.tar.gz",
+      "sha256": "daf3e11e64932a0b53ed3fccd9424948b81328056dca8fd36496fe11c0907a00"
+    },
+    "19.5.0": {
+      "url": "https://nodejs.org/dist/v19.5.0/node-v19.5.0-aix-ppc64.tar.gz",
+      "sha256": "6ef2fe701f73e4b42c0e621ca4d3790fd2e1beea6bf0aab1f9351e48ee44c9f2"
+    },
+    "19.4.0": {
+      "url": "https://nodejs.org/dist/v19.4.0/node-v19.4.0-aix-ppc64.tar.gz",
+      "sha256": "9fb2fbb9339fe8f3e436b82253c4c53b75b2364c02d9f6857d20efdd90e56479"
+    },
+    "19.3.0": {
+      "url": "https://nodejs.org/dist/v19.3.0/node-v19.3.0-aix-ppc64.tar.gz",
+      "sha256": "a5ff43eab40dfa812eeb804a7e064cc9e549e04347f0a0e2250a2a8253eaee6f"
+    },
+    "19.2.0": {
+      "url": "https://nodejs.org/dist/v19.2.0/node-v19.2.0-aix-ppc64.tar.gz",
+      "sha256": "8b5ab2cec5a20df8e99242b248a6345f4a393facd29a5b077ba6d7dafd629b4c"
+    },
+    "19.1.0": {
+      "url": "https://nodejs.org/dist/v19.1.0/node-v19.1.0-aix-ppc64.tar.gz",
+      "sha256": "d1b2b585c25c846bb0453313d1d5dab8e82713e72c5cb01199a6e6b545816b84"
+    },
+    "19.0.1": {
+      "url": "https://nodejs.org/dist/v19.0.1/node-v19.0.1-aix-ppc64.tar.gz",
+      "sha256": "479408f8ee19ae11aa49ad36b0f95ccea4e27000c84f743101c88b1f6b4e9493"
+    },
+    "19.0.0": {
+      "url": "https://nodejs.org/dist/v19.0.0/node-v19.0.0-aix-ppc64.tar.gz",
+      "sha256": "6c01d2537f0f906d252d8a2b6fbf830e3080844d06ec59c48b902e99e0dc101f"
+    },
+    "18.15.0": {
+      "url": "https://nodejs.org/dist/v18.15.0/node-v18.15.0-aix-ppc64.tar.gz",
+      "sha256": "b5a7cf75c6d22536b8c364a4414bf6df88efea54429e185e2a0c819b90c491ed"
+    },
+    "18.14.2": {
+      "url": "https://nodejs.org/dist/v18.14.2/node-v18.14.2-aix-ppc64.tar.gz",
+      "sha256": "2e9a2b5cf051e3ecf4e5816aec38c79e4d549db43dd33b523c1b6b9b3ea18326"
+    },
+    "18.14.1": {
+      "url": "https://nodejs.org/dist/v18.14.1/node-v18.14.1-aix-ppc64.tar.gz",
+      "sha256": "702bfe7aaebb49870487ca7a4060ae143caf662bdfdfd3f4c9f033863898f41b"
+    },
+    "18.14.0": {
+      "url": "https://nodejs.org/dist/v18.14.0/node-v18.14.0-aix-ppc64.tar.gz",
+      "sha256": "bc9302e8ad5f835caf359ec727127bb8232c633f62ba60ec22f581a570c8816d"
+    },
+    "18.13.0": {
+      "url": "https://nodejs.org/dist/v18.13.0/node-v18.13.0-aix-ppc64.tar.gz",
+      "sha256": "9a479a5b7128ed8bb32c263f4519ca84ec7fa49efb90ebaf0cb25d34dd6d2667"
+    },
+    "18.12.1": {
+      "url": "https://nodejs.org/dist/v18.12.1/node-v18.12.1-aix-ppc64.tar.gz",
+      "sha256": "adc237098880c85b3aacaf2dfbea86c3db065fa7e4cbf207b617a661f4627555"
+    },
+    "18.12.0": {
+      "url": "https://nodejs.org/dist/v18.12.0/node-v18.12.0-aix-ppc64.tar.gz",
+      "sha256": "10b1f6ffd3a10fc33e497ea66019a5f66b748c1f8767fcb22cd3c365b5c30b64"
+    },
+    "18.11.0": {
+      "url": "https://nodejs.org/dist/v18.11.0/node-v18.11.0-aix-ppc64.tar.gz",
+      "sha256": "d567b0b7ab71139ee90fd7cdadc11602e183db2a23a5ffb393f92870eac033e2"
+    },
+    "18.10.0": {
+      "url": "https://nodejs.org/dist/v18.10.0/node-v18.10.0-aix-ppc64.tar.gz",
+      "sha256": "8f4dfa78d823a4c7e4c83bbfebef9ce3d49a6e1ed28408521c706350f8a2aee7"
+    },
+    "18.9.1": {
+      "url": "https://nodejs.org/dist/v18.9.1/node-v18.9.1-aix-ppc64.tar.gz",
+      "sha256": "6b602994ea7e22d49e1b2406d3d1119133d6bc89e52f70cd61090968b9e5ec93"
+    },
+    "18.9.0": {
+      "url": "https://nodejs.org/dist/v18.9.0/node-v18.9.0-aix-ppc64.tar.gz",
+      "sha256": "e4d8d6030efe1e0b103ba7a158996b2ff4ceef0f8fd05af9ea61eb4b17d6fa0c"
+    },
+    "18.8.0": {
+      "url": "https://nodejs.org/dist/v18.8.0/node-v18.8.0-aix-ppc64.tar.gz",
+      "sha256": "30c6f976deae4cd35f8c24abf3b89b0787bf57c86622a006edcea8aaa5e67e6b"
+    },
+    "18.7.0": {
+      "url": "https://nodejs.org/dist/v18.7.0/node-v18.7.0-aix-ppc64.tar.gz",
+      "sha256": "2ecce3603a75464e45e5e3c451662ff5993b7608aa838e0bf17ba1f48b989b11"
+    },
+    "18.6.0": {
+      "url": "https://nodejs.org/dist/v18.6.0/node-v18.6.0-aix-ppc64.tar.gz",
+      "sha256": "692b81d30ee0e03397ec13a74e65012db5a31dc4513f6abb73d290dbf6f85f48"
+    },
+    "18.5.0": {
+      "url": "https://nodejs.org/dist/v18.5.0/node-v18.5.0-aix-ppc64.tar.gz",
+      "sha256": "32959422d032244fc5bed1ff8ddbaddacb12b4d333b3e1ae20dc0f2e6bac64f8"
+    },
+    "18.4.0": {
+      "url": "https://nodejs.org/dist/v18.4.0/node-v18.4.0-aix-ppc64.tar.gz",
+      "sha256": "a403ee671a261d4e52694a81b55ec01aad70e955afae2680eab2e4095260e601"
+    },
+    "18.3.0": {
+      "url": "https://nodejs.org/dist/v18.3.0/node-v18.3.0-aix-ppc64.tar.gz",
+      "sha256": "dc4664de812d7f1d5aecf82e3a6ffbd63e1c2e0c5b32d9bde6c6dc51c9c51f50"
+    },
+    "18.2.0": {
+      "url": "https://nodejs.org/dist/v18.2.0/node-v18.2.0-aix-ppc64.tar.gz",
+      "sha256": "7bb0a93a3f6b9b0a46194420fc554c1d12682aef7d8822cfd2bbb3639f5b2059"
+    },
+    "18.1.0": {
+      "url": "https://nodejs.org/dist/v18.1.0/node-v18.1.0-aix-ppc64.tar.gz",
+      "sha256": "f1af6dbdc5e89b9b6485689016ff48c292afd1cb3da3841194718dcdfdcdccca"
+    },
+    "18.0.0": {
+      "url": "https://nodejs.org/dist/v18.0.0/node-v18.0.0-aix-ppc64.tar.gz",
+      "sha256": "01f2e194074e209340c7b7320bbb568829120c7747d469214ec76413d950bced"
+    },
+    "17.9.1": {
+      "url": "https://nodejs.org/dist/v17.9.1/node-v17.9.1-aix-ppc64.tar.gz",
+      "sha256": "c18843570c178033cb3cd159c48d45b702070d0f0cdd383b5f2bfd2eef37a8b3"
+    },
+    "17.9.0": {
+      "url": "https://nodejs.org/dist/v17.9.0/node-v17.9.0-aix-ppc64.tar.gz",
+      "sha256": "0e6d3b1677c1b9b1228a0df241ae2fa72952a35dba5d1fe165b0cac5a8e230db"
+    },
+    "17.8.0": {
+      "url": "https://nodejs.org/dist/v17.8.0/node-v17.8.0-aix-ppc64.tar.gz",
+      "sha256": "d3b95026bd938623491f72285df414fe4e77db6cb724d4af9c18a63e698834aa"
+    },
+    "17.7.2": {
+      "url": "https://nodejs.org/dist/v17.7.2/node-v17.7.2-aix-ppc64.tar.gz",
+      "sha256": "a70a82872ce0c37c47356fbb216b434aed578a730ca6dd359f2f21f74a2b8c20"
+    },
+    "17.7.1": {
+      "url": "https://nodejs.org/dist/v17.7.1/node-v17.7.1-aix-ppc64.tar.gz",
+      "sha256": "0711b683f653ce65c1232f208d2f01df2261f44c8627ed989efe1f57ce5bca79"
+    },
+    "17.7.0": {
+      "url": "https://nodejs.org/dist/v17.7.0/node-v17.7.0-aix-ppc64.tar.gz",
+      "sha256": "ad28001c3acf8b46696dc48aa72b58eccdd13e71d3772904c2993f9d206ebd62"
+    },
+    "17.6.0": {
+      "url": "https://nodejs.org/dist/v17.6.0/node-v17.6.0-aix-ppc64.tar.gz",
+      "sha256": "484d55ba3921f3ab056957517cd39f72cb787e21c1ceb91135e8d9d4c6a56efa"
+    },
+    "17.5.0": {
+      "url": "https://nodejs.org/dist/v17.5.0/node-v17.5.0-aix-ppc64.tar.gz",
+      "sha256": "5608146533a5ff53d9fc737e1edef90da564ff89c979f15f317c0af861747da6"
+    },
+    "17.4.0": {
+      "url": "https://nodejs.org/dist/v17.4.0/node-v17.4.0-aix-ppc64.tar.gz",
+      "sha256": "91688cbeac365a5dde54f8615845f99c0b999599bd9924340ba5aa1ae9f590ff"
+    },
+    "17.3.1": {
+      "url": "https://nodejs.org/dist/v17.3.1/node-v17.3.1-aix-ppc64.tar.gz",
+      "sha256": "499156d09a9f9d589af9da091c57ba545c33a1fac6915d0687c1b27dbe91d77e"
+    },
+    "17.3.0": {
+      "url": "https://nodejs.org/dist/v17.3.0/node-v17.3.0-aix-ppc64.tar.gz",
+      "sha256": "5300264598a643445378a51bf1d62242281ae602045934bf6fcacf6f6ba3abda"
+    },
+    "17.2.0": {
+      "url": "https://nodejs.org/dist/v17.2.0/node-v17.2.0-aix-ppc64.tar.gz",
+      "sha256": "1fcfaad85f298d45e8e8c86bc007b536117583040ba1a9e3d2323152dcf6a0d3"
+    },
+    "17.1.0": {
+      "url": "https://nodejs.org/dist/v17.1.0/node-v17.1.0-aix-ppc64.tar.gz",
+      "sha256": "dfeb027e2dd37b099bf326238a24959bee2818a4544a63d8a3f7ff88e026b050"
+    },
+    "17.0.1": {
+      "url": "https://nodejs.org/dist/v17.0.1/node-v17.0.1-aix-ppc64.tar.gz",
+      "sha256": "fa09aa43637816e27d240d551416c8b32d5503e1a6371d01fe60d3700e146ec3"
+    },
+    "17.0.0": {
+      "url": "https://nodejs.org/dist/v17.0.0/node-v17.0.0-aix-ppc64.tar.gz",
+      "sha256": "ab2a9b508665f88d6516a6322971bbb988dddf311cd26edcaea374ff06ee8f14"
+    },
+    "16.19.1": {
+      "url": "https://nodejs.org/dist/v16.19.1/node-v16.19.1-aix-ppc64.tar.gz",
+      "sha256": "b93adce984bca2712bf4e48c49f828cd1ae1a8d89e6ebd9e4fecb2165cf6b438"
+    },
+    "16.19.0": {
+      "url": "https://nodejs.org/dist/v16.19.0/node-v16.19.0-aix-ppc64.tar.gz",
+      "sha256": "2697295a083b1be572a98f632f28c510e5eb5af526bbdf4ca1b5060abc01d24e"
+    },
+    "16.18.1": {
+      "url": "https://nodejs.org/dist/v16.18.1/node-v16.18.1-aix-ppc64.tar.gz",
+      "sha256": "aeca357b0135f704ec8862727be5601d336024d217b33ae4aa37c87337329be7"
+    },
+    "16.18.0": {
+      "url": "https://nodejs.org/dist/v16.18.0/node-v16.18.0-aix-ppc64.tar.gz",
+      "sha256": "b7ee0afbd7b091cdff83fff76e6159a63307361599d8b0f68c767bcdf5932462"
+    },
+    "16.17.1": {
+      "url": "https://nodejs.org/dist/v16.17.1/node-v16.17.1-aix-ppc64.tar.gz",
+      "sha256": "dfb37570ef34ac04f34c26d0ec558df60a9665df5961c01c1657c0ca495f2f01"
+    },
+    "16.17.0": {
+      "url": "https://nodejs.org/dist/v16.17.0/node-v16.17.0-aix-ppc64.tar.gz",
+      "sha256": "19d8bd771213d4f55b4aa5f661212f4bc5aeb4bd53928eb922af3a5538df75c7"
+    },
+    "16.16.0": {
+      "url": "https://nodejs.org/dist/v16.16.0/node-v16.16.0-aix-ppc64.tar.gz",
+      "sha256": "6050ce2c71ef0acca9bc09a0dbbc19b243d1915839b3a349f08ac92672c09ff7"
+    },
+    "16.15.1": {
+      "url": "https://nodejs.org/dist/v16.15.1/node-v16.15.1-aix-ppc64.tar.gz",
+      "sha256": "31dec4d81fb154120055132bf21b0664c34ca6e1f66def9438bd19e2c5aff0ca"
+    },
+    "16.15.0": {
+      "url": "https://nodejs.org/dist/v16.15.0/node-v16.15.0-aix-ppc64.tar.gz",
+      "sha256": "237a2b77ef1ec74343329c8c701d0f41feb946ede0a2cbc7292175b34cc638f6"
+    },
+    "16.14.2": {
+      "url": "https://nodejs.org/dist/v16.14.2/node-v16.14.2-aix-ppc64.tar.gz",
+      "sha256": "acae171e4d58905e7e4c712a614de17bdf6a6720addbb5e440a94efda78807e4"
+    },
+    "16.14.1": {
+      "url": "https://nodejs.org/dist/v16.14.1/node-v16.14.1-aix-ppc64.tar.gz",
+      "sha256": "b7bb8e48e0d84cf63c0a024b0867f4a62ec5d4a48753015b60789ee70012c3c8"
+    },
+    "16.14.0": {
+      "url": "https://nodejs.org/dist/v16.14.0/node-v16.14.0-aix-ppc64.tar.gz",
+      "sha256": "e31a1478b50814848089bc11fb58d463c180ac5e08ec95f6bd314b2a7209d23a"
+    },
+    "16.13.2": {
+      "url": "https://nodejs.org/dist/v16.13.2/node-v16.13.2-aix-ppc64.tar.gz",
+      "sha256": "54078953e99360087e1c300f7cc36165b838229034c451367428b40095656133"
+    },
+    "16.13.1": {
+      "url": "https://nodejs.org/dist/v16.13.1/node-v16.13.1-aix-ppc64.tar.gz",
+      "sha256": "b1986cc40595c615fa5c51e29148c41c9e2446c479cdb99575a033f30c5f419c"
+    },
+    "16.13.0": {
+      "url": "https://nodejs.org/dist/v16.13.0/node-v16.13.0-aix-ppc64.tar.gz",
+      "sha256": "eadf10e991a690c2af98b6df8a118336ded513d6b13a83721bb28bec290df908"
+    },
+    "16.12.0": {
+      "url": "https://nodejs.org/dist/v16.12.0/node-v16.12.0-aix-ppc64.tar.gz",
+      "sha256": "d45cc55607bdc730aa6b930be4a067bc56568ff92162608f0f5983879024cd5b"
+    },
+    "16.11.1": {
+      "url": "https://nodejs.org/dist/v16.11.1/node-v16.11.1-aix-ppc64.tar.gz",
+      "sha256": "f386076358c470150cd8ad5cc18f008ec51d146ad2e66345fcd063f7228a5d95"
+    },
+    "16.11.0": {
+      "url": "https://nodejs.org/dist/v16.11.0/node-v16.11.0-aix-ppc64.tar.gz",
+      "sha256": "c83419e179b82019daea529c1da187e91b857184adfbf315e267490a47aad957"
+    },
+    "16.10.0": {
+      "url": "https://nodejs.org/dist/v16.10.0/node-v16.10.0-aix-ppc64.tar.gz",
+      "sha256": "2142ee042206c5064b19fc034d8d03c7291d0177341a3b55f80d0a3b44ee32de"
+    },
+    "16.9.1": {
+      "url": "https://nodejs.org/dist/v16.9.1/node-v16.9.1-aix-ppc64.tar.gz",
+      "sha256": "92e602c856d91394223aeae0a9df8ba9dc1d8535a56c8e58561e319caba272c0"
+    },
+    "16.9.0": {
+      "url": "https://nodejs.org/dist/v16.9.0/node-v16.9.0-aix-ppc64.tar.gz",
+      "sha256": "d4c91b7321877945403162bb330aa5c30323773aece0bbc65fefb1efd2be8a53"
+    },
+    "16.8.0": {
+      "url": "https://nodejs.org/dist/v16.8.0/node-v16.8.0-aix-ppc64.tar.gz",
+      "sha256": "cc9e8e2600c2ad9ee80be45a850453a5f0237650f8bd4364db4a9f941a5b6e57"
+    },
+    "16.7.0": {
+      "url": "https://nodejs.org/dist/v16.7.0/node-v16.7.0-aix-ppc64.tar.gz",
+      "sha256": "4c706dbaebab5c5787d36238b32405143742050fb0faccc81d9da6ebf05e8304"
+    },
+    "16.6.2": {
+      "url": "https://nodejs.org/dist/v16.6.2/node-v16.6.2-aix-ppc64.tar.gz",
+      "sha256": "2a51635501451a88f6addc192a79b6d36cc40dcf3a198a54037ab26fa6305043"
+    },
+    "16.6.1": {
+      "url": "https://nodejs.org/dist/v16.6.1/node-v16.6.1-aix-ppc64.tar.gz",
+      "sha256": "02581dbbfc2886dec326c3fca70c0f17e82491563057889dc630e5c055754c02"
+    },
+    "16.6.0": {
+      "url": "https://nodejs.org/dist/v16.6.0/node-v16.6.0-aix-ppc64.tar.gz",
+      "sha256": "ed07957f3c6075294cb1c5ed5760b8471c6fab880fd85bb29dabd44d64d12869"
+    },
+    "16.5.0": {
+      "url": "https://nodejs.org/dist/v16.5.0/node-v16.5.0-aix-ppc64.tar.gz",
+      "sha256": "3d134a7499d7b022febaa50d1923fb799c8edd9c2478be180eb88bfee06165b1"
+    },
+    "16.4.2": {
+      "url": "https://nodejs.org/dist/v16.4.2/node-v16.4.2-aix-ppc64.tar.gz",
+      "sha256": "face4ef55857571cefeac04be0b9381cb4ec97512fd5f843a7c44d5cea467b95"
+    },
+    "16.4.1": {
+      "url": "https://nodejs.org/dist/v16.4.1/node-v16.4.1-aix-ppc64.tar.gz",
+      "sha256": "d0f079c4bc78ee9e1eb646434bc52730c59e433f75febee70ee5506a5526eead"
+    },
+    "16.4.0": {
+      "url": "https://nodejs.org/dist/v16.4.0/node-v16.4.0-aix-ppc64.tar.gz",
+      "sha256": "7695554a71873ea2393248438508c5d73a4fc195f760a9317e33670826ab691f"
+    },
+    "16.3.0": {
+      "url": "https://nodejs.org/dist/v16.3.0/node-v16.3.0-aix-ppc64.tar.gz",
+      "sha256": "4241dc60ff8bb1748391fd16cde459a486824e23b96b13c223fb97b3fecd9fe9"
+    },
+    "16.2.0": {
+      "url": "https://nodejs.org/dist/v16.2.0/node-v16.2.0-aix-ppc64.tar.gz",
+      "sha256": "149f3f7be5996d6f26a86f97daeaa24bf585e9517ea283cd60676a0c81943a95"
+    },
+    "16.1.0": {
+      "url": "https://nodejs.org/dist/v16.1.0/node-v16.1.0-aix-ppc64.tar.gz",
+      "sha256": "174f356190d82f24a53085d102799fd90e9031003adb891510aeef58bf2cc302"
+    },
+    "16.0.0": {
+      "url": "https://nodejs.org/dist/v16.0.0/node-v16.0.0-aix-ppc64.tar.gz",
+      "sha256": "a6aee31e1fd8f55dc78007de2e4ac0d8e0dadd36beacfbabbaf9ab27a5f1f2f4"
+    },
+    "15.14.0": {
+      "url": "https://nodejs.org/dist/v15.14.0/node-v15.14.0-aix-ppc64.tar.gz",
+      "sha256": "cb133ef05eb9c20c23a2f267f216dca0a66166bb5cdbf1a1871c114a439f8767"
+    },
+    "15.13.0": {
+      "url": "https://nodejs.org/dist/v15.13.0/node-v15.13.0-aix-ppc64.tar.gz",
+      "sha256": "9476bb2d9cdd50c80a57a941234bbd763a697377e5677befb67b4ead9511a361"
+    },
+    "15.12.0": {
+      "url": "https://nodejs.org/dist/v15.12.0/node-v15.12.0-aix-ppc64.tar.gz",
+      "sha256": "b05beb9caa359aba0402412937a6f7434459adab016021c6e30f4c67b5ab35d9"
+    },
+    "15.11.0": {
+      "url": "https://nodejs.org/dist/v15.11.0/node-v15.11.0-aix-ppc64.tar.gz",
+      "sha256": "dbe6ab79a7fcff06e72d5a062c5850132d06ecc79bbda5049d33a0702483f906"
+    },
+    "15.10.0": {
+      "url": "https://nodejs.org/dist/v15.10.0/node-v15.10.0-aix-ppc64.tar.gz",
+      "sha256": "351ef617dea3ec93819ebb92435b82febaa1de393bdb442dcc129ac76a03014c"
+    },
+    "15.9.0": {
+      "url": "https://nodejs.org/dist/v15.9.0/node-v15.9.0-aix-ppc64.tar.gz",
+      "sha256": "7d160d3accabb6c61a2d54aa0405f08060e0924e079ceccb31763c5666c72358"
+    },
+    "15.8.0": {
+      "url": "https://nodejs.org/dist/v15.8.0/node-v15.8.0-aix-ppc64.tar.gz",
+      "sha256": "8a1f2fc0e4aac595f7d82ab9e1a51958aa74bbdfa9bb36090f4a78b5cc776638"
+    },
+    "15.7.0": {
+      "url": "https://nodejs.org/dist/v15.7.0/node-v15.7.0-aix-ppc64.tar.gz",
+      "sha256": "b091732d90fe6882850dc5d0973a774030c4d6c32fb303a49f7e7be1918d168e"
+    },
+    "15.6.0": {
+      "url": "https://nodejs.org/dist/v15.6.0/node-v15.6.0-aix-ppc64.tar.gz",
+      "sha256": "166985455aaf6a16c570045c3381bc7d88a1dfa3f98cf4bb67a699b7240c6bed"
+    },
+    "15.5.1": {
+      "url": "https://nodejs.org/dist/v15.5.1/node-v15.5.1-aix-ppc64.tar.gz",
+      "sha256": "1b56c38c36efb3d23c37fd7b2a46660ca06963d47dfd9160befb80e508169a48"
+    },
+    "15.5.0": {
+      "url": "https://nodejs.org/dist/v15.5.0/node-v15.5.0-aix-ppc64.tar.gz",
+      "sha256": "14ba6dd3629af5640cf0fde81b86ce9e17bcfdc7b25f7fe2a0a112d422c3d8cb"
+    },
+    "15.4.0": {
+      "url": "https://nodejs.org/dist/v15.4.0/node-v15.4.0-aix-ppc64.tar.gz",
+      "sha256": "e9630d01ee1ff74445e12ab2f14581b2aea9201eca05b39f8174697afdba74b2"
+    },
+    "15.3.0": {
+      "url": "https://nodejs.org/dist/v15.3.0/node-v15.3.0-aix-ppc64.tar.gz",
+      "sha256": "5cf19b4cb855147b1fdd0e85b9d283af726e1f9e8f7274e81885a1011b33a672"
+    },
+    "15.2.1": {
+      "url": "https://nodejs.org/dist/v15.2.1/node-v15.2.1-aix-ppc64.tar.gz",
+      "sha256": "7f8276074adb699696b1a159bc2a21b939ab9d6a2997c49a80d967ae460f6c3d"
+    },
+    "15.2.0": {
+      "url": "https://nodejs.org/dist/v15.2.0/node-v15.2.0-aix-ppc64.tar.gz",
+      "sha256": "72d8f863c0e6aa2a971d4ea19d8da1a84f28fc21d5532f8e284a2cfe62e07928"
+    },
+    "15.1.0": {
+      "url": "https://nodejs.org/dist/v15.1.0/node-v15.1.0-aix-ppc64.tar.gz",
+      "sha256": "39b7152a34b5d391355c86b4081639b09795853e3fb1b91b3e86ec3eb78a8d07"
+    },
+    "15.0.1": {
+      "url": "https://nodejs.org/dist/v15.0.1/node-v15.0.1-aix-ppc64.tar.gz",
+      "sha256": "f070380cab039487ae0d16db122c4f6eaf0a165ccbf03685214e3ec5a7e98644"
+    },
+    "15.0.0": {
+      "url": "https://nodejs.org/dist/v15.0.0/node-v15.0.0-aix-ppc64.tar.gz",
+      "sha256": "3d56e708ba3283a4c087c6265936e37c728568aa3636d3487553a728e96750d9"
+    },
+    "14.21.3": {
+      "url": "https://nodejs.org/dist/v14.21.3/node-v14.21.3-aix-ppc64.tar.gz",
+      "sha256": "41b1e54022e2ed4340ae76ef3cdbb06c6693faaadd869b21c5a04664a34aa12e"
+    },
+    "14.21.2": {
+      "url": "https://nodejs.org/dist/v14.21.2/node-v14.21.2-aix-ppc64.tar.gz",
+      "sha256": "bbcd546fd41dadb4d0278c7b522282c97c406388628245dcca1a667bb69ca05d"
+    },
+    "14.21.1": {
+      "url": "https://nodejs.org/dist/v14.21.1/node-v14.21.1-aix-ppc64.tar.gz",
+      "sha256": "d2c027a4eec38ab0d8a30256832270690c57794173d3f7dc8dd2016b3218e59d"
+    },
+    "14.21.0": {
+      "url": "https://nodejs.org/dist/v14.21.0/node-v14.21.0-aix-ppc64.tar.gz",
+      "sha256": "eb26168c8e6e251871581a812bd556ed8759189c262af2c6b44331daaab5b1bd"
+    },
+    "14.20.1": {
+      "url": "https://nodejs.org/dist/v14.20.1/node-v14.20.1-aix-ppc64.tar.gz",
+      "sha256": "1140709298833d74fad652fd4f7e3e76eff0ce496756df2acf7b9872c9d0b7e7"
+    },
+    "14.20.0": {
+      "url": "https://nodejs.org/dist/v14.20.0/node-v14.20.0-aix-ppc64.tar.gz",
+      "sha256": "ce1d48f43d7a0f1709e8ec1776ea67de10104038c4784ebd399fd4971b7cc53c"
+    },
+    "14.19.3": {
+      "url": "https://nodejs.org/dist/v14.19.3/node-v14.19.3-aix-ppc64.tar.gz",
+      "sha256": "0d6b529f581b4a67f3799888a9f7d95271132f473269b412d6ca89641810ffae"
+    },
+    "14.19.2": {
+      "url": "https://nodejs.org/dist/v14.19.2/node-v14.19.2-aix-ppc64.tar.gz",
+      "sha256": "519f8a87e6181682c4953554262713d9f2632eedb3b149ee2b5189622f6a7139"
+    },
+    "14.19.1": {
+      "url": "https://nodejs.org/dist/v14.19.1/node-v14.19.1-aix-ppc64.tar.gz",
+      "sha256": "5b50af3390996a9212ac44d363696fc4b416b8fd882cea9e63201411fa800a92"
+    },
+    "14.19.0": {
+      "url": "https://nodejs.org/dist/v14.19.0/node-v14.19.0-aix-ppc64.tar.gz",
+      "sha256": "bad96e53e403a8bbc3c5b92bf451327f90ddaf37923ef3a91f3f7e267ff68930"
+    },
+    "14.18.3": {
+      "url": "https://nodejs.org/dist/v14.18.3/node-v14.18.3-aix-ppc64.tar.gz",
+      "sha256": "4c5ff6f0ee670e6175d4b0b19da4d238b7ccb0bc551e61b296f38da5ef3fee7c"
+    },
+    "14.18.2": {
+      "url": "https://nodejs.org/dist/v14.18.2/node-v14.18.2-aix-ppc64.tar.gz",
+      "sha256": "841b47d77ea253929e00da489686340edec60bc27e898bd3cf69ec7f4ff9b37b"
+    },
+    "14.18.1": {
+      "url": "https://nodejs.org/dist/v14.18.1/node-v14.18.1-aix-ppc64.tar.gz",
+      "sha256": "01092d92ec076778b9291983fa6854befd19a11655f261a3b3ec1c675154ecfb"
+    },
+    "14.18.0": {
+      "url": "https://nodejs.org/dist/v14.18.0/node-v14.18.0-aix-ppc64.tar.gz",
+      "sha256": "887bdbc61250431cf2fe062f55124833c02a9386fdd234d11aa868049ac1858e"
+    },
+    "14.17.6": {
+      "url": "https://nodejs.org/dist/v14.17.6/node-v14.17.6-aix-ppc64.tar.gz",
+      "sha256": "8a809d7c75f9e695396b53aa95bcf8ec49b9ec5a993e82c02c2e067f48b89e81"
+    },
+    "14.17.5": {
+      "url": "https://nodejs.org/dist/v14.17.5/node-v14.17.5-aix-ppc64.tar.gz",
+      "sha256": "9085e04afb5ac85f70d9ac1080a486022ad14a2e36c0f668cb8a8c23e7f413cf"
+    },
+    "14.17.4": {
+      "url": "https://nodejs.org/dist/v14.17.4/node-v14.17.4-aix-ppc64.tar.gz",
+      "sha256": "58e4ca29b0585ebeb1dbf5a701d9959dda219b5bdf6d8363213f51a779d395da"
+    },
+    "14.17.3": {
+      "url": "https://nodejs.org/dist/v14.17.3/node-v14.17.3-aix-ppc64.tar.gz",
+      "sha256": "20e2ce162be33e76a256f48f2c33a2a6458e26c9052d58ff63e8458e05f7f08f"
+    },
+    "14.17.2": {
+      "url": "https://nodejs.org/dist/v14.17.2/node-v14.17.2-aix-ppc64.tar.gz",
+      "sha256": "fb4348515d67085153c58d7b5114ca71690e3938d6c6000a02a7977cf154290a"
+    },
+    "14.17.1": {
+      "url": "https://nodejs.org/dist/v14.17.1/node-v14.17.1-aix-ppc64.tar.gz",
+      "sha256": "b2aaa7d5cffd4ea950aa65e92ffa88781e74b0dd29028963c2b74a58bd72ff04"
+    },
+    "14.17.0": {
+      "url": "https://nodejs.org/dist/v14.17.0/node-v14.17.0-aix-ppc64.tar.gz",
+      "sha256": "fb33407ea6518e5a839875d33a10948c01e36bbdba968831c861a2f5c1d5c3c2"
+    },
+    "14.16.1": {
+      "url": "https://nodejs.org/dist/v14.16.1/node-v14.16.1-aix-ppc64.tar.gz",
+      "sha256": "79d7201c1cc0765248f6b96d6377aa1f02c27c12814275a93cb3eaa2a25eec2c"
+    },
+    "14.16.0": {
+      "url": "https://nodejs.org/dist/v14.16.0/node-v14.16.0-aix-ppc64.tar.gz",
+      "sha256": "086c8b4aa726c3b197765c9f66e05b25f8e811853d0686dfbf380299b4bf5869"
+    },
+    "14.15.5": {
+      "url": "https://nodejs.org/dist/v14.15.5/node-v14.15.5-aix-ppc64.tar.gz",
+      "sha256": "cc7dc8f702ab9fe143e4d9cfce33331f630b5ce5df9b76e4353b91fe7d5075ee"
+    },
+    "14.15.4": {
+      "url": "https://nodejs.org/dist/v14.15.4/node-v14.15.4-aix-ppc64.tar.gz",
+      "sha256": "03ac3f7d33f17b762d676988b725c58140b5f9a131c849f9b78cbe7f7f84c234"
+    },
+    "14.15.3": {
+      "url": "https://nodejs.org/dist/v14.15.3/node-v14.15.3-aix-ppc64.tar.gz",
+      "sha256": "98c04e6d867ddd65f59c3079dfc155ed8834a499b55d9fdc50caacd95b5f619f"
+    },
+    "14.15.2": {
+      "url": "https://nodejs.org/dist/v14.15.2/node-v14.15.2-aix-ppc64.tar.gz",
+      "sha256": "ced5810b721cf1ffd97b3214e6e1749981928d7d787785ab6e93656c7eecef57"
+    },
+    "14.15.1": {
+      "url": "https://nodejs.org/dist/v14.15.1/node-v14.15.1-aix-ppc64.tar.gz",
+      "sha256": "696acf72b098d65f191db70f6a24ded7b914c4fe340a0a542b14dc57e69fd65b"
+    },
+    "14.15.0": {
+      "url": "https://nodejs.org/dist/v14.15.0/node-v14.15.0-aix-ppc64.tar.gz",
+      "sha256": "7e82b8faf651c80204cd7272e7cd627b6094de04624a6967d555b02150b6bb26"
+    },
+    "14.14.0": {
+      "url": "https://nodejs.org/dist/v14.14.0/node-v14.14.0-aix-ppc64.tar.gz",
+      "sha256": "38e9aba76b3c7a75be19f0c44bec9fca6c8c9d3515574fbd209197a82abdb07e"
+    },
+    "14.13.1": {
+      "url": "https://nodejs.org/dist/v14.13.1/node-v14.13.1-aix-ppc64.tar.gz",
+      "sha256": "1a73710f119692effb1d05307fba02f1834895460935b735af4eb6e2693f987a"
+    },
+    "14.13.0": {
+      "url": "https://nodejs.org/dist/v14.13.0/node-v14.13.0-aix-ppc64.tar.gz",
+      "sha256": "73f7fb1b63c7ffa2ebfddceca64a0bde23cee735398db31eb9006a9272cdfa0e"
+    },
+    "14.12.0": {
+      "url": "https://nodejs.org/dist/v14.12.0/node-v14.12.0-aix-ppc64.tar.gz",
+      "sha256": "2f9f3bed29027b30b331c673425edbd7b40be2bf623c4e08acb491a366858062"
+    },
+    "14.11.0": {
+      "url": "https://nodejs.org/dist/v14.11.0/node-v14.11.0-aix-ppc64.tar.gz",
+      "sha256": "cb97474a5165b89b2789a8b464727d6756596455648c8dda89f95dfe7c5ef3c0"
+    },
+    "14.10.1": {
+      "url": "https://nodejs.org/dist/v14.10.1/node-v14.10.1-aix-ppc64.tar.gz",
+      "sha256": "c2c7ba0d9fd55c1ce89def6775ec1792367ae73645535829a6482f6015c24fef"
+    },
+    "14.10.0": {
+      "url": "https://nodejs.org/dist/v14.10.0/node-v14.10.0-aix-ppc64.tar.gz",
+      "sha256": "95947c76445850e23d47a50b2934f03736d88fc7b82d4c99d038500c0e29d8e5"
+    },
+    "14.9.0": {
+      "url": "https://nodejs.org/dist/v14.9.0/node-v14.9.0-aix-ppc64.tar.gz",
+      "sha256": "d17443e0fa87e1edf441eb134bec95254e2f329c079a29fa8989efa4b3632452"
+    },
+    "14.8.0": {
+      "url": "https://nodejs.org/dist/v14.8.0/node-v14.8.0-aix-ppc64.tar.gz",
+      "sha256": "104da9a7138aad8d825a4ced0197529956d5bac11f0c6f443a49360d7cf5556f"
+    },
+    "14.7.0": {
+      "url": "https://nodejs.org/dist/v14.7.0/node-v14.7.0-aix-ppc64.tar.gz",
+      "sha256": "c9dc58ddc4eac5db92d7803359d2dc4a90428cc5bab1c91b96c1e2f5717b8caf"
+    },
+    "14.6.0": {
+      "url": "https://nodejs.org/dist/v14.6.0/node-v14.6.0-aix-ppc64.tar.gz",
+      "sha256": "5a42400906c4e748930a90ee1137639876839394b5ebab4dbea96eac2fa32be7"
+    },
+    "14.5.0": {
+      "url": "https://nodejs.org/dist/v14.5.0/node-v14.5.0-aix-ppc64.tar.gz",
+      "sha256": "ee3252a5721ab141b62450d865403ca0c027a8ad036fa86dd4a732157645e692"
+    },
+    "14.4.0": {
+      "url": "https://nodejs.org/dist/v14.4.0/node-v14.4.0-aix-ppc64.tar.gz",
+      "sha256": "5acdf3a6cf15342b07c9ef5e2292b949178dd69462bd07ea7b5f2d28cfa74296"
+    },
+    "14.3.0": {
+      "url": "https://nodejs.org/dist/v14.3.0/node-v14.3.0-aix-ppc64.tar.gz",
+      "sha256": "b9c9b96ecfbf47403b25a7e5779b290e7434ee3e93f8f1a15faa6c7f9a84f953"
+    },
+    "14.2.0": {
+      "url": "https://nodejs.org/dist/v14.2.0/node-v14.2.0-aix-ppc64.tar.gz",
+      "sha256": "9b4461a1af6d6fc012db5c580ece88bb72aaf33307974fe7736e83ec4bca1788"
+    },
+    "14.1.0": {
+      "url": "https://nodejs.org/dist/v14.1.0/node-v14.1.0-aix-ppc64.tar.gz",
+      "sha256": "359a6b81c5ad5918850612faa08c8e2bc9b8d3fe703b915bdd5e7c1df6e0d740"
+    },
+    "14.0.0": {
+      "url": "https://nodejs.org/dist/v14.0.0/node-v14.0.0-aix-ppc64.tar.gz",
+      "sha256": "9d6b1bf5df82fac15ca1df96155092d7463c300b82cae4c25e5e8a13227b7993"
+    },
+    "13.14.0": {
+      "url": "https://nodejs.org/dist/v13.14.0/node-v13.14.0-aix-ppc64.tar.gz",
+      "sha256": "a1c87a6262d65853d03a84c2037d5989b664f8e06a1ad3d0c7e5a666a3efb18a"
+    },
+    "13.13.0": {
+      "url": "https://nodejs.org/dist/v13.13.0/node-v13.13.0-aix-ppc64.tar.gz",
+      "sha256": "acaeb22af1eb81204d9b73a365bd2355b45625d36c341d9f4b2b3240b1998eac"
+    },
+    "13.12.0": {
+      "url": "https://nodejs.org/dist/v13.12.0/node-v13.12.0-aix-ppc64.tar.gz",
+      "sha256": "fe07c84054befb425bb8e270337410ed0ce865f910d86e26f37c29d40554f709"
+    },
+    "13.11.0": {
+      "url": "https://nodejs.org/dist/v13.11.0/node-v13.11.0-aix-ppc64.tar.gz",
+      "sha256": "35ef7b13b8c5cee625d14a82a896401ccccc60f2299c63827c52e3aff27a7b5a"
+    },
+    "13.10.1": {
+      "url": "https://nodejs.org/dist/v13.10.1/node-v13.10.1-aix-ppc64.tar.gz",
+      "sha256": "6e0a311b0e8ef5fb3ede6745dc19fd2d37b6120b66a0fd3bcb82178361d2bc6f"
+    },
+    "13.10.0": {
+      "url": "https://nodejs.org/dist/v13.10.0/node-v13.10.0-aix-ppc64.tar.gz",
+      "sha256": "a5037e8b3ace4ece087fdd89bf7a652b3e9dc8bda9579f2e1cbbcbd5d58b11c9"
+    },
+    "13.9.0": {
+      "url": "https://nodejs.org/dist/v13.9.0/node-v13.9.0-aix-ppc64.tar.gz",
+      "sha256": "0330f9649df64a665d073226d27a7ea418e09bb3f3a59abfdbabcffe5efd6d10"
+    },
+    "13.8.0": {
+      "url": "https://nodejs.org/dist/v13.8.0/node-v13.8.0-aix-ppc64.tar.gz",
+      "sha256": "25a267d18f6d7d66528bbe9a9d54730a8a39b27e9d315114ca008a105a01e55c"
+    },
+    "13.7.0": {
+      "url": "https://nodejs.org/dist/v13.7.0/node-v13.7.0-aix-ppc64.tar.gz",
+      "sha256": "50cf1dfcf1cfbc32def91e43f28ea5886135776c7dee5b3f7a4818487028f03b"
+    },
+    "13.6.0": {
+      "url": "https://nodejs.org/dist/v13.6.0/node-v13.6.0-aix-ppc64.tar.gz",
+      "sha256": "2a23aa5541378896ae92b729c279e27f2153904189ec3f641e7c96b53681acc0"
+    },
+    "13.5.0": {
+      "url": "https://nodejs.org/dist/v13.5.0/node-v13.5.0-aix-ppc64.tar.gz",
+      "sha256": "1d935f44f67a8c8bf68db3b38c23d38e7502ca9b3481338e7224283b6dd3b353"
+    },
+    "13.4.0": {
+      "url": "https://nodejs.org/dist/v13.4.0/node-v13.4.0-aix-ppc64.tar.gz",
+      "sha256": "149a3aa1c87ed82305f15fe0a0785aab61792e2b3a50e828efcc515b7c168173"
+    },
+    "13.3.0": {
+      "url": "https://nodejs.org/dist/v13.3.0/node-v13.3.0-aix-ppc64.tar.gz",
+      "sha256": "dd9e7f3fb9ef6bd5a27933f66c7dbf4d84aa5b001eab6315595924e5e44e4ae1"
+    },
+    "13.2.0": {
+      "url": "https://nodejs.org/dist/v13.2.0/node-v13.2.0-aix-ppc64.tar.gz",
+      "sha256": "9b5751453a3192a92def580c730302c549486644d8b665dd6fb60e39056bdcae"
+    },
+    "13.1.0": {
+      "url": "https://nodejs.org/dist/v13.1.0/node-v13.1.0-aix-ppc64.tar.gz",
+      "sha256": "5faec026afe9052f277402500236dd9ec4d58e0e8de93f66989fc337c65e33c8"
+    },
+    "13.0.1": {
+      "url": "https://nodejs.org/dist/v13.0.1/node-v13.0.1-aix-ppc64.tar.gz",
+      "sha256": "86d3a93abc03aeb43c9a56db56eac591276a66f0723cd3c32f20d427b21fb3b9"
+    },
+    "13.0.0": {
+      "url": "https://nodejs.org/dist/v13.0.0/node-v13.0.0-aix-ppc64.tar.gz",
+      "sha256": "9164c8b7eb9f2acccf8fe2d783122bfe967774a400ba7551695b4252181ffbcf"
+    },
+    "12.22.12": {
+      "url": "https://nodejs.org/dist/v12.22.12/node-v12.22.12-aix-ppc64.tar.gz",
+      "sha256": "c360131f03422105d59c84d164e3cbb8fa23d6c1a7d7b80fc594ec331e13a466"
+    },
+    "12.22.11": {
+      "url": "https://nodejs.org/dist/v12.22.11/node-v12.22.11-aix-ppc64.tar.gz",
+      "sha256": "66d54fbdc98ed93cc54524d8e515301a6954daabcfb1507c57c258e20095a12f"
+    },
+    "12.22.10": {
+      "url": "https://nodejs.org/dist/v12.22.10/node-v12.22.10-aix-ppc64.tar.gz",
+      "sha256": "2f60e225dd0c50a4e43e08ddaa822d60e59b0ebe77140a7ded284133ce5fab78"
+    },
+    "12.22.9": {
+      "url": "https://nodejs.org/dist/v12.22.9/node-v12.22.9-aix-ppc64.tar.gz",
+      "sha256": "bb1de3edd4aef85ed7a9581f8bab579cace8c3a5a4909e6aabc412c9fdb636ee"
+    },
+    "12.22.8": {
+      "url": "https://nodejs.org/dist/v12.22.8/node-v12.22.8-aix-ppc64.tar.gz",
+      "sha256": "e96e6df9a493c60e8d95ce9affb0b7404ea646050236995fc42ba3226e6f80a1"
+    },
+    "12.22.7": {
+      "url": "https://nodejs.org/dist/v12.22.7/node-v12.22.7-aix-ppc64.tar.gz",
+      "sha256": "32a88bed33b22ac4c7c0a11a66857748f1d2ba8f409527d87d0045e5edb11ea9"
+    },
+    "12.22.6": {
+      "url": "https://nodejs.org/dist/v12.22.6/node-v12.22.6-aix-ppc64.tar.gz",
+      "sha256": "eb2fc7741587f5149178265cbc5b244d9a9cffb6a5fe62e20ee966d57ec9217a"
+    },
+    "12.22.5": {
+      "url": "https://nodejs.org/dist/v12.22.5/node-v12.22.5-aix-ppc64.tar.gz",
+      "sha256": "88ec315734db12686d1ee8cc24c7590f125231b64159b23e8aae3c42083d5480"
+    },
+    "12.22.4": {
+      "url": "https://nodejs.org/dist/v12.22.4/node-v12.22.4-aix-ppc64.tar.gz",
+      "sha256": "efc0252457e8bbc4d703a672e2f58a4da9ebc14eb07e7a16c9dab2fbc732f6a5"
+    },
+    "12.22.3": {
+      "url": "https://nodejs.org/dist/v12.22.3/node-v12.22.3-aix-ppc64.tar.gz",
+      "sha256": "84755fb1e0d8c87b7da168f5d29b53427275c3899f9542d64a56b188d19305fc"
+    },
+    "12.22.2": {
+      "url": "https://nodejs.org/dist/v12.22.2/node-v12.22.2-aix-ppc64.tar.gz",
+      "sha256": "6e55248464241a1a2e025872c02becf49ab4a989576a5a40fdabc7c11c2cb449"
+    },
+    "12.22.1": {
+      "url": "https://nodejs.org/dist/v12.22.1/node-v12.22.1-aix-ppc64.tar.gz",
+      "sha256": "696f48b080915eb08e2ae24349a32ce56520483ac982fb51cce4876b82ab1bf5"
+    },
+    "12.22.0": {
+      "url": "https://nodejs.org/dist/v12.22.0/node-v12.22.0-aix-ppc64.tar.gz",
+      "sha256": "64482b90fb13ca4be3a40386c958a41e49f6c915d3807d14d797bf101d363621"
+    },
+    "12.21.0": {
+      "url": "https://nodejs.org/dist/v12.21.0/node-v12.21.0-aix-ppc64.tar.gz",
+      "sha256": "10a487471ebd720f0d643c9e8e919db580baf852b812788f00db736d2e634d77"
+    },
+    "12.20.2": {
+      "url": "https://nodejs.org/dist/v12.20.2/node-v12.20.2-aix-ppc64.tar.gz",
+      "sha256": "663510979b18d0cde123156f4fe78569716559cebe798390db4f2fd5e1940206"
+    },
+    "12.20.1": {
+      "url": "https://nodejs.org/dist/v12.20.1/node-v12.20.1-aix-ppc64.tar.gz",
+      "sha256": "85d6b2fb4517fdc2540eba89a70a6256541f89cb9970aa5176c10294c2d595ee"
+    },
+    "12.20.0": {
+      "url": "https://nodejs.org/dist/v12.20.0/node-v12.20.0-aix-ppc64.tar.gz",
+      "sha256": "e31578c5fad164c2b292d3e13a8eded6aefd094e2abe3c9f4d9d0bf94743cc84"
+    },
+    "12.19.1": {
+      "url": "https://nodejs.org/dist/v12.19.1/node-v12.19.1-aix-ppc64.tar.gz",
+      "sha256": "b89a4c9ca331fd8ded9ea8d97e70461f7b90bc71a29b6845b4703cd3f2294a24"
+    },
+    "12.19.0": {
+      "url": "https://nodejs.org/dist/v12.19.0/node-v12.19.0-aix-ppc64.tar.gz",
+      "sha256": "256ce45b2aad4f4d7da6e282f94f1c8cfdef20cd0c4e346c9a158116fc944825"
+    },
+    "12.18.4": {
+      "url": "https://nodejs.org/dist/v12.18.4/node-v12.18.4-aix-ppc64.tar.gz",
+      "sha256": "ddba15a6b544df32c242d761ffc66b7f5d841fe9fdf78ec1e11aa4ae9f4ac452"
+    },
+    "12.18.3": {
+      "url": "https://nodejs.org/dist/v12.18.3/node-v12.18.3-aix-ppc64.tar.gz",
+      "sha256": "9b62fcc3138eaadfc4ea90776c5e02f508a1d7df8c0b1692734cd9d07a7d82dd"
+    },
+    "12.18.2": {
+      "url": "https://nodejs.org/dist/v12.18.2/node-v12.18.2-aix-ppc64.tar.gz",
+      "sha256": "3b7026487c93871c8d7817c008cf2a04a04094873f198a605c7386d7054d2c06"
+    },
+    "12.18.1": {
+      "url": "https://nodejs.org/dist/v12.18.1/node-v12.18.1-aix-ppc64.tar.gz",
+      "sha256": "ff5ff4f96630cff7c7aa8fe54f42bdae6ada43ac8043badb4fb4ed3ae3e5b3e9"
+    },
+    "12.18.0": {
+      "url": "https://nodejs.org/dist/v12.18.0/node-v12.18.0-aix-ppc64.tar.gz",
+      "sha256": "78581e043e6d33c2d793c24990424b1c3e8ac276e440d38184ba1af25b5a7aeb"
+    },
+    "12.17.0": {
+      "url": "https://nodejs.org/dist/v12.17.0/node-v12.17.0-aix-ppc64.tar.gz",
+      "sha256": "a775eb37dd9bd020b5d96673390e2aa43e59953f50fda59acf1f56f3dde01716"
+    },
+    "12.16.3": {
+      "url": "https://nodejs.org/dist/v12.16.3/node-v12.16.3-aix-ppc64.tar.gz",
+      "sha256": "7d16447943c66dda607420e798ddc9c7d59f8849aa739e061b6cab63e7c10dd1"
+    },
+    "12.16.2": {
+      "url": "https://nodejs.org/dist/v12.16.2/node-v12.16.2-aix-ppc64.tar.gz",
+      "sha256": "6beb0d9583b33d6ff7cab78cb89f61c861fe57d2fff6474317aa2613eaf1634f"
+    },
+    "12.16.1": {
+      "url": "https://nodejs.org/dist/v12.16.1/node-v12.16.1-aix-ppc64.tar.gz",
+      "sha256": "d928dd3dc4a79c39e45aa8f1f00c33117eb6145001427cb4dd838340932d8f2d"
+    },
+    "12.16.0": {
+      "url": "https://nodejs.org/dist/v12.16.0/node-v12.16.0-aix-ppc64.tar.gz",
+      "sha256": "62495024587778856d800021203b67c1c306b451146c2418614810ebd8666f5e"
+    },
+    "12.15.0": {
+      "url": "https://nodejs.org/dist/v12.15.0/node-v12.15.0-aix-ppc64.tar.gz",
+      "sha256": "4674d94402b8c0d79a9e20d4320652830032f0a7171cea2c815858b76d3d2ee9"
+    },
+    "12.14.1": {
+      "url": "https://nodejs.org/dist/v12.14.1/node-v12.14.1-aix-ppc64.tar.gz",
+      "sha256": "7d7621ff0c037ea556284e382f3c5c98af0dad146786fef133a71cea1bd661fc"
+    },
+    "12.14.0": {
+      "url": "https://nodejs.org/dist/v12.14.0/node-v12.14.0-aix-ppc64.tar.gz",
+      "sha256": "b1c4db193ac9981d671a8b267d4d836dcdb20d9d0a9fa1b69150c349a5ac5b39"
+    },
+    "12.13.1": {
+      "url": "https://nodejs.org/dist/v12.13.1/node-v12.13.1-aix-ppc64.tar.gz",
+      "sha256": "81a5eed8c2215816aad4551683189a48953a11cb669f2e942a903e2cd5a5e4d7"
+    },
+    "12.13.0": {
+      "url": "https://nodejs.org/dist/v12.13.0/node-v12.13.0-aix-ppc64.tar.gz",
+      "sha256": "c5a07d2915a787e8f73c987e8263bb33b453a854f7fba3c8873421be5b4d53b6"
+    },
+    "12.12.0": {
+      "url": "https://nodejs.org/dist/v12.12.0/node-v12.12.0-aix-ppc64.tar.gz",
+      "sha256": "b9ccb43e955656ad9c1653428890ce74a7a7ac25dad0218e9b4a259e57fc0d6f"
+    },
+    "12.11.1": {
+      "url": "https://nodejs.org/dist/v12.11.1/node-v12.11.1-aix-ppc64.tar.gz",
+      "sha256": "5242f490a320584dbfb21a7009fe6c316d43cffc9fa661ee852bdbb0875e27f4"
+    },
+    "12.11.0": {
+      "url": "https://nodejs.org/dist/v12.11.0/node-v12.11.0-aix-ppc64.tar.gz",
+      "sha256": "e6016150756787756e019d86f3cc677ae26348abc1cae48c7faaa393b5be7b08"
+    },
+    "12.10.0": {
+      "url": "https://nodejs.org/dist/v12.10.0/node-v12.10.0-aix-ppc64.tar.gz",
+      "sha256": "c5058a0fcbd0c9f8d49b64aa573ef151460f9de142a94479b2eda7d077d9de37"
+    },
+    "12.9.1": {
+      "url": "https://nodejs.org/dist/v12.9.1/node-v12.9.1-aix-ppc64.tar.gz",
+      "sha256": "76c66b55bd2a923579333c2d24429e10d50f4e259170cdd6e413214febb9df55"
+    },
+    "12.9.0": {
+      "url": "https://nodejs.org/dist/v12.9.0/node-v12.9.0-aix-ppc64.tar.gz",
+      "sha256": "c690810b11e286778c0eacb8f1f56af1973d71b1788c54040f25380fc3ff6bcd"
+    },
+    "12.8.1": {
+      "url": "https://nodejs.org/dist/v12.8.1/node-v12.8.1-aix-ppc64.tar.gz",
+      "sha256": "a140e9c84fdb5c40328dc1ea6425954e08cec722ab4e1ab4521b0523bd7b2fa0"
+    },
+    "12.8.0": {
+      "url": "https://nodejs.org/dist/v12.8.0/node-v12.8.0-aix-ppc64.tar.gz",
+      "sha256": "c90a01b8480e2f820649924f9814023b2cb1ddda439d8f2d1f64e7917774459d"
+    },
+    "12.7.0": {
+      "url": "https://nodejs.org/dist/v12.7.0/node-v12.7.0-aix-ppc64.tar.gz",
+      "sha256": "48d199a653952aee81ba31a7cc04da45ccf4f20d9b74172ea19a1cd4f507a836"
+    },
+    "12.6.0": {
+      "url": "https://nodejs.org/dist/v12.6.0/node-v12.6.0-aix-ppc64.tar.gz",
+      "sha256": "26bbcb162932a8d04008c65b19c5056c871a7c3af38b4a4efaba316751a81f59"
+    },
+    "12.5.0": {
+      "url": "https://nodejs.org/dist/v12.5.0/node-v12.5.0-aix-ppc64.tar.gz",
+      "sha256": "45f3d0ea287d5f091da5c71cf6e77f36a98348e13972c6397bbc374d12257ef3"
+    },
+    "12.4.0": {
+      "url": "https://nodejs.org/dist/v12.4.0/node-v12.4.0-aix-ppc64.tar.gz",
+      "sha256": "b5fbeca9b72725a9825cad0a73af3f804ec01f8a7bac335fc9547c89443ad7f6"
+    },
+    "12.3.1": {
+      "url": "https://nodejs.org/dist/v12.3.1/node-v12.3.1-aix-ppc64.tar.gz",
+      "sha256": "3ab8ed94704c6d74bbf6553a3481352cbeb51dc267d8bf32390398984cb9add3"
+    },
+    "12.3.0": {
+      "url": "https://nodejs.org/dist/v12.3.0/node-v12.3.0-aix-ppc64.tar.gz",
+      "sha256": "ad994e17d12427dfb96b796c8a390af14541499edea9cc4b7349305ae650597c"
+    },
+    "12.2.0": {
+      "url": "https://nodejs.org/dist/v12.2.0/node-v12.2.0-aix-ppc64.tar.gz",
+      "sha256": "94533317caae6c62ba0d139641e3d873cd678cc9a1105c96f89c423fdea46b76"
+    },
+    "12.1.0": {
+      "url": "https://nodejs.org/dist/v12.1.0/node-v12.1.0-aix-ppc64.tar.gz",
+      "sha256": "dfedd5f7f31284b4b1c4cabc07c1f8619e998ebeac8183ea4c4b8cb1e1a61611"
+    },
+    "12.0.0": {
+      "url": "https://nodejs.org/dist/v12.0.0/node-v12.0.0-aix-ppc64.tar.gz",
+      "sha256": "84e9f3f274a89ff82f9f5890bc009a2d697bfca0312fb3dbc248212844bb7e20"
+    },
+    "11.15.0": {
+      "url": "https://nodejs.org/dist/v11.15.0/node-v11.15.0-aix-ppc64.tar.gz",
+      "sha256": "f6cbaa83f176f7b267e8751c5b99b4d4f5cd43b3a441593a2e44287d733cc976"
+    },
+    "11.14.0": {
+      "url": "https://nodejs.org/dist/v11.14.0/node-v11.14.0-aix-ppc64.tar.gz",
+      "sha256": "fd0db076d7b7b4fe93617906b0dc9af3c7dc88bcdebb683a3a7741d0b0746018"
+    },
+    "11.13.0": {
+      "url": "https://nodejs.org/dist/v11.13.0/node-v11.13.0-aix-ppc64.tar.gz",
+      "sha256": "194cb9007c4db2a38a17ffabaa334166e6506274bcb23afa28a538838c180e35"
+    },
+    "11.12.0": {
+      "url": "https://nodejs.org/dist/v11.12.0/node-v11.12.0-aix-ppc64.tar.gz",
+      "sha256": "8d0860b866cff03b41cbb611e07962da087cfd238147ea13a66311590b5e72ef"
+    },
+    "11.11.0": {
+      "url": "https://nodejs.org/dist/v11.11.0/node-v11.11.0-aix-ppc64.tar.gz",
+      "sha256": "74e0c2e1183a33e592854c203a64b2471fa68ce51ed49f25a7a2845233d653ee"
+    },
+    "11.10.1": {
+      "url": "https://nodejs.org/dist/v11.10.1/node-v11.10.1-aix-ppc64.tar.gz",
+      "sha256": "b52526c4d271c221e9bd4b36888be9a1b5f8b5381f22665ec46910dde0c06b45"
+    },
+    "11.10.0": {
+      "url": "https://nodejs.org/dist/v11.10.0/node-v11.10.0-aix-ppc64.tar.gz",
+      "sha256": "c9526a855f9322330caa8f800de8cd734895d8575292286f5576f62c614aa5b4"
+    },
+    "11.9.0": {
+      "url": "https://nodejs.org/dist/v11.9.0/node-v11.9.0-aix-ppc64.tar.gz",
+      "sha256": "f603424e6efb7336d4fa9862c87f8edbfcc06cddcf9daabe495e98b5f6479d18"
+    },
+    "11.8.0": {
+      "url": "https://nodejs.org/dist/v11.8.0/node-v11.8.0-aix-ppc64.tar.gz",
+      "sha256": "6150a5f8ae0184a7b69deaa8c18eb3013cd02738d829b4cd8a476f0b184f52b9"
+    },
+    "11.7.0": {
+      "url": "https://nodejs.org/dist/v11.7.0/node-v11.7.0-aix-ppc64.tar.gz",
+      "sha256": "081b4c5359dbf320fd167f2b8c075a91980a49a5d95f3d4ecdd075dfb6d92132"
+    },
+    "11.6.0": {
+      "url": "https://nodejs.org/dist/v11.6.0/node-v11.6.0-aix-ppc64.tar.gz",
+      "sha256": "b015a390703cf829c169016991c891c91807db50c76be8a73f39f1415efed462"
+    },
+    "11.5.0": {
+      "url": "https://nodejs.org/dist/v11.5.0/node-v11.5.0-aix-ppc64.tar.gz",
+      "sha256": "f1eaef8d20fd107ee716cca51d35c3588400cd97f6d67ef5d1075a1cbd5344fd"
+    },
+    "11.4.0": {
+      "url": "https://nodejs.org/dist/v11.4.0/node-v11.4.0-aix-ppc64.tar.gz",
+      "sha256": "fe7842762be7a0385c13a45b476a0b4dc6509487209ec9b7cb84f7f4a5d31953"
+    },
+    "11.3.0": {
+      "url": "https://nodejs.org/dist/v11.3.0/node-v11.3.0-aix-ppc64.tar.gz",
+      "sha256": "37cd261b32d2c6e320d99d9ea5e3d57dc4efd0f279e2366563c2a1c58ea7bf5c"
+    },
+    "11.2.0": {
+      "url": "https://nodejs.org/dist/v11.2.0/node-v11.2.0-aix-ppc64.tar.gz",
+      "sha256": "f593158350894ba43ec665ca04ea89ac72585aafef8db35e39895862d86f1935"
+    },
+    "11.1.0": {
+      "url": "https://nodejs.org/dist/v11.1.0/node-v11.1.0-aix-ppc64.tar.gz",
+      "sha256": "71e08bec907dfb5f32d71c88e0b5a449984eefba64dbf89c6e31ae3a2e339ed1"
+    },
+    "11.0.0": {
+      "url": "https://nodejs.org/dist/v11.0.0/node-v11.0.0-aix-ppc64.tar.gz",
+      "sha256": "e4599aa883f4402e6e140bfc01b13c1c46900927b568f6a855d9812bd07fbff7"
+    },
+    "10.24.1": {
+      "url": "https://nodejs.org/dist/v10.24.1/node-v10.24.1-aix-ppc64.tar.gz",
+      "sha256": "fc9ba4f3ba0be4a4495dd4fc7aa1e608f74a1440264518da760b246417077c3f"
+    },
+    "10.24.0": {
+      "url": "https://nodejs.org/dist/v10.24.0/node-v10.24.0-aix-ppc64.tar.gz",
+      "sha256": "59bdb393035c605627bf4ba64ad8edcc74f067043790c7edc545333cca8630c4"
+    },
+    "10.23.3": {
+      "url": "https://nodejs.org/dist/v10.23.3/node-v10.23.3-aix-ppc64.tar.gz",
+      "sha256": "b9ad6ba0f7377fc5010b7aa3bb852385e3a54d6a910d294a76b23419a3eeb297"
+    },
+    "10.23.2": {
+      "url": "https://nodejs.org/dist/v10.23.2/node-v10.23.2-aix-ppc64.tar.gz",
+      "sha256": "a0b595a3c0da4e8cd8cf30786f505241d339b58e24de9de2e37114b519236b59"
+    },
+    "10.23.1": {
+      "url": "https://nodejs.org/dist/v10.23.1/node-v10.23.1-aix-ppc64.tar.gz",
+      "sha256": "33bf67ad4a5843b0c1a5a9f3800ccbe1f30b068889177049bd6faca4a843c64a"
+    },
+    "10.23.0": {
+      "url": "https://nodejs.org/dist/v10.23.0/node-v10.23.0-aix-ppc64.tar.gz",
+      "sha256": "b7967e12fc50c73e9b70be8fd744539bb90f845b05947e93715c55f00e09d484"
+    },
+    "10.22.1": {
+      "url": "https://nodejs.org/dist/v10.22.1/node-v10.22.1-aix-ppc64.tar.gz",
+      "sha256": "358d266878b8a728dfdcb93a7d6d1d1a9d489026bca4a1bece6fc839984dc3d8"
+    },
+    "10.22.0": {
+      "url": "https://nodejs.org/dist/v10.22.0/node-v10.22.0-aix-ppc64.tar.gz",
+      "sha256": "15fc4672df24d28e606acb9f4d0c5dd72e11cefca880107167d661b6c7a6a455"
+    },
+    "10.21.0": {
+      "url": "https://nodejs.org/dist/v10.21.0/node-v10.21.0-aix-ppc64.tar.gz",
+      "sha256": "73f0bc9348b2f70f2deed898843f7212f494b085ee3022ff67967005852130fa"
+    },
+    "10.20.1": {
+      "url": "https://nodejs.org/dist/v10.20.1/node-v10.20.1-aix-ppc64.tar.gz",
+      "sha256": "d25e795554942f467d6c3c3e22d3cd420aa3beac03adc71055c50c6cc41e79cf"
+    },
+    "10.20.0": {
+      "url": "https://nodejs.org/dist/v10.20.0/node-v10.20.0-aix-ppc64.tar.gz",
+      "sha256": "392432f73ec56ad420bd505d9d4e0e15435138aef45c27106d0f15de4975790b"
+    },
+    "10.19.0": {
+      "url": "https://nodejs.org/dist/v10.19.0/node-v10.19.0-aix-ppc64.tar.gz",
+      "sha256": "9040615d614cf4039f4abbd62c799877c3c2efd517e4100d6f13064d368a25a0"
+    },
+    "10.18.1": {
+      "url": "https://nodejs.org/dist/v10.18.1/node-v10.18.1-aix-ppc64.tar.gz",
+      "sha256": "07d8baf00e4456d678c4828bc597808f0789abfbc91e81172bed650f1b72477d"
+    },
+    "10.18.0": {
+      "url": "https://nodejs.org/dist/v10.18.0/node-v10.18.0-aix-ppc64.tar.gz",
+      "sha256": "1e8604a930d732eef94362c8e5b204cb7272bbd14171582043ee8436caeb7fd4"
+    },
+    "10.17.0": {
+      "url": "https://nodejs.org/dist/v10.17.0/node-v10.17.0-aix-ppc64.tar.gz",
+      "sha256": "0e6237b642ce93704395a61468990fb1156df33c0b60a83bfebb42aaeee272f5"
+    },
+    "10.16.3": {
+      "url": "https://nodejs.org/dist/v10.16.3/node-v10.16.3-aix-ppc64.tar.gz",
+      "sha256": "1e246436e177d69354b5e3ea47579a03b68d7b61a2565972c18c3a4cb5d8ee33"
+    },
+    "10.16.2": {
+      "url": "https://nodejs.org/dist/v10.16.2/node-v10.16.2-aix-ppc64.tar.gz",
+      "sha256": "0b78f2bb3281090dd8f389aa57e692cf548f993d8108032c24793bcb9c3ed440"
+    },
+    "10.16.1": {
+      "url": "https://nodejs.org/dist/v10.16.1/node-v10.16.1-aix-ppc64.tar.gz",
+      "sha256": "f9afd5285438e2f6b72c5c529a9f28a80f0fcd9cdc003e477d6e95177d89fdc2"
+    },
+    "10.16.0": {
+      "url": "https://nodejs.org/dist/v10.16.0/node-v10.16.0-aix-ppc64.tar.gz",
+      "sha256": "6aa026be2dcda26c3a5dd6f492bf517431787ba52e7a82db1d0a37c16031b841"
+    },
+    "10.15.3": {
+      "url": "https://nodejs.org/dist/v10.15.3/node-v10.15.3-aix-ppc64.tar.gz",
+      "sha256": "f2f018418b6bfa263ec981f04f3fa5337724edae8d77fc3951cd36667ee720ea"
+    },
+    "10.15.2": {
+      "url": "https://nodejs.org/dist/v10.15.2/node-v10.15.2-aix-ppc64.tar.gz",
+      "sha256": "04b06a4904442887939603d1e34fb9d9230d5660c8d7d6ad7c0a0c708f8baacf"
+    },
+    "10.15.1": {
+      "url": "https://nodejs.org/dist/v10.15.1/node-v10.15.1-aix-ppc64.tar.gz",
+      "sha256": "5085537ad9d6a6adc24bbfbb5c40711be61222378b37202fa189b69135aa5503"
+    },
+    "10.15.0": {
+      "url": "https://nodejs.org/dist/v10.15.0/node-v10.15.0-aix-ppc64.tar.gz",
+      "sha256": "5a0eac2db2dc6114a9095190a0e9e835e210d5cdf5c0042607bb50331c32313f"
+    },
+    "10.14.2": {
+      "url": "https://nodejs.org/dist/v10.14.2/node-v10.14.2-aix-ppc64.tar.gz",
+      "sha256": "c5df726d847b7b2744b7a2cd7dcb687a5dbac4ab5920d6e93cc8a1b85b7055d8"
+    },
+    "10.14.1": {
+      "url": "https://nodejs.org/dist/v10.14.1/node-v10.14.1-aix-ppc64.tar.gz",
+      "sha256": "81cc429d9c5d50d36f7912ec927ff271e0608c501db7aa3375aad0043558e6f7"
+    },
+    "10.14.0": {
+      "url": "https://nodejs.org/dist/v10.14.0/node-v10.14.0-aix-ppc64.tar.gz",
+      "sha256": "d089875efec9b79a248a23ed7da86250b639fbca1572dba19323eb16321e58e1"
+    },
+    "10.13.0": {
+      "url": "https://nodejs.org/dist/v10.13.0/node-v10.13.0-aix-ppc64.tar.gz",
+      "sha256": "9e8d0b86ef67ea2bf660a50f560ba8eb5b91665af7489c5ba8475708624dbd30"
+    },
+    "10.12.0": {
+      "url": "https://nodejs.org/dist/v10.12.0/node-v10.12.0-aix-ppc64.tar.gz",
+      "sha256": "eb8cb1aa1f3ee9bc376d3654ce6410980e9c42b5d09eddca73f5d624bec22861"
+    },
+    "10.11.0": {
+      "url": "https://nodejs.org/dist/v10.11.0/node-v10.11.0-aix-ppc64.tar.gz",
+      "sha256": "af6ade952ad083d2db9d21db9e5a6ecb87deb1a28d55d63376e96fd35ee527a4"
+    },
+    "10.10.0": {
+      "url": "https://nodejs.org/dist/v10.10.0/node-v10.10.0-aix-ppc64.tar.gz",
+      "sha256": "d37fa6cb6ac55ae8b3529492a3fd0a0c3210b22a8acb6b6a7228907ae941cbb1"
+    },
+    "10.9.0": {
+      "url": "https://nodejs.org/dist/v10.9.0/node-v10.9.0-aix-ppc64.tar.gz",
+      "sha256": "238afcb7b047691db3883b01a97f1ec458824d6d7d8412840319aeb82f3a3d5c"
+    },
+    "10.8.0": {
+      "url": "https://nodejs.org/dist/v10.8.0/node-v10.8.0-aix-ppc64.tar.gz",
+      "sha256": "b167433b33bddd5839c7ce2a703137b22a888f22a12d5a32b3eca6f78819f557"
+    },
+    "10.7.0": {
+      "url": "https://nodejs.org/dist/v10.7.0/node-v10.7.0-aix-ppc64.tar.gz",
+      "sha256": "fb5d42f64655bf21ffee921a1b1ecad3a7bcbe11d709db054a7f26073ec28e8b"
+    },
+    "10.6.0": {
+      "url": "https://nodejs.org/dist/v10.6.0/node-v10.6.0-aix-ppc64.tar.gz",
+      "sha256": "ad6c4cc2be5b5427a1d48c61e86778b1f085d74a9c7e140bf5769ef025cf3b3b"
+    },
+    "10.5.0": {
+      "url": "https://nodejs.org/dist/v10.5.0/node-v10.5.0-aix-ppc64.tar.gz",
+      "sha256": "a4008530bf54dc760206e71d7548977137d488e83081e3153a2ffead9bd9549e"
+    },
+    "10.4.1": {
+      "url": "https://nodejs.org/dist/v10.4.1/node-v10.4.1-aix-ppc64.tar.gz",
+      "sha256": "7b35df9310cf11c2c9b2ff27de5acb19ac2f75fc0f8d670da0d05d2a83b84bb2"
+    },
+    "10.4.0": {
+      "url": "https://nodejs.org/dist/v10.4.0/node-v10.4.0-aix-ppc64.tar.gz",
+      "sha256": "cc90b3662a6e479b42f71091fe8ffd155d520cf81c96b3012d9126568e7fc03b"
+    },
+    "10.3.0": {
+      "url": "https://nodejs.org/dist/v10.3.0/node-v10.3.0-aix-ppc64.tar.gz",
+      "sha256": "53f5d2b14f4fe2f66a4c4063f7870af978a81559e7d0b608a9b483673e6d0b56"
+    },
+    "10.2.1": {
+      "url": "https://nodejs.org/dist/v10.2.1/node-v10.2.1-aix-ppc64.tar.gz",
+      "sha256": "e71c30c2f723d95b421bf6744acac6db1cf1abc1e6da626e410381f8565409eb"
+    },
+    "10.2.0": {
+      "url": "https://nodejs.org/dist/v10.2.0/node-v10.2.0-aix-ppc64.tar.gz",
+      "sha256": "bc1e5b26ddd18f494036682fda957199210b4c88b382f61eb45ec55a70601546"
+    },
+    "10.1.0": {
+      "url": "https://nodejs.org/dist/v10.1.0/node-v10.1.0-aix-ppc64.tar.gz",
+      "sha256": "f4f96c3180f9fd8113632e499d5129709d52d8206e250924ff4c2d7d07ba5715"
+    },
+    "10.0.0": {
+      "url": "https://nodejs.org/dist/v10.0.0/node-v10.0.0-aix-ppc64.tar.gz",
+      "sha256": "1b9849a20b335229bcdbea04db213846553c87f50002b6457a5c9c4b299411b5"
+    },
+    "9.11.2": {
+      "url": "https://nodejs.org/dist/v9.11.2/node-v9.11.2-aix-ppc64.tar.gz",
+      "sha256": "b2a6ce3c9161436e5219748f42c7ce2d0cbc9a1ab05ee404d47a39115da0181f"
+    },
+    "9.11.1": {
+      "url": "https://nodejs.org/dist/v9.11.1/node-v9.11.1-aix-ppc64.tar.gz",
+      "sha256": "45ff7d5168dbdfc9501c72f0001a5a44fbb10492c4a0d3e331a3c1d7b0481f8d"
+    },
+    "9.11.0": {
+      "url": "https://nodejs.org/dist/v9.11.0/node-v9.11.0-aix-ppc64.tar.gz",
+      "sha256": "b85ea086ed586a54c78a87402729a078ef3bc6d887771426a10d8b781baaf0cd"
+    },
+    "9.10.1": {
+      "url": "https://nodejs.org/dist/v9.10.1/node-v9.10.1-aix-ppc64.tar.gz",
+      "sha256": "2fcbe5e13d03e2e8bb6bd20ae6df91144ae9eb641c5475e190b4dff6dcb4f2bf"
+    },
+    "9.10.0": {
+      "url": "https://nodejs.org/dist/v9.10.0/node-v9.10.0-aix-ppc64.tar.gz",
+      "sha256": "3ad90e0ed617eaa19d77d9d02c5c42f8b03560abbd02ddaa0db0016725660b9a"
+    },
+    "9.9.0": {
+      "url": "https://nodejs.org/dist/v9.9.0/node-v9.9.0-aix-ppc64.tar.gz",
+      "sha256": "204f65d57e940913144cc25e2e835c1f64c68938c0c1217f0954ff045e233f5e"
+    },
+    "9.8.0": {
+      "url": "https://nodejs.org/dist/v9.8.0/node-v9.8.0-aix-ppc64.tar.gz",
+      "sha256": "9cf4a126d679a91821f9832c9b8a534c34d59761b22fca6783c2ff8c45499d47"
+    },
+    "9.7.1": {
+      "url": "https://nodejs.org/dist/v9.7.1/node-v9.7.1-aix-ppc64.tar.gz",
+      "sha256": "6b64c804bdc74e40be18378f84e2920f2bf0b7c64bd67873c73d7668868538df"
+    },
+    "9.7.0": {
+      "url": "https://nodejs.org/dist/v9.7.0/node-v9.7.0-aix-ppc64.tar.gz",
+      "sha256": "b49936b7b28849890a8c255550a89c2bd3569abf0abaccbaf584f80a718cfa2f"
+    },
+    "9.6.1": {
+      "url": "https://nodejs.org/dist/v9.6.1/node-v9.6.1-aix-ppc64.tar.gz",
+      "sha256": "2c11c8796afe731a11ae0ea5898650881e86e557b8127cb5201ffb64cb3dd2d4"
+    },
+    "9.6.0": {
+      "url": "https://nodejs.org/dist/v9.6.0/node-v9.6.0-aix-ppc64.tar.gz",
+      "sha256": "67b25b3e29b5db4a73b4100f03dbb2216115d828c12d18c3978afb3e22525ae8"
+    },
+    "9.5.0": {
+      "url": "https://nodejs.org/dist/v9.5.0/node-v9.5.0-aix-ppc64.tar.gz",
+      "sha256": "12b97b006a49248b65d679506ce17309ef2668f1887352f95eb74447a44657ed"
+    },
+    "9.4.0": {
+      "url": "https://nodejs.org/dist/v9.4.0/node-v9.4.0-aix-ppc64.tar.gz",
+      "sha256": "8498d7e2c5293e697303c721ba465f34ea3898dea78ed9f33ab257a3da1eb3be"
+    },
+    "9.3.0": {
+      "url": "https://nodejs.org/dist/v9.3.0/node-v9.3.0-aix-ppc64.tar.gz",
+      "sha256": "d0bfbd7697c1249b536586cfdc257828f2f56f30945fd120d735f646f297828c"
+    },
+    "9.2.1": {
+      "url": "https://nodejs.org/dist/v9.2.1/node-v9.2.1-aix-ppc64.tar.gz",
+      "sha256": "8f8017bf8e4f953cf6596bd6b08f66df39fb2d791abee1254881b7c04bc1819d"
+    },
+    "9.2.0": {
+      "url": "https://nodejs.org/dist/v9.2.0/node-v9.2.0-aix-ppc64.tar.gz",
+      "sha256": "066ab559f3744b0301637bb8d51e22da655e6a5ab0b38e2ff5d9a68e669cedf5"
+    },
+    "9.1.0": {
+      "url": "https://nodejs.org/dist/v9.1.0/node-v9.1.0-aix-ppc64.tar.gz",
+      "sha256": "ad17f74b4ff2de4c3e9306fae9dbc018b27bdd150cfaf86b70aad0024e370e2c"
+    },
+    "9.0.0": {
+      "url": "https://nodejs.org/dist/v9.0.0/node-v9.0.0-aix-ppc64.tar.gz",
+      "sha256": "7eafe17599d9cc63c1c0ddbf4d8f7daacbef11804ae52376fa79033addbdd341"
+    },
+    "8.17.0": {
+      "url": "https://nodejs.org/dist/v8.17.0/node-v8.17.0-aix-ppc64.tar.gz",
+      "sha256": "b7a3cf3be16de9ec3cec995d335613de9337acfb17e2e64bcfe346482efcc9ed"
+    },
+    "8.16.2": {
+      "url": "https://nodejs.org/dist/v8.16.2/node-v8.16.2-aix-ppc64.tar.gz",
+      "sha256": "8ed8a96300c116eb9533beb70510882fb5a9bc4b1f9acfa31bb718d52213e4a3"
+    },
+    "8.16.1": {
+      "url": "https://nodejs.org/dist/v8.16.1/node-v8.16.1-aix-ppc64.tar.gz",
+      "sha256": "be210d9ce20155877e56aa57901f71b45b214ebb6f78fc48e96ad3c37ec2ea0c"
+    },
+    "8.16.0": {
+      "url": "https://nodejs.org/dist/v8.16.0/node-v8.16.0-aix-ppc64.tar.gz",
+      "sha256": "fde4775ae5b8b2a19f1343629b6892da60eca0aebf517f840e345522a5c386b2"
+    },
+    "8.15.1": {
+      "url": "https://nodejs.org/dist/v8.15.1/node-v8.15.1-aix-ppc64.tar.gz",
+      "sha256": "9156fc8929f545981bfbafa4fe8ea3b8afeed9dacfb6e4bbc145ac86705c783e"
+    },
+    "8.15.0": {
+      "url": "https://nodejs.org/dist/v8.15.0/node-v8.15.0-aix-ppc64.tar.gz",
+      "sha256": "ef9db73a1c84129b0549db54299569eb308e5992a1459fe27f5c4c8c7184b382"
+    },
+    "8.14.1": {
+      "url": "https://nodejs.org/dist/v8.14.1/node-v8.14.1-aix-ppc64.tar.gz",
+      "sha256": "6a3f40c519b104ad9d9969ad70a26816bc6d4da8a17e4b71dac6abc28295ed12"
+    },
+    "8.14.0": {
+      "url": "https://nodejs.org/dist/v8.14.0/node-v8.14.0-aix-ppc64.tar.gz",
+      "sha256": "3897b7ad086751be72eebeafab5c5f84f361135748dd2cfb542046e990561adf"
+    },
+    "8.13.0": {
+      "url": "https://nodejs.org/dist/v8.13.0/node-v8.13.0-aix-ppc64.tar.gz",
+      "sha256": "22a763858774c078d4a9cc121b7744ce3f1c5312bff939c407292261b3a69d50"
+    },
+    "8.12.0": {
+      "url": "https://nodejs.org/dist/v8.12.0/node-v8.12.0-aix-ppc64.tar.gz",
+      "sha256": "6a514208421b0643769fb7064d2edaadedd10c6eef4647b645907481e575fca6"
+    },
+    "8.11.4": {
+      "url": "https://nodejs.org/dist/v8.11.4/node-v8.11.4-aix-ppc64.tar.gz",
+      "sha256": "8d80ab9743983ced0936b1a05e2ec94df32d32080e7030b0e8524a450c88c4b9"
+    },
+    "8.11.3": {
+      "url": "https://nodejs.org/dist/v8.11.3/node-v8.11.3-aix-ppc64.tar.gz",
+      "sha256": "3933bbdbc678cf237072b0429f0552e01c77fe0a6118da907bff81769d2c801e"
+    },
+    "8.11.2": {
+      "url": "https://nodejs.org/dist/v8.11.2/node-v8.11.2-aix-ppc64.tar.gz",
+      "sha256": "9a39fa0477246ada0ba248f410c57fec25abf3c581018f4b7dbaefb3f1d6dd7f"
+    },
+    "8.11.1": {
+      "url": "https://nodejs.org/dist/v8.11.1/node-v8.11.1-aix-ppc64.tar.gz",
+      "sha256": "0dabd62eaa3675dafb458da6206fe31a6edf3c368b428fe8d2f800b857070c44"
+    },
+    "8.11.0": {
+      "url": "https://nodejs.org/dist/v8.11.0/node-v8.11.0-aix-ppc64.tar.gz",
+      "sha256": "79cca390e53f6b63ea66b26f621e0253db065b005775aeec83a0d7762c911860"
+    },
+    "8.10.0": {
+      "url": "https://nodejs.org/dist/v8.10.0/node-v8.10.0-aix-ppc64.tar.gz",
+      "sha256": "0cf3170dfd8cf489a8e17dfa525927ba927fe3022a1ef2c924affffce7c82691"
+    },
+    "8.9.4": {
+      "url": "https://nodejs.org/dist/v8.9.4/node-v8.9.4-aix-ppc64.tar.gz",
+      "sha256": "155ae63f0bb47050e0c31b4f8c17dadc79dcfa8e8f4ec9e3974fd7592afa9a4f"
+    },
+    "8.9.3": {
+      "url": "https://nodejs.org/dist/v8.9.3/node-v8.9.3-aix-ppc64.tar.gz",
+      "sha256": "92e662ae3e7fa84a304a4be2e547a38d4f4dc421201a44a5f833683278484198"
+    },
+    "8.9.2": {
+      "url": "https://nodejs.org/dist/v8.9.2/node-v8.9.2-aix-ppc64.tar.gz",
+      "sha256": "7d04fd8133c8ab7d1951dbbd7a1c89385f713c414d92eadba98a12947f31d605"
+    },
+    "8.9.1": {
+      "url": "https://nodejs.org/dist/v8.9.1/node-v8.9.1-aix-ppc64.tar.gz",
+      "sha256": "70c9bbb0b7e9125ba2d1e83826cd7ab981d21bf59f58b53809bb1922e59211a9"
+    },
+    "8.9.0": {
+      "url": "https://nodejs.org/dist/v8.9.0/node-v8.9.0-aix-ppc64.tar.gz",
+      "sha256": "7c0d705d29130357bef83ce062031dd2d8e3756deee444865ec23f8e5bf83635"
+    },
+    "8.8.1": {
+      "url": "https://nodejs.org/dist/v8.8.1/node-v8.8.1-aix-ppc64.tar.gz",
+      "sha256": "532ab5404a992e061639e9fb552818719c67167b065d831e203e896baa9a68b4"
+    },
+    "8.8.0": {
+      "url": "https://nodejs.org/dist/v8.8.0/node-v8.8.0-aix-ppc64.tar.gz",
+      "sha256": "4524fccb73aae20d6ebd1900c0dd131fab7d3807c5597eb847293562513e43bf"
+    },
+    "8.7.0": {
+      "url": "https://nodejs.org/dist/v8.7.0/node-v8.7.0-aix-ppc64.tar.gz",
+      "sha256": "b5b39887d41c12c5dbecddb9f7c9a40887776bcd7bee598ce1f5a6fd2373e542"
+    },
+    "8.6.0": {
+      "url": "https://nodejs.org/dist/v8.6.0/node-v8.6.0-aix-ppc64.tar.gz",
+      "sha256": "8b7d261caa3b2d4a9dce44703ef84a4e6622bd0206c0a20e0958ca11b731fd15"
+    },
+    "8.5.0": {
+      "url": "https://nodejs.org/dist/v8.5.0/node-v8.5.0-aix-ppc64.tar.gz",
+      "sha256": "5555ac88cdf15b0984efb87a81b6b692ad2a86711516453b8e8fd4923003b578"
+    },
+    "8.4.0": {
+      "url": "https://nodejs.org/dist/v8.4.0/node-v8.4.0-aix-ppc64.tar.gz",
+      "sha256": "9007e961fc9a2a8badb656ebaab52077347113d7618806e7aa502a71eab3f5aa"
+    },
+    "8.3.0": {
+      "url": "https://nodejs.org/dist/v8.3.0/node-v8.3.0-aix-ppc64.tar.gz",
+      "sha256": "223d7e7b2079f1766057d1213b7dd1f7ab037cb3f29ae9e5db1b12dc4a7d003a"
+    },
+    "8.2.1": {
+      "url": "https://nodejs.org/dist/v8.2.1/node-v8.2.1-aix-ppc64.tar.gz",
+      "sha256": "b6343e1d396dff5b29a62eff0550a7782a6b82b18625fb29cebd6735b30851f3"
+    },
+    "8.2.0": {
+      "url": "https://nodejs.org/dist/v8.2.0/node-v8.2.0-aix-ppc64.tar.gz",
+      "sha256": "502f4620457ac966ae5890b0a77a09a456e4e838b41d732d853db1ae21f0a3ca"
+    },
+    "8.1.4": {
+      "url": "https://nodejs.org/dist/v8.1.4/node-v8.1.4-aix-ppc64.tar.gz",
+      "sha256": "3d3f66dc9ef56456815b3edf3a4d0a984ce298e55f2e80bf5643108c3daa7f49"
+    },
+    "8.1.3": {
+      "url": "https://nodejs.org/dist/v8.1.3/node-v8.1.3-aix-ppc64.tar.gz",
+      "sha256": "9f00c50d3065a6effe2b8f5c1097238bb7a00de9136b36e368fd30000135006f"
+    },
+    "8.1.2": {
+      "url": "https://nodejs.org/dist/v8.1.2/node-v8.1.2-aix-ppc64.tar.gz",
+      "sha256": "9886f85b9ed8f9588ab28c42732deaaae5d43d63432036a351c8df968bc72483"
+    },
+    "8.1.1": {
+      "url": "https://nodejs.org/dist/v8.1.1/node-v8.1.1-aix-ppc64.tar.gz",
+      "sha256": "3f39c72b597a5810e4b5a510feec11a78f943e4c06c73e160558f7e7614362c9"
+    },
+    "8.1.0": {
+      "url": "https://nodejs.org/dist/v8.1.0/node-v8.1.0-aix-ppc64.tar.gz",
+      "sha256": "53db5aea2ebea852be456ad5829b5d4bd7894bc40982bce247639b838543d574"
+    },
+    "8.0.0": {
+      "url": "https://nodejs.org/dist/v8.0.0/node-v8.0.0-aix-ppc64.tar.gz",
+      "sha256": "e71f14f58d1251932d537af3c47213d2cf3774f031bc7e26b81f69b24688ed84"
+    },
+    "7.10.1": {
+      "url": "https://nodejs.org/dist/v7.10.1/node-v7.10.1-aix-ppc64.tar.gz",
+      "sha256": "9a8502e5ee6b68ed6d5fbdb52ae3228e9f80b628bf505d7a47bb41a815e50579"
+    },
+    "7.10.0": {
+      "url": "https://nodejs.org/dist/v7.10.0/node-v7.10.0-aix-ppc64.tar.gz",
+      "sha256": "84c478cc48345be13a08b0dc84da1a80c2b700fb7c78120828231dc1eca3fe18"
+    },
+    "7.9.0": {
+      "url": "https://nodejs.org/dist/v7.9.0/node-v7.9.0-aix-ppc64.tar.gz",
+      "sha256": "e2ea01c130677d5ac5ecea9b1591d285779a142d372000bda15655058864534f"
+    },
+    "7.8.0": {
+      "url": "https://nodejs.org/dist/v7.8.0/node-v7.8.0-aix-ppc64.tar.gz",
+      "sha256": "3b433801907437aac7680588519492052de7854eab74ce7d70fc22182fa469ee"
+    },
+    "7.7.4": {
+      "url": "https://nodejs.org/dist/v7.7.4/node-v7.7.4-aix-ppc64.tar.gz",
+      "sha256": "0d7cb85072d99e47305fbdf31541704557038a8811d4ba1d7a76f68cfddedf78"
+    },
+    "7.7.3": {
+      "url": "https://nodejs.org/dist/v7.7.3/node-v7.7.3-aix-ppc64.tar.gz",
+      "sha256": "c102f23a70ffd302bc6233c4dc33a1a230ad49046bd0b003c405a9a1a9bb06b8"
+    },
+    "7.7.2": {
+      "url": "https://nodejs.org/dist/v7.7.2/node-v7.7.2-aix-ppc64.tar.gz",
+      "sha256": "71445192382115e16be153f5bb4fbd5cd3638d68089acf15421fe736c04042aa"
+    },
+    "7.7.1": {
+      "url": "https://nodejs.org/dist/v7.7.1/node-v7.7.1-aix-ppc64.tar.gz",
+      "sha256": "c6ae32c741a007b443092a85f5dfd5b244a1c9eaf3f0cc27052d3d2017019953"
+    },
+    "7.7.0": {
+      "url": "https://nodejs.org/dist/v7.7.0/node-v7.7.0-aix-ppc64.tar.gz",
+      "sha256": "2faca08ec1b3266625fc7c3b130f3598f4552a780242dc077d2f26205b2ef837"
+    },
+    "7.6.0": {
+      "url": "https://nodejs.org/dist/v7.6.0/node-v7.6.0-aix-ppc64.tar.gz",
+      "sha256": "242445e5353b20b14d3c986dbb7b84b4017982340b4c0c049935e2e983608a7f"
+    },
+    "7.5.0": {
+      "url": "https://nodejs.org/dist/v7.5.0/node-v7.5.0-aix-ppc64.tar.gz",
+      "sha256": "b97c867927ee4d32526ff411b2fc53b6131f5defbf3c1f487c7068da7d2ad3bf"
+    },
+    "7.4.0": {
+      "url": "https://nodejs.org/dist/v7.4.0/node-v7.4.0-aix-ppc64.tar.gz",
+      "sha256": "4128cd6fb9e8b844e6b12aaa67fce875434ec8682dd3955c9193dfb69c6cddbf"
+    },
+    "7.3.0": {
+      "url": "https://nodejs.org/dist/v7.3.0/node-v7.3.0-aix-ppc64.tar.gz",
+      "sha256": "301bf56472af47863ce78a6b371c6fc36f9cd25a74f9d098fd18d7dd080d2551"
+    },
+    "7.2.1": {
+      "url": "https://nodejs.org/dist/v7.2.1/node-v7.2.1-aix-ppc64.tar.gz",
+      "sha256": "93c809d64e28f6cf0e62f51f0e385764f615c90112ed6220371ad756332b796f"
+    },
+    "7.2.0": {
+      "url": "https://nodejs.org/dist/v7.2.0/node-v7.2.0-aix-ppc64.tar.gz",
+      "sha256": "27643e5c280b513314c0335a4430437a416d3bc4d0f3ffe783cd1f2cb88ee956"
+    },
+    "7.1.0": {
+      "url": "https://nodejs.org/dist/v7.1.0/node-v7.1.0-aix-ppc64.tar.gz",
+      "sha256": "5ef780ab1d04674c7ec528eeb112d37a42a58f00c9f15954655929c5adaf1bbe"
+    },
+    "7.0.0": {
+      "url": "https://nodejs.org/dist/v7.0.0/node-v7.0.0-aix-ppc64.tar.gz",
+      "sha256": "0977be0f261dd0e61433e875fbf0014773d1560b8bb5a882637e6e0289906d84"
+    },
+    "6.17.1": {
+      "url": "https://nodejs.org/dist/v6.17.1/node-v6.17.1-aix-ppc64.tar.gz",
+      "sha256": "8e01f15308312487d7f2f0f86185e768f0ee61bcc8f2d52e8dbe9b6cab241539"
+    },
+    "6.17.0": {
+      "url": "https://nodejs.org/dist/v6.17.0/node-v6.17.0-aix-ppc64.tar.gz",
+      "sha256": "9eb3b9f5e754d803b5e0cdcd406cc2ef8e6656f6bdcf1a3bb1eab14b3ffd9cb2"
+    },
+    "6.16.0": {
+      "url": "https://nodejs.org/dist/v6.16.0/node-v6.16.0-aix-ppc64.tar.gz",
+      "sha256": "2defd3ab3f4628cade7d4b415be013fa0ad8e6ec4ee7da556affc3209b6eb0a4"
+    },
+    "6.15.1": {
+      "url": "https://nodejs.org/dist/v6.15.1/node-v6.15.1-aix-ppc64.tar.gz",
+      "sha256": "dcabcb43de205f1946f9cb415c728a5d542345117c9a61a506c587b4c7c01b52"
+    },
+    "6.15.0": {
+      "url": "https://nodejs.org/dist/v6.15.0/node-v6.15.0-aix-ppc64.tar.gz",
+      "sha256": "16dbfb9fc50992b7fe0551f5851ce7b540a850ee7692a709405eb87d622a3937"
+    },
+    "6.14.4": {
+      "url": "https://nodejs.org/dist/v6.14.4/node-v6.14.4-aix-ppc64.tar.gz",
+      "sha256": "91ba62cef4f8d2d3f4d4764a7116ba1eae963a4e8847290ac599dfc459ab1058"
+    },
+    "6.14.3": {
+      "url": "https://nodejs.org/dist/v6.14.3/node-v6.14.3-aix-ppc64.tar.gz",
+      "sha256": "98055f1b91e283c1d050dfbe78f8b7e5e4ae915c5d4c8ff5b3962b0e1b9d72e9"
+    },
+    "6.14.2": {
+      "url": "https://nodejs.org/dist/v6.14.2/node-v6.14.2-aix-ppc64.tar.gz",
+      "sha256": "dcad7d29c35ff34b54dc5c0c80c90626d1b85039147b11635d91203aa2411d91"
+    },
+    "6.14.1": {
+      "url": "https://nodejs.org/dist/v6.14.1/node-v6.14.1-aix-ppc64.tar.gz",
+      "sha256": "baff3cbf6ad4f386d47aa2fd8c87c9947aea6654578008fc082d3812e9e6f4d3"
+    },
+    "6.14.0": {
+      "url": "https://nodejs.org/dist/v6.14.0/node-v6.14.0-aix-ppc64.tar.gz",
+      "sha256": "d0faec6a64ced7d9277b49d9236ccb0d071aecd5de05bc2ca97f62b285da68b4"
+    },
+    "6.13.1": {
+      "url": "https://nodejs.org/dist/v6.13.1/node-v6.13.1-aix-ppc64.tar.gz",
+      "sha256": "202fccebc6629de680c13ce3ec69c8ba91ddaa1eace00fa18f9d9b10775442c2"
+    },
+    "6.13.0": {
+      "url": "https://nodejs.org/dist/v6.13.0/node-v6.13.0-aix-ppc64.tar.gz",
+      "sha256": "449d81e4dafa5d055e0f6b345c91962113e5bf36417edb65e4a1b6af4c8a790a"
+    },
+    "6.12.3": {
+      "url": "https://nodejs.org/dist/v6.12.3/node-v6.12.3-aix-ppc64.tar.gz",
+      "sha256": "3ca24ee434513dd4f9180ffca6d2e740255aa046ed88e665ce15bb8ee9623380"
+    },
+    "6.12.2": {
+      "url": "https://nodejs.org/dist/v6.12.2/node-v6.12.2-aix-ppc64.tar.gz",
+      "sha256": "a9ac3110966718640e8da7692b6e8438264a6dec766ff0565ebb0b7b6d8f20b2"
+    },
+    "6.12.1": {
+      "url": "https://nodejs.org/dist/v6.12.1/node-v6.12.1-aix-ppc64.tar.gz",
+      "sha256": "894890be550a764b3f6b7ce80054efce5d5ca0d18624fc560062908cb0dd3391"
+    },
+    "6.12.0": {
+      "url": "https://nodejs.org/dist/v6.12.0/node-v6.12.0-aix-ppc64.tar.gz",
+      "sha256": "170d3fe4f32a2a2c15fe93cb74d77e0dffbc9b5058c5381f5253732d564797d6"
+    },
+    "6.11.5": {
+      "url": "https://nodejs.org/dist/v6.11.5/node-v6.11.5-aix-ppc64.tar.gz",
+      "sha256": "907cc72126bfcfed2040ded546649ee1023d8839fc898447bf8435f8b204b654"
+    },
+    "6.11.4": {
+      "url": "https://nodejs.org/dist/v6.11.4/node-v6.11.4-aix-ppc64.tar.gz",
+      "sha256": "1a7c75efe627e63abfb2d663a379b39aea1ce367bcb5d02d315726c96af72d04"
+    },
+    "6.11.3": {
+      "url": "https://nodejs.org/dist/v6.11.3/node-v6.11.3-aix-ppc64.tar.gz",
+      "sha256": "7f344d29a6feb0fd77529dc30ce2badd881d8fa382e6bbee97dee45a31b1e322"
+    },
+    "6.11.2": {
+      "url": "https://nodejs.org/dist/v6.11.2/node-v6.11.2-aix-ppc64.tar.gz",
+      "sha256": "79ead2addfa70ea471406f48917530822e9214acd2351d1f02401b3c4dd7a34a"
+    },
+    "6.11.1": {
+      "url": "https://nodejs.org/dist/v6.11.1/node-v6.11.1-aix-ppc64.tar.gz",
+      "sha256": "903c39914631c25509467516f22d2b8b320d08f17d1a4d2a7de740dffc7a1c1b"
+    },
+    "6.11.0": {
+      "url": "https://nodejs.org/dist/v6.11.0/node-v6.11.0-aix-ppc64.tar.gz",
+      "sha256": "70e0d8d853f88d5178fba02d8516f58f26c0d52dbcc2bd5c979bc9bb35e38c77"
+    },
+    "6.10.3": {
+      "url": "https://nodejs.org/dist/v6.10.3/node-v6.10.3-aix-ppc64.tar.gz",
+      "sha256": "1cc6ffb9f41512be53cac90bccebc3c7d8143e06f0b95441deee218b3f47f2f5"
+    },
+    "6.10.2": {
+      "url": "https://nodejs.org/dist/v6.10.2/node-v6.10.2-aix-ppc64.tar.gz",
+      "sha256": "625947ad107156105f0b1ee05cde078f0175793ea59022e831bab85b7c19d6be"
+    },
+    "6.10.1": {
+      "url": "https://nodejs.org/dist/v6.10.1/node-v6.10.1-aix-ppc64.tar.gz",
+      "sha256": "fe3f3de8ac6789df4639e29dd2ee3f5b3b8c30445a6120f1caf46dd347229e4a"
+    },
+    "6.10.0": {
+      "url": "https://nodejs.org/dist/v6.10.0/node-v6.10.0-aix-ppc64.tar.gz",
+      "sha256": "28ec25cbe3b1f4000a2a9f3bb565c36ff89745db35d5db07b99d223eb52941c8"
+    },
+    "6.9.5": {
+      "url": "https://nodejs.org/dist/v6.9.5/node-v6.9.5-aix-ppc64.tar.gz",
+      "sha256": "bb0c8db8c1a7e04667d482c0d44db9e7afa1a9ff6cde5829bb582e57727769f6"
+    },
+    "6.9.4": {
+      "url": "https://nodejs.org/dist/v6.9.4/node-v6.9.4-aix-ppc64.tar.gz",
+      "sha256": "c80f9efefd22abeb2958d57f1c1d62257d25a14227ba66565616d23db9a851ea"
+    },
+    "6.9.3": {
+      "url": "https://nodejs.org/dist/v6.9.3/node-v6.9.3-aix-ppc64.tar.gz",
+      "sha256": "ced91ebd70173714117e3d4787036b7047c5000ab28896ac128fbd3607dd99f1"
+    },
+    "6.9.2": {
+      "url": "https://nodejs.org/dist/v6.9.2/node-v6.9.2-aix-ppc64.tar.gz",
+      "sha256": "0e4df135bca73e05aa0c3d71684833b683b6b68b6a14c48f05e161fdd79bd697"
+    },
+    "6.9.1": {
+      "url": "https://nodejs.org/dist/v6.9.1/node-v6.9.1-aix-ppc64.tar.gz",
+      "sha256": "77c14510c4b09188450f8c10b8c163ef4b4f616c8b7f455d538f07a810bc98bf"
+    },
+    "6.9.0": {
+      "url": "https://nodejs.org/dist/v6.9.0/node-v6.9.0-aix-ppc64.tar.gz",
+      "sha256": "a5738a8061e5964d9851047355bab10c02046997adad0592d3e0c834c19c9599"
+    },
+    "6.8.1": {
+      "url": "https://nodejs.org/dist/v6.8.1/node-v6.8.1-aix-ppc64.tar.gz",
+      "sha256": "fc42b85875c2ed593a22c4543f82f5ae4d737969c1915ac3d5f7a1fcf47a05a1"
+    },
+    "6.8.0": {
+      "url": "https://nodejs.org/dist/v6.8.0/node-v6.8.0-aix-ppc64.tar.gz",
+      "sha256": "6ec44c9dd6e9e7ed5145089aeb4437893873dd4de7cd8dfd7afb875f9b8eeb77"
+    },
+    "6.7.0": {
+      "url": "https://nodejs.org/dist/v6.7.0/node-v6.7.0-aix-ppc64.tar.gz",
+      "sha256": "132855c123efdfa43dc4a256f15728f1bbd3f9996a4b9e29cd31908248be6bf2"
+    },
+    "6.6.0": {
+      "url": "https://nodejs.org/dist/v6.6.0/node-v6.6.0-darwin-x64.tar.gz",
+      "sha256": "c8d1fe38eb794ca46aacf6c8e90676eec7a8aeec83b4b09f57ce503509e7a19f"
+    },
+    "6.5.0": {
+      "url": "https://nodejs.org/dist/v6.5.0/node-v6.5.0-darwin-x64.tar.gz",
+      "sha256": "352cee438dc55942aebac054e8a2e14b6784056c66465105e2b3bfc55832927f"
+    },
+    "6.4.0": {
+      "url": "https://nodejs.org/dist/v6.4.0/node-v6.4.0-darwin-x64.tar.gz",
+      "sha256": "4d04f11e12a360a0d5c6da5cd393fbe75a13f111a492c2a12185992b83542f9c"
+    },
+    "6.3.1": {
+      "url": "https://nodejs.org/dist/v6.3.1/node-v6.3.1-darwin-x64.tar.gz",
+      "sha256": "de6d45f63ab281b7454977d8dbf5494015e63a1cd9c9d8fe6f67e2431684f34f"
+    },
+    "6.3.0": {
+      "url": "https://nodejs.org/dist/v6.3.0/node-v6.3.0-darwin-x64.tar.gz",
+      "sha256": "5c711a62e464f1d455c31afe2a62e9866eeaf1c23d977b57a60285d0bd040ba5"
+    },
+    "6.2.2": {
+      "url": "https://nodejs.org/dist/v6.2.2/node-v6.2.2-darwin-x64.tar.gz",
+      "sha256": "03b9eadd71d73daf2a25c8ea833454b326cb702f717a39f1b2a1324179cab5fa"
+    },
+    "6.2.1": {
+      "url": "https://nodejs.org/dist/v6.2.1/node-v6.2.1-darwin-x64.tar.gz",
+      "sha256": "a6e99c2e482133b0f2db6bb8284ef79ea60c554e8dbfc24a1a691671cc5d0517"
+    },
+    "6.2.0": {
+      "url": "https://nodejs.org/dist/v6.2.0/node-v6.2.0-darwin-x64.tar.gz",
+      "sha256": "1c8c16bb3df22c7c98cf0c118bd183838b848e36ef1448992cf511c044339823"
+    },
+    "6.1.0": {
+      "url": "https://nodejs.org/dist/v6.1.0/node-v6.1.0-darwin-x64.tar.gz",
+      "sha256": "481aeab001b6c79589daf3e1f8f5b9ad7021a3979b49fd842313010482ff7b56"
+    },
+    "6.0.0": {
+      "url": "https://nodejs.org/dist/v6.0.0/node-v6.0.0-darwin-x64.tar.gz",
+      "sha256": "5be18c5571ce2b33918a3dd0be2f18d2a6939a60754026fb7e7967bec09d9e5e"
+    },
+    "5.12.0": {
+      "url": "https://nodejs.org/dist/v5.12.0/node-v5.12.0-darwin-x64.tar.gz",
+      "sha256": "bcbfb16896d4b13e08184343420ab00822e9ef09a72f9dbc41ef0cfcc84b99c2"
+    },
+    "5.11.1": {
+      "url": "https://nodejs.org/dist/v5.11.1/node-v5.11.1-darwin-x64.tar.gz",
+      "sha256": "7a992f61dc535c696ba2e236e3664ba669680f7e1a204e42166412cc3476503a"
+    },
+    "5.11.0": {
+      "url": "https://nodejs.org/dist/v5.11.0/node-v5.11.0-darwin-x64.tar.gz",
+      "sha256": "4992e1ba18cdac51383a089b1494131dbca465a5328938dbd4835cbf780f7ecc"
+    },
+    "5.10.1": {
+      "url": "https://nodejs.org/dist/v5.10.1/node-v5.10.1-darwin-x64.tar.gz",
+      "sha256": "00ffc5c662580e1a5062a8740a9b9a40dbf7dadb5c8aa16bdf0ed33c7c1dfbfb"
+    },
+    "5.10.0": {
+      "url": "https://nodejs.org/dist/v5.10.0/node-v5.10.0-darwin-x64.tar.gz",
+      "sha256": "00407892416649f7567cc20ae6f0c091650dee6186fe58eb33d2bd886f276799"
+    },
+    "5.9.1": {
+      "url": "https://nodejs.org/dist/v5.9.1/node-v5.9.1-darwin-x64.tar.gz",
+      "sha256": "90dbbd2072582f0373a738114131112f3f8a2c7f7f64bbf4991a51d2808d4935"
+    },
+    "5.9.0": {
+      "url": "https://nodejs.org/dist/v5.9.0/node-v5.9.0-darwin-x64.tar.gz",
+      "sha256": "6417022026c30cfb1b8af92f1434c1b202548076ada636708e1874d8af78197b"
+    },
+    "5.8.0": {
+      "url": "https://nodejs.org/dist/v5.8.0/node-v5.8.0-darwin-x64.tar.gz",
+      "sha256": "8c16f21a1c8882ba5875d0da617c817aa5005e514bd460dbf32aaeb3ffa477fe"
+    },
+    "5.7.1": {
+      "url": "https://nodejs.org/dist/v5.7.1/node-v5.7.1-darwin-x64.tar.gz",
+      "sha256": "25627633163e6ad47e62cd9aaab04e47707b51ecc5aaa05f35a2d6419dbe054c"
+    },
+    "5.7.0": {
+      "url": "https://nodejs.org/dist/v5.7.0/node-v5.7.0-darwin-x64.tar.gz",
+      "sha256": "a68a9d45527077e1e044a4036a9b0fc803faa46c97e30fed71b77a759b4fa2fe"
+    },
+    "5.6.0": {
+      "url": "https://nodejs.org/dist/v5.6.0/node-v5.6.0-darwin-x64.tar.gz",
+      "sha256": "1ef8f5b627cf980b0d242d5b70be3c6fbefc8e61ecfcaf97930965d68c927bd9"
+    },
+    "5.5.0": {
+      "url": "https://nodejs.org/dist/v5.5.0/node-v5.5.0-darwin-x64.tar.gz",
+      "sha256": "d4fd29e2d501963235104fc715fb0b55b302a40b605f432c456069606b939a46"
+    },
+    "5.4.1": {
+      "url": "https://nodejs.org/dist/v5.4.1/node-v5.4.1-darwin-x64.tar.gz",
+      "sha256": "c523472a5972823e8b6baf2419f837885321c772612ec508a65614c758e25a46"
+    },
+    "5.4.0": {
+      "url": "https://nodejs.org/dist/v5.4.0/node-v5.4.0-darwin-x64.tar.gz",
+      "sha256": "efc7422f46ff2c9961ea984ced72b74f9c6c2e4e73f51ad83ff35c63835323f9"
+    },
+    "5.3.0": {
+      "url": "https://nodejs.org/dist/v5.3.0/node-v5.3.0-darwin-x64.tar.gz",
+      "sha256": "bfb28ff6a02a6bcb3a77afcb66054dcf44b50e1ccdbeca807865c6220c380b6b"
+    },
+    "5.2.0": {
+      "url": "https://nodejs.org/dist/v5.2.0/node-v5.2.0-darwin-x64.tar.gz",
+      "sha256": "e3d690b8a1f3aae3caaa57d931aac5ace7dbdea7237d3e9413041c30feecb4e0"
+    },
+    "5.1.1": {
+      "url": "https://nodejs.org/dist/v5.1.1/node-v5.1.1-darwin-x64.tar.gz",
+      "sha256": "cb6c831e7c3a8432a14a0e4ddb2000295c0166abce06b2d50134cc2cccb2dc9c"
+    },
+    "5.1.0": {
+      "url": "https://nodejs.org/dist/v5.1.0/node-v5.1.0-darwin-x64.tar.gz",
+      "sha256": "4752961731e579a26dd45d765f76e67f70683b0026c0035fc4c30d70c7baf4f0"
+    },
+    "5.0.0": {
+      "url": "https://nodejs.org/dist/v5.0.0/node-v5.0.0-darwin-x64.tar.gz",
+      "sha256": "26f3e42df814b9b42f0b0045901c84eb79233d8196d0dcdf77a6a3c975c6f25d"
+    },
+    "4.9.1": {
+      "url": "https://nodejs.org/dist/v4.9.1/node-v4.9.1-darwin-x64.tar.gz",
+      "sha256": "d86280574658364f8acea579c430b65fe4ab71138039904739df830943ca4859"
+    },
+    "4.9.0": {
+      "url": "https://nodejs.org/dist/v4.9.0/node-v4.9.0-darwin-x64.tar.gz",
+      "sha256": "9baa27ff50189db2f8de4b3dff58bd1c6e83ba98f8ecc128215c007f0de0a3d7"
+    },
+    "4.8.7": {
+      "url": "https://nodejs.org/dist/v4.8.7/node-v4.8.7-darwin-x64.tar.gz",
+      "sha256": "c8c1efb41d84c81a8f97791dc8179a03d0f90cd32f2fd8471d9088be74cbffb6"
+    },
+    "4.8.6": {
+      "url": "https://nodejs.org/dist/v4.8.6/node-v4.8.6-darwin-x64.tar.gz",
+      "sha256": "ee7ce30a1b7069efea27bbef1829a3a665ae6650cc4a79eb556707c6779ba540"
+    },
+    "4.8.5": {
+      "url": "https://nodejs.org/dist/v4.8.5/node-v4.8.5-darwin-x64.tar.gz",
+      "sha256": "7e0b0ea1ea8d37096561caed59368eebb773c2cdf9d455ad30381053fbc109ce"
+    },
+    "4.8.4": {
+      "url": "https://nodejs.org/dist/v4.8.4/node-v4.8.4-darwin-x64.tar.gz",
+      "sha256": "06213900c7d6ed598355cd11348b204bbb4d8069eaa7425c067ee596f38e7c4d"
+    },
+    "4.8.3": {
+      "url": "https://nodejs.org/dist/v4.8.3/node-v4.8.3-darwin-x64.tar.gz",
+      "sha256": "5aa0fe69a61b56a806b7176ef53974e61ae4643b3684a1b098bc2f31a21f87c4"
+    },
+    "4.8.2": {
+      "url": "https://nodejs.org/dist/v4.8.2/node-v4.8.2-darwin-x64.tar.gz",
+      "sha256": "839e8ac8b30692000393172ba10e0d14057060751694c73276cecc03ec301152"
+    },
+    "4.8.1": {
+      "url": "https://nodejs.org/dist/v4.8.1/node-v4.8.1-darwin-x64.tar.gz",
+      "sha256": "ec6a6c41d8001abf0a954bec4cec3b2b1e063b2b13af11b177c33f5c965d6b52"
+    },
+    "4.8.0": {
+      "url": "https://nodejs.org/dist/v4.8.0/node-v4.8.0-darwin-x64.tar.gz",
+      "sha256": "ea4d8dc0e77e744d78dbb5221f2711e77f90394a5a5296fc231757dd52afe9b0"
+    },
+    "4.7.3": {
+      "url": "https://nodejs.org/dist/v4.7.3/node-v4.7.3-darwin-x64.tar.gz",
+      "sha256": "1d69b0919250cac5997be5623eb916ae7087f5c91c8bad17afffe32ac1cbced8"
+    },
+    "4.7.2": {
+      "url": "https://nodejs.org/dist/v4.7.2/node-v4.7.2-darwin-x64.tar.gz",
+      "sha256": "2ce6c9dca7dbf768760bf520fb9e5a4cb67651ad912bddec9fbb4dd9ce04b4f8"
+    },
+    "4.7.1": {
+      "url": "https://nodejs.org/dist/v4.7.1/node-v4.7.1-darwin-x64.tar.gz",
+      "sha256": "4567240caa1c59e702a42704f3af2c79df488a139dd8ab37cf0fce24b5f74020"
+    },
+    "4.7.0": {
+      "url": "https://nodejs.org/dist/v4.7.0/node-v4.7.0-darwin-x64.tar.gz",
+      "sha256": "a8a930005e964e38cd40a4549b5f9796703720df856d7b72519e42f1237707dc"
+    },
+    "4.6.2": {
+      "url": "https://nodejs.org/dist/v4.6.2/node-v4.6.2-darwin-x64.tar.gz",
+      "sha256": "0e19ba9c0e16ea1d96df2a3a5edc07e0950325f465ab1049d6ab7b7d98d384f2"
+    },
+    "4.6.1": {
+      "url": "https://nodejs.org/dist/v4.6.1/node-v4.6.1-darwin-x64.tar.gz",
+      "sha256": "e5929de3a963f9a75c5923c9c222cde401e03c4b4991ec9281bf81f878f482ff"
+    },
+    "4.6.0": {
+      "url": "https://nodejs.org/dist/v4.6.0/node-v4.6.0-darwin-x64.tar.gz",
+      "sha256": "525ab42c767525edb7e512c600dedb20d826a6f58e1d6d1b774651a1c782a267"
+    },
+    "4.5.0": {
+      "url": "https://nodejs.org/dist/v4.5.0/node-v4.5.0-darwin-x64.tar.gz",
+      "sha256": "d171f0c859e3895b2430c317001b817866c4de45211ad540c59658ee6a2f689f"
+    },
+    "4.4.7": {
+      "url": "https://nodejs.org/dist/v4.4.7/node-v4.4.7-darwin-x64.tar.gz",
+      "sha256": "1971386a2dcf4406b5bc414d111ea40b227cfebf396badd447c37ace0eef2fa9"
+    },
+    "4.4.6": {
+      "url": "https://nodejs.org/dist/v4.4.6/node-v4.4.6-darwin-x64.tar.gz",
+      "sha256": "2afbc5f48ce3b3bb9b9a46e64b8a23c08a448bf8bf89c10a5a053fd0ec024a07"
+    },
+    "4.4.5": {
+      "url": "https://nodejs.org/dist/v4.4.5/node-v4.4.5-darwin-x64.tar.gz",
+      "sha256": "1e729f9836e7b543724ee0b2ac902b4dff4a6f7d91031d20314825b61e86127f"
+    },
+    "4.4.4": {
+      "url": "https://nodejs.org/dist/v4.4.4/node-v4.4.4-darwin-x64.tar.gz",
+      "sha256": "3d240db764391faca06df67db1eefd0b20989153edb0a99cbaf16e441e734a4d"
+    },
+    "4.4.3": {
+      "url": "https://nodejs.org/dist/v4.4.3/node-v4.4.3-darwin-x64.tar.gz",
+      "sha256": "7cbb9819926d90c9c9f31c3db4c83499a3d9518ad3c7d9915fa4c66d6d5875df"
+    },
+    "4.4.2": {
+      "url": "https://nodejs.org/dist/v4.4.2/node-v4.4.2-darwin-x64.tar.gz",
+      "sha256": "a143d6c71c9f1d1827d4cde1086611fb41d4909247377b8539a7129e1bf8266b"
+    },
+    "4.4.1": {
+      "url": "https://nodejs.org/dist/v4.4.1/node-v4.4.1-darwin-x64.tar.gz",
+      "sha256": "628195be45f7248a6defb6c23aaed7d0bca78979934f6e868387ddeb311dcc56"
+    },
+    "4.4.0": {
+      "url": "https://nodejs.org/dist/v4.4.0/node-v4.4.0-darwin-x64.tar.gz",
+      "sha256": "650c2f1e186a4974304b652321fbb3c4bd22ee7bc7c2c406c6e244dd6a6d38be"
+    },
+    "4.3.2": {
+      "url": "https://nodejs.org/dist/v4.3.2/node-v4.3.2-darwin-x64.tar.gz",
+      "sha256": "6380a36500de02a48758f204c1c5931af986d93609cfa06db1f91216bec9a5eb"
+    },
+    "4.3.1": {
+      "url": "https://nodejs.org/dist/v4.3.1/node-v4.3.1-darwin-x64.tar.gz",
+      "sha256": "9c0751ee88a47c10269eb930d7ad7b103c2ba875c3a96204ca133dc52fc50826"
+    },
+    "4.3.0": {
+      "url": "https://nodejs.org/dist/v4.3.0/node-v4.3.0-darwin-x64.tar.gz",
+      "sha256": "72858adf7bc84b632f5635dd4a8030226048af5ad5cb166c7ee169dfcb4645ef"
+    },
+    "4.2.6": {
+      "url": "https://nodejs.org/dist/v4.2.6/node-v4.2.6-darwin-x64.tar.gz",
+      "sha256": "259ea77784013c1124506e3d90ee6847b2b9d3c066b6626ed62ebb31ed8e6fe3"
+    },
+    "4.2.5": {
+      "url": "https://nodejs.org/dist/v4.2.5/node-v4.2.5-darwin-x64.tar.gz",
+      "sha256": "c504aa1a0b7d7a51efe2403d72ef35a4742b5321fd23a2af52e06f9986a5ca70"
+    },
+    "4.2.4": {
+      "url": "https://nodejs.org/dist/v4.2.4/node-v4.2.4-darwin-x64.tar.gz",
+      "sha256": "3260412c210099b82a42316d614dec3313f4684a8ec63fca8684423675c37b0b"
+    },
+    "4.2.3": {
+      "url": "https://nodejs.org/dist/v4.2.3/node-v4.2.3-darwin-x64.tar.gz",
+      "sha256": "078b033d98367da2248b443ed74f0b8a5808783d07cf0c24884457fd66b68fc1"
+    },
+    "4.2.2": {
+      "url": "https://nodejs.org/dist/v4.2.2/node-v4.2.2-darwin-x64.tar.gz",
+      "sha256": "17e60f59cfd40bd0a74f62106dfe2d6cf14aea53490c5e872fa7530138d0dfef"
+    },
+    "4.2.1": {
+      "url": "https://nodejs.org/dist/v4.2.1/node-v4.2.1-darwin-x64.tar.gz",
+      "sha256": "658686795fac9669d411ac5c5be2da8159058e386767322d8d8151dcdb4810b9"
+    },
+    "4.2.0": {
+      "url": "https://nodejs.org/dist/v4.2.0/node-v4.2.0-darwin-x64.tar.gz",
+      "sha256": "078c9a2c2fbfb603700d94b618df3b8b211e10f361bced5e4439142715aebde5"
+    },
+    "4.1.2": {
+      "url": "https://nodejs.org/dist/v4.1.2/node-v4.1.2-darwin-x64.tar.gz",
+      "sha256": "058a5b07c9bda34074f4acad75ce03319402592a0482221f574e2fc4aed60131"
+    },
+    "4.1.1": {
+      "url": "https://nodejs.org/dist/v4.1.1/node-v4.1.1-darwin-x64.tar.gz",
+      "sha256": "b7e72bf8364c35992a8bebc57bf68c596d622c33d409c0943bf7d24ca7205c76"
+    },
+    "4.1.0": {
+      "url": "https://nodejs.org/dist/v4.1.0/node-v4.1.0-darwin-x64.tar.gz",
+      "sha256": "ff1c4b13a10c0789709cd73980a496b27e434207802989377ec4cb56302a1ebc"
+    },
+    "4.0.0": {
+      "url": "https://nodejs.org/dist/v4.0.0/node-v4.0.0-darwin-x64.tar.gz",
+      "sha256": "4893cadaa55fe88b214371b23257d7fae4b30661ef01d352e3f930ba9d402ee0"
+    },
+    "0.12.18": {
+      "url": "https://nodejs.org/dist/v0.12.18/node-v0.12.18-darwin-x64.tar.gz",
+      "sha256": "65ebb91bf79c9d7521d394bf76a44b67363895302eb98cd131b540761212016a"
+    },
+    "0.12.17": {
+      "url": "https://nodejs.org/dist/v0.12.17/node-v0.12.17-darwin-x64.tar.gz",
+      "sha256": "4134958fecbc56e9a25374c80e4770ec51e5acfb5eefb67c89ee1af8d80c83da"
+    },
+    "0.12.16": {
+      "url": "https://nodejs.org/dist/v0.12.16/node-v0.12.16-darwin-x64.tar.gz",
+      "sha256": "c602cbced0d6a2fb9d97f25a72833cf564b35fdf742f8627a93b6cdb5132ea95"
+    },
+    "0.12.15": {
+      "url": "https://nodejs.org/dist/v0.12.15/node-v0.12.15-darwin-x64.tar.gz",
+      "sha256": "125551969069284099d402d85e36e1637d9dd6f19105261f87b8f8b2020b3433"
+    },
+    "0.12.14": {
+      "url": "https://nodejs.org/dist/v0.12.14/node-v0.12.14-darwin-x64.tar.gz",
+      "sha256": "b4de40b8fe9cf748b36b9d7764c06f1fc955c73e3547c4eaab3d90a818663e1c"
+    },
+    "0.12.13": {
+      "url": "https://nodejs.org/dist/v0.12.13/node-v0.12.13-darwin-x64.tar.gz",
+      "sha256": "e842a8eb8b7658d177675de9d054de4d7fb7d6c77edfcda7d83adb95b029bf3d"
+    },
+    "0.12.12": {
+      "url": "https://nodejs.org/dist/v0.12.12/node-v0.12.12-darwin-x64.tar.gz",
+      "sha256": "b9b7b7c8f9c35fd6492bd5e60ec485ca8bf60f678651c7b6c46a3d8cf561e13c"
+    },
+    "0.12.11": {
+      "url": "https://nodejs.org/dist/v0.12.11/node-v0.12.11-darwin-x64.tar.gz",
+      "sha256": "68b949f6c308eb1ad28e96926fca68e3ac0dfb7ec997945f4e26db99fe3ad711"
+    },
+    "0.12.10": {
+      "url": "https://nodejs.org/dist/v0.12.10/node-v0.12.10-darwin-x64.tar.gz",
+      "sha256": "c95df35ca1ed7b4b0ded815c1d49f36defcb1fdb882f6a8ef6106a07e3f2ffef"
+    },
+    "0.12.9": {
+      "url": "https://nodejs.org/dist/v0.12.9/node-v0.12.9-darwin-x64.tar.gz",
+      "sha256": "8a40582c8f346f4acb08ab29bdc171db5fea55603999e02be1ebfcdd2ed3ca83"
+    },
+    "0.12.8": {
+      "url": "https://nodejs.org/dist/v0.12.8/node-v0.12.8-darwin-x64.tar.gz",
+      "sha256": "857155d09d62b59c675baf4091a4e76af0972f8c99a26259a18e3ac99575697b"
+    },
+    "0.12.7": {
+      "url": "https://nodejs.org/dist/v0.12.7/node-v0.12.7-darwin-x64.tar.gz",
+      "sha256": "58f24547ae5be8e0c7183bed65f96a1722af1ce363eccb1523a2321f38d83d57"
+    },
+    "0.12.6": {
+      "url": "https://nodejs.org/dist/v0.12.6/node-v0.12.6-darwin-x64.tar.gz",
+      "sha256": "843b72103c461c780554c590041bc1df1086e192c07dc8eeddb5fe644f072f19"
+    },
+    "0.12.5": {
+      "url": "https://nodejs.org/dist/v0.12.5/node-v0.12.5-darwin-x64.tar.gz",
+      "sha256": "23cbcbae16488384580324a059a8716667f2ea7798589caebf038ceda2db5355"
+    },
+    "0.12.4": {
+      "url": "https://nodejs.org/dist/v0.12.4/node-v0.12.4-darwin-x64.tar.gz",
+      "sha256": "757d1a2e7d3deb03b40277e9f04ae276c370b53e6e5238d44e08846f1f3c85c2"
+    },
+    "0.12.3": {
+      "url": "https://nodejs.org/dist/v0.12.3/node-v0.12.3-darwin-x64.tar.gz",
+      "sha256": "74ddd964bcc7d73bb7cf893174710bf6d0b9d8950e30cccb9a50827df04f1c59"
+    },
+    "0.12.2": {
+      "url": "https://nodejs.org/dist/v0.12.2/node-v0.12.2-darwin-x64.tar.gz",
+      "sha256": "7d382f8988ea441e2918d9d935003177affd13d4d160020df6b3d8ee7d65ec2d"
+    },
+    "0.12.1": {
+      "url": "https://nodejs.org/dist/v0.12.1/node-v0.12.1-darwin-x64.tar.gz",
+      "sha256": "1724e75c32ac58452e0ca3eae25120ab67e3b1383da7c10278b33c0f2d3385bf"
+    },
+    "0.12.0": {
+      "url": "https://nodejs.org/dist/v0.12.0/node-v0.12.0-darwin-x64.tar.gz",
+      "sha256": "880c530d11168c796c3b3e4cec1b2fa37af22e9c559faf395854b94bc7bf0cd2"
+    },
+    "0.11.16": {
+      "url": "https://nodejs.org/dist/v0.11.16/node-v0.11.16-darwin-x64.tar.gz",
+      "sha256": "95a05f0b8d6f950121e983b1c17ef676356dbe6f8ea51453c037df200ed09ba0"
+    },
+    "0.11.15": {
+      "url": "https://nodejs.org/dist/v0.11.15/node-v0.11.15-darwin-x64.tar.gz",
+      "sha256": "e52e79416922eccdcc2451c9e041bac70c0b8aa9e90dd1ce0659602bc82c8ac1"
+    },
+    "0.11.14": {
+      "url": "https://nodejs.org/dist/v0.11.14/node-v0.11.14-darwin-x64.tar.gz",
+      "sha256": "074669d2f3d8419496076c55c2743389538996a90e87277ea5bf032f885877ad"
+    },
+    "0.11.13": {
+      "url": "https://nodejs.org/dist/v0.11.13/node-v0.11.13-darwin-x64.tar.gz",
+      "sha256": "d642d825f8815b87a7edfc7c6057853671bda6a53711f1c6fa532735cabdaf07"
+    },
+    "0.11.12": {
+      "url": "https://nodejs.org/dist/v0.11.12/node-v0.11.12-darwin-x64.tar.gz",
+      "sha256": "2265e5a755e442fbd923119df673816bdf4f2a2931f93821e6c1075fdc678451"
+    },
+    "0.11.11": {
+      "url": "https://nodejs.org/dist/v0.11.11/node-v0.11.11-darwin-x64.tar.gz",
+      "sha256": "f10deff61ab2659fbcb92ebd20d90689008a4152fe1b989e2b3b49cc468f534b"
+    },
+    "0.11.10": {
+      "url": "https://nodejs.org/dist/v0.11.10/node-v0.11.10-darwin-x64.tar.gz",
+      "sha256": "3beb0693c395272d07f1fbf7fdcdeeaf018f9571e813ea085422f81a03188eb7"
+    },
+    "0.11.9": {
+      "url": "https://nodejs.org/dist/v0.11.9/node-v0.11.9-darwin-x64.tar.gz",
+      "sha256": "cc523a93237645fb44d24cda3bfeb2b2d7ebd4d2265c0a175f264e3333706c45"
+    },
+    "0.11.8": {
+      "url": "https://nodejs.org/dist/v0.11.8/node-v0.11.8-darwin-x64.tar.gz",
+      "sha256": "e8d64d423b97aa50d42c917759c7ccd3cdfb3e6b257cdd08a7030eb2347e5a50"
+    },
+    "0.11.7": {
+      "url": "https://nodejs.org/dist/v0.11.7/node-v0.11.7-darwin-x64.tar.gz",
+      "sha256": "1679e0fc69202638186392be31ffca6f39d666f275875779f1f76f4dc2c10ece"
+    },
+    "0.11.5": {
+      "url": "https://nodejs.org/dist/v0.11.5/node-v0.11.5-darwin-x64.tar.gz",
+      "sha256": "62034296248db29751c5748f0403c07e73a0ae3b0ef2c3384956aac70a12cd21"
+    },
+    "0.11.3": {
+      "url": "https://nodejs.org/dist/v0.11.3/node-v0.11.3-darwin-x64.tar.gz",
+      "sha256": "7f441d7abde7656f01ebb268a4d61c07ecd63934f099f30a386ea7718cf1486b"
+    },
+    "0.11.2": {
+      "url": "https://nodejs.org/dist/v0.11.2/node-v0.11.2-darwin-x64.tar.gz",
+      "sha256": "3221e877fa2c30a93df5fd1510913b0f85a18e09cd54fec07b363ecace84a429"
+    },
+    "0.11.1": {
+      "url": "https://nodejs.org/dist/v0.11.1/node-v0.11.1-darwin-x64.tar.gz",
+      "sha256": "bfa6644b345dedc26ed8a72f190ca825ce39f4332a423435a5eef67e078232be"
+    },
+    "0.11.0": {
+      "url": "https://nodejs.org/dist/v0.11.0/node-v0.11.0-darwin-x64.tar.gz",
+      "sha256": "734693d7a388dcc46d5f6e3c3146fecde9b6de0c4afb9d4389c066be655095fc"
+    },
+    "0.10.48": {
+      "url": "https://nodejs.org/dist/v0.10.48/node-v0.10.48-darwin-x64.tar.gz",
+      "sha256": "35d510ca5e8dd0c21cb11c2bf33b90f3715f92281aaaa49645f61c565c8adceb"
+    },
+    "0.10.47": {
+      "url": "https://nodejs.org/dist/v0.10.47/node-v0.10.47-darwin-x64.tar.gz",
+      "sha256": "6920608a46761c33056d78e504222a3a42dc8c0cf8ab6ff7497cd4a81b06d090"
+    },
+    "0.10.46": {
+      "url": "https://nodejs.org/dist/v0.10.46/node-v0.10.46-darwin-x64.tar.gz",
+      "sha256": "ab9eafa76c4c9a2e0d43e6727d82b331157dc7f43fde9a3f2a4881102df9ff3a"
+    },
+    "0.10.45": {
+      "url": "https://nodejs.org/dist/v0.10.45/node-v0.10.45-darwin-x64.tar.gz",
+      "sha256": "d1ab69f49365a0dc6b10a363965452f37f3589adee19974940cbd2b991965e70"
+    },
+    "0.10.44": {
+      "url": "https://nodejs.org/dist/v0.10.44/node-v0.10.44-darwin-x64.tar.gz",
+      "sha256": "cc9916991a16395c4a561db6d091a9a1e9af13e66dddbd03d3c687d0ab3e52a9"
+    },
+    "0.10.43": {
+      "url": "https://nodejs.org/dist/v0.10.43/node-v0.10.43-darwin-x64.tar.gz",
+      "sha256": "c7fb30129206fa2d74d72d3c1a86fa5cb768a1165c41be9f7c724e35c3b53ca9"
+    },
+    "0.10.42": {
+      "url": "https://nodejs.org/dist/v0.10.42/node-v0.10.42-darwin-x64.tar.gz",
+      "sha256": "356b4891c7060b6a68cf126837689807c30d43b709120b7fe6f167404612eb5a"
+    },
+    "0.10.41": {
+      "url": "https://nodejs.org/dist/v0.10.41/node-v0.10.41-darwin-x64.tar.gz",
+      "sha256": "f55050a8774828846670fea91695a8da754768021cf1121cf91f788bb3e89d20"
+    },
+    "0.10.40": {
+      "url": "https://nodejs.org/dist/v0.10.40/node-v0.10.40-darwin-x64.tar.gz",
+      "sha256": "c6587b133c77c0cc858c10910dea3796a719b190aab0f62ad3e46bcee1fe08d1"
+    },
+    "0.10.39": {
+      "url": "https://nodejs.org/dist/v0.10.39/node-v0.10.39-darwin-x64.tar.gz",
+      "sha256": "0fde1b6449fb4a39b55239241258fd6a2a176eaf30ba0d3c50124f64ba485002"
+    },
+    "0.10.38": {
+      "url": "https://nodejs.org/dist/v0.10.38/node-v0.10.38-darwin-x64.tar.gz",
+      "sha256": "039644613dc9c953559ea93fcea90f278dd97c3154289759033426c7902db69f"
+    },
+    "0.10.37": {
+      "url": "https://nodejs.org/dist/v0.10.37/node-v0.10.37-darwin-x64.tar.gz",
+      "sha256": "260561bd0f19fbaf2bc371b7dd23133e4cb1f97bc0135d1bde807bdcdcfbd017"
+    },
+    "0.10.36": {
+      "url": "https://nodejs.org/dist/v0.10.36/node-v0.10.36-darwin-x64.tar.gz",
+      "sha256": "f5768eaabc692fd3ed0cb063d17962c933951b78dec09af3c30eb76c3189d9ee"
+    },
+    "0.10.35": {
+      "url": "https://nodejs.org/dist/v0.10.35/node-v0.10.35-darwin-x64.tar.gz",
+      "sha256": "e3ab19876c8cfafbda9587a108c90bb9e975d073af5d545a34f6336afe5c7924"
+    },
+    "0.10.34": {
+      "url": "https://nodejs.org/dist/v0.10.34/node-v0.10.34-darwin-x64.tar.gz",
+      "sha256": "a3aa311213c3491b550b9b96835d4b4e18754524a2f82c6a1bb7fcdf3a6773e3"
+    },
+    "0.10.33": {
+      "url": "https://nodejs.org/dist/v0.10.33/node-v0.10.33-darwin-x64.tar.gz",
+      "sha256": "a5b6c3daafbdef5bee0376a147b3f74990bc032d9ab0b394600b4336b6e19f8f"
+    },
+    "0.10.32": {
+      "url": "https://nodejs.org/dist/v0.10.32/node-v0.10.32-darwin-x64.tar.gz",
+      "sha256": "730ee5c3a44790998bbee1471ca903e6802e79080d4eba0fabf5ab92035e9037"
+    },
+    "0.10.31": {
+      "url": "https://nodejs.org/dist/v0.10.31/node-v0.10.31-darwin-x64.tar.gz",
+      "sha256": "4dc3e53bafefd02c3ac009dd53e7acd725f109f344121e54f76c2bea8a6638c8"
+    },
+    "0.10.30": {
+      "url": "https://nodejs.org/dist/v0.10.30/node-v0.10.30-darwin-x64.tar.gz",
+      "sha256": "d13b5ad8294c39175a434cdcb3233cc1ddecfd92b23eb4dfdec3931d65cb5796"
+    },
+    "0.10.29": {
+      "url": "https://nodejs.org/dist/v0.10.29/node-v0.10.29-darwin-x64.tar.gz",
+      "sha256": "219299cd959819e215c4fcd8dfd3ba3ebbf634972667e6ef70e0d1ead741bb27"
+    },
+    "0.10.28": {
+      "url": "https://nodejs.org/dist/v0.10.28/node-v0.10.28-darwin-x64.tar.gz",
+      "sha256": "304122e04df8ba3fadaf1ff442b2eb1181bf3ce0d2539a0a7c70a62157aed1f4"
+    },
+    "0.10.27": {
+      "url": "https://nodejs.org/dist/v0.10.27/node-v0.10.27-darwin-x64.tar.gz",
+      "sha256": "17d4711d0510da53c604bacce68066891ef0dff85e830fbcd2d1b0410bd1ddde"
+    },
+    "0.10.26": {
+      "url": "https://nodejs.org/dist/v0.10.26/node-v0.10.26-darwin-x64.tar.gz",
+      "sha256": "863ec06ea2f9f613de39b15d081cc2fa422937e3492cc09b12c73ac884c80d8f"
+    },
+    "0.10.25": {
+      "url": "https://nodejs.org/dist/v0.10.25/node-v0.10.25-darwin-x64.tar.gz",
+      "sha256": "5ae186f86564df87d82811614f667b9333a6219b02c6f405fd72807b459b8fc7"
+    },
+    "0.10.24": {
+      "url": "https://nodejs.org/dist/v0.10.24/node-v0.10.24-darwin-x64.tar.gz",
+      "sha256": "c1c523014124a0327d71ba5d6f737a4c866a170f1749f8895482c5fa8be877b0"
+    },
+    "0.10.23": {
+      "url": "https://nodejs.org/dist/v0.10.23/node-v0.10.23-darwin-x64.tar.gz",
+      "sha256": "295720906b3f84bd083949125c14920801d98fe7e72e234ea03caa9829af3f84"
+    },
+    "0.10.22": {
+      "url": "https://nodejs.org/dist/v0.10.22/node-v0.10.22-darwin-x64.tar.gz",
+      "sha256": "2e9313ce780c7eb377105295dd1b0c803fe78171a26756b1914781c09c67f4bd"
+    },
+    "0.10.21": {
+      "url": "https://nodejs.org/dist/v0.10.21/node-v0.10.21-darwin-x64.tar.gz",
+      "sha256": "26a2c00b3b61d34a1558b70e093230ead737f43de2be2954deeeef2edd54e7bb"
+    },
+    "0.10.20": {
+      "url": "https://nodejs.org/dist/v0.10.20/node-v0.10.20-darwin-x64.tar.gz",
+      "sha256": "f059b3d9dfd42fa9d7d8542e51aea6c92d87aff1b9023fc1c7c12acb7f3d28e5"
+    },
+    "0.10.19": {
+      "url": "https://nodejs.org/dist/v0.10.19/node-v0.10.19-darwin-x64.tar.gz",
+      "sha256": "4a51a73b03184dacd10abb12bfc461db1c35c9167f4348ed851f51ed56806af8"
+    },
+    "0.10.18": {
+      "url": "https://nodejs.org/dist/v0.10.18/node-v0.10.18-darwin-x64.tar.gz",
+      "sha256": "9a0fafc8142a47ae1517c8df2b53188d181f13022d9560202fc906f35575cef0"
+    },
+    "0.10.17": {
+      "url": "https://nodejs.org/dist/v0.10.17/node-v0.10.17-darwin-x64.tar.gz",
+      "sha256": "4c2df96d444704aba89ac69952f9cfade9b7651f736c9ccd09e0b40200b56832"
+    },
+    "0.10.16": {
+      "url": "https://nodejs.org/dist/v0.10.16/node-v0.10.16-darwin-x64.tar.gz",
+      "sha256": "ca2cfb44f4b592840643f50b11b06aef56328a647afc73db7dc37d7cc61bf393"
+    },
+    "0.10.15": {
+      "url": "https://nodejs.org/dist/v0.10.15/node-v0.10.15-darwin-x64.tar.gz",
+      "sha256": "f4ea534e6ca6326a8bf823b6c44ae50f5d968c105a18c6372a8bde2d50518489"
+    },
+    "0.10.14": {
+      "url": "https://nodejs.org/dist/v0.10.14/node-v0.10.14-darwin-x64.tar.gz",
+      "sha256": "1a2f35f53be472de27bef88e6e2efc69b4d563b384ab33eba39a6035570bcc67"
+    },
+    "0.10.13": {
+      "url": "https://nodejs.org/dist/v0.10.13/node-v0.10.13-darwin-x64.tar.gz",
+      "sha256": "45f014d08120cb2a3f03616338e2931d673190a52692336cde386e1a91310115"
+    },
+    "0.10.12": {
+      "url": "https://nodejs.org/dist/v0.10.12/node-v0.10.12-darwin-x64.tar.gz",
+      "sha256": "e41d873b0444937ac1f2816ea8c6c4abb3f0af260c2fc1419e83fb7ea5a23090"
+    },
+    "0.10.11": {
+      "url": "https://nodejs.org/dist/v0.10.11/node-v0.10.11-darwin-x64.tar.gz",
+      "sha256": "0c3e0ba53f3878aa5b3dac9b87cc1eff0dc8110b75d7b3b004a61ebdda734ece"
+    },
+    "0.10.10": {
+      "url": "https://nodejs.org/dist/v0.10.10/node-v0.10.10-darwin-x64.tar.gz",
+      "sha256": "ecec87637784f98318efa5f076a25985609387782b3e371b7596e939775d7cb6"
+    },
+    "0.10.9": {
+      "url": "https://nodejs.org/dist/v0.10.9/node-v0.10.9-darwin-x64.tar.gz",
+      "sha256": "3b0cbd1ac4b7e514ccd68fcd3089ccb1f13606fb41dbd2a776693bb984623bbd"
+    },
+    "0.10.8": {
+      "url": "https://nodejs.org/dist/v0.10.8/node-v0.10.8-darwin-x64.tar.gz",
+      "sha256": "2253d67aec2e3525e0a649c7befb30a28d71425c1e902a86a5708be92ac6c28e"
+    },
+    "0.10.7": {
+      "url": "https://nodejs.org/dist/v0.10.7/node-v0.10.7-darwin-x64.tar.gz",
+      "sha256": "879550ddc6fa8e56ed8ffed7c0bc27dee1d21867b07c398a44180fba34e6b029"
+    },
+    "0.10.6": {
+      "url": "https://nodejs.org/dist/v0.10.6/node-v0.10.6-darwin-x64.tar.gz",
+      "sha256": "662cbb2068aeb464aa61346cd4cb838b2c4d629ad3519fdf1915ea1da18dc470"
+    },
+    "0.10.5": {
+      "url": "https://nodejs.org/dist/v0.10.5/node-v0.10.5-darwin-x64.tar.gz",
+      "sha256": "5957284e645dd815a4a7a4898584eebe846e2a09a8d2629ec76e0f69087a400a"
+    },
+    "0.10.4": {
+      "url": "https://nodejs.org/dist/v0.10.4/node-v0.10.4-darwin-x64.tar.gz",
+      "sha256": "b7d9a8df207e8cd41798ab507e3e28fe92d1a5667014ecfef8c1ce8b9ea39203"
+    },
+    "0.10.3": {
+      "url": "https://nodejs.org/dist/v0.10.3/node-v0.10.3-darwin-x64.tar.gz",
+      "sha256": "5656918cc7cc480afb9fa99053623eb9a9b392db2e2a3d5f60333a1b27eeb495"
+    },
+    "0.10.2": {
+      "url": "https://nodejs.org/dist/v0.10.2/node-v0.10.2-darwin-x64.tar.gz",
+      "sha256": "cef798ba85522f1e82076cf60cb27ea7d85406ecea461e9dd1b5503d48a23c3b"
+    },
+    "0.10.1": {
+      "url": "https://nodejs.org/dist/v0.10.1/node-v0.10.1-darwin-x64.tar.gz",
+      "sha256": "eb5cc271f39a680b1280a422e7e9da48c0033edf779616656bdc90d4c372c000"
+    },
+    "0.10.0": {
+      "url": "https://nodejs.org/dist/v0.10.0/node-v0.10.0-darwin-x64.tar.gz",
+      "sha256": "6499e4fc0abe82446ffccc0dac6c29e9744577bb76886d0a92cfc74f799794f4"
+    },
+    "0.9.12": {
+      "url": "https://nodejs.org/dist/v0.9.12/node-v0.9.12-darwin-x64.tar.gz",
+      "sha256": "3e9db5d098688b4caa80c3de29f6623ff7c8420e43cb10d3a2b25d50dcf0e1db"
+    },
+    "0.9.11": {
+      "url": "https://nodejs.org/dist/v0.9.11/node-v0.9.11-darwin-x64.tar.gz",
+      "sha256": "20653e45e6e1ab3e4ef639ef7072b51fe858616cff27fca105f61a5bba26d434"
+    },
+    "0.9.10": {
+      "url": "https://nodejs.org/dist/v0.9.10/node-v0.9.10-darwin-x64.tar.gz",
+      "sha256": "71d26152e960d85918001c1c8db7a66bbbc3293edd58f75a63d649fbc3c14d20"
+    },
+    "0.9.9": {
+      "url": "https://nodejs.org/dist/v0.9.9/node-v0.9.9-darwin-x64.tar.gz",
+      "sha256": "e1a886746b4afa453e08505284d0c11c765299651135fa11d01b0ffb3493e2fc"
+    },
+    "0.9.8": {
+      "url": "https://nodejs.org/dist/v0.9.8/node-v0.9.8-darwin-x64.tar.gz",
+      "sha256": "370fbeb63a187b6519464d2f7f2ac0f808ea7fe9810dcc74545365488e5627b4"
+    },
+    "0.9.7": {
+      "url": "https://nodejs.org/dist/v0.9.7/node-v0.9.7-darwin-x64.tar.gz",
+      "sha256": "c7904122355d9756a72c8a49ecf5c3bc23d76d319b25c18616a9c611179aea17"
+    },
+    "0.9.6": {
+      "url": "https://nodejs.org/dist/v0.9.6/node-v0.9.6-darwin-x64.tar.gz",
+      "sha256": "e069593a5a97a390ce32443cdd4a385424281a1bbb1b72382763c5ac9834c70b"
+    },
+    "0.9.5": {
+      "url": "https://nodejs.org/dist/v0.9.5/node-v0.9.5-darwin-x64.tar.gz",
+      "sha256": "490890fa1259aaa5e0aa66a4aae432831c10ef20729c1dee235e86579af2615e"
+    },
+    "0.9.4": {
+      "url": "https://nodejs.org/dist/v0.9.4/node-v0.9.4-darwin-x64.tar.gz",
+      "sha256": "a01c42debabffd9b99ed7eef89c8bb87e08bc3e40e147b3eb809be469ff0c947"
+    },
+    "0.9.3": {
+      "url": "https://nodejs.org/dist/v0.9.3/node-v0.9.3-darwin-x64.tar.gz",
+      "sha256": "d2ceeba6ea15f02cdefa6a91181bbe931452f5ddd69f9594d4bed57c6eeb95c9"
+    },
+    "0.9.2": {
+      "url": "https://nodejs.org/dist/v0.9.2/node-v0.9.2-darwin-x64.tar.gz",
+      "sha256": "19d9a9c60f3a2fee9b910846daad9615ef761bbf6ce8dcbea372b725f5e470e8"
+    },
+    "0.9.1": {
+      "url": "https://nodejs.org/dist/v0.9.1/node-v0.9.1-darwin-x64.tar.gz",
+      "sha256": "1758e8bcb881e507506e743e3d23d3f1bc8101330492f7d8f0818f1ac4c6317f"
+    },
+    "0.9.0": {
+      "url": "https://nodejs.org/dist/v0.9.0/node-v0.9.0.tar.gz",
+      "sha256": "4d2e5d7c8b345f6e401eed7d06b4bbc6cb012aefc34b46e7c3aedb4a0fccd258"
+    },
+    "0.8.28": {
+      "url": "https://nodejs.org/dist/v0.8.28/node-v0.8.28-darwin-x64.tar.gz",
+      "sha256": "e2ce196394765bee8fbb703651dbc4024cd840f802d2277e7adff91f5a6e1656"
+    },
+    "0.8.27": {
+      "url": "https://nodejs.org/dist/v0.8.27/node-v0.8.27-darwin-x64.tar.gz",
+      "sha256": "593044136647bd73d29c709d16c4c27ff295c41129015d8414f5ea1f935efd2d"
+    },
+    "0.8.26": {
+      "url": "https://nodejs.org/dist/v0.8.26/node-v0.8.26-darwin-x64.tar.gz",
+      "sha256": "1c25e4ca125ddda22648957e1a40f4c7d37a0eda52cbe9ae1620b8bce9da317b"
+    },
+    "0.8.25": {
+      "url": "https://nodejs.org/dist/v0.8.25/node-v0.8.25-darwin-x64.tar.gz",
+      "sha256": "22aa30210b989c8800d0625c880153594cd1e39015a30a85e0c2085c9497c09d"
+    },
+    "0.8.24": {
+      "url": "https://nodejs.org/dist/v0.8.24/node-v0.8.24-darwin-x64.tar.gz",
+      "sha256": "8a15b6b40ba03fc361342faf2ddb3cc0480ebf5e63fb9adbaab6cda757697311"
+    },
+    "0.8.23": {
+      "url": "https://nodejs.org/dist/v0.8.23/node-v0.8.23-darwin-x64.tar.gz",
+      "sha256": "fa1835e56992b0608ae6d19e031e33545a86becbb0d2695809403d70aff58258"
+    },
+    "0.8.22": {
+      "url": "https://nodejs.org/dist/v0.8.22/node-v0.8.22-darwin-x64.tar.gz",
+      "sha256": "640cb11ecad00b9cddaadb2d95d760123523c26e0dcbf2abe9ef5ab3c2e41206"
+    },
+    "0.8.21": {
+      "url": "https://nodejs.org/dist/v0.8.21/node-v0.8.21-darwin-x64.tar.gz",
+      "sha256": "6db45e7118329c94b733d49b0adb27f26769d48915c75cf812cf6d4b4fff49bf"
+    },
+    "0.8.20": {
+      "url": "https://nodejs.org/dist/v0.8.20/node-v0.8.20-darwin-x64.tar.gz",
+      "sha256": "f81d2dff6097a80606b8807cd4eaa4c77b2c83630394a1bcfba885679b6caa1a"
+    },
+    "0.8.19": {
+      "url": "https://nodejs.org/dist/v0.8.19/node-v0.8.19-darwin-x64.tar.gz",
+      "sha256": "39387dfb03c7c5421bdd117963d520ac1db1b26a74e0931125aa636d182e8aa2"
+    },
+    "0.8.18": {
+      "url": "https://nodejs.org/dist/v0.8.18/node-v0.8.18-darwin-x64.tar.gz",
+      "sha256": "45f2a4ab27018e84dd83b7172c8f1560fbc0c3d24a6b6d03ca1bfc1b33bdb240"
+    },
+    "0.8.17": {
+      "url": "https://nodejs.org/dist/v0.8.17/node-v0.8.17-darwin-x64.tar.gz",
+      "sha256": "0b6a2c9f295c59c7c7364a03e51467b0bf6614cb0d46d590d6ee8b89438a6206"
+    },
+    "0.8.16": {
+      "url": "https://nodejs.org/dist/v0.8.16/node-v0.8.16-darwin-x64.tar.gz",
+      "sha256": "348dfbb41a322d4e365667aa01a2c3fb722a9650638efd0d5b280a6ec31e5315"
+    },
+    "0.8.15": {
+      "url": "https://nodejs.org/dist/v0.8.15/node-v0.8.15-darwin-x64.tar.gz",
+      "sha256": "c1050151d178017a2d9fbf842d63e014beb63104c96031b42b5c6d1476f5a2c4"
+    },
+    "0.8.14": {
+      "url": "https://nodejs.org/dist/v0.8.14/node-v0.8.14-darwin-x64.tar.gz",
+      "sha256": "7713f0f5379a8b4a026ea9ec14f55394f34bb61c91e27dd08eea28a7edc31edd"
+    },
+    "0.8.13": {
+      "url": "https://nodejs.org/dist/v0.8.13/node-v0.8.13-darwin-x64.tar.gz",
+      "sha256": "2f2317359a8d10429f6b69f18c659c5cbbee40d948d994fb469237e9bb138b73"
+    },
+    "0.8.12": {
+      "url": "https://nodejs.org/dist/v0.8.12/node-v0.8.12-darwin-x64.tar.gz",
+      "sha256": "05836e0924b67713e0306f710adca8ce0fbf1941dd959a354f000b8d3bb039f6"
+    },
+    "0.8.11": {
+      "url": "https://nodejs.org/dist/v0.8.11/node-v0.8.11-darwin-x64.tar.gz",
+      "sha256": "7199b8260f3b02c362b7a347a27d9527c9fac37f4ca5d6c5e1d3c2ebd4d271c7"
+    },
+    "0.8.10": {
+      "url": "https://nodejs.org/dist/v0.8.10/node-v0.8.10-darwin-x64.tar.gz",
+      "sha256": "3b347b17f295ef4683278c589eed695db3544d2fba4d5969d0700173153da336"
+    },
+    "0.8.9": {
+      "url": "https://nodejs.org/dist/v0.8.9/node-v0.8.9-darwin-x64.tar.gz",
+      "sha256": "c41002cac64f4198e55ed6a78f2e321e721c6150854d3ca27603cb912782c04e"
+    },
+    "0.8.8": {
+      "url": "https://nodejs.org/dist/v0.8.8/node-v0.8.8-darwin-x64.tar.gz",
+      "sha256": "69e5f514e22c2139454f9469c58c8bb0f4092c29e1115bc446afd12f75a467e7"
+    },
+    "0.8.7": {
+      "url": "https://nodejs.org/dist/v0.8.7/node-v0.8.7-darwin-x64.tar.gz",
+      "sha256": "3966ba6007b13ba8f47af101c2a329b39412a532ba9aa089860d4af54b51efcd"
+    },
+    "0.8.6": {
+      "url": "https://nodejs.org/dist/v0.8.6/node-v0.8.6-darwin-x64.tar.gz",
+      "sha256": "42c853c0adb8052da0d2976cfc2cbb29152dc9904d69efd7e61c71afbf9492af"
+    },
+    "0.8.5": {
+      "url": "https://nodejs.org/dist/v0.8.5/node-v0.8.5.tar.gz",
+      "sha256": "022a924973b15291f98b57437b53c59eaabee02348a2534259836e837f9ea6c0"
+    },
+    "0.8.4": {
+      "url": "https://nodejs.org/dist/v0.8.4/node-v0.8.4.tar.gz",
+      "sha256": "d0a3b0d2028ddd6bbaab5d3fe38dd6f80d7e810fe9e55efab3230a7c90d31174"
+    },
+    "0.8.3": {
+      "url": "https://nodejs.org/dist/v0.8.3/node-v0.8.3.tar.gz",
+      "sha256": "600a1d88744937dbad048f65f60d1259b814c59777d7b9d8665def77b1e1ec35"
+    },
+    "0.8.2": {
+      "url": "https://nodejs.org/dist/v0.8.2/node-v0.8.2.tar.gz",
+      "sha256": "6830ed4eaf6c191243fb3afbe3ca3283d7e3a537c8f3ce508fa2af1328fe4baf"
+    },
+    "0.8.1": {
+      "url": "https://nodejs.org/dist/v0.8.1/node-v0.8.1.tar.gz",
+      "sha256": "0cda1325a010ce18f68501ae68e0ce97f0094e7a282c34a451f552621643a884"
+    },
+    "0.8.0": {
+      "url": "https://nodejs.org/dist/v0.8.0/node-v0.8.0.tar.gz",
+      "sha256": "ecafca018b5109a28537633d0433d513f68b1bae7191a1821e8eaa84ccf128ee"
+    },
+    "0.7.12": {
+      "url": "https://nodejs.org/dist/v0.7.12/node-v0.7.12.tar.gz",
+      "sha256": "e0be9f001467e2a9e728d53969a3c7f079da4af1ff896155822479ad92b3efbe"
+    },
+    "0.7.11": {
+      "url": "https://nodejs.org/dist/v0.7.11/node-v0.7.11.tar.gz",
+      "sha256": "add0db06f628ed8330b1a3450efa39f18d08c5a54d5827004c76ae23522ca842"
+    },
+    "0.7.10": {
+      "url": "https://nodejs.org/dist/v0.7.10/node-v0.7.10.tar.gz",
+      "sha256": "9094dcd47dba984b6c2ca89a5361bd6664d1990edf41419f9a8a6d26ae774c6e"
+    },
+    "0.7.9": {
+      "url": "https://nodejs.org/dist/v0.7.9/node-v0.7.9.tar.gz",
+      "sha256": "0a94de8743420c0a664b3bc9bec876098e4035b5079a4b2b4e3e3dc1acc9f926"
+    },
+    "0.7.8": {
+      "url": "https://nodejs.org/dist/v0.7.8/node-v0.7.8.tar.gz",
+      "sha256": "59722d4a71c26963a8bbd31aadc64aeff2c0a2902fb4d9542d161f458487355e"
+    },
+    "0.7.7": {
+      "url": "https://nodejs.org/dist/v0.7.7/node-v0.7.7.tar.gz",
+      "sha256": "40d67cdaba5fdef522fc49e31220ffc3278c90cb5ca1dc5dbb6e43cbc938f8d1"
+    },
+    "0.7.6": {
+      "url": "https://nodejs.org/dist/v0.7.6/node-v0.7.6.tar.gz",
+      "sha256": "ce1772b7b649121a04dbb36c94e4e4d8850a109d07746cff6bab5c4d1ed38e1c"
+    },
+    "0.7.5": {
+      "url": "https://nodejs.org/dist/v0.7.5/node-v0.7.5.tar.gz",
+      "sha256": "f855ba273ea8d4b036f811008dc205e0070358584185dbc79abd09ffcb99d12b"
+    },
+    "0.7.4": {
+      "url": "https://nodejs.org/dist/v0.7.4/node-v0.7.4.tar.gz",
+      "sha256": "14bd37525dab52d28271211002fe102ebbcc9afa01064f93d9945d66e3989660"
+    },
+    "0.7.3": {
+      "url": "https://nodejs.org/dist/v0.7.3/node-v0.7.3.tar.gz",
+      "sha256": "292204f73b4007fecf7aa9d065a0360abc43a1fc007ea1138cf4fa8d553cca58"
+    },
+    "0.7.2": {
+      "url": "https://nodejs.org/dist/v0.7.2/node-v0.7.2.tar.gz",
+      "sha256": "de0bff9067f4cd63c4bd5fb847352725b86122eac7483aa88b764eb8272807a3"
+    },
+    "0.7.1": {
+      "url": "https://nodejs.org/dist/v0.7.1/node-v0.7.1.tar.gz",
+      "sha256": "903224a2c9e4510b2281d0fa72cbd930b6dfb97a750e6d02bd12442a5aa30032"
+    },
+    "0.7.0": {
+      "url": "https://nodejs.org/dist/v0.7.0/node-v0.7.0.tar.gz",
+      "sha256": "0c716d7c61f77c53b0383e82da3f3ca8a4187f7d1c9831aec95efe7cfda9cafb"
+    },
+    "0.6.21": {
+      "url": "https://nodejs.org/dist/v0.6.21/node-v0.6.21.tar.gz",
+      "sha256": "22265fd07e09c22f1d058156d548e7398c9740210f534e2f848eeab5b9772117"
+    },
+    "0.6.20": {
+      "url": "https://nodejs.org/dist/v0.6.20/node-v0.6.20.tar.gz",
+      "sha256": "b7bf4cf143ddf46ba5e975761b98a38dd3d72b176fd5d4bb2f9c9e7bbe6c4b15"
+    },
+    "0.6.19": {
+      "url": "https://nodejs.org/dist/v0.6.19/node-v0.6.19-baddocs.tar.gz",
+      "sha256": "748306c67ac04b9c28675ae5ed4ae66620d3faa801e5920304f2b2f859fe7249"
+    },
+    "0.6.18": {
+      "url": "https://nodejs.org/dist/v0.6.18/node-v0.6.18.tar.gz",
+      "sha256": "6cf4311ecbc1700e88f4382a31b3a7017c1572cd641fd06e653fc1692c2cffff"
+    },
+    "0.6.17": {
+      "url": "https://nodejs.org/dist/v0.6.17/node-v0.6.17.tar.gz",
+      "sha256": "8dfe5948de27e37a14af184f06e7bd89a23c3b248af44c8ef5cffcd0e4c65778"
+    },
+    "0.6.16": {
+      "url": "https://nodejs.org/dist/v0.6.16/node-v0.6.16.tar.gz",
+      "sha256": "21d9cccaa642794db69619d813adf00b3533080a8928370c2b1a4b3a6478eaa7"
+    },
+    "0.6.15": {
+      "url": "https://nodejs.org/dist/v0.6.15/node-v0.6.15.tar.gz",
+      "sha256": "78859a1a31c8e7a64d0efa040326d93c6624cc344d39b2e47e14e9c4dc3136e0"
+    },
+    "0.6.14": {
+      "url": "https://nodejs.org/dist/v0.6.14/node-v0.6.14.tar.gz",
+      "sha256": "e41922308155c5197c2d048948ca9cd76ea5f9a51f977e1591bd93fe17d4cf1f"
+    },
+    "0.6.13": {
+      "url": "https://nodejs.org/dist/v0.6.13/node-v0.6.13.tar.gz",
+      "sha256": "fc4f3ceacfd2cfc4ec75fc59d97f1f2d04947efd5e191efaddeb552df486245b"
+    },
+    "0.6.12": {
+      "url": "https://nodejs.org/dist/v0.6.12/node-v0.6.12.tar.gz",
+      "sha256": "a16392fb83b288bd40cb64593253756a44f8111478edf5e8cc439a64622281c4"
+    },
+    "0.6.11": {
+      "url": "https://nodejs.org/dist/v0.6.11/node-v0.6.11.tar.gz",
+      "sha256": "94bbdb2d62645fd2ad5b96e41cfec68abf004fd03fabaaf7d71c48b39013cbd1"
+    },
+    "0.6.10": {
+      "url": "https://nodejs.org/dist/v0.6.10/node-v0.6.10.tar.gz",
+      "sha256": "d1d060ab53c6079409403530009a2095036f19920aabd3a1c20542e0db586bd5"
+    },
+    "0.6.9": {
+      "url": "https://nodejs.org/dist/v0.6.9/node-v0.6.9.tar.gz",
+      "sha256": "484ab6b3da6195339544c16aff17f747aa85d1dd15d765d6724aa8a4ecda03ca"
+    },
+    "0.6.8": {
+      "url": "https://nodejs.org/dist/v0.6.8/node-v0.6.8.tar.gz",
+      "sha256": "e6cbfc5ccdbe10128dbbd4dc7a88c154d80f8a39c3a8477092cf7d25eef78c9c"
+    },
+    "0.6.7": {
+      "url": "https://nodejs.org/dist/v0.6.7/node-v0.6.7.tar.gz",
+      "sha256": "b34387449723352d2f5b7a51d8c1358c247908a5f7acd7849cac45f980246d54"
+    },
+    "0.6.6": {
+      "url": "https://nodejs.org/dist/v0.6.6/node-v0.6.6.tar.gz",
+      "sha256": "7abea518b1b63fd669c9ca436bf33d0bb0b09b252f06d700ccbd290fe5222102"
+    },
+    "0.6.5": {
+      "url": "https://nodejs.org/dist/v0.6.5/node-v0.6.5.tar.gz",
+      "sha256": "72364d240fb61e678897c099df6f2913857c5931aa9b1f44e73e432d4629ca2f"
+    },
+    "0.6.4": {
+      "url": "https://nodejs.org/dist/v0.6.4/node-v0.6.4.tar.gz",
+      "sha256": "67b029f0da10ffa706cda23d6a3bb7c682ca589cd7f6647a578dcfb74a78f916"
+    },
+    "0.6.3": {
+      "url": "https://nodejs.org/dist/v0.6.3/node-v0.6.3.tar.gz",
+      "sha256": "fe5642d26d04cc7e7d47daa426da2a79e244bdcbae1594a12578f0d6fe03082e"
+    },
+    "0.6.2": {
+      "url": "https://nodejs.org/dist/v0.6.2/node-v0.6.2.tar.gz",
+      "sha256": "3a24f6f91bb806a230a7b200ca638459a9680ea2daf9a427098c61f847016139"
+    },
+    "0.6.1": {
+      "url": "https://nodejs.org/dist/v0.6.1/node-v0.6.1.tar.gz",
+      "sha256": "b161050ed8cdb2d45f601181d146821e5535a8fcbf5978b2ff064e5476a8e606"
+    },
+    "0.6.0": {
+      "url": "https://nodejs.org/dist/v0.6.0/node-v0.6.0.tar.gz",
+      "sha256": "1b6a34b6f2099145c44a0c20d3a5cab7c9ec063de1a195ddeda61ad55d601d7f"
+    },
+    "0.5.10": {
+      "url": "https://nodejs.org/dist/v0.5.10/node-v0.5.10.tar.gz",
+      "sha256": "56396854f85a0d2fafc038436be3d84041f991f59613761e61295fc02d662a40"
+    },
+    "0.5.9": {
+      "url": "https://nodejs.org/dist/v0.5.9/node-v0.5.9.tar.gz",
+      "sha256": "5659cde8b36cf5c29433e73a351b0bacfac16be1b0b47e64ea138fe270b5607f"
+    },
+    "0.5.8": {
+      "url": "https://nodejs.org/dist/v0.5.8/node-v0.5.8.tar.gz",
+      "sha256": "e15214605c473d14cf73ebac4df1c8ff54d88f405b20b473bda719728e217fd2"
+    },
+    "0.5.7": {
+      "url": "https://nodejs.org/dist/v0.5.7/node-v0.5.7.tar.gz",
+      "sha256": "bd5c1f8029517bd8070001e3099a2330bcea696fcf1855b6c857b6fb58e676c6"
+    },
+    "0.5.6": {
+      "url": "https://nodejs.org/dist/v0.5.6/node-v0.5.6.tar.gz",
+      "sha256": "f9745ab3b19be29d3ddf40c40cec6d4c4685ae94d9943389d6b67178f11ecd9b"
+    },
+    "0.5.5": {
+      "url": "https://nodejs.org/dist/v0.5.5/node-v0.5.5.tar.gz",
+      "sha256": "6f7ef8859e43545ff9a0e178e39a070f22c6a2abcf46b2cae079f446b5750e65"
+    },
+    "0.5.4": {
+      "url": "https://nodejs.org/dist/v0.5.4/node-v0.5.4.tar.gz",
+      "sha256": "d32d3af4e3286b383640df857d76c2fcca1a2e2cb85abb484483a0a49d09ae71"
+    },
+    "0.5.3": {
+      "url": "https://nodejs.org/dist/v0.5.3/node-v0.5.3.tar.gz",
+      "sha256": "27e5a488040e59e192b3db6675c5f0b6b00cccdd53f1a7cdf98b6477220fbb1e"
+    },
+    "0.5.2": {
+      "url": "https://nodejs.org/dist/v0.5.2/node-v0.5.2.tar.gz",
+      "sha256": "198f9109bf22a9f8d88cf0b696bd36fc897dfa6b655f30102d7cc55bf033e19b"
+    },
+    "0.5.1": {
+      "url": "https://nodejs.org/dist/v0.5.1/node-v0.5.1.tar.gz",
+      "sha256": "a788469bbfd52ba56f1fa76ff28f796aff8aec9ce1cd92aca62853e72d187839"
+    },
+    "0.5.0": {
+      "url": "https://nodejs.org/dist/v0.5.0/node-v0.5.0.tar.gz",
+      "sha256": "ac7e786f69343654dff091e1d5a85ee001f48b7b0fe145c0a0e14040b82978b9"
+    },
+    "0.4.12": {
+      "url": "https://nodejs.org/dist/v0.4.12/node-v0.4.12.tar.gz",
+      "sha256": "c01af05b933ad4d2ca39f63cac057f54f032a4d83cff8711e42650ccee24fce4"
+    },
+    "0.4.11": {
+      "url": "https://nodejs.org/dist/v0.4.11/node-v0.4.11.tar.gz",
+      "sha256": "e009522d52c4a844c46e51c63b852899d1b7e6d949d1a139cdc16b4f6c4ab63f"
+    },
+    "0.4.10": {
+      "url": "https://nodejs.org/dist/v0.4.10/node-v0.4.10.tar.gz",
+      "sha256": "57fa7ed5a818308ff485bb1c1a8ec8f1eb6a7800e14201dff65d88ce657da50a"
+    },
+    "0.4.9": {
+      "url": "https://nodejs.org/dist/v0.4.9/node-v0.4.9.tar.gz",
+      "sha256": "f231ea6d19ea9ea4c7f8e7ff5061e7d301f1635bec7ed0ff1eef2512576ea442"
+    },
+    "0.4.8": {
+      "url": "https://nodejs.org/dist/v0.4.8/node-v0.4.8.tar.gz",
+      "sha256": "c72a0136a022581e9ca5d26fd4a9af277525204547bcf06276dbe6b66e1fa112"
+    },
+    "0.4.7": {
+      "url": "https://nodejs.org/dist/v0.4.7/node-v0.4.7.tar.gz",
+      "sha256": "5c405ff85549ebff49ee06d4e4391f02ed65b2b1177dc0f617f727ab48593dee"
+    },
+    "0.4.6": {
+      "url": "https://nodejs.org/dist/v0.4.6/node-v0.4.6.tar.gz",
+      "sha256": "0f07823f1eb32a51351739763a73a66e2b8c80ed6e3e787a1f68eec255b481f6"
+    },
+    "0.4.5": {
+      "url": "https://nodejs.org/dist/v0.4.5/node-v0.4.5.tar.gz",
+      "sha256": "63fa6acd7dbf1ea816dc5fd64ba4d066f85380396571d29934b8b9141dc2a0ee"
+    },
+    "0.4.4": {
+      "url": "https://nodejs.org/dist/v0.4.4/node-v0.4.4.tar.gz",
+      "sha256": "ea4430909601340cb3e8adb15569facfeca4e1d59129f1932254535bb4bf3e17"
+    },
+    "0.4.3": {
+      "url": "https://nodejs.org/dist/v0.4.3/node-v0.4.3.tar.gz",
+      "sha256": "945cd6743336933bdd1843c28e6d4c896483c8ffc899555079c1eca7a69bd81c"
+    },
+    "0.4.2": {
+      "url": "https://nodejs.org/dist/v0.4.2/node-v0.4.2.tar.gz",
+      "sha256": "09b1100ca6828eedbe52418fbeb3352d71c0b1ff3344c44a5af3efb80c5b908c"
+    },
+    "0.4.1": {
+      "url": "https://nodejs.org/dist/v0.4.1/node-v0.4.1.tar.gz",
+      "sha256": "fdd61c479a0c9f30102454ee53d2ba0c5fc9f6d06d1073958ae2fd3fc314de23"
+    },
+    "0.4.0": {
+      "url": "https://nodejs.org/dist/v0.4.0/node-v0.4.0.tar.gz",
+      "sha256": "4a30bd9963373cb86a994479bdd451ab3b6f2124f0089493366315da79d3408e"
+    },
+    "0.3.8": {
+      "url": "https://nodejs.org/dist/v0.3.8/node-v0.3.8.tar.gz",
+      "sha256": "fc71861d339ec9ced9c85cb714f14e3e6e51651833ef0fec2abf41ad113172f1"
+    },
+    "0.3.7": {
+      "url": "https://nodejs.org/dist/v0.3.7/node-v0.3.7.tar.gz",
+      "sha256": "21c53e74684a8a3c3d14d14a49a07fa8250f0e41514b448182ef0d1f5bbba52f"
+    },
+    "0.3.6": {
+      "url": "https://nodejs.org/dist/v0.3.6/node-v0.3.6.tar.gz",
+      "sha256": "682709b86be119927015a95418a519542caadb95cbadb635ef51f7d0732fe305"
+    },
+    "0.3.5": {
+      "url": "https://nodejs.org/dist/v0.3.5/node-v0.3.5.tar.gz",
+      "sha256": "affdf4cbe8aaab74f99ea0a534d913a6203de353652c2fe01e1ce75707d730c7"
+    },
+    "0.3.4": {
+      "url": "https://nodejs.org/dist/v0.3.4/node-v0.3.4.tar.gz",
+      "sha256": "6980300d371ea182d719722a92706a495d19bd2efc6e1c3cdfe1c8fff74b5717"
+    },
+    "0.3.3": {
+      "url": "https://nodejs.org/dist/v0.3.3/node-v0.3.3.tar.gz",
+      "sha256": "7f0dd072fbfa2dca8d873f56a4f57fdecbf4aba794b821654bec86daf3f980bc"
+    },
+    "0.3.2": {
+      "url": "https://nodejs.org/dist/v0.3.2/node-v0.3.2.tar.gz",
+      "sha256": "0cfb16b60c3c32c5fe0644108abb09e9425597a192c23844f29782b3ef7f7de2"
+    },
+    "0.3.1": {
+      "url": "https://nodejs.org/dist/v0.3.1/node-v0.3.1.tar.gz",
+      "sha256": "19c4c6144af143fbe37f80ec5d2843c4e19b5b6054fb10225bec314b60d2d012"
+    },
+    "0.3.0": {
+      "url": "https://nodejs.org/dist/v0.3.0/node-v0.3.0.tar.gz",
+      "sha256": "aa53c3d136ceaa02108ad013d9d9917e6e2ea22f10e3bd7414f4ba6f6a1427b5"
+    },
+    "0.2.6": {
+      "url": "https://nodejs.org/dist/v0.2.6/node-v0.2.6.tar.gz",
+      "sha256": "e97fe9c81ff4b569ae9a0d46e64a0572a1f171293573a5b5290bcc3996a19701"
+    },
+    "0.2.5": {
+      "url": "https://nodejs.org/dist/v0.2.5/node-v0.2.5.tar.gz",
+      "sha256": "6c964096e2fb7bfa9108b31bdd2a920465a1b7f7a603e3937128eee9538b44bb"
+    },
+    "0.2.4": {
+      "url": "https://nodejs.org/dist/v0.2.4/node-v0.2.4.tar.gz",
+      "sha256": "e6952007dacf18d9d85ae8ede8228e25cfe46e00be21b31c4d166239ec1fa533"
+    },
+    "0.2.3": {
+      "url": "https://nodejs.org/dist/v0.2.3/node-v0.2.3.tar.gz",
+      "sha256": "7358f8969b7bf6da7b066185bfa72d3bbc92e80b174ff5ea0e2b536fd357c8cf"
+    },
+    "0.2.2": {
+      "url": "https://nodejs.org/dist/v0.2.2/node-v0.2.2.tar.gz",
+      "sha256": "21dc8e18cd678f55773a2dbe309a559882bf6f3b969c9e5b39f6977fb85ee480"
+    },
+    "0.2.1": {
+      "url": "https://nodejs.org/dist/v0.2.1/node-v0.2.1.tar.gz",
+      "sha256": "5bb7d084b2138ce43fcb34739ed894379c450a1dd569a1c710405bc39d2861c2"
+    },
+    "0.2.0": {
+      "url": "https://nodejs.org/dist/v0.2.0/node-v0.2.0.tar.gz",
+      "sha256": "3d3eff9287c9917af4044f3cef99ae5b17946710a71e83039de4fcb4b0a26631"
+    },
+    "0.1.104": {
+      "url": "https://nodejs.org/dist/v0.1.104/node-v0.1.104.tar.gz",
+      "sha256": "a1c776f44bc07305dc0e56df17cc3260eaafa0394c3b06c27448ad85bec272df"
+    },
+    "0.1.103": {
+      "url": "https://nodejs.org/dist/v0.1.103/node-v0.1.103.tar.gz",
+      "sha256": "7482b898a0f9514c74137b490c3ad0810ee5ce1586e8886c5182f6446e56711e"
+    },
+    "0.1.102": {
+      "url": "https://nodejs.org/dist/v0.1.102/node-v0.1.102.tar.gz",
+      "sha256": "bd9b1d09ad40ceaef4bdd46019960c5c2fe87026c9598a6fb23c66457510a22d"
+    },
+    "0.1.101": {
+      "url": "https://nodejs.org/dist/v0.1.101/node-v0.1.101.tar.gz",
+      "sha256": "44b08c5c9bd0c23d79d447bc67e1767ec1350a02cec0da6e5ce4c7f790b4e773"
+    },
+    "0.1.100": {
+      "url": "https://nodejs.org/dist/v0.1.100/node-v0.1.100.tar.gz",
+      "sha256": "623d9157017ca3805cbbca653724f8e25a52be689f821d0c608f94717342e1e2"
+    },
+    "0.1.99": {
+      "url": "https://nodejs.org/dist/v0.1.99/node-v0.1.99.tar.gz",
+      "sha256": "fcd771a873609096c33e297869c52799bbcd4038b68112a9185785ca73a235d0"
+    },
+    "0.1.98": {
+      "url": "https://nodejs.org/dist/v0.1.98/node-v0.1.98.tar.gz",
+      "sha256": "6ce54b2e81ba1f4085d165bf3e853111a77e2a20de9493a0d7092665a5c9fda8"
+    },
+    "0.1.97": {
+      "url": "https://nodejs.org/dist/v0.1.97/node-v0.1.97.tar.gz",
+      "sha256": "8ad00afa4d43c479a5025293ef83fd69e94ddef5ee2795263ca46222d1c2a954"
+    },
+    "0.1.96": {
+      "url": "https://nodejs.org/dist/v0.1.96/node-v0.1.96.tar.gz",
+      "sha256": "b58c607a3f2549722acc9c7cf1f3ccd57c3c15ca7a8ca4a9e6fe3567e8a0b500"
+    },
+    "0.1.95": {
+      "url": "https://nodejs.org/dist/v0.1.95/node-v0.1.95.tar.gz",
+      "sha256": "d215477805fc7f48522f97813f0757dcc85b5b9423db1b3e6a16ea78afa375b8"
+    },
+    "0.1.94": {
+      "url": "https://nodejs.org/dist/v0.1.94/node-v0.1.94.tar.gz",
+      "sha256": "93d19477e069171307f66dffc665c900d80382bca021536451c785f78dba1b3d"
+    },
+    "0.1.93": {
+      "url": "https://nodejs.org/dist/v0.1.93/node-v0.1.93.tar.gz",
+      "sha256": "7f0574212b2addb53adb47422b7343ac0872e0fd9618b8e8877f61579686a95a"
+    },
+    "0.1.92": {
+      "url": "https://nodejs.org/dist/v0.1.92/node-v0.1.92.tar.gz",
+      "sha256": "f23ba3e4596fa22dabe2f5d5718a55e3100badeb2de2ef623440d9288ce88e04"
+    },
+    "0.1.91": {
+      "url": "https://nodejs.org/dist/v0.1.91/node-v0.1.91.tar.gz",
+      "sha256": "dcdbd47c9bbe508c86f2dad4f751e5caaf1247a013cb55b8d5e75f47e800f38a"
+    },
+    "0.1.90": {
+      "url": "https://nodejs.org/dist/v0.1.90/node-v0.1.90.tar.gz",
+      "sha256": "0dbd47f6be45049a54de6ff268b25a8ccf8cac38bd75788e713dab35a14695c3"
+    },
+    "0.1.33": {
+      "url": "https://nodejs.org/dist/v0.1.33/node-v0.1.33.tar.gz",
+      "sha256": "4a5db1dbacb22baf3a43a77a9c089bd3eb6b903ccc83e874541c48984310c5a7"
+    },
+    "0.1.32": {
+      "url": "https://nodejs.org/dist/v0.1.32/node-v0.1.32.tar.gz",
+      "sha256": "1fda75df1f2c15df3d24c59b8cb3f0c649b6476a59354b9ddad25287cb57f73e"
+    },
+    "0.1.31": {
+      "url": "https://nodejs.org/dist/v0.1.31/node-v0.1.31.tar.gz",
+      "sha256": "260972bedf789580b56433ca27a1e3717b131a531a4b3688980a16e65d79abbd"
+    },
+    "0.1.30": {
+      "url": "https://nodejs.org/dist/v0.1.30/node-v0.1.30.tar.gz",
+      "sha256": "37ee475b43609b9052300472ea33cf027f6777975bc90611837e54ecdad3f22c"
+    },
+    "0.1.29": {
+      "url": "https://nodejs.org/dist/v0.1.29/node-v0.1.29.tar.gz",
+      "sha256": "b56ddee6fbd89f674df7d38295563f4124e728dbf2dc4e7fb359fd1f6fe9bb06"
+    },
+    "0.1.28": {
+      "url": "https://nodejs.org/dist/v0.1.28/node-v0.1.28.tar.gz",
+      "sha256": "06f8a8d5246d34629b1355497c2f0f9f779c7dd9830e3ec51c67cbdae46c9069"
+    },
+    "0.1.27": {
+      "url": "https://nodejs.org/dist/v0.1.27/node-v0.1.27.tar.gz",
+      "sha256": "1f83401b9ede7558350e183fc4386234a803d1253e7fe99bce0aba7138270806"
+    },
+    "0.1.26": {
+      "url": "https://nodejs.org/dist/v0.1.26/node-v0.1.26.tar.gz",
+      "sha256": "8c6e5858bcf1e401af50a7f71d6cbffb3af2f4e41813c46a138edb489bbd84f0"
+    },
+    "0.1.25": {
+      "url": "https://nodejs.org/dist/v0.1.25/node-v0.1.25.tar.gz",
+      "sha256": "48cb603bd55182c22a0030db78be146e137bcf396ff78dc1b7fe748adc9d59a6"
+    },
+    "0.1.24": {
+      "url": "https://nodejs.org/dist/v0.1.24/node-v0.1.24.tar.gz",
+      "sha256": "a1bb4bda5c43142485ea4b0f725bae6319132daf90a243635f626f2d191374f4"
+    },
+    "0.1.23": {
+      "url": "https://nodejs.org/dist/v0.1.23/node-v0.1.23.tar.gz",
+      "sha256": "69b416d60f288389d25d04797a030b4db6a1ca0cafbd545ca2b8824afaba3035"
+    },
+    "0.1.22": {
+      "url": "https://nodejs.org/dist/v0.1.22/node-v0.1.22.tar.gz",
+      "sha256": "7884d315b318cdd4e45abe76d42cc44aabb792cce1d2974ff7b4669561fb28ba"
+    },
+    "0.1.21": {
+      "url": "https://nodejs.org/dist/v0.1.21/node-v0.1.21.tar.gz",
+      "sha256": "f7a7cc74c7b3eff74056bfa4710ae0bde65bf2d86ed9f9fdbc0406e14c0a5100"
+    },
+    "0.1.20": {
+      "url": "https://nodejs.org/dist/v0.1.20/node-v0.1.20.tar.gz",
+      "sha256": "4f6684d831554508b2ec4ab3ebe3c417a5f55174a3a00cb5ad67b90d473942fc"
+    },
+    "0.1.19": {
+      "url": "https://nodejs.org/dist/v0.1.19/node-v0.1.19.tar.gz",
+      "sha256": "5eff91296a705f72bed6dd493e20af49fd56987e16928f45005605bc6736480a"
+    },
+    "0.1.18": {
+      "url": "https://nodejs.org/dist/v0.1.18/node-v0.1.18.tar.gz",
+      "sha256": "08b2db2dc4f0bb97fc51d79675803e1e4756209531b3c4a9b0f9850802155587"
+    },
+    "0.1.17": {
+      "url": "https://nodejs.org/dist/v0.1.17/node-v0.1.17.tar.gz",
+      "sha256": "86765206da369900663976b215ff6aa38a6b7518474f60c382b3926a0186528a"
+    },
+    "0.1.16": {
+      "url": "https://nodejs.org/dist/v0.1.16/node-v0.1.16.tar.gz",
+      "sha256": "3e2088120bbd45881778d105ec53241bd15b0a90f4061d0e3bec2d7faa2955c2"
+    },
+    "0.1.15": {
+      "url": "https://nodejs.org/dist/v0.1.15/node-v0.1.15.tar.gz",
+      "sha256": "aaf90fb73ba9246adce7ea066ecbf954cb8fa1868246b73871adbe1dd3fcc8e0"
+    },
+    "0.1.14": {
+      "url": "https://nodejs.org/dist/v0.1.14/node-v0.1.14.tar.gz",
+      "sha256": "ff74848a9d444923e378e45ec46d6d0867889e78a045c43fa33080fe47c85004"
+    }
+  },
+  "aliases": {
+    "0": "0.12.18",
+    "4": "4.9.1",
+    "5": "5.12.0",
+    "6": "6.17.1",
+    "7": "7.10.1",
+    "8": "8.17.0",
+    "9": "9.11.2",
+    "10": "10.24.1",
+    "11": "11.15.0",
+    "12": "12.22.12",
+    "13": "13.14.0",
+    "14": "14.21.3",
+    "15": "15.14.0",
+    "16": "16.19.1",
+    "17": "17.9.1",
+    "18": "18.15.0",
+    "19": "19.7.0",
+    "latest": "19.7.0",
+    "argon": "4.9.1",
+    "boron": "6.17.1",
+    "carbon": "8.17.0",
+    "dubnium": "10.24.1",
+    "erbium": "12.22.12",
+    "fermium": "14.21.3",
+    "gallium": "16.19.1",
+    "hydrogen": "18.15.0",
+    "v0.10.x": "0.10.48",
+    "v0.12.x": "0.12.18",
+    "v10.x": "10.24.1",
+    "v11.x": "11.15.0",
+    "v12.x": "12.22.12",
+    "v13.x": "13.14.0",
+    "v14.x": "14.21.3",
+    "v15.x": "15.14.0",
+    "v16.x": "16.19.1",
+    "v17.x": "17.9.1",
+    "v18.x": "18.15.0",
+    "v19.x": "19.7.0",
+    "v4.x": "4.9.1",
+    "v5.x": "5.12.0",
+    "v6.x": "6.17.1",
+    "v7.x": "7.10.1",
+    "v8.x": "8.17.0",
+    "v9.x": "9.11.2",
+    "19.7": "19.7.0",
+    "19.6": "19.6.1",
+    "19.5": "19.5.0",
+    "19.4": "19.4.0",
+    "19.3": "19.3.0",
+    "19.2": "19.2.0",
+    "19.1": "19.1.0",
+    "19.0": "19.0.1",
+    "18.15": "18.15.0",
+    "18.14": "18.14.2",
+    "18.13": "18.13.0",
+    "18.12": "18.12.1",
+    "18.11": "18.11.0",
+    "18.10": "18.10.0",
+    "18.9": "18.9.1",
+    "18.8": "18.8.0",
+    "18.7": "18.7.0",
+    "18.6": "18.6.0",
+    "18.5": "18.5.0",
+    "18.4": "18.4.0",
+    "18.3": "18.3.0",
+    "18.2": "18.2.0",
+    "18.1": "18.1.0",
+    "18.0": "18.0.0",
+    "17.9": "17.9.1",
+    "17.8": "17.8.0",
+    "17.7": "17.7.2",
+    "17.6": "17.6.0",
+    "17.5": "17.5.0",
+    "17.4": "17.4.0",
+    "17.3": "17.3.1",
+    "17.2": "17.2.0",
+    "17.1": "17.1.0",
+    "17.0": "17.0.1",
+    "16.19": "16.19.1",
+    "16.18": "16.18.1",
+    "16.17": "16.17.1",
+    "16.16": "16.16.0",
+    "16.15": "16.15.1",
+    "16.14": "16.14.2",
+    "16.13": "16.13.2",
+    "16.12": "16.12.0",
+    "16.11": "16.11.1",
+    "16.10": "16.10.0",
+    "16.9": "16.9.1",
+    "16.8": "16.8.0",
+    "16.7": "16.7.0",
+    "16.6": "16.6.2",
+    "16.5": "16.5.0",
+    "16.4": "16.4.2",
+    "16.3": "16.3.0",
+    "16.2": "16.2.0",
+    "16.1": "16.1.0",
+    "16.0": "16.0.0",
+    "15.14": "15.14.0",
+    "15.13": "15.13.0",
+    "15.12": "15.12.0",
+    "15.11": "15.11.0",
+    "15.10": "15.10.0",
+    "15.9": "15.9.0",
+    "15.8": "15.8.0",
+    "15.7": "15.7.0",
+    "15.6": "15.6.0",
+    "15.5": "15.5.1",
+    "15.4": "15.4.0",
+    "15.3": "15.3.0",
+    "15.2": "15.2.1",
+    "15.1": "15.1.0",
+    "15.0": "15.0.1",
+    "14.21": "14.21.3",
+    "14.20": "14.20.1",
+    "14.19": "14.19.3",
+    "14.18": "14.18.3",
+    "14.17": "14.17.6",
+    "14.16": "14.16.1",
+    "14.15": "14.15.5",
+    "14.14": "14.14.0",
+    "14.13": "14.13.1",
+    "14.12": "14.12.0",
+    "14.11": "14.11.0",
+    "14.10": "14.10.1",
+    "14.9": "14.9.0",
+    "14.8": "14.8.0",
+    "14.7": "14.7.0",
+    "14.6": "14.6.0",
+    "14.5": "14.5.0",
+    "14.4": "14.4.0",
+    "14.3": "14.3.0",
+    "14.2": "14.2.0",
+    "14.1": "14.1.0",
+    "14.0": "14.0.0",
+    "13.14": "13.14.0",
+    "13.13": "13.13.0",
+    "13.12": "13.12.0",
+    "13.11": "13.11.0",
+    "13.10": "13.10.1",
+    "13.9": "13.9.0",
+    "13.8": "13.8.0",
+    "13.7": "13.7.0",
+    "13.6": "13.6.0",
+    "13.5": "13.5.0",
+    "13.4": "13.4.0",
+    "13.3": "13.3.0",
+    "13.2": "13.2.0",
+    "13.1": "13.1.0",
+    "13.0": "13.0.1",
+    "12.22": "12.22.12",
+    "12.21": "12.21.0",
+    "12.20": "12.20.2",
+    "12.19": "12.19.1",
+    "12.18": "12.18.4",
+    "12.17": "12.17.0",
+    "12.16": "12.16.3",
+    "12.15": "12.15.0",
+    "12.14": "12.14.1",
+    "12.13": "12.13.1",
+    "12.12": "12.12.0",
+    "12.11": "12.11.1",
+    "12.10": "12.10.0",
+    "12.9": "12.9.1",
+    "12.8": "12.8.1",
+    "12.7": "12.7.0",
+    "12.6": "12.6.0",
+    "12.5": "12.5.0",
+    "12.4": "12.4.0",
+    "12.3": "12.3.1",
+    "12.2": "12.2.0",
+    "12.1": "12.1.0",
+    "12.0": "12.0.0",
+    "11.15": "11.15.0",
+    "11.14": "11.14.0",
+    "11.13": "11.13.0",
+    "11.12": "11.12.0",
+    "11.11": "11.11.0",
+    "11.10": "11.10.1",
+    "11.9": "11.9.0",
+    "11.8": "11.8.0",
+    "11.7": "11.7.0",
+    "11.6": "11.6.0",
+    "11.5": "11.5.0",
+    "11.4": "11.4.0",
+    "11.3": "11.3.0",
+    "11.2": "11.2.0",
+    "11.1": "11.1.0",
+    "11.0": "11.0.0",
+    "10.24": "10.24.1",
+    "10.23": "10.23.3",
+    "10.22": "10.22.1",
+    "10.21": "10.21.0",
+    "10.20": "10.20.1",
+    "10.19": "10.19.0",
+    "10.18": "10.18.1",
+    "10.17": "10.17.0",
+    "10.16": "10.16.3",
+    "10.15": "10.15.3",
+    "10.14": "10.14.2",
+    "10.13": "10.13.0",
+    "10.12": "10.12.0",
+    "10.11": "10.11.0",
+    "10.10": "10.10.0",
+    "10.9": "10.9.0",
+    "10.8": "10.8.0",
+    "10.7": "10.7.0",
+    "10.6": "10.6.0",
+    "10.5": "10.5.0",
+    "10.4": "10.4.1",
+    "10.3": "10.3.0",
+    "10.2": "10.2.1",
+    "10.1": "10.1.0",
+    "10.0": "10.0.0",
+    "9.11": "9.11.2",
+    "9.10": "9.10.1",
+    "9.9": "9.9.0",
+    "9.8": "9.8.0",
+    "9.7": "9.7.1",
+    "9.6": "9.6.1",
+    "9.5": "9.5.0",
+    "9.4": "9.4.0",
+    "9.3": "9.3.0",
+    "9.2": "9.2.1",
+    "9.1": "9.1.0",
+    "9.0": "9.0.0",
+    "8.17": "8.17.0",
+    "8.16": "8.16.2",
+    "8.15": "8.15.1",
+    "8.14": "8.14.1",
+    "8.13": "8.13.0",
+    "8.12": "8.12.0",
+    "8.11": "8.11.4",
+    "8.10": "8.10.0",
+    "8.9": "8.9.4",
+    "8.8": "8.8.1",
+    "8.7": "8.7.0",
+    "8.6": "8.6.0",
+    "8.5": "8.5.0",
+    "8.4": "8.4.0",
+    "8.3": "8.3.0",
+    "8.2": "8.2.1",
+    "8.1": "8.1.4",
+    "8.0": "8.0.0",
+    "7.10": "7.10.1",
+    "7.9": "7.9.0",
+    "7.8": "7.8.0",
+    "7.7": "7.7.4",
+    "7.6": "7.6.0",
+    "7.5": "7.5.0",
+    "7.4": "7.4.0",
+    "7.3": "7.3.0",
+    "7.2": "7.2.1",
+    "7.1": "7.1.0",
+    "7.0": "7.0.0",
+    "6.17": "6.17.1",
+    "6.16": "6.16.0",
+    "6.15": "6.15.1",
+    "6.14": "6.14.4",
+    "6.13": "6.13.1",
+    "6.12": "6.12.3",
+    "6.11": "6.11.5",
+    "6.10": "6.10.3",
+    "6.9": "6.9.5",
+    "6.8": "6.8.1",
+    "6.7": "6.7.0",
+    "6.6": "6.6.0",
+    "6.5": "6.5.0",
+    "6.4": "6.4.0",
+    "6.3": "6.3.1",
+    "6.2": "6.2.2",
+    "6.1": "6.1.0",
+    "6.0": "6.0.0",
+    "5.12": "5.12.0",
+    "5.11": "5.11.1",
+    "5.10": "5.10.1",
+    "5.9": "5.9.1",
+    "5.8": "5.8.0",
+    "5.7": "5.7.1",
+    "5.6": "5.6.0",
+    "5.5": "5.5.0",
+    "5.4": "5.4.1",
+    "5.3": "5.3.0",
+    "5.2": "5.2.0",
+    "5.1": "5.1.1",
+    "5.0": "5.0.0",
+    "4.9": "4.9.1",
+    "4.8": "4.8.7",
+    "4.7": "4.7.3",
+    "4.6": "4.6.2",
+    "4.5": "4.5.0",
+    "4.4": "4.4.7",
+    "4.3": "4.3.2",
+    "4.2": "4.2.6",
+    "4.1": "4.1.2",
+    "4.0": "4.0.0",
+    "0.12": "0.12.18",
+    "0.11": "0.11.16",
+    "0.10": "0.10.48",
+    "0.9": "0.9.12",
+    "0.8": "0.8.28",
+    "0.7": "0.7.12",
+    "0.6": "0.6.21",
+    "0.5": "0.5.10",
+    "0.4": "0.4.12",
+    "0.3": "0.3.8",
+    "0.2": "0.2.6",
+    "0.1": "0.1.104"
+  }
+}
