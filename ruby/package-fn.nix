@@ -34,6 +34,8 @@
 , fiddleSupport ? true
 , yjitSupport ? true
 , rustc
+, jemallocSupport ? false
+, jemalloc
 }:
 let
   op = lib.optional;
@@ -75,6 +77,7 @@ let
         ++ (op gdbmSupport gdbm)
         ++ (op yamlSupport libyaml)
         ++ (op yjitSupport rustc)
+        ++ (op jemallocSupport jemalloc)
         # Looks like ruby fails to build on darwin without readline even if curses
         # support is not enabled, so add readline to the build inputs if curses
         # support is disabled (if it's enabled, we already have it) and we're
@@ -109,6 +112,7 @@ let
       configureFlags =
         [ "--enable-shared" "--enable-pthread" ]
         ++ op (!docSupport) "--disable-install-doc"
+        ++ op jemallocSupport "--with-jemalloc"
         ++ ops stdenv.isDarwin [
           # on darwin, we have /usr/include/tk.h -- so the configure script detects
           # that tk is installed

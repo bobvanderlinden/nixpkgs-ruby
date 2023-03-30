@@ -138,6 +138,14 @@
                   ruby -e 'puts "ok"' > $out
                 '';
               };
+              "${rubyName}-jemalloc" = {
+                nativeBuildInputs = [
+                  (ruby.override { jemallocSupport = true; })
+                ];
+                command = ''
+                  ruby -e 'puts "ok"' > $out
+                '';
+              };
               "${rubyName}-mkRuby" = {
                 nativeBuildInputs = [
                   (self.lib.mkRuby {
@@ -197,7 +205,7 @@
                     ruby -e 'puts RUBY_VERSION' > $out
                   '';
                 };
-            packageFromRubyVersionFileWithEngine = 
+            packageFromRubyVersionFileWithEngine =
               let
                 ruby = self.lib.packageFromRubyVersionFile {
                   file = ./tests/ruby-version-with-engine;
