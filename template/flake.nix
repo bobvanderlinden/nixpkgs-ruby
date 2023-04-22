@@ -11,7 +11,7 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         ruby = nixpkgs-ruby.lib.packageFromRubyVersionFile {
-          file = ./ruby-version;
+          file = ./.ruby-version;
           inherit system;
         };
 

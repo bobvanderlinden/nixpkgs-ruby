@@ -351,13 +351,29 @@
     "3.4.8": {
       "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.4.8.tar.gz",
       "hash": "sha256-3K+QHF0o8GgNIb90AK56pru83EvmPfSO+n8070f/qgk="
+    },
+    "3.4.9": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.4.9.tar.gz",
+      "hash": "sha256-Ync7lHj3O3AFt7RCMYeYu/4Z4dc6Zf5hiNEsq8fVrwE="
+    },
+    "3.4.10": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.4.10.tar.gz",
+      "hash": "sha256-EwpjW6n+qOEllNMW91J42epkpHskgTA0rVvi+aIZ4BA="
+    },
+    "3.4.11": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.4.11.tar.gz",
+      "hash": "sha256-unT3JWNa8BSEhRqXqvje2KjugLDcLp94F4hlIJykWLg="
+    },
+    "3.4.12": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.4.12.tar.gz",
+      "hash": "sha256-ds6FqDSt7xQ95X1BBdrA3dHZiSBI9zPk316mIzS/axU="
     }
   },
   "aliases": {
     "1": "1.8.30",
     "2": "2.7.6",
-    "3": "3.4.8",
-    "3.4": "3.4.8",
+    "3": "3.4.12",
+    "3.4": "3.4.12",
     "3.3": "3.3.26",
     "3.2": "3.2.34",
     "3.1": "3.1.4",
@@ -367,7 +383,7 @@
     "2.2": "2.2.3",
     "2.0": "2.0.15",
     "1.8": "1.8.30",
-    "3_4": "3.4.8",
+    "3_4": "3.4.12",
     "3_3": "3.3.26",
     "3_2": "3.2.34",
     "3_1": "3.1.4",
