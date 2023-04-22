@@ -145,6 +145,14 @@
                   ruby -e 'puts "ok"' > $out
                 '';
               };
+              "${rubyName}-openssl" = {
+                nativeBuildInputs = [
+                  ruby
+                ];
+                command = ''
+                  ruby -e 'require "openssl"; puts OpenSSL::OPENSSL_VERSION' > $out
+                '';
+              };
             } // (lib.optionalAttrs (with import ./lib/version-comparison.nix rubyVersion; greaterOrEqualTo "2.2") {
               "${rubyName}-bundlerEnv" = let
                 gems = pkgs.bundlerEnv {
