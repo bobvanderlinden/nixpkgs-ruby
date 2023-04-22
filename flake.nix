@@ -145,6 +145,9 @@
                   ruby -e 'puts "ok"' > $out
                 '';
               };
+            } // (lib.optionalAttrs (with versionComparison rubyVersion; greaterOrEqualTo "2.4") {
+              # Ruby <2.4 only supports openssl 1.0 and not openssl1.1. openssl 1.0 is not supported by nixpkgs
+              # anymore, so we will not support it here.
               "${rubyName}-openssl" = {
                 nativeBuildInputs = [
                   ruby
@@ -153,7 +156,7 @@
                   ruby -e 'require "openssl"; puts OpenSSL::OPENSSL_VERSION' > $out
                 '';
               };
-            } // (lib.optionalAttrs (with import ./lib/version-comparison.nix rubyVersion; greaterOrEqualTo "2.2") {
+            }) // (lib.optionalAttrs (with versionComparison rubyVersion; greaterOrEqualTo "2.2") {
               "${rubyName}-bundlerEnv" = let
                 gems = pkgs.bundlerEnv {
                   name = "gemset";
