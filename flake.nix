@@ -3,6 +3,8 @@
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+  inputs.flake-compat.url = "github:edolstra/flake-compat";
+  inputs.flake-compat.flake = false;
 
   nixConfig = {
     extra-substituters = "https://nixpkgs-ruby.cachix.org";
@@ -13,6 +15,7 @@
     { self
     , nixpkgs
     , flake-utils
+    , ...
     }:
     let
       applyOverrides = import ./lib/apply-overrides.nix;
@@ -145,7 +148,18 @@
                   ruby -e 'puts "ok"' > $out
                 '';
               };
-            } // (lib.optionalAttrs (with import ./lib/version-comparison.nix rubyVersion; greaterOrEqualTo "2.2") {
+            } // (lib.optionalAttrs (with versionComparison rubyVersion; greaterOrEqualTo "2.4") {
+              # Ruby <2.4 only supports openssl 1.0 and not openssl1.1. openssl 1.0 is not supported by nixpkgs
+              # anymore, so we will not support it here.
+              "${rubyName}-openssl" = {
+                nativeBuildInputs = [
+                  ruby
+                ];
+                command = ''
+                  ruby -e 'require "openssl"; puts OpenSSL::OPENSSL_VERSION' > $out
+                '';
+              };
+            }) // (lib.optionalAttrs (with versionComparison rubyVersion; greaterOrEqualTo "2.2") {
               "${rubyName}-bundlerEnv" = let
                 gems = pkgs.bundlerEnv {
                   name = "gemset";

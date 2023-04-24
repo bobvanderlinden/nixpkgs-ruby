@@ -24,7 +24,7 @@
   }
   {
     condition = version: with versionComparison version;
-      lessThan "3.0.3";
+      lessThan "3.1";
     override = pkg: pkg.override { openssl = openssl_1_1; };
   }
   {
