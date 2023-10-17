@@ -23,6 +23,7 @@
 , buildEnv
 , bundler
 , bundix
+, removeReferencesTo
 , useRailsExpress ? true
 , zlibSupport ? true
 , opensslSupport ? true
@@ -131,8 +132,33 @@ let
           ${buildRuby} setup.rb
           popd
         ''}
+        rbConfig=$(find $out/lib/ruby -name rbconfig.rb)
+
+        # Remove references to the build environment from the closure
+        sed -i '/^  CONFIG\["\(BASERUBY\|SHELL\|GREP\|EGREP\|MKDIR_P\|MAKEDIRS\|INSTALL\)"\]/d' $rbConfig
+
         # Remove unnecessary groff reference from runtime closure, since it's big
-        sed -i '/NROFF/d' $out/lib/ruby/*/*/rbconfig.rb
+        sed -i '/NROFF/d' $rbConfig
+
+        # Get rid of the CC runtime dependency
+        ${removeReferencesTo}/bin/remove-references-to \
+          -t ${stdenv.cc} \
+          $out/lib/libruby*
+        ${removeReferencesTo}/bin/remove-references-to \
+          -t ${stdenv.cc} \
+          $rbConfig
+        sed -i '/CC_VERSION_MESSAGE/d' $rbConfig
+
+        # Allow to override compiler. This is important for cross compiling as
+        # we need to set a compiler that is different from the build one.
+        sed -i 's/CONFIG\["CC"\] = "\(.*\)"/CONFIG["CC"] = if ENV["CC"].nil? || ENV["CC"].empty? then "\1" else ENV["CC"] end/'  "$rbConfig"
+
+        # Remove unnecessary external intermediate files created by gems
+        extMakefiles=$(find $out/${self.passthru.gemPath} -name Makefile)
+        for makefile in $extMakefiles; do
+          make -C "$(dirname "$makefile")" distclean
+        done
+        find "$out/${self.passthru.gemPath}" \( -name gem_make.out -o -name mkmf.log \) -delete
 
         # Bundler tries to create this directory
         mkdir -p $out/nix-support
