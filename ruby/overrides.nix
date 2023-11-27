@@ -31,6 +31,10 @@
     condition = version: stdenv.isDarwin && (with versionComparison version;
       composeAny hasPrefix [
         "2.2.1"
+        "2.2.2"
+        "2.2.3"
+        "2.2.4"
+        "2.2.5"
         "2.2.6"
         "2.2.7"
         "2.2.8"
