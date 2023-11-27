@@ -1,5 +1,6 @@
 { versionComparison
 , openssl_1_1
+, stdenv
 }:
 [
   {
@@ -22,6 +23,18 @@
         "2.5.2"
         "2.5.8"
       ];
+    override = pkg: pkg.overrideAttrs (finalAttrs: previousAttrs: { meta = previousAttrs.meta // { broken = true; }; });
+  }
+  {
+    condition = version: stdenv.isDarwin && (with versionComparison version;
+      composeAny hasPrefix [
+        "2.2.1"
+        "2.2.6"
+        "2.2.7"
+        "2.2.8"
+        "2.2.9"
+        "2.6.7"
+      ]);
     override = pkg: pkg.overrideAttrs (finalAttrs: previousAttrs: { meta = previousAttrs.meta // { broken = true; }; });
   }
   {
