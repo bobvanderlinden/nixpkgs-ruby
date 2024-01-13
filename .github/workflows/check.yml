@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Install Nix
         uses: cachix/install-nix-action@v25
-      - uses: cachix/cachix-action@v13
+      - uses: cachix/cachix-action@v14
         with:
           name: nixpkgs-ruby
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
