@@ -252,6 +252,7 @@
               '';
             updateCommands = mapAttrsToList updateCommand pkgsetsToUpdate;
             script = pkgs.writeScript "update" ''
+              #!${pkgs.bash}/bin/bash
               set -o errexit
               ${concatStringsSep "\n" updateCommands}
             '';
