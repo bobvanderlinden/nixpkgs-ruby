@@ -77,7 +77,6 @@ let
         ++ (op gdbmSupport gdbm)
         ++ (op yamlSupport libyaml)
         ++ (op yjitSupport rustc)
-        ++ (op jemallocSupport jemalloc)
         # Looks like ruby fails to build on darwin without readline even if curses
         # support is not enabled, so add readline to the build inputs if curses
         # support is disabled (if it's enabled, we already have it) and we're
@@ -86,6 +85,8 @@ let
         ++ (op stdenv.isDarwin darwin.apple_sdk.frameworks.Foundation)
         ++ (ops stdenv.isDarwin
           (with darwin; [ libiconv libobjc libunwind ]));
+      propagatedBuildInputs =
+        (op jemallocSupport jemalloc);
 
       enableParallelBuilding = true;
 
