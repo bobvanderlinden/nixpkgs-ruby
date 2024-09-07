@@ -22,7 +22,7 @@ jobs:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Create Pull Request
       id: create-pull-request
-      uses: peter-evans/create-pull-request@v6
+      uses: peter-evans/create-pull-request@v7
       with:
         token: ${{ secrets.UPDATE_GITHUB_TOKEN }}
         commit-message: Update Ruby versions
