@@ -136,3 +136,22 @@ Next, use a specific Ruby package in `devenv.nix`:
   languages.ruby.package = nixpkgs-ruby.packages.${pkgs.system}."ruby-2.7";
 }
 ```
+
+### Development shell (without flakes)
+
+When you want to use `nix-shell` with a `shell.nix` or `default.nix` file, use an expression like:
+
+```nix
+{ nixpkgs ? import <nixpkgs>
+, pkgs ? nixpkgs {}
+, nixpkgs-ruby ? import (builtins.fetchTarball {
+    url = "https://github.com/bobvanderlinden/nixpkgs-ruby/archive/c1ba161adf31119cfdbb24489766a7bcd4dbe881.tar.gz";
+  })
+, ruby ? nixpkgs-ruby.packages.${builtins.currentSystem}."ruby-3.2.2"
+}:
+pkgs.mkShell {
+  buildInputs = [
+    ruby
+  ];
+}
+```
