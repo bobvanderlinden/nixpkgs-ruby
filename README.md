@@ -34,6 +34,8 @@ nix flake init --template github:bobvanderlinden/nixpkgs-ruby#
 
 This creates `flake.nix` that includes a development shell with a Ruby version that it reads from `.ruby-version`.
 
+> Note: do make sure to `git add` these files in order for Nix to see them.
+
 To use the shell use:
 
 ```sh
