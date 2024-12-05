@@ -41,6 +41,10 @@
         "2.2.8"
         "2.2.9"
         "2.6.7"
+        "3.1.0"
+        "3.1.1"
+        "3.1.2"
+        "3.1.3"
       ]);
     override = pkg: pkg.overrideAttrs (finalAttrs: previousAttrs: { meta = previousAttrs.meta // { broken = true; }; });
   }
