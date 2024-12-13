@@ -875,6 +875,10 @@
     "3.3.6": {
       "url": "https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.6.tar.gz",
       "sha256": "8dc48fffaf270f86f1019053f28e51e4da4cce32a36760a0603a9aee67d7fd8d"
+    },
+    "3.4.0-rc1": {
+      "url": "https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.0-rc1.tar.gz",
+      "sha256": "1f3187d3366e90af6d760994f8bfe1fe8999a8ba3553ea4dcfae63e548236e2a"
     }
   },
   "aliases": {
