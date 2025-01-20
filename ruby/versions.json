@@ -804,6 +804,10 @@
       "url": "https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.0-preview1.tar.gz",
       "sha256": "c3454a911779b8d747ab0ea87041030d002d533edacb2485fe558b7084da25ed"
     },
+    "3.3.0-preview2": {
+      "url": "https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.0-preview2.tar.gz",
+      "sha256": "30ce8b0fe11b37b5ac088f5a5765744b935eac45bb89a9e381731533144f5991"
+    },
     "3.3.0-preview3": {
       "url": "https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.0-preview3.tar.gz",
       "sha256": "0969141be92e67e0edb84a8fb354acc98f01bd78e602a23a0f136045c82f4809"
@@ -887,6 +891,10 @@
     "3.4.1": {
       "url": "https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.1.tar.gz",
       "sha256": "3d385e5d22d368b064c817a13ed8e3cc3f71a7705d7ed1bae78013c33aa7c87f"
+    },
+    "3.3.7": {
+      "url": "https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.7.tar.gz",
+      "sha256": "9c37c3b12288c7aec20ca121ce76845be5bb5d77662a24919651aaf1d12c8628"
     }
   },
   "aliases": {
@@ -894,7 +902,7 @@
     "3": "3.4.1",
     "latest": "3.4.1",
     "3.4": "3.4.1",
-    "3.3": "3.3.6",
+    "3.3": "3.3.7",
     "3.2": "3.2.6",
     "3.1": "3.1.6",
     "3.0": "3.0.7",
@@ -908,7 +916,7 @@
     "2.*": "2.7.8",
     "3.*": "3.4.1",
     "3.4.*": "3.4.1",
-    "3.3.*": "3.3.6",
+    "3.3.*": "3.3.7",
     "3.2.*": "3.2.6",
     "3.1.*": "3.1.6",
     "3.0.*": "3.0.7",
