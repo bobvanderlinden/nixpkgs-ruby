@@ -919,6 +919,10 @@
     "3.3.8": {
       "url": "https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.8.tar.gz",
       "sha256": "5ae28a87a59a3e4ad66bc2931d232dbab953d0aa8f6baf3bc4f8f80977c89cab"
+    },
+    "3.5.0-preview1": {
+      "url": "https://cache.ruby-lang.org/pub/ruby/3.5/ruby-3.5.0-preview1.tar.gz",
+      "sha256": "ecf09c7eb902e91cdaf9cc553cd00cca9b848b3fc0e14297850f9ab08cdd46f0"
     }
   },
   "aliases": {
