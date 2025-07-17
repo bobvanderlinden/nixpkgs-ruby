@@ -18,5 +18,3 @@ jobs:
           rolling: true
           visibility: "public"
           include-output-paths: true
-        env:
-          NIXPKGS_ALLOW_INSECURE: 1
