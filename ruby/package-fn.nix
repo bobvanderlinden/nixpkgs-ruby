@@ -82,7 +82,6 @@ let
         # support is disabled (if it's enabled, we already have it) and we're
         # running on darwin
         ++ (op (!cursesSupport && stdenv.isDarwin) readline)
-        ++ (op stdenv.isDarwin darwin.apple_sdk.frameworks.Foundation)
         ++ (ops stdenv.isDarwin
           (with darwin; [ libiconv libobjc libunwind ]));
       propagatedBuildInputs =
