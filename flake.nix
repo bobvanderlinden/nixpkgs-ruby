@@ -115,19 +115,21 @@
           "openssl-1.1.1w"
         ];
       };
+
+      allPackages = nixpkgs.lib.concatMapAttrs (name: pkgset: pkgset pkgs) pkgsets;
+      intactPackages = nixpkgs.lib.filterAttrs (name: package: !package.meta.broken) allPackages;
     in
     {
-      packages = nixpkgs.lib.concatMapAttrs (name: pkgset: pkgset pkgs) pkgsets;
+      packages = intactPackages;
 
       checks =
         let
           lib = nixpkgs.lib;
           mkTest = { name, command, env ? {}, nativeBuildInputs ? [] }:
             pkgs.runCommand name ({ inherit nativeBuildInputs; } // env) command;
-          unbrokenPackages = lib.filterAttrs (name: package: !package.meta.broken) self.packages.${system};
           rubyPackages = lib.filterAttrs
             (name: package: (builtins.match "ruby-[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+" name) != null)
-            unbrokenPackages;
+            intactPackages;
           rubyTestAttrs = lib.concatMapAttrs (rubyName: ruby:
             let
               rubyVersion = nixpkgs.lib.removePrefix "ruby-" rubyName;
