@@ -19,7 +19,8 @@
 , libffi
 , bison
 , autoconf
-, darwin ? null
+, libiconv
+, libunwind
 , buildEnv
 , bundler
 , bundix
@@ -82,8 +83,7 @@ let
         # support is disabled (if it's enabled, we already have it) and we're
         # running on darwin
         ++ (op (!cursesSupport && stdenv.isDarwin) readline)
-        ++ (ops stdenv.isDarwin
-          (with darwin; [ libiconv libobjc libunwind ]));
+        ++ (ops stdenv.isDarwin [ libiconv libunwind ]);
       propagatedBuildInputs =
         (op jemallocSupport jemalloc);
 
