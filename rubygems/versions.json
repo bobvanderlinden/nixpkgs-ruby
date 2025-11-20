@@ -559,6 +559,10 @@
     "3.7.2": {
       "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.7.2.tar.gz",
       "hash": "sha256-HqEeIuqh3su7Egs1keMwIieGR4u0fMfE8jhj9cc6TtA="
+    },
+    "4.0.0.beta1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v4.0.0.beta1.tar.gz",
+      "hash": "sha256-Vda/7OT+dVApyGsC+qmzX/gEtGV1+f/v8yREQ+ePEd4="
     }
   },
   "aliases": {
