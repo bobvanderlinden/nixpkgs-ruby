@@ -563,6 +563,10 @@
     "4.0.0.beta1": {
       "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v4.0.0.beta1.tar.gz",
       "hash": "sha256-Vda/7OT+dVApyGsC+qmzX/gEtGV1+f/v8yREQ+ePEd4="
+    },
+    "4.0.0.beta2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v4.0.0.beta2.tar.gz",
+      "hash": "sha256-nO1ogMucZDyOKBD1UbQ7+ZpfDNx8R3S6mQrCnD0rOLc="
     }
   },
   "aliases": {
