@@ -2,6 +2,7 @@
 , versionSource
 , libDir ? "${(import ./parse-version.nix version).majMin}.0"
 , rubygems ? null
+, opensslGem ? null
 , stdenv
 , buildPackages
 , lib
@@ -88,6 +89,14 @@ let
         (op jemallocSupport jemalloc);
 
       enableParallelBuilding = true;
+
+      postUnpack = opString (opensslGem != null) ''
+        rm -rf $sourceRoot/ext/openssl
+        mkdir -p $sourceRoot/ext/openssl
+        cp -r ${opensslGem}/ext/openssl $sourceRoot/ext/
+        cp -r ${opensslGem}/lib/ $sourceRoot/ext/openssl/
+        cp -r ${opensslGem}/{History.md,openssl.gemspec} $sourceRoot/ext/openssl/
+      '';
 
       postPatch = ''
         ${opString (rubygems != null) ''
