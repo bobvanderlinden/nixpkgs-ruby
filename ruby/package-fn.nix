@@ -117,8 +117,6 @@ let
           # on darwin, we have /usr/include/tk.h -- so the configure script detects
           # that tk is installed
           "--with-out-ext=tk"
-          # on yosemite, "generating encdb.h" will hang for a very long time without this flag
-          "--with-setjmp-type=setjmp"
         ];
 
       preInstall = ''
