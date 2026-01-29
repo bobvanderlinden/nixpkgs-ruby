@@ -587,14 +587,18 @@
     "4.0.4": {
       "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v4.0.4.tar.gz",
       "hash": "sha256-QLGowaBfJPoHq2eB2NTWDTfGwP8p10mANg1pxyVNkAU="
+    },
+    "4.0.5": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v4.0.5.tar.gz",
+      "hash": "sha256-c6bd5F1ETrwjXsS6HOJqo7rAY6qhEXnGi1sepTxBCrE="
     }
   },
   "aliases": {
     "1": "1.8.30",
     "2": "2.7.6",
     "3": "3.7.2",
-    "4": "4.0.4",
-    "4.0": "4.0.4",
+    "4": "4.0.5",
+    "4.0": "4.0.5",
     "3.7": "3.7.2",
     "3.6": "3.6.9",
     "3.5": "3.5.23",
@@ -608,7 +612,7 @@
     "2.2": "2.2.3",
     "2.0": "2.0.15",
     "1.8": "1.8.30",
-    "4_0": "4.0.4",
+    "4_0": "4.0.5",
     "3_7": "3.7.2",
     "3_6": "3.6.9",
     "3_5": "3.5.23",
