@@ -3,6 +3,7 @@
 , stdenv
 , fetchurl
 , fetchpatch
+, ...
 }:
 stdenv.mkDerivation {
   pname = "rubygems";

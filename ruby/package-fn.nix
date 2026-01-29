@@ -1,5 +1,6 @@
 { version
 , versionSource
+, versionComparison
 , libDir ? "${(import ./parse-version.nix version).majMin}.0"
 , rubygems ? null
 , stdenv
@@ -25,6 +26,7 @@
 , bundler
 , bundix
 , removeReferencesTo
+, parallelBuild ? true
 , useRailsExpress ? true
 , zlibSupport ? true
 , opensslSupport ? true
@@ -87,7 +89,7 @@ let
       propagatedBuildInputs =
         (op jemallocSupport jemalloc);
 
-      enableParallelBuilding = true;
+      enableParallelBuilding = parallelBuild;
 
       postPatch = ''
         ${opString (rubygems != null) ''
@@ -195,4 +197,7 @@ let
       };
     };
 in
+# There's a known race condition when building with docs enabled before Ruby 3.4.0
+# Building documents requires parallelBuild to be false in those versions
+assert docSupport -> (with versionComparison version; greaterOrEqualTo "3.4.0" || !parallelBuild);
 self
