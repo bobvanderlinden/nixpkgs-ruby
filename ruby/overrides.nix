@@ -1,7 +1,28 @@
 { versionComparison
 , openssl_1_1
 , stdenv
+, fetchFromGitHub
 }:
+let
+  opensslGem_3_1_2 = fetchFromGitHub {
+    owner = "ruby";
+    repo = "openssl";
+    rev = "v3.1.2";
+    hash = "sha256-LAVgwwZtYe4iIL2agdMeeNq0DzLu5x+AyvoKb95wFcU=";
+  };
+  opensslGem_3_2_2 = fetchFromGitHub {
+    owner = "ruby";
+    repo = "openssl";
+    rev = "v3.2.2";
+    hash = "sha256-q3e6JBauJ/j2ds2mR7mtjc00aS3o3yAncv+SPkafB9M=";
+  };
+  opensslGem_3_3_1 = fetchFromGitHub {
+    owner = "ruby";
+    repo = "openssl";
+    rev = "v3.3.1";
+    hash = "sha256-1QillscdCzY0hFtH0dcbiAiu4WZMV2XqiMBDZ/UMXZE=";
+  };
+in
 [
   # Some of the older versions do not build.
   {
@@ -100,6 +121,24 @@
     condition = version: with versionComparison version;
       lessThan "3.1";
     override = pkg: pkg.override { openssl = openssl_1_1; };
+  }
+  # Ruby 3.1+ needs updated openssl gem versions for OpenSSL 3.6 support.
+  # https://github.com/ruby/openssl/issues/949
+  {
+    condition = version: with versionComparison version;
+      greaterOrEqualTo "3.1" && lessOrEqualTo "3.2.9";
+    override = pkg: pkg.override { opensslGem = opensslGem_3_1_2; };
+  }
+  {
+    condition = version: with versionComparison version;
+      greaterOrEqualTo "3.3" && lessOrEqualTo "3.3.9";
+    override = pkg: pkg.override { opensslGem = opensslGem_3_2_2; };
+  }
+  {
+    condition = version: with versionComparison version;
+      (greaterOrEqualTo "3.4" && lessOrEqualTo "3.4.7")
+      || version == "3.5.0-preview1";
+    override = pkg: pkg.override { opensslGem = opensslGem_3_3_1; };
   }
   # Ruby nowadays uses an convention for libDir = MAJOR.MINOR.0.
   # This wasn't the case for Ruby < 3.
