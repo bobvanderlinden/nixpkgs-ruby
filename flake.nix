@@ -26,7 +26,7 @@
           versionedPackageFnWithOverrides = { version, versionSource }:
             let pkg =
               pkgs.callPackage packageFn {
-                inherit version versionSource;
+                inherit version versionSource versionComparison;
               };
             in
             applyOverrides {
@@ -189,6 +189,24 @@
                 ];
                 command = ''
                   ruby -e 'require "foobar"; say' > $out
+                '';
+              };
+            }) // (lib.optionalAttrs (with versionComparison rubyVersion; greaterOrEqualTo "3.4") {
+              "${rubyName}-docSupport" = {
+                nativeBuildInputs = [
+                  (ruby.override { docSupport = true; })
+                ];
+                command = ''
+                  ri Array > $out
+                '';
+              };
+            }) // (lib.optionalAttrs (with versionComparison rubyVersion; lessThan "3.4") {
+              "${rubyName}-docSupport-noParallel" = {
+                nativeBuildInputs = [
+                  (ruby.override { docSupport = true; parallelBuild = false; })
+                ];
+                command = ''
+                  ri Array > $out
                 '';
               };
             })
