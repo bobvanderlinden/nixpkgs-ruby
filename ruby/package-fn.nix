@@ -107,6 +107,11 @@ let
 
       preConfigure = ''
         sed -i configure -e 's/;; #(/\n;;/g'
+        ${opString docSupport ''
+          # rdoc creates XDG_DATA_DIR (defaulting to $HOME/.local/share) even if
+          # it's not going to be used.
+          export HOME=$TMPDIR
+        ''}
       '';
 
       configureFlags =
