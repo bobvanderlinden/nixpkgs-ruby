@@ -197,7 +197,7 @@
                   (ruby.override { docSupport = true; })
                 ];
                 command = ''
-                  ri Array > $out
+                  HOME=$TMPDIR ri Array > $out
                 '';
               };
             }) // (lib.optionalAttrs (with versionComparison rubyVersion; lessThan "3.4") {
@@ -206,7 +206,7 @@
                   (ruby.override { docSupport = true; parallelBuild = false; })
                 ];
                 command = ''
-                  ri Array > $out
+                  HOME=$TMPDIR ri Array > $out
                 '';
               };
             })
