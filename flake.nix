@@ -225,7 +225,7 @@
                   (ruby.override { docSupport = true; })
                 ];
                 command = ''
-                  ri Array > $out
+                  HOME=$TMPDIR ri Array > $out
                 '';
               };
             })
@@ -238,7 +238,7 @@
                   })
                 ];
                 command = ''
-                  ri Array > $out
+                  HOME=$TMPDIR ri Array > $out
                 '';
               };
             })
