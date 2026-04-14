@@ -45,12 +45,11 @@
             version: versionSource: versionedPackageFnWithOverrides { inherit version versionSource; }
           ) versions.sources;
           packageAliases = builtins.mapAttrs (alias: version: packageVersions.${version}) versions.aliases;
-          packages = nixpkgs.lib.mapAttrs' (version: package: {
-            name = version;
-            value = package;
-          }) (packageAliases // packageVersions);
         in
-        packages;
+        nixpkgs.lib.mapAttrs' (version: package: {
+          name = version;
+          value = package;
+        }) (packageAliases // packageVersions);
       mkPkgSet =
         {
           pname,
@@ -113,6 +112,7 @@
             rubyEngine = builtins.head segments;
             version = builtins.concatStringsSep "-" (builtins.tail segments);
           };
+
       lib.packageFromRubyVersionFile =
         { file, system }:
         let
@@ -143,11 +143,11 @@
           default = nixpkgs.lib.composeManyExtensions (builtins.attrValues pkgsetOverlays);
         }
         // pkgsetOverlays;
-
     }
     // flake-utils.lib.eachDefaultSystem (
       system:
       let
+        lib = nixpkgs.lib;
         pkgs = import nixpkgs {
           inherit system;
           overlays = [
@@ -158,101 +158,97 @@
           ];
         };
 
-        allPackages = nixpkgs.lib.concatMapAttrs (name: pkgset: pkgset pkgs) pkgsets;
-        intactPackages = nixpkgs.lib.filterAttrs (name: package: !package.meta.broken) allPackages;
-      in
-      {
-        packages = intactPackages;
-
-        checks =
-          let
-            lib = nixpkgs.lib;
-            mkTest =
-              {
-                name,
-                command,
-                env ? { },
-                nativeBuildInputs ? [ ],
-              }:
-              pkgs.runCommand name ({ inherit nativeBuildInputs; } // env) command;
-            rubyPackages = lib.filterAttrs (
-              name: package: (builtins.match "ruby-[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+" name) != null
-            ) intactPackages;
-            rubyTestAttrs = lib.concatMapAttrs (
-              rubyName: ruby:
-              let
-                rubyVersion = nixpkgs.lib.removePrefix "ruby-" rubyName;
-              in
-              {
-                "${rubyName}-puts-ok" = {
-                  nativeBuildInputs = [
-                    ruby
-                  ];
-                  command = ''
-                    ruby -e 'puts "ok"' > $out
-                  '';
-                };
-                "${rubyName}-jemalloc" = {
-                  nativeBuildInputs = [
-                    (ruby.override { jemallocSupport = true; })
-                  ];
-                  command = ''
-                    ruby -e 'puts "ok"' > $out
-                  '';
-                };
-                "${rubyName}-mkRuby" = {
-                  nativeBuildInputs = [
-                    (self.lib.mkRuby {
-                      inherit pkgs rubyVersion;
-                    })
-                  ];
-                  command = ''
-                    ruby -e 'puts "ok"' > $out
-                  '';
-                };
-              }
-              // (lib.optionalAttrs (with versionComparison rubyVersion; greaterOrEqualTo "2.4") {
-                # Ruby <2.4 only supports openssl 1.0 and not openssl1.1. openssl 1.0 is not supported by nixpkgs
-                # anymore, so we will not support it here.
-                "${rubyName}-openssl" = {
-                  nativeBuildInputs = [
-                    ruby
-                  ];
-                  command = ''
-                    ruby -e 'require "openssl"; puts OpenSSL::OPENSSL_VERSION' > $out
-                  '';
-                };
-              })
-              // (lib.optionalAttrs (with versionComparison rubyVersion; greaterOrEqualTo "2.2") {
-                "${rubyName}-bundlerEnv" =
-                  let
-                    gems = pkgs.bundlerEnv {
-                      name = "gemset";
-                      inherit ruby;
-                      gemfile = ./tests/bundlerEnv/Gemfile;
-                      lockfile = ./tests/bundlerEnv/Gemfile.lock;
-                      gemset = ./tests/bundlerEnv/gemset.nix;
-                      groups = [
-                        "default"
-                        "production"
-                        "development"
-                        "test"
-                      ];
-                    };
-                  in
-                  {
-                    nativeBuildInputs = [
-                      self.packages.${pkgs.system}.${rubyName}
-                      gems
+        allPackages = lib.concatMapAttrs (name: pkgset: pkgset pkgs) pkgsets;
+        intactPackages = lib.filterAttrs (name: package: !package.meta.broken) allPackages;
+        rubyPackages = lib.filterAttrs (
+          name: package: (builtins.match "ruby-[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+" name) != null
+        ) intactPackages;
+        mkTest =
+          {
+            name,
+            command,
+            env ? { },
+            nativeBuildInputs ? [ ],
+          }:
+          pkgs.runCommand name ({ inherit nativeBuildInputs; } // env) command;
+        flattenCheckName =
+          groupName: testName: if groupName == "common" then testName else "${groupName}-${testName}";
+        checkBatchAttrs =
+          lib.mapAttrs (
+            rubyName: ruby:
+            let
+              rubyVersion = lib.removePrefix "ruby-" rubyName;
+            in
+            {
+              puts-ok = {
+                nativeBuildInputs = [
+                  ruby
+                ];
+                command = ''
+                  ruby -e 'puts "ok"' > $out
+                '';
+              };
+              jemalloc = {
+                nativeBuildInputs = [
+                  (ruby.override { jemallocSupport = true; })
+                ];
+                command = ''
+                  ruby -e 'puts "ok"' > $out
+                '';
+              };
+              mkRuby = {
+                nativeBuildInputs = [
+                  (self.lib.mkRuby {
+                    inherit pkgs rubyVersion;
+                  })
+                ];
+                command = ''
+                  ruby -e 'puts "ok"' > $out
+                '';
+              };
+            }
+            // (lib.optionalAttrs (with versionComparison rubyVersion; greaterOrEqualTo "2.4") {
+              # Ruby <2.4 only supports openssl 1.0 and not openssl1.1. openssl 1.0 is not supported by nixpkgs
+              # anymore, so we will not support it here.
+              openssl = {
+                nativeBuildInputs = [
+                  ruby
+                ];
+                command = ''
+                  ruby -e 'require "openssl"; puts OpenSSL::OPENSSL_VERSION' > $out
+                '';
+              };
+            })
+            // (lib.optionalAttrs (with versionComparison rubyVersion; greaterOrEqualTo "2.2") {
+              bundlerEnv =
+                let
+                  gems = pkgs.bundlerEnv {
+                    name = "gemset";
+                    inherit ruby;
+                    gemfile = ./tests/bundlerEnv/Gemfile;
+                    lockfile = ./tests/bundlerEnv/Gemfile.lock;
+                    gemset = ./tests/bundlerEnv/gemset.nix;
+                    groups = [
+                      "default"
+                      "production"
+                      "development"
+                      "test"
                     ];
-                    command = ''
-                      ruby -e 'require "foobar"; say' > $out
-                    '';
                   };
-              })
-            ) rubyPackages;
-
-            testAttrs = rubyTestAttrs // {
+                in
+                {
+                  nativeBuildInputs = [
+                    self.packages.${pkgs.system}.${rubyName}
+                    gems
+                  ];
+                  command = ''
+                    ruby -e 'require "foobar"; say' > $out
+                  '';
+                };
+            })
+          ) rubyPackages
+          // {
+            common = {
               packageFromRubyVersionFileWithoutEngine =
                 let
                   ruby = self.lib.packageFromRubyVersionFile {
@@ -284,16 +280,44 @@
                   '';
                 };
             };
+          };
+        mkCheckBatch =
+          groupName: batchAttrs:
+          let
+            batchChecks = lib.mapAttrs (
+              testName: attrs:
+              mkTest (
+                {
+                  name = flattenCheckName groupName testName;
+                }
+                // attrs
+              )
+            ) batchAttrs;
           in
-          lib.mapAttrs (
-            name: testAttrs:
-            mkTest (
-              {
-                inherit name;
-              }
-              // testAttrs
-            )
-          ) testAttrs;
+          batchChecks
+          // {
+            all = pkgs.linkFarm "${groupName}-checks" (
+              lib.mapAttrsToList (testName: checkDrv: {
+                name = testName;
+                path = checkDrv;
+              }) batchChecks
+            );
+          };
+        checkBatches = lib.mapAttrs mkCheckBatch checkBatchAttrs;
+        checks = lib.concatMapAttrs (
+          groupName: batchChecks:
+          lib.mapAttrs' (testName: checkDrv: {
+            name = flattenCheckName groupName testName;
+            value = checkDrv;
+          }) (lib.removeAttrs batchChecks [ "all" ])
+        ) checkBatches;
+      in
+      {
+        packages = intactPackages;
+
+        checkBatches = checkBatches;
+
+        checks = checks;
 
         formatter = pkgs.nixfmt-tree;
 
@@ -301,7 +325,7 @@
           # The shell for editing this project.
           default = pkgs.mkShell {
             nativeBuildInputs = with pkgs; [
-              nixfmt
+              nixfmt-tree
             ];
           };
         };
@@ -311,11 +335,7 @@
           program =
             let
               inherit (builtins)
-                map
-                attrNames
-                getFlake
                 concatStringsSep
-                filter
                 ;
               inherit (nixpkgs.lib) mapAttrsToList filterAttrs;
               pkgsetsToUpdate = filterAttrs (name: pkgset: pkgset ? updater) _pkgsets;
