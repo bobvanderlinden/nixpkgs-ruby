@@ -6,8 +6,15 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-ruby, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixpkgs-ruby,
+      flake-utils,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
         ruby = nixpkgs-ruby.lib.packageFromRubyVersionFile {
@@ -21,11 +28,17 @@
           gemfile = ./Gemfile;
           lockfile = ./Gemfile.lock;
           gemset = ./gemset.nix;
-          groups = [ "default" "production" "development" "test" ];
+          groups = [
+            "default"
+            "production"
+            "development"
+            "test"
+          ];
         };
       in
       {
-        devShell = with pkgs;
+        devShell =
+          with pkgs;
           mkShell {
             buildInputs = [
               # gems
@@ -33,5 +46,6 @@
               bundix
             ];
           };
-      });
+      }
+    );
 }
