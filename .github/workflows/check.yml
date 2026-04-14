@@ -6,17 +6,55 @@ on:
       - master
   pull_request: {}
   workflow_dispatch: {}
+
 permissions:
   contents: read
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+
 jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+      - name: nix flake check --no-build
+        run: nix flake check --all-systems --no-build
+
+  prepare-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+      - id: matrix
+        name: Generate build matrix
+        run: |
+          linux_groups="$(nix eval --json .#checkBatches.x86_64-linux --apply builtins.attrNames)"
+          darwin_groups="$(nix eval --json .#checkBatches.aarch64-darwin --apply builtins.attrNames)"
+          matrix="$(jq --null-input --compact-output \
+            --argjson linux_groups "$linux_groups" \
+            --argjson darwin_groups "$darwin_groups" '
+              {
+                include:
+                  ([ $linux_groups[] | { os: "ubuntu-latest", system: "x86_64-linux", group: . } ] +
+                   [ $darwin_groups[] | { os: "macos-latest", system: "aarch64-darwin", group: . } ])
+              }
+            ')"
+          printf 'matrix=%s\n' "$matrix" >> "$GITHUB_OUTPUT"
+
   build:
+    needs:
+      - eval
+      - prepare-matrix
     strategy:
       fail-fast: false
-      matrix:
-        os: [ubuntu-latest, macos-latest]
+      matrix: ${{ fromJson(needs.prepare-matrix.outputs.matrix) }}
     runs-on: ${{ matrix.os }}
     steps:
       - name: Install Nix
@@ -26,5 +64,7 @@ jobs:
           name: nixpkgs-ruby
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - uses: actions/checkout@v6
-      - name: nix flake check
-        run: nix flake check --print-build-logs --keep-going
+      - name: nix build check batch
+        run: |
+          installable='.#checkBatches.${{ matrix.system }}."${{ matrix.group }}".all'
+          nix build --print-build-logs --keep-going "$installable"
