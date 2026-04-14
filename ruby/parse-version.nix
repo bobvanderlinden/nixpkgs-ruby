@@ -1,6 +1,10 @@
 version:
 let
-  versionSegments = builtins.splitVersion version ++ [ "" "" "" ];
+  versionSegments = builtins.splitVersion version ++ [
+    ""
+    ""
+    ""
+  ];
 in
 rec {
   inherit version;

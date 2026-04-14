@@ -1,7 +1,8 @@
-{ lib
-, overrides
-, version
-, pkg
+{
+  lib,
+  overrides,
+  version,
+  pkg,
 }:
 let
   matching = builtins.filter ({ condition, ... }: condition version) overrides;

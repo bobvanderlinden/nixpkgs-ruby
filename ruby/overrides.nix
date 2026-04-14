@@ -1,11 +1,14 @@
-{ versionComparison
-, openssl_1_1
-, stdenv
+{
+  versionComparison,
+  openssl_1_1,
+  stdenv,
 }:
 [
   # Some of the older versions do not build.
   {
-    condition = version: with versionComparison version;
+    condition =
+      version:
+      with versionComparison version;
       composeAny hasPrefix [
         "1"
         "2.0"
@@ -38,85 +41,102 @@
         "2.5.8"
         "2.6.7"
       ];
-    override = pkg: pkg.overrideAttrs (finalAttrs: previousAttrs: { meta = previousAttrs.meta // { broken = true; }; });
+    override =
+      pkg:
+      pkg.overrideAttrs (
+        finalAttrs: previousAttrs: {
+          meta = previousAttrs.meta // {
+            broken = true;
+          };
+        }
+      );
   }
   # Some of the older versions do not build on OSX. Mark these as broken.
   {
-    condition = version: stdenv.isDarwin && (with versionComparison version;
-      composeAny hasPrefix [
-        "2.1"
-        "2.2.2"
-        "2.2.3"
-        "2.2.4"
-        "2.2.5"
-        "2.3.5"
-        "2.3.6"
-        "2.3.7"
-        "2.3.8"
-        "2.4.0"
-        "2.4.1"
-        "2.4.2"
-        "2.4.3"
-        "2.4.4"
-        "2.4.5"
-        "2.4.6"
-        "2.4.7"
-        "2.4.9"
-        "2.4.10"
-        "2.5.0"
-        "2.5.1"
-        "2.5.3"
-        "2.5.4"
-        "2.5.5"
-        "2.5.6"
-        "2.5.7"
-        "2.5.9"
-        "2.6.0"
-        "2.6.1"
-        "2.6.2"
-        "2.6.3"
-        "2.6.4"
-        "2.6.5"
-        "2.6.6"
-        "2.7.0"
-        "2.7.1"
-        "3.0.0"
-        "3.0.1"
-        "3.0.2"
-        "3.0.3"
-        "3.0.4"
-        "3.0.5"
-        "3.0.6"
-        "3.0.7"
-        "3.1.0"
-        "3.1.1"
-        "3.1.2"
-        "3.1.3"
-      ]);
-    override = pkg: pkg.overrideAttrs (finalAttrs: previousAttrs: { meta = previousAttrs.meta // { broken = true; }; });
+    condition =
+      version:
+      stdenv.isDarwin
+      && (
+        with versionComparison version;
+        composeAny hasPrefix [
+          "2.1"
+          "2.2.2"
+          "2.2.3"
+          "2.2.4"
+          "2.2.5"
+          "2.3.5"
+          "2.3.6"
+          "2.3.7"
+          "2.3.8"
+          "2.4.0"
+          "2.4.1"
+          "2.4.2"
+          "2.4.3"
+          "2.4.4"
+          "2.4.5"
+          "2.4.6"
+          "2.4.7"
+          "2.4.9"
+          "2.4.10"
+          "2.5.0"
+          "2.5.1"
+          "2.5.3"
+          "2.5.4"
+          "2.5.5"
+          "2.5.6"
+          "2.5.7"
+          "2.5.9"
+          "2.6.0"
+          "2.6.1"
+          "2.6.2"
+          "2.6.3"
+          "2.6.4"
+          "2.6.5"
+          "2.6.6"
+          "2.7.0"
+          "2.7.1"
+          "3.0.0"
+          "3.0.1"
+          "3.0.2"
+          "3.0.3"
+          "3.0.4"
+          "3.0.5"
+          "3.0.6"
+          "3.0.7"
+          "3.1.0"
+          "3.1.1"
+          "3.1.2"
+          "3.1.3"
+        ]
+      );
+    override =
+      pkg:
+      pkg.overrideAttrs (
+        finalAttrs: previousAttrs: {
+          meta = previousAttrs.meta // {
+            broken = true;
+          };
+        }
+      );
   }
   # Ruby 3.1 introduced support for OpenSSL 3, everything before that uses OpenSSL 1.1.
   {
-    condition = version: with versionComparison version;
-      lessThan "3.1";
+    condition = version: with versionComparison version; lessThan "3.1";
     override = pkg: pkg.override { openssl = openssl_1_1; };
   }
   # Ruby nowadays uses an convention for libDir = MAJOR.MINOR.0.
   # This wasn't the case for Ruby < 3.
   {
-    condition = version: with versionComparison version;
-      hasPrefix "2.0";
+    condition = version: with versionComparison version; hasPrefix "2.0";
     override = pkg: pkg.override { libDir = "2.0.0"; };
   }
   {
-    condition = version: with versionComparison version;
-      hasPrefix "1.9" && greaterOrEqualTo "1.9.1";
+    condition = version: with versionComparison version; hasPrefix "1.9" && greaterOrEqualTo "1.9.1";
     override = pkg: pkg.override { libDir = "1.9.1"; };
   }
   # yjit support was introduced in Ruby 3.2. Disable it for older versions.
   {
-    condition = version: with versionComparison version;
-      lessThan "3.2";
+    condition = version: with versionComparison version; lessThan "3.2";
     override = pkg: pkg.override { yjitSupport = false; };
   }
 ]
