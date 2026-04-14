@@ -233,12 +233,14 @@
             } // testAttrs)
           ) testAttrs;
 
+      formatter = pkgs.nixfmt-tree;
+
       devShells = {
         # The shell for editing this project.
         default = pkgs.mkShell {
           nativeBuildInputs = with pkgs;
             [
-              nixpkgs-fmt
+              nixfmt
             ];
         };
       };
