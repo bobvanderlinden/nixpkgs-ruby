@@ -6,17 +6,44 @@ on:
       - master
   pull_request: {}
   workflow_dispatch: {}
+
 permissions:
   contents: read
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+
 jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+      - name: nix flake check --no-build
+        run: nix flake check --all-systems --no-build
+
+  prepare-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+      - id: matrix
+        name: Generate build matrix
+        run: nix run .#gha-prepare-matrix
+
   build:
+    needs:
+      - eval
+      - prepare-matrix
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        include: ${{ fromJson(needs.prepare-matrix.outputs.matrix) }}
     runs-on: ${{ matrix.os }}
     steps:
       - name: Install Nix
@@ -26,5 +53,25 @@ jobs:
           name: nixpkgs-ruby
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - uses: actions/checkout@v6
-      - name: nix flake check
-        run: nix flake check --print-build-logs --keep-going
+      - name: nix build check batch
+        run: |
+          installable='.#checkBatches.${{ matrix.system }}."${{ matrix.group }}".all'
+          nix build --print-build-logs --keep-going "$installable"
+
+  all_checks:
+    if: ${{ always() }}
+    needs:
+      - eval
+      - prepare-matrix
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require successful checks
+        env:
+          EVAL_RESULT: ${{ needs.eval.result }}
+          PREPARE_MATRIX_RESULT: ${{ needs.prepare-matrix.result }}
+          BUILD_RESULT: ${{ needs.build.result }}
+        run: |
+          test "$EVAL_RESULT" = success
+          test "$PREPARE_MATRIX_RESULT" = success
+          test "$BUILD_RESULT" = success
