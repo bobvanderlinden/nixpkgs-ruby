@@ -1,6 +1,8 @@
 {
   version,
-  versionSource,
+  versionSource
+, versionComparison
+,
   libDir ? "${(import ./parse-version.nix version).majMin}.0",
   rubygems ? null,
   stdenv,
@@ -25,7 +27,9 @@
   buildEnv,
   bundler,
   bundix,
-  removeReferencesTo,
+  removeReferencesTo
+, parallelBuild ? true
+,
   useRailsExpress ? true,
   zlibSupport ? true,
   opensslSupport ? true,
@@ -89,7 +93,7 @@ let
       ]);
     propagatedBuildInputs = (op jemallocSupport jemalloc);
 
-    enableParallelBuilding = true;
+    enableParallelBuilding = parallelBuild;
 
     postPatch = ''
       ${opString (rubygems != null) ''
@@ -109,6 +113,11 @@ let
 
     preConfigure = ''
       sed -i configure -e 's/;; #(/\n;;/g'
+      ${opString docSupport ''
+        # rdoc creates XDG_DATA_DIR (defaulting to $HOME/.local/share) even if
+        # it's not going to be used.
+        export HOME=$TMPDIR
+      ''}
     '';
 
     configureFlags =
@@ -200,4 +209,7 @@ let
     };
   };
 in
+# There's a known race condition when building with docs enabled before Ruby 3.4.0
+# Building documents requires parallelBuild to be false in those versions
+assert docSupport -> (with versionComparison version; greaterOrEqualTo "3.4.0" || !parallelBuild);
 self

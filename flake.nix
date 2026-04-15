@@ -34,7 +34,7 @@
             { version, versionSource }:
             let
               pkg = pkgs.callPackage packageFn {
-                inherit version versionSource;
+                inherit version versionSource versionComparison;
               };
             in
             applyOverrides {
@@ -216,6 +216,29 @@
                 ];
                 command = ''
                   ruby -e 'require "openssl"; puts OpenSSL::OPENSSL_VERSION' > $out
+                '';
+              };
+            })
+            // (lib.optionalAttrs (with versionComparison rubyVersion; greaterOrEqualTo "3.4") {
+              docSupport = {
+                nativeBuildInputs = [
+                  (ruby.override { docSupport = true; })
+                ];
+                command = ''
+                  HOME=$TMPDIR ri Array > $out
+                '';
+              };
+            })
+            // (lib.optionalAttrs (with versionComparison rubyVersion; lessThan "3.4") {
+              docSupport-noParallel = {
+                nativeBuildInputs = [
+                  (ruby.override {
+                    docSupport = true;
+                    parallelBuild = false;
+                  })
+                ];
+                command = ''
+                  HOME=$TMPDIR ri Array > $out
                 '';
               };
             })
