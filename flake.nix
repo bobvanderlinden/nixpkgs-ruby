@@ -311,9 +311,35 @@
             value = checkDrv;
           }) (lib.removeAttrs batchChecks [ "all" ])
         ) checkBatches;
+        ghaMatrixEntries =
+          (builtins.map (group: {
+            os = "ubuntu-latest";
+            system = "x86_64-linux";
+            inherit group;
+          }) (builtins.attrNames self.checkBatches.x86_64-linux))
+          ++ (builtins.map (group: {
+            os = "macos-latest";
+            system = "aarch64-darwin";
+            inherit group;
+          }) (builtins.attrNames self.checkBatches.aarch64-darwin));
+        ghaPrepareMatrix = pkgs.writeShellApplication {
+          name = "gha-prepare-matrix";
+          text = ''
+            matrix=${lib.escapeShellArg (builtins.toJSON ghaMatrixEntries)}
+
+            if [ -n "''${GITHUB_OUTPUT:-}" ]; then
+              printf 'matrix=%s\n' "$matrix" >> "$GITHUB_OUTPUT"
+            else
+              printf 'warning: GITHUB_OUTPUT is not set; writing matrix to stdout\n' >&2
+              printf 'matrix=%s\n' "$matrix"
+            fi
+          '';
+        };
       in
       {
-        packages = intactPackages;
+        packages = intactPackages // {
+          gha-prepare-matrix = ghaPrepareMatrix;
+        };
 
         checkBatches = checkBatches;
 
@@ -330,27 +356,34 @@
           };
         };
 
-        apps.update = {
-          type = "app";
-          program =
-            let
-              inherit (builtins)
-                concatStringsSep
-                ;
-              inherit (nixpkgs.lib) mapAttrsToList filterAttrs;
-              pkgsetsToUpdate = filterAttrs (name: pkgset: pkgset ? updater) _pkgsets;
-              updateCommand = name: pkgset: ''
-                echo "Updating ${name}..."
-                (cd ${name} && ${pkgs.callPackage pkgset.updater { }}/bin/update)
-              '';
-              updateCommands = mapAttrsToList updateCommand pkgsetsToUpdate;
-              script = pkgs.writeScript "update" ''
-                #!${pkgs.bash}/bin/bash
-                set -o errexit
-                ${concatStringsSep "\n" updateCommands}
-              '';
-            in
-            "${script}";
+        apps = {
+          gha-prepare-matrix = {
+            type = "app";
+            program = "${ghaPrepareMatrix}/bin/gha-prepare-matrix";
+          };
+
+          update = {
+            type = "app";
+            program =
+              let
+                inherit (builtins)
+                  concatStringsSep
+                  ;
+                inherit (nixpkgs.lib) mapAttrsToList filterAttrs;
+                pkgsetsToUpdate = filterAttrs (name: pkgset: pkgset ? updater) _pkgsets;
+                updateCommand = name: pkgset: ''
+                  echo "Updating ${name}..."
+                  (cd ${name} && ${pkgs.callPackage pkgset.updater { }}/bin/update)
+                '';
+                updateCommands = mapAttrsToList updateCommand pkgsetsToUpdate;
+                script = pkgs.writeScript "update" ''
+                  #!${pkgs.bash}/bin/bash
+                  set -o errexit
+                  ${concatStringsSep "\n" updateCommands}
+                '';
+              in
+              "${script}";
+          };
         };
       }
     );
