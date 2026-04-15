@@ -57,3 +57,21 @@ jobs:
         run: |
           installable='.#checkBatches.${{ matrix.system }}."${{ matrix.group }}".all'
           nix build --print-build-logs --keep-going "$installable"
+
+  all_checks:
+    if: ${{ always() }}
+    needs:
+      - eval
+      - prepare-matrix
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require successful checks
+        env:
+          EVAL_RESULT: ${{ needs.eval.result }}
+          PREPARE_MATRIX_RESULT: ${{ needs.prepare-matrix.result }}
+          BUILD_RESULT: ${{ needs.build.result }}
+        run: |
+          test "$EVAL_RESULT" = success
+          test "$PREPARE_MATRIX_RESULT" = success
+          test "$BUILD_RESULT" = success
