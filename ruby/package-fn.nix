@@ -67,6 +67,12 @@ let
     # Have `configure' avoid `/usr/bin/nroff' in non-chroot builds.
     NROFF = if docSupport then "${groff}/bin/nroff" else null;
 
+    LANG =
+      if docSupport && (with versionComparison version; hasPrefix "4.0") then
+        "C.UTF-8"
+      else
+        null;
+
     nativeBuildInputs = [
       bison
     ] ++ ops (stdenv.buildPlatform != stdenv.hostPlatform) [ buildPackages.ruby ];
