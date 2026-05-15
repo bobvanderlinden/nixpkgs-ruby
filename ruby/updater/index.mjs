@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-import { writeFile } from 'fs/promises'
+import { readFile, writeFile } from 'fs/promises'
 import { join } from 'path'
+import { pathToFileURL } from 'url'
 
 const rootPath = process.env.ROOT_PATH || process.cwd()
 
@@ -37,6 +38,11 @@ async function writeJsonFile(filename, content) {
   await writeFile(filename, JSON.stringify(content, null, 2) + '\n');
 }
 
+async function readJsonFile(filename) {
+  const content = await readFile(filename, { encoding: 'utf-8' });
+  return JSON.parse(content);
+}
+
 Array.prototype.groupBy = function(keyFn) {
   return this.reduce((result, value) => {
     const key = keyFn(value);
@@ -68,18 +74,30 @@ Object.prototype.map = function(mapFn) {
   );
 }
 
-async function run() {
-  const response = await fetch('https://raw.githubusercontent.com/postmodern/ruby-versions/master/ruby/checksums.sha256')
-  const responseBody = await response.text()
-  const regex = /^(?<checksum>\w+)  (?<filename>ruby-(?<version>(?<majorMinorVersion>\d+\.\d+)\.\d+(?:-(\w+))?)\.tar\.gz)$/mg
-  
-  const sources = [...responseBody.matchAll(regex)]
-    .map(({ groups: { checksum, filename, version, majorMinorVersion }}) => [version, {
-      url: `https://cache.ruby-lang.org/pub/ruby/${majorMinorVersion}/${filename}`,
-      sha256: checksum
-    }])
-    .toObject();
+function parseRssSources(responseBody) {
+  return responseBody
+    .split(/<item>/g)
+    .slice(1)
+    .map(item => {
+      const tarballMatch = item.match(/https:\/\/cache\.ruby-lang\.org\/pub\/ruby\/(?<majorMinorVersion>\d+\.\d+)\/(?<filename>ruby-(?<version>\d+(?:\.\d+)+(?:-\w+)?)\.tar\.gz)(?=&quot;|<)/);
+      const checksumMatch = item.match(/SHA256:\s*(?<checksum>[0-9a-f]{64})/i);
 
+      if (!tarballMatch || !checksumMatch) {
+        return null;
+      }
+
+      const { filename, version, majorMinorVersion } = tarballMatch.groups;
+      const { checksum } = checksumMatch.groups;
+      return [version, {
+        url: `https://cache.ruby-lang.org/pub/ruby/${majorMinorVersion}/${filename}`,
+        sha256: checksum.toLowerCase(),
+      }];
+    })
+    .filter(Boolean)
+    .toObject();
+}
+
+function buildAliases(sources) {
   const stableVersions = Object.keys(sources)
     .filter(version => /^\d+\.\d+\.\d+$/.test(version))
     .sort(compareVersion);
@@ -102,10 +120,34 @@ async function run() {
     ...minorVersions.map(([majorMinor, version]) => [`${majorMinor}.*`, version]),
   };
 
-  await writeJsonFile(join(rootPath, "versions.json"), {
+  return aliases;
+}
+
+export async function run({
+  versionsPath = join(rootPath, 'versions.json'),
+  fetch = globalThis.fetch,
+} = {}) {
+  const response = await fetch('https://www.ruby-lang.org/en/feeds/news.rss');
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Ruby news RSS: ${response.status}`);
+  }
+
+  const responseBody = await response.text();
+  const existingContent = await readJsonFile(versionsPath);
+  const sources = {
+    ...existingContent.sources,
+    ...parseRssSources(responseBody),
+  };
+  const aliases = buildAliases(sources);
+
+  await writeJsonFile(versionsPath, {
     sources,
     aliases
   });
 }
 
-run()
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  await run();
+}
+
+export { buildAliases, parseRssSources };
