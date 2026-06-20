@@ -18,7 +18,7 @@ jobs:
   eval:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Install Nix
         uses: cachix/install-nix-action@v31
       - name: nix flake check --no-build
@@ -29,7 +29,7 @@ jobs:
     outputs:
       matrix: ${{ steps.matrix.outputs.matrix }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Install Nix
         uses: cachix/install-nix-action@v31
       - id: matrix
@@ -52,7 +52,7 @@ jobs:
         with:
           name: nixpkgs-ruby
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: nix build check batch
         run: |
           installable='.#checkBatches.${{ matrix.system }}."${{ matrix.group }}".all'
