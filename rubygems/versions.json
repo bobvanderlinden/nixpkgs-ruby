@@ -659,11 +659,764 @@
     "4.0.21": {
       "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v4.0.21.tar.gz",
       "hash": "sha256-lhZrQkXue1q/5uv5rapY+1rXFibVpDAK3ZPXxFMfDyE="
+    },
+    "3.1.6": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.1.6.tar.gz",
+      "hash": "sha256-QpMo+4NfLN7nDVCmjXhe1470reHFHphlFZ7r+yET9vc="
+    },
+    "3.1.5": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.1.5.tar.gz",
+      "hash": "sha256-nip/wjG9b9ia9uev3okYPCbUyMrBrRDFMfEDyethJOc="
+    },
+    "3.0.9": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.0.9.tar.gz",
+      "hash": "sha256-3YNjk2uXESRpjw+21NlWUOQ6dl65MyhcrfjB+CvkprI="
+    },
+    "2.7.11": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.7.11.tar.gz",
+      "hash": "sha256-1dNqS/GF0+AfMctf44sSO4NGFAdaFdohEcMna/bIBVo="
+    },
+    "3.1.0.pre3": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.1.0.pre3.tar.gz",
+      "hash": "sha256-7+igeAFaVJek+lT+LhtSiQ3EYRpFKhzBhipbkTL5FKE="
+    },
+    "3.1.0.pre2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.1.0.pre2.tar.gz",
+      "hash": "sha256-/KRCBz85ESjIZOKzRByRALHvv/knlzOagAQ3OmmP580="
+    },
+    "3.1.0.pre1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.1.0.pre1.tar.gz",
+      "hash": "sha256-ffKulOhRYMe+hJUK1i1iZ/vMNKzUbbCI/b3Qe5OiPQQ="
+    },
+    "3.0.6": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.0.6.tar.gz",
+      "hash": "sha256-AMRDw66KQxLcbVuqBKAeX6AWmqyZHgd8TB8yQ/Q1X/U="
+    },
+    "3.0.5": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.0.5.tar.gz",
+      "hash": "sha256-U81rDESqj3cimQ+NF/15bcUPriwZnacPCpC2bNlEcvo="
+    },
+    "3.0.4": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.0.4.tar.gz",
+      "hash": "sha256-Rkrk3ZESYNXA9oJI0j2SfwdMeHQdPlnWhNoWjTCmuxI="
+    },
+    "2.7.10": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.7.10.tar.gz",
+      "hash": "sha256-NotgidlwC2p1ohhl/J9KQhiMkZqX+NMjTYm+oz4RDA8="
+    },
+    "2.7.9": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.7.9.tar.gz",
+      "hash": "sha256-VFTG1UIaEFh71Yadtwf6QT+e2KIrhcTSef74jt2BfJU="
+    },
+    "3.0.3": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.0.3.tar.gz",
+      "hash": "sha256-Q5HNl4gO7TPkNMy9z9GVOhp9m3fJUjw+nTGkYJ0eMgc="
+    },
+    "3.0.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.0.2.tar.gz",
+      "hash": "sha256-ZkboC34WW8F2atMahICK5XSjxwIvc45UapZWHbrgsY0="
+    },
+    "3.0.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.0.1.tar.gz",
+      "hash": "sha256-UDMJ5Gj197ZEmWCO8Z/Kwujp1YerAAvOWm+2vjL2/mA="
+    },
+    "3.0.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.0.0.tar.gz",
+      "hash": "sha256-as53bxgwNT1Z3+o7tdBh88m+j7Zn6to9cS6/Few/JJI="
+    },
+    "3.0.0.beta3": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.0.0.beta3.tar.gz",
+      "hash": "sha256-UqlESxVZ8s/n7G3PCiWZYz/p3jJWC9ov4Kj0FulG2t4="
+    },
+    "3.0.0.beta2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.0.0.beta2.tar.gz",
+      "hash": "sha256-FXJ7G7+LhhicuVHZa0+bV4SKb3pG/A3f8JEyaPJRhb8="
+    },
+    "2.7.8": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.7.8.tar.gz",
+      "hash": "sha256-o4zJUKM6tR1IPFUVtcoeONCSPzSh+RM5AXQ0HYX28Yk="
+    },
+    "3.0.0.beta1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v3.0.0.beta1.tar.gz",
+      "hash": "sha256-lqwWB5G3q+aE79T3QPMdr5tsdcDp3nGTfbyciNh/jJw="
+    },
+    "2.7.7": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.7.7.tar.gz",
+      "hash": "sha256-5Sp0LAfEUKAdrPg6g44P9QZHclvdOfrhyjUao1omQaA="
+    },
+    "2.7.5": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.7.5.tar.gz",
+      "hash": "sha256-ngFTdSFyleucfmRYRyk5R8zeP1ylM2bz8on9fJ9RJL8="
+    },
+    "2.7.4": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.7.4.tar.gz",
+      "hash": "sha256-fx9jPCpWwaa9xFXyPuC4zg2hbMmlr9Lh364P6BTLsgU="
+    },
+    "2.7.3": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.7.3.tar.gz",
+      "hash": "sha256-HaG2F0GMSbRb9k0JqJ1UZohyHk5fRi+x+laCyTZ5B58="
+    },
+    "2.7.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.7.1.tar.gz",
+      "hash": "sha256-Rr5+j3cEtZbgp43H5MWZzcfr2TOk2XVoQT6yJjPFHIk="
+    },
+    "2.7.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.7.0.tar.gz",
+      "hash": "sha256-ZSg26UzGcGqxTlHx7MySKxVf3hdtjaGt6fvX9tmUKlA="
+    },
+    "2.6.13": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.6.13.tar.gz",
+      "hash": "sha256-w16VRZsQFUn7i77ow2mXRDtFAplepqjPVVnsnbwY4CA="
+    },
+    "2.6.12": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.6.12.tar.gz",
+      "hash": "sha256-qgkyjTPewZ7aMB9JM8cc27/6YWAfmd/2vMEaMKEeOK8="
+    },
+    "2.6.11": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.6.11.tar.gz",
+      "hash": "sha256-Ex/VpmpdGEMTPLpMqmEx34SFI7/HYFqlT6v8yaDs49A="
+    },
+    "2.6.10": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.6.10.tar.gz",
+      "hash": "sha256-Z4f4N7w1o3lXb432cD36Ji+DrpHespdWM+dpe5LDzGE="
+    },
+    "2.6.9": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.6.9.tar.gz",
+      "hash": "sha256-xNjPMjPx3G5Wd4yaAlAg0Jeyqq+iclrB+T2dsclc/SQ="
+    },
+    "2.6.8": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.6.8.tar.gz",
+      "hash": "sha256-lRGSswqUcYn2VAeaFfao/sFVVc0RvFHFHwDmYhAL0Tc="
+    },
+    "2.6.7": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.6.7.tar.gz",
+      "hash": "sha256-LNwNnCQrvvrkM1qd9byJVLAlz/YfylqPKMDmXV9+T1g="
+    },
+    "2.6.6": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.6.6.tar.gz",
+      "hash": "sha256-XakhO89tFIv6jMEPQ6WOqGLC1alfhKx3sgDkM4ONRAU="
+    },
+    "2.6.5": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.6.5.tar.gz",
+      "hash": "sha256-nz/Xa1j9jzNG/80sRcprG3daSSBG2GOGpJC59QH4HvQ="
+    },
+    "2.6.4": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.6.4.tar.gz",
+      "hash": "sha256-pvTHQyywKCnAaUm610zfbPxKvSQbpDiqnwqGlUOc9XE="
+    },
+    "2.6.3": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.6.3.tar.gz",
+      "hash": "sha256-IoJOOv958j7JfErpoOkwps5i0LFnwKyPOmCk1bgQytw="
+    },
+    "2.6.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.6.2.tar.gz",
+      "hash": "sha256-1LM5exgTq73DEy2GUVkxCT+zyaRuURRVW7x92awzRbQ="
+    },
+    "2.6.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.6.1.tar.gz",
+      "hash": "sha256-q5+c5KO5U9QdWlIRRtfcsVqH+AcTGM4AJB2nWzBpAfc="
+    },
+    "2.6.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.6.0.tar.gz",
+      "hash": "sha256-wMLSG+pL1fQsymmjwTWdpKngMbuWCcgy1VIRj0dQdF4="
+    },
+    "2.5.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.5.2.tar.gz",
+      "hash": "sha256-L5pzIchsn89hxh6d8WeHRviUjR/x6fDvzVXgpEyUxPA="
+    },
+    "2.5.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.5.1.tar.gz",
+      "hash": "sha256-eU9dgr0cFeNAvI+szUkuWKY7PUS1qoJ5oqFbPE5Vz2A="
+    },
+    "2.5.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.5.0.tar.gz",
+      "hash": "sha256-qYnUugxwToqbhBYaNmn/spSZ3RFGcwxPd77wghPpqyw="
+    },
+    "2.0.17": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.17.tar.gz",
+      "hash": "sha256-IVwah2N4IU/y7GievKppgV2OOkhmGaKbiAsjHxofLIU="
+    },
+    "2.2.5": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.2.5.tar.gz",
+      "hash": "sha256-Mf+L2TlsGDxsumIp3n0JwX2846KSfUZ7cfRXqFByLQM="
+    },
+    "2.4.8": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.4.8.tar.gz",
+      "hash": "sha256-8MOqRn6pj7lmljDv1YPS5LqI7bImUM8txT+6mZ9LPqQ="
+    },
+    "2.0.16": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.16.tar.gz",
+      "hash": "sha256-5VRtDa0p8zkgaiPEOhRKB7CG7RQyfXw+pjaSBnaN31M="
+    },
+    "2.2.4": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.2.4.tar.gz",
+      "hash": "sha256-ffpEIoR+iL+Ontnvhku8k+pHQijfWo8P7SFoOmdychI="
+    },
+    "2.4.7": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.4.7.tar.gz",
+      "hash": "sha256-OgxaHFEqRsi7jxiZ8uO4dGD3igEsqXsA80Aa/2nCSC8="
+    },
+    "2.4.6": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.4.6.tar.gz",
+      "hash": "sha256-MXOXc++enfz3BhG0RAGUeps+4IlNOWw7+1HWcBdETwk="
+    },
+    "2.4.5": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.4.5.tar.gz",
+      "hash": "sha256-E7f73T5tywbmgGZ+mR8FwceS7txmt+GhWJpT9UNmVXs="
+    },
+    "2.4.4": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.4.4.tar.gz",
+      "hash": "sha256-ltgrpmEZDSBtK6iov0pYmRm6zMeEXZts+RVUSasFtVo="
+    },
+    "2.4.3": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.4.3.tar.gz",
+      "hash": "sha256-I2yiYNZbNly1nRkOx/QqC/MUvhZYeifzpHP/XX4H8/I="
+    },
+    "2.4.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.4.2.tar.gz",
+      "hash": "sha256-pnY0eOLUlH1NFEzb+sXqNOuM5V0h6gN+++coICkfRXc="
+    },
+    "2.4.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.4.1.tar.gz",
+      "hash": "sha256-IoLUkA/eQYWNqiix/eWugDzPQ3T+Ma3GeZhyFEPDHNQ="
+    },
+    "2.4.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.4.0.tar.gz",
+      "hash": "sha256-BGSkOedjTxQqiS8EfcYnaRrNm6ltCrLz7CsV8AAfZUA="
+    },
+    "2.3.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.3.0.tar.gz",
+      "hash": "sha256-cjAfK3Pca/SK5HePqkToBGcAOW7wvr9D7OwSw1lOWOo="
+    },
+    "2.2.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.2.2.tar.gz",
+      "hash": "sha256-rGR+Q06KETMuo3a8DbL+HBcXzJqQoQXDy4C/I7YYqqs="
+    },
+    "2.2.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.2.1.tar.gz",
+      "hash": "sha256-cgUbaEMocXrU43hH0xwNRMTzsT4WR6A6JaE190XtFRQ="
+    },
+    "2.2.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.2.0.tar.gz",
+      "hash": "sha256-s+s29IXO2iFV72hE/EA6wYig173tGuHOTfBp2uyki7E="
+    },
+    "2.2.0.rc.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.2.0.rc.1.tar.gz",
+      "hash": "sha256-XD4lxWGJpN5Rbe6vKWVEyfyw9dHfbkDsV/dA6aXyGXg="
+    },
+    "1.8.29": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.29.tar.gz",
+      "hash": "sha256-5jp0hl1NZr1s4no7c4v5B33CAsqh2fqe0wUHvqQ7Ldc="
+    },
+    "2.1.11": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.1.11.tar.gz",
+      "hash": "sha256-LPSTx2p35PducJ2MzRWUUEBTvPjDVX0cR+I9g5So6ow="
+    },
+    "2.0.14": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.14.tar.gz",
+      "hash": "sha256-eWREn5SJDeTcCCzwCFs70NULWtd0cmdOMksXLPhJKBs="
+    },
+    "2.1.10": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.1.10.tar.gz",
+      "hash": "sha256-RaW0ZDbJI3hnqxGL9hAk6L3ZssZGS9GmD/2GvTbrtMw="
+    },
+    "2.0.13": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.13.tar.gz",
+      "hash": "sha256-pFFMHk66/QDOkHptiL19RLbT8lx8a+bBKuxxVKIQUog="
+    },
+    "2.0.12": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.12.tar.gz",
+      "hash": "sha256-KJUzBKSevCffvSHIg8ypeKmsKH6lI/Dj4VX+eVvFKKg="
+    },
+    "2.1.9": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.1.9.tar.gz",
+      "hash": "sha256-l73qXeKU0lQg5cxdU6f6IHVOG1dV79JExeBnsLRIRuU="
+    },
+    "2.1.8": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.1.8.tar.gz",
+      "hash": "sha256-RQTZ5o4xpUBkM0gjuTNp4+UxaQJcBE3uaU10JAYVOGw="
+    },
+    "2.1.7": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.1.7.tar.gz",
+      "hash": "sha256-Kmvza1NH9s90FhhjYgWO3JQ/4yNDMkeonxKf27bML9E="
+    },
+    "1.8.28": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.28.tar.gz",
+      "hash": "sha256-UO4gQ0gCJHyW1RJWTU228GdT55Y4sjKd9IyIabkkVUQ="
+    },
+    "2.0.11": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.11.tar.gz",
+      "hash": "sha256-ja3sx+G7hZFyhPOvIZaBm4vDt8Gdwv+VuyWWaCisYjo="
+    },
+    "2.1.6": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.1.6.tar.gz",
+      "hash": "sha256-S5bigcnzx9eTYTwk85rLR4tGssMPPTWmdmq6tzqg7pg="
+    },
+    "1.8.23.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.23.2.tar.gz",
+      "hash": "sha256-zBtLCY8dc/eQeMW3PIGsHU31UpNFnqozRgsDFO0nwbQ="
+    },
+    "2.0.10": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.10.tar.gz",
+      "hash": "sha256-OgIapZmC6ZEJkV+AkEptnfaNDJsmTLGceXB5u0vMiJk="
+    },
+    "1.8.27": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.27.tar.gz",
+      "hash": "sha256-Pyh0tjhw9orlqy4QepDkIMkLs40nG7ClRLk2dIu4YKM="
+    },
+    "2.1.5": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.1.5.tar.gz",
+      "hash": "sha256-qh95iYK3X084diqE8Fqzkz5JM7AFYPR5jGWI9N5KXoQ="
+    },
+    "2.2.0.preview.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.2.0.preview.1.tar.gz",
+      "hash": "sha256-1X0tnu7+8lYiuxCXCuAUqg7zwet57pDYrOHMEMj+q1E="
+    },
+    "2.1.4": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.1.4.tar.gz",
+      "hash": "sha256-DJho0yKWrr+JdgdLonr7RrxDXtb5XrZRnwB6M7EwhSI="
+    },
+    "2.0.9": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.9.tar.gz",
+      "hash": "sha256-0yBxPIQsnrgCKjXdJo7xMY2fEpDXtTbBiqMkw26zTLA="
+    },
+    "2.1.3": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.1.3.tar.gz",
+      "hash": "sha256-L1dh21rtdmVB1kSiijNqULFLylO3pt0XR7pMlBOBBZ0="
+    },
+    "2.1.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.1.2.tar.gz",
+      "hash": "sha256-KJZQLbvaZzjPAf30j5fN9+VGLIp39BTgYh4udXWPlW4="
+    },
+    "2.1.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.1.1.tar.gz",
+      "hash": "sha256-bD/LHJ0dDE3oMrz/4TbxNydf+YU1Rgpb+HTb9KfiPYk="
+    },
+    "1.8.23.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.23.1.tar.gz",
+      "hash": "sha256-4xa/kVv+x3zRoiBNRaBg0KKHcoBgk7FPQPKVeMJ7le8="
+    },
+    "1.8.26": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.26.tar.gz",
+      "hash": "sha256-l6EcKjWFd/4HJ0esvEmEvXWEIYU/F+SEBWXfkZSeSCI="
+    },
+    "2.0.8": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.8.tar.gz",
+      "hash": "sha256-Qmp7rt9FRCtvCqNs/bjCU+Za/3bNGZHD6sv6rDHNzMo="
+    },
+    "2.1.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.1.0.tar.gz",
+      "hash": "sha256-J3bbI45sET6ynWLWUlHoILmsqpQV6swhtuYMwIFYtkw="
+    },
+    "2.1.0.rc.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.1.0.rc.2.tar.gz",
+      "hash": "sha256-YEVYbqG/ejBGDHFQOVT4Yyd8SfsvCNzh7E/KK4chZpw="
+    },
+    "2.0.7": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.7.tar.gz",
+      "hash": "sha256-QfV0vxZcfp6FRYrtrHGX+4YihXkdy8jYZpzyU6PRVHo="
+    },
+    "2.1.0.rc.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.1.0.rc.1.tar.gz",
+      "hash": "sha256-y5Wz91f78wrAMveGCPyHSrQaGv5+6g7JQIckjFGH0c4="
+    },
+    "2.0.6": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.6.tar.gz",
+      "hash": "sha256-515Zyb/3j/mZE/FV77eKFVy1+5eJZHNLOMUqnLtdI/g="
+    },
+    "2.0.3": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.3.tar.gz",
+      "hash": "sha256-qFu9nwkxGlbc8yneXdQbwHf480FA/gFUY/RaTaz7XqM="
+    },
+    "2.0.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.2.tar.gz",
+      "hash": "sha256-hGRH77tQok/yyzcxz/9jwLWipER8WdD7PsENHyKgjbs="
+    },
+    "2.0.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.1.tar.gz",
+      "hash": "sha256-hNmtva6xrETWFby+ExdiklgfFf2k5sq2eRPHGB+ZjHE="
+    },
+    "2.0.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.0.tar.gz",
+      "hash": "sha256-4U0sg4ctvZ1qUQ84nnGp32trFAJU4u1Q+dXo+yVJO/Q="
+    },
+    "2.0.0.rc.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.0.rc.2.tar.gz",
+      "hash": "sha256-+2K0C+SoaVh8a6swWTDkMV2CalFYh7H6VXM2lNnipnw="
+    },
+    "1.8.25": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.25.tar.gz",
+      "hash": "sha256-DWyLnpix8yu2JaJGdNO64ffEM1rRte9s1XNpl0XSEXs="
+    },
+    "2.0.0.rc.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.0.rc.1.tar.gz",
+      "hash": "sha256-opndx9UsUozO+hvOYvqZeTNTGzNEUjIIZ8vjTYk44wg="
+    },
+    "2.0.0.preview2.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.0.preview2.2.tar.gz",
+      "hash": "sha256-3zTb5Oj+vlWWhdgVSi7VzfXynqZALPi4ygpW+IIO1FE="
+    },
+    "2.0.0.preview2.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.0.preview2.1.tar.gz",
+      "hash": "sha256-GBv31LcyxqWWPIKHJ1Z8/hSzUMTkqvWDNEr0drmvYCw="
+    },
+    "2.0.0.preview2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v2.0.0.preview2.tar.gz",
+      "hash": "sha256-6t2drVjJGqb9rqfZWWN++ZLsGlhtdeBZ3btYODX3l5c="
+    },
+    "1.8.24": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.24.tar.gz",
+      "hash": "sha256-/iSK4I8hjbgODiQ1c/oRbPtQMetOU2zxIVArFopKHwQ="
+    },
+    "1.8.23": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.23.tar.gz",
+      "hash": "sha256-91eUmvrzT9cgXikOP6tQ6SbYm5lSnhbqcGkyXJM4dDE="
+    },
+    "1.8.22": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.22.tar.gz",
+      "hash": "sha256-irTi4vvGhUeX23h8Y+mbzEdQh7FH+xvVJHcfOr0+vQE="
+    },
+    "1.8.21": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.21.tar.gz",
+      "hash": "sha256-iaM4G6T4YmuJZeU/BYy8kETa68KU63G7pMxMxcVAKx4="
+    },
+    "1.8.20": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.20.tar.gz",
+      "hash": "sha256-62eYt6gdE7ej9prY4A+j77LoIl0k9bWDnPIKRG1//rM="
+    },
+    "1.8.19": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.19.tar.gz",
+      "hash": "sha256-08wVZkhZjkEVBCvV15cV915IEsBQSMAk89ci5lw9mhM="
+    },
+    "1.8.18": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.18.tar.gz",
+      "hash": "sha256-Tk2g+kfyOOhM7u11sC1fNgb1uoEzvttK+x4pIPiH/8Q="
+    },
+    "1.8.17": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.17.tar.gz",
+      "hash": "sha256-tRRRXaZQYfTt9Q0TRynS5HZ2wNH6+zBgGXo1OlmqdPQ="
+    },
+    "1.8.16": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.16.tar.gz",
+      "hash": "sha256-yu9MGK0/BW9IkawjlBXfVB5MQsC55vR5gyHNPNtjS3c="
+    },
+    "1.8.15": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.15.tar.gz",
+      "hash": "sha256-XSl2Aqmh01Qa74i6ZOo/+i4as2l49vfNNyEwbwsISrE="
+    },
+    "1.8.14": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.14.tar.gz",
+      "hash": "sha256-LFxbL6IqRHcP5ehLy4z9yWU2HBaoHYXvLzLdWXrwzcM="
+    },
+    "1.8.13": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.13.tar.gz",
+      "hash": "sha256-BFQSh0+XclqCT0sLziFlXeG6YTWlXRNrDO4+/qpsq8I="
+    },
+    "1.8.12": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.12.tar.gz",
+      "hash": "sha256-Gy3TGHPuP+SL7LtpTqrDcy3/WhlxwnbzUxMxlrnpZlE="
+    },
+    "1.8.11": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.11.tar.gz",
+      "hash": "sha256-OTopjdUtVsIRIYciUz5RU7yjVDQ/MVTekCJYBG2Xi6g="
+    },
+    "1.8.10": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.10.tar.gz",
+      "hash": "sha256-I8skYUL7GNAqG9xrlFj1AhKU7f2ohx8BGSv0RM0TD9U="
+    },
+    "1.8.9": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.9.tar.gz",
+      "hash": "sha256-o7mjKU4eBrWnwLGmdFzxO/CQH7hxFzVce6I8id3/q+k="
+    },
+    "1.8.8": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.8.tar.gz",
+      "hash": "sha256-arF1Yz69BnvbHM4IM5gCjmntDf3GNY/zrzSlPyZSoB0="
+    },
+    "1.8.7": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.7.tar.gz",
+      "hash": "sha256-JKWUNHnznCD4pLErzK96zPkpFAKpSj6GRC/JGTx/I1g="
+    },
+    "1.8.6": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.6.tar.gz",
+      "hash": "sha256-366aIQLbUb3eRKznfLP9d6LvnD7IGEq/2oQ69RySAfw="
+    },
+    "1.8.5": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.5.tar.gz",
+      "hash": "sha256-TTSQj5DNRmhB0AwJNVpMc95HJiVrddCa2K+hW0Y4moU="
+    },
+    "1.8.4": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.4.tar.gz",
+      "hash": "sha256-JgHiU0VfhQhwySEKPFYtwcudqGHrYwE0uVGa/LpD2U0="
+    },
+    "1.8.3": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.3.tar.gz",
+      "hash": "sha256-f6Nj00sTxU5ffRw6IEL+VlJfGkbVRo+cVToPAK4Gy0s="
+    },
+    "1.8.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.2.tar.gz",
+      "hash": "sha256-Ggpxgr6mrRzM+/NWv0XrmVGJHbnsfQ0EmKkKo021xoQ="
+    },
+    "1.8.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.1.tar.gz",
+      "hash": "sha256-GNC6SxmRM/pvn7KEVBKBvxWJn0EXyqmIlajA9VrxZJM="
+    },
+    "1.8.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.8.0.tar.gz",
+      "hash": "sha256-d66YjQdLIu+ZDt3mpBn5BjQg+w3mUaNhDi6R5G2Z60s="
+    },
+    "1.7.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.7.2.tar.gz",
+      "hash": "sha256-taxPDXmDVDGatigilIQUBV0KCkLH+JPFH5moY24jF54="
+    },
+    "1.7.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.7.1.tar.gz",
+      "hash": "sha256-DuxJ7cJdU7dMMcJGeN5aPoLwI75/iGsl94iWuAU9RJk="
+    },
+    "1.7.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.7.0.tar.gz",
+      "hash": "sha256-lP5TLe9sykRoxu9OBZ6B92BmLOSo+JP1CbWG6bGIRwE="
+    },
+    "1.6.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.6.2.tar.gz",
+      "hash": "sha256-qeevulYmVtXDg6ZeASyDZpTZYZZ3iEd/N7XQvwjlL48="
+    },
+    "1.6.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.6.1.tar.gz",
+      "hash": "sha256-qEk3Vqb6r0hYH6n+lLeP7uw/rEbREdU2Fh95vBE+VLI="
+    },
+    "1.6.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.6.0.tar.gz",
+      "hash": "sha256-Tky1s7T9uIDBPTw1iBxoYmdDfT8Rz+CCWYtW7gRYccs="
+    },
+    "1.5.3": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.5.3.tar.gz",
+      "hash": "sha256-uBw4pwiKJyoj7ybmEZ9TE3tZB+PaeVJvEFtKKLe8rmE="
+    },
+    "1.5.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.5.2.tar.gz",
+      "hash": "sha256-vOpXyunj+rKQzWYATIpHw9YaZU2ac1mXrdXQxmbDr1E="
+    },
+    "1.5.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.5.1.tar.gz",
+      "hash": "sha256-xCbiY9nURylFmvGS2ssp/GWKCr4DzMuqkY/qS2Xmsbw="
+    },
+    "1.5.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.5.0.tar.gz",
+      "hash": "sha256-N+3qj0b8uhpxJonm4cGD19P+jf+ESOxkDuCYy6cs7Bc="
+    },
+    "1.4.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.4.2.tar.gz",
+      "hash": "sha256-K5FYCXa8ny35fPaQBzSUfcJTQY+UHY/y51ja3mxZ7CU="
+    },
+    "1.4.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.4.1.tar.gz",
+      "hash": "sha256-CGUAAjX3YvDjbattGQBy1/ye4lehNSaNFIUew8rzKvI="
+    },
+    "1.4.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.4.0.tar.gz",
+      "hash": "sha256-XXbh4PL+9sbMJxjyDyGQSFsJWcwv5PTgL70Puh3pbE8="
+    },
+    "1.3.7": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.3.7.tar.gz",
+      "hash": "sha256-RD1GPsYX+e9U0ueuDcOni55UYdg3yxVCZZtjMxIiSiA="
+    },
+    "1.3.7.pre.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.3.7.pre.1.tar.gz",
+      "hash": "sha256-j9R30IJzirWZD+ubvBGhJXzbPDRxiV1l2MetVNw0j6o="
+    },
+    "1.3.6": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.3.6.tar.gz",
+      "hash": "sha256-qwVgwpD3iJsiClC2v1wdN1VyiGhq6i+jvSjRnwRSxLI="
+    },
+    "1.3.5": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.3.5.tar.gz",
+      "hash": "sha256-XPXWEnuJOsRjDjB1E9inXvpApK2EcHU0Ff7nKFLwMSw="
+    },
+    "1.3.4": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.3.4.tar.gz",
+      "hash": "sha256-d+62Dbd3rcULD6Oq7f8shEs8dEdO7cQWdhlSS0AgZJU="
+    },
+    "1.3.3": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.3.3.tar.gz",
+      "hash": "sha256-rUCkHiYgLEbi/77P7DbvbHmEvO1oJYsveoQ41jGyEbw="
+    },
+    "1.3.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.3.2.tar.gz",
+      "hash": "sha256-Zt6ptXNjmvUHengtfnwoqJBNfvQ9sHRceVt5u9o+918="
+    },
+    "1.3.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.3.1.tar.gz",
+      "hash": "sha256-82buN83vb7n2K60OskjtgGC7K3S2+tUqJlwlZhlTwAw="
+    },
+    "1.3.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.3.0.tar.gz",
+      "hash": "sha256-6kVg3h/9M2gdhHb3gWmmApIre4ohCBxNKC9ItKpI08M="
+    },
+    "1.2.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.2.0.tar.gz",
+      "hash": "sha256-SaOm/CoS7NM576Q+Z9m0zOwqy1ilbFxIcRysSdW0WaQ="
+    },
+    "1.1.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.1.1.tar.gz",
+      "hash": "sha256-DLmc/rYaMcCIUa9wWy1UMT8gGjxDbAWrJMzA/IVZ+ro="
+    },
+    "1.1.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.1.0.tar.gz",
+      "hash": "sha256-hiv7Y1Q75EhoJQ95ZpvJcnH+dpWOGUHdIHFVrpnRpLY="
+    },
+    "1.0.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.0.1.tar.gz",
+      "hash": "sha256-ujSwxWm4B8iUIDxVD36zU8hVdaMiqlo0jLrWvjTMriw="
+    },
+    "1.0.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v1.0.0.tar.gz",
+      "hash": "sha256-MIvtntggTezmhDqry5KAtLqdINFciww4Ls0RzNwxhRs="
+    },
+    "0.9.5": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.9.5.tar.gz",
+      "hash": "sha256-lRzvhAW29v/V4vkz3+cT7CemNWkTQtlz2bOTKnD0Gb4="
+    },
+    "0.9.4.7": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.9.4.7.tar.gz",
+      "hash": "sha256-wywLK9TomzLNQxtaRyQ2EdyKyogP7BVh9sR3+rxE6h0="
+    },
+    "0.9.4.6": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.9.4.6.tar.gz",
+      "hash": "sha256-AkaQUd2cBYnVYRlABYM9RnWVVUMwFK0d+Y+fPtRXYFc="
+    },
+    "0.9.4.5": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.9.4.5.tar.gz",
+      "hash": "sha256-95k8mWWV0mB0lQRcXYMbQh5wmMQDmCemO8CRi6qMsrg="
+    },
+    "0.9.4.4": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.9.4.4.tar.gz",
+      "hash": "sha256-2PkZuZN59qB5USveBS6jO/bRfgbFHzN5dVS8tkM++4I="
+    },
+    "0.9.4.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.9.4.2.tar.gz",
+      "hash": "sha256-y72cfgGn2h/5L1aAFMGI60Q7infVvmNNnBarrGniOvQ="
+    },
+    "0.9.4.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.9.4.1.tar.gz",
+      "hash": "sha256-FhbDtOF4RbUYQCUFOvpbxUtS9hUQw0H9lzY0Zi1kIkM="
+    },
+    "0.9.4": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.9.4.tar.gz",
+      "hash": "sha256-tS7KZn5nx+bsNqW0QBN/tlYWXCkgLP0LOsAB+NuSgtY="
+    },
+    "0.9.3": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.9.3.tar.gz",
+      "hash": "sha256-UTB9RZ1LiOfapji/p25Gl88uTP/lEzRSApdo6OE1rYI="
+    },
+    "0.9.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.9.2.tar.gz",
+      "hash": "sha256-sreZYKjWL55cDY1tRa5pWaeOFuxcjFArTrzdZnm0pHk="
+    },
+    "0.9.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.9.1.tar.gz",
+      "hash": "sha256-hxsNbXLTlBurCgSXh+NgSjEG4ozG8DDUi9/2x2hkKWI="
+    },
+    "0.9.0.8": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.9.0.8.tar.gz",
+      "hash": "sha256-a78o1weE4qYsdLdOqrzbq0plp3xCRSErNBpz9Fwajy4="
+    },
+    "0.9.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.9.0.tar.gz",
+      "hash": "sha256-QZI7En6Bpm295VbWn/EDSP69ax1ZkO0DqiDJTCiOFDA="
+    },
+    "0.8.11": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.8.11.tar.gz",
+      "hash": "sha256-bGxfvQHGG3OkJ3vo0r9fyOn7AJCwYEUxT2puh0jhrBs="
+    },
+    "0.8.10": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.8.10.tar.gz",
+      "hash": "sha256-cqTOYOqDTBR+eZl+gShUjx8mpXH0lEfohkopMcmZreo="
+    },
+    "0.8.9": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.8.9.tar.gz",
+      "hash": "sha256-TAka1p9XuUjqSAwEtRrh1AdUpJInmusw7obCp7/qYn0="
+    },
+    "0.8.8": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.8.8.tar.gz",
+      "hash": "sha256-d3oN28K6JQRTdt+0Hcgm1mvhXPaTjLrZgdo6V8FGWGg="
+    },
+    "0.8.7": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.8.7.tar.gz",
+      "hash": "sha256-eWBHTSwYWaShb7yzJP7vwm4erJ0isQjDcgxQJ3WYMlI="
+    },
+    "0.8.6": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.8.6.tar.gz",
+      "hash": "sha256-UKLFclkyLhdsYayozYa7/vGnzmG9n9VgpToGqEkOrAM="
+    },
+    "0.8.5": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.8.5.tar.gz",
+      "hash": "sha256-P5nZqAKEM7yQW+h+p5rQsqrHmonGnbPeJYZSaaY5ZVE="
+    },
+    "0.8.4": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.8.4.tar.gz",
+      "hash": "sha256-vaZNM9wkHOW1t8i4OCy5C3XGM41a+MercBA3LH8YEac="
+    },
+    "0.8.3b": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.8.3b.tar.gz",
+      "hash": "sha256-MRzygMl/3nxcRVyRII/aKm9arkpXOZC2al4X3PQr/d4="
+    },
+    "0.8.3a": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.8.3a.tar.gz",
+      "hash": "sha256-ibkBGOiTrqxpJu9r4pqOtAvG0cGB9o9ap0mTGLvmlvw="
+    },
+    "0.8.3": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.8.3.tar.gz",
+      "hash": "sha256-w8sSt3I7W1RKUnPsbN2YXOOy464aeStBSs5B6FXKpB8="
+    },
+    "0.8.2": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.8.2.tar.gz",
+      "hash": "sha256-7DDSQkCfoQwqJVP1WIXViQI0/vdjOrvDV1PwLXC45Vg="
+    },
+    "0.8.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.8.1.tar.gz",
+      "hash": "sha256-zzBWiaxHAMds4c4S6/M74n64R/RdpkvwywFgP41YjZ8="
+    },
+    "0.8.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.8.0.tar.gz",
+      "hash": "sha256-6XRTn68I5gBsO0hij58XU2ABktD2ZJXbD3qeQlTcb0Y="
+    },
+    "0.7.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.7.0.tar.gz",
+      "hash": "sha256-kHNS/MpB4/HH1y2nQof/m+pyNzaNVNGnbzGan95FarI="
+    },
+    "0.6.1": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.6.1.tar.gz",
+      "hash": "sha256-aE7oD7eVr9VlVtoc7TagdLD6WtcR7MfOyGfL34YmNbo="
+    },
+    "0.6.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.6.0.tar.gz",
+      "hash": "sha256-ZIy3+2Tj7CdLwXGtPcv5WMkKP1jDLwOK6X117FguwcA="
+    },
+    "0.5.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.5.0.tar.gz",
+      "hash": "sha256-URFFVuTxe9QZhz9k1jtF5paWBB4g5JDgaqoM6pXVygw="
+    },
+    "0.4.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.4.0.tar.gz",
+      "hash": "sha256-tkGV5SOdiuLGyt2c/rUTvBJq3BbM9mygbUEFkm6flJg="
+    },
+    "0.3.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.3.0.tar.gz",
+      "hash": "sha256-fb9p/82S9gmz/09hfB403va8G/jLSLnQMXeH/o3i9OE="
+    },
+    "0.3.0.pre": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.3.0.pre.tar.gz",
+      "hash": "sha256-cdhysFUmIKnp7NuwG2N4CJ6fwAu//IIuDI/nDwF2b54="
+    },
+    "0.2.0": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v0.2.0.tar.gz",
+      "hash": "sha256-wvMqPtuOB7DqfesZv3PGJ5N5oi5b4CAqeBISM3VzPTg="
     }
   },
   "aliases": {
+    "0": "0.9.5",
     "1": "1.8.30",
-    "2": "2.7.6",
+    "2": "2.7.11",
     "3": "3.7.2",
     "4": "4.0.21",
     "4.0": "4.0.21",
@@ -673,13 +1426,33 @@
     "3.4": "3.4.22",
     "3.3": "3.3.27",
     "3.2": "3.2.34",
-    "3.1": "3.1.4",
-    "3.0": "3.0.8",
-    "2.7": "2.7.6",
+    "3.1": "3.1.6",
+    "3.0": "3.0.9",
+    "2.7": "2.7.11",
     "2.6": "2.6.14",
-    "2.2": "2.2.3",
-    "2.0": "2.0.15",
+    "2.5": "2.5.2",
+    "2.4": "2.4.8",
+    "2.3": "2.3.0",
+    "2.2": "2.2.5",
+    "2.1": "2.1.11",
+    "2.0": "2.0.17",
     "1.8": "1.8.30",
+    "1.7": "1.7.2",
+    "1.6": "1.6.2",
+    "1.5": "1.5.3",
+    "1.4": "1.4.2",
+    "1.3": "1.3.7",
+    "1.2": "1.2.0",
+    "1.1": "1.1.1",
+    "1.0": "1.0.1",
+    "0.9": "0.9.5",
+    "0.8": "0.8.11",
+    "0.7": "0.7.0",
+    "0.6": "0.6.1",
+    "0.5": "0.5.0",
+    "0.4": "0.4.0",
+    "0.3": "0.3.0",
+    "0.2": "0.2.0",
     "4_0": "4.0.21",
     "3_7": "3.7.2",
     "3_6": "3.6.9",
@@ -687,12 +1460,32 @@
     "3_4": "3.4.22",
     "3_3": "3.3.27",
     "3_2": "3.2.34",
-    "3_1": "3.1.4",
-    "3_0": "3.0.8",
-    "2_7": "2.7.6",
+    "3_1": "3.1.6",
+    "3_0": "3.0.9",
+    "2_7": "2.7.11",
     "2_6": "2.6.14",
-    "2_2": "2.2.3",
-    "2_0": "2.0.15",
-    "1_8": "1.8.30"
+    "2_5": "2.5.2",
+    "2_4": "2.4.8",
+    "2_3": "2.3.0",
+    "2_2": "2.2.5",
+    "2_1": "2.1.11",
+    "2_0": "2.0.17",
+    "1_8": "1.8.30",
+    "1_7": "1.7.2",
+    "1_6": "1.6.2",
+    "1_5": "1.5.3",
+    "1_4": "1.4.2",
+    "1_3": "1.3.7",
+    "1_2": "1.2.0",
+    "1_1": "1.1.1",
+    "1_0": "1.0.1",
+    "0_9": "0.9.5",
+    "0_8": "0.8.11",
+    "0_7": "0.7.0",
+    "0_6": "0.6.1",
+    "0_5": "0.5.0",
+    "0_4": "0.4.0",
+    "0_3": "0.3.0",
+    "0_2": "0.2.0"
   }
 }
