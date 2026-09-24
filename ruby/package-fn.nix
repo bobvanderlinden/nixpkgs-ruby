@@ -92,8 +92,8 @@ let
       # support is not enabled, so add readline to the build inputs if curses
       # support is disabled (if it's enabled, we already have it) and we're
       # running on darwin
-      ++ (op (!cursesSupport && stdenv.isDarwin) readline)
-      ++ (ops stdenv.isDarwin [
+      ++ (op (!cursesSupport && stdenv.hostPlatform.isDarwin) readline)
+      ++ (ops stdenv.hostPlatform.isDarwin [
         libiconv
         libunwind
       ]);
@@ -133,7 +133,7 @@ let
       ]
       ++ op (!docSupport) "--disable-install-doc"
       ++ op jemallocSupport "--with-jemalloc"
-      ++ ops stdenv.isDarwin [
+      ++ ops stdenv.hostPlatform.isDarwin [
         # on darwin, we have /usr/include/tk.h -- so the configure script detects
         # that tk is installed
         "--with-out-ext=tk"

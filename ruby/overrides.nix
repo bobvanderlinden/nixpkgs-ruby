@@ -55,7 +55,7 @@
   {
     condition =
       version:
-      stdenv.isDarwin
+      stdenv.hostPlatform.isDarwin
       && (
         with versionComparison version;
         composeAny hasPrefix [
