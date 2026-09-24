@@ -10,7 +10,7 @@
   lib,
   fetchurl,
   fetchpatch,
-  fetchFromSavannah,
+  fetchzip,
   fetchFromGitHub,
   zlib,
   openssl,
@@ -47,7 +47,7 @@ let
   op = lib.optional;
   ops = lib.optionals;
   opString = lib.optionalString;
-  config = import ./config.nix { inherit fetchFromSavannah; };
+  config = import ./config.nix { inherit fetchzip; };
 
   # Needed during postInstall
   buildRuby =
