@@ -1023,6 +1023,10 @@
     "3.4.11": {
       "url": "https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.11.tar.gz",
       "sha256": "5c22be44524312b3d433d68739bcc530633b1da5ef8ba0afa0a37680da17d3de"
+    },
+    "4.1.0-preview1": {
+      "url": "https://cache.ruby-lang.org/pub/ruby/4.1/ruby-4.1.0-preview1.tar.gz",
+      "sha256": "fb530bb88e90de3ae91c1310a27ae090e6bd989b8726de50ef12a890a85b88ef"
     }
   },
   "aliases": {
