@@ -1423,6 +1423,10 @@
     "4.0.23": {
       "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v4.0.23.tar.gz",
       "hash": "sha256-a5qbKJLOBGsReCaXPhI15J5IyR+gupDu63QQL8Fg+Oo="
+    },
+    "4.1.0.beta3": {
+      "url": "https://github.com/rubygems/rubygems/archive/refs/tags/v4.1.0.beta3.tar.gz",
+      "hash": "sha256-ebJHW+S6PJuActW9mY8U/xu93Og7O40HHDKM/bWUVd8="
     }
   },
   "aliases": {
