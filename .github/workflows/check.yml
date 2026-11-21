@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Install Nix
-        uses: cachix/install-nix-action@v31
+        uses: cachix/install-nix-action@v32
       - name: nix flake check --no-build
         run: nix flake check --all-systems --no-build
 
@@ -31,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Install Nix
-        uses: cachix/install-nix-action@v31
+        uses: cachix/install-nix-action@v32
       - id: matrix
         name: Generate build matrix
         run: nix run .#gha-prepare-matrix
@@ -47,7 +47,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Install Nix
-        uses: cachix/install-nix-action@v31
+        uses: cachix/install-nix-action@v32
       - uses: cachix/cachix-action@v17
         with:
           name: nixpkgs-ruby
