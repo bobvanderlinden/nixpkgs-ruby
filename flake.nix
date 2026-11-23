@@ -18,108 +18,7 @@
       flake-utils,
       ...
     }:
-    let
-      applyOverrides = import ./lib/apply-overrides.nix;
-      versionComparison = import ./lib/version-comparison.nix;
-      mkPackageVersions =
-        {
-          pkgs,
-          versions,
-          overridesFn,
-          packageFn,
-        }:
-        let
-          overrides = pkgs.callPackage overridesFn { inherit versionComparison; };
-          versionedPackageFnWithOverrides =
-            { version, versionSource }:
-            let
-              pkg = pkgs.callPackage packageFn {
-                inherit version versionSource versionComparison;
-              };
-            in
-            applyOverrides {
-              inherit (pkgs) lib;
-              inherit overrides version pkg;
-            };
-          packageVersions = builtins.mapAttrs (
-            version: versionSource: versionedPackageFnWithOverrides { inherit version versionSource; }
-          ) versions.sources;
-          packageAliases = builtins.mapAttrs (alias: version: packageVersions.${version}) versions.aliases;
-        in
-        nixpkgs.lib.mapAttrs' (version: package: {
-          name = version;
-          value = package;
-        }) (packageAliases // packageVersions);
-      mkPkgSet =
-        {
-          pname,
-          pkgs,
-          versions,
-          overridesFn,
-          packageFn,
-        }:
-        let
-          packageVersions = mkPackageVersions {
-            inherit
-              versions
-              pkgs
-              overridesFn
-              packageFn
-              ;
-          };
-        in
-        nixpkgs.lib.mapAttrs' (version: package: {
-          name = if version == "" then pname else "${pname}-${version}";
-          value = package;
-        }) packageVersions;
-
-      _pkgsets = {
-        rubygems = import ./rubygems;
-        ruby = import ./ruby;
-      };
-
-      pkgsets = builtins.mapAttrs (
-        name: pkgset: pkgs:
-        mkPkgSet {
-          inherit pkgs;
-          pname = name;
-          inherit (pkgset) versions overridesFn packageFn;
-        }
-      ) _pkgsets;
-    in
     {
-      lib.mkRuby =
-        {
-          pkgs,
-          rubyVersion,
-        }:
-        (pkgsets.ruby pkgs)."ruby-${rubyVersion}";
-
-      lib.readRubyVersionFile =
-        file:
-        let
-          contents = nixpkgs.lib.strings.fileContents file;
-          strippedContents = builtins.head (builtins.match "[[:space:]]*(.*)[[:space:]]*" contents);
-          segments = nixpkgs.lib.strings.splitString "-" strippedContents;
-        in
-        if builtins.length segments == 1 then
-          {
-            rubyEngine = "ruby";
-            version = builtins.head segments;
-          }
-        else
-          {
-            rubyEngine = builtins.head segments;
-            version = builtins.concatStringsSep "-" (builtins.tail segments);
-          };
-
-      lib.packageFromRubyVersionFile =
-        { file, system }:
-        let
-          inherit (self.lib.readRubyVersionFile file) rubyEngine version;
-        in
-        self.packages.${system}."${rubyEngine}-${version}";
-
       templates.default = {
         path = ./template;
         description = "A standard Nix-based Ruby project";
@@ -132,17 +31,16 @@
         '';
       };
 
-      overlays =
-        let
-          pkgsetOverlays = builtins.mapAttrs (
-            name: pkgset: final: prev:
-            pkgset final
-          ) pkgsets;
-        in
-        {
-          default = nixpkgs.lib.composeManyExtensions (builtins.attrValues pkgsetOverlays);
-        }
-        // pkgsetOverlays;
+      overlays = import ./overlays.nix;
+
+      lib = import ./lib.nix { lib = nixpkgs.lib; } // {
+        packageFromRubyVersionFile =
+          { file, system }:
+          let
+            inherit (self.lib.readRubyVersionFile file) rubyEngine version;
+          in
+          self.packages.${system}."${rubyEngine}-${version}";
+      };
     }
     // flake-utils.lib.eachDefaultSystem (
       system:
@@ -157,9 +55,8 @@
             "openssl-1.1.1w"
           ];
         };
-
-        allPackages = lib.concatMapAttrs (name: pkgset: pkgset pkgs) pkgsets;
-        intactPackages = lib.filterAttrs (name: package: !package.meta.broken) allPackages;
+        versionComparison = import ./lib/version-comparison.nix;
+        intactPackages = pkgs.nixpkgs-ruby.packages;
         rubyPackages = lib.filterAttrs (
           name: package: (builtins.match "ruby-[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+" name) != null
         ) intactPackages;
@@ -360,6 +257,7 @@
         };
       in
       {
+        legacyPackages = pkgs;
         packages = intactPackages // {
           gha-prepare-matrix = ghaPrepareMatrix;
         };
@@ -393,6 +291,10 @@
                   concatStringsSep
                   ;
                 inherit (nixpkgs.lib) mapAttrsToList filterAttrs;
+                _pkgsets = {
+                  rubygems = import ./rubygems;
+                  ruby = import ./ruby;
+                };
                 pkgsetsToUpdate = filterAttrs (name: pkgset: pkgset ? updater) _pkgsets;
                 updateCommand = name: pkgset: ''
                   echo "Updating ${name}..."
